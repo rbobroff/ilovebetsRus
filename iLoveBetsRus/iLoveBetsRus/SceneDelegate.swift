@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  iLoveBetsRus
+//  11
 //
-//  Created by Roman Bobrov on 29.10.2019.
+//  Created by Roman Bobrov on 30.10.2019.
 //  Copyright © 2019 Roman Bobrov. All rights reserved.
 //
 
