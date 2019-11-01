@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
 		EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525822368B3D0002428AB /* AppDelegate.swift */; };
-		EDB525852368B3D0002428AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525842368B3D0002428AB /* SceneDelegate.swift */; };
 		EDB525872368B3D0002428AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525862368B3D0002428AB /* ViewController.swift */; };
 		EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB525882368B3D0002428AB /* Main.storyboard */; };
 		EDB5258C2368B3D3002428AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB5258B2368B3D3002428AB /* Assets.xcassets */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDB5257F2368B3D0002428AB /* iLoveBetsRus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLoveBetsRus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDB525842368B3D0002428AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDB525862368B3D0002428AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDB525892368B3D0002428AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDB5258B2368B3D3002428AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +37,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1FF1DE236A02F00023F948 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		ED1FF1DF236A03B00023F948 /* Images_Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images_Buttons;
+			sourceTree = "<group>";
+		};
+		ED7B7080236CA44200784F55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EDB525762368B3D0002428AB = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +77,14 @@
 		EDB525812368B3D0002428AB /* iLoveBetsRus */ = {
 			isa = PBXGroup;
 			children = (
+				ED7B7080236CA44200784F55 /* Model */,
+				ED1FF1DF236A03B00023F948 /* Images_Buttons */,
+				ED1FF1DE236A02F00023F948 /* SupportingFiles */,
 				EDB525822368B3D0002428AB /* AppDelegate.swift */,
-				EDB525842368B3D0002428AB /* SceneDelegate.swift */,
+				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
 				EDB525862368B3D0002428AB /* ViewController.swift */,
-				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
+				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
 				EDB525902368B3D3002428AB /* Info.plist */,
 			);
@@ -140,7 +164,7 @@
 			files = (
 				EDB525872368B3D0002428AB /* ViewController.swift in Sources */,
 				EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */,
-				EDB525852368B3D0002428AB /* SceneDelegate.swift in Sources */,
+				ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ63WJBDTX;
 				INFOPLIST_FILE = iLoveBetsRus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ63WJBDTX;
 				INFOPLIST_FILE = iLoveBetsRus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
