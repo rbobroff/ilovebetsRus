@@ -21,7 +21,8 @@ return urlPath
 }
     
 //Функция загрузки новостей
-func loadNews() {
+//отдаем функцию loadNews так называемой completionHandler
+func loadNews(completionHandler: (()->Void)?) {
   /*  let url = URL(string: "https://newsapi.org/v2/everything?q=bitcoin&from=2019-10-06&sortBy=publishedAt&apiKey=239de8b6b6ed404ebcb61b80dfcf7bbc") */
     
     let url = URL(string: "https://ilovebets.ru/mynewsapi2019/")
@@ -40,8 +41,10 @@ func loadNews() {
             print(urlToData)
             //вызываем функцию parseNews после того, как сохранили наш файл:
             parseNews()
+            completionHandler?()
             //чтобы протестировать, печатаем количество новостей в массиве:
-            print(articles.count)
+           // print(articles.count)
+            
         }
     }
     

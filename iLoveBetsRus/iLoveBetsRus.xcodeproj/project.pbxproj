@@ -15,6 +15,7 @@
 		EDB5258F2368B3D3002428AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */; };
 		EDBE205F237337C800E206C9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE205E237337C800E206C9 /* Article.swift */; };
 		EDBE2061237337D500E206C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE2060237337D500E206C9 /* Model.swift */; };
+		EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF6BF123748C61005816C7 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EDB525902368B3D3002428AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBE205E237337C800E206C9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EDBE2060237337D500E206C9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EDFF6BF123748C61005816C7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				EDB525822368B3D0002428AB /* AppDelegate.swift */,
 				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
 				EDB525862368B3D0002428AB /* ViewController.swift */,
+				EDFF6BF123748C61005816C7 /* TableViewController.swift */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
 				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDBE2061237337D500E206C9 /* Model.swift in Sources */,
+				EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */,
 				EDBE205F237337C800E206C9 /* Article.swift in Sources */,
 				EDB525872368B3D0002428AB /* ViewController.swift in Sources */,
 				EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */,

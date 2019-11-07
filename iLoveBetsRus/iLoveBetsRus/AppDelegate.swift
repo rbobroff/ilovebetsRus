@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //загружаем новости при загрузке приложения
-        loadNews()
+        //загружаем новости при загрузке приложения. использовали на начальных парах, чтоюы проверить, что новости загружаются и записываются в файл
+        //loadNews()
         
         return true
     }
