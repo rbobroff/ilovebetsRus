@@ -15,6 +15,7 @@
 		EDB5258F2368B3D3002428AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */; };
 		EDBE205F237337C800E206C9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE205E237337C800E206C9 /* Article.swift */; };
 		EDBE2061237337D500E206C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE2060237337D500E206C9 /* Model.swift */; };
+		EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */; };
 		EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF6BF123748C61005816C7 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		EDB525902368B3D3002428AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBE205E237337C800E206C9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EDBE2060237337D500E206C9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
 		EDFF6BF123748C61005816C7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
 				EDB525862368B3D0002428AB /* ViewController.swift */,
 				EDFF6BF123748C61005816C7 /* TableViewController.swift */,
+				EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
 				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				EDB525872368B3D0002428AB /* ViewController.swift in Sources */,
 				EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */,
 				ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */,
+				EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ63WJBDTX;
 				INFOPLIST_FILE = iLoveBetsRus/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ63WJBDTX;
 				INFOPLIST_FILE = iLoveBetsRus/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -59,6 +59,10 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    //создаем метод, который вызывается тогда, когда нажали по ячейке. Создаем для перехода на экран с одной новостью при нажатии по ячейке в таблице
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 
     /*
     // Override to support conditional editing of the table view.
