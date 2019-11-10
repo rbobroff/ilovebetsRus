@@ -61,9 +61,27 @@ class TableViewController: UITableViewController {
     
     //создаем метод, который вызывается тогда, когда нажали по ячейке. Создаем для перехода на экран с одной новостью при нажатии по ячейке в таблице
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        //выполняем переход по нажатию ячейки. указываем идентификатор перехода "goToOneNews"
+        performSegue(withIdentifier: "goToOneNews", sender: self)
     }
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // подготовка к переходу
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //у нашей переменной segue есть путь назначения, это и есть наш OneNewsViewController. делаем преобразования в OneNewsViewController: as?
+        //переменной article должны присвоить значение выбранной ячейки
+        if segue.identifier == "goToOneNews" {
+            //делаем проверку, чтобы ничего не вылетело. проверяем, чтобы indexPath не был равен "нулю"
+            if let indexPath = tableView.indexPathForSelectedRow {
+                (segue.destination as? OneNewsViewController)?.article = articles[tableView.indexPathForSelectedRow!.row]
+                  
+                  tableView.deselectRow(at: indexPath, animated: true)
+            }
+        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -99,14 +117,9 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+    
 
 }
