@@ -14,7 +14,9 @@ class OneNewsViewController: UIViewController {
     var article: Article!
     
     //вытаскиваем элементы, с которыми будем работать (из одной новости)
-    @IBOutlet weak var imageVIew: UIImageView!
+ 
+    
+    @IBOutlet weak var urlImage: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     
@@ -24,7 +26,8 @@ class OneNewsViewController: UIViewController {
         labelTitle.text = article.title
         labelDescription.text = article.description
         
-        
+        urlImage.text = article.urlToImage
+ 
         
         
         
