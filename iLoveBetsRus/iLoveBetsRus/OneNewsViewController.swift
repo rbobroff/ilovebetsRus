@@ -16,7 +16,8 @@ class OneNewsViewController: UIViewController {
     //вытаскиваем элементы, с которыми будем работать (из одной новости)
  
     
-    @IBOutlet weak var urlImage: UILabel!
+ 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     
@@ -26,9 +27,15 @@ class OneNewsViewController: UIViewController {
         labelTitle.text = article.title
         labelDescription.text = article.description
         
-        urlImage.text = article.urlToImage
+ //       urlImage.text = article.urlToImage
  
-        
+        DispatchQueue.main.async {
+            if let url = URL(string: self.article.urlToImage) {
+                if let data = try? Data(contentsOf: url) {
+                    self.imageView.image = UIImage(data: data)
+                }
+            }
+        }
         
         
         // Do any additional setup after loading the view.
