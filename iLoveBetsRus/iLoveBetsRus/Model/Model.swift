@@ -36,7 +36,9 @@ func loadNews(completionHandler: (()->Void)?) {
         if urlFile != nil {
         //эта команда вернет путь в директорию пользователя. это массив всех папок, которые там есть. наши новости будут загружены в файл data.json в файловой системе устройства. при оптимизации скопировали в выше "var urlToData: URL {
         
-            try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
+          //  try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
+            try?  FileManager.default.replaceItemAt(urlToData, withItemAt: urlFile!)
+            
             //Тестируем, что все ок. Печатаем в консоле путь к файлу при запуске приложения
             print(urlToData)
             //вызываем функцию parseNews после того, как сохранили наш файл:
