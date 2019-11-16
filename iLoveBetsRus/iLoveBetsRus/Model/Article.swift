@@ -8,6 +8,9 @@
 
 import Foundation
 
+//Отображение новостей сделано по курсу https://youtu.be/lCDTcGJ5Nwg
+
+//Пример формата  jSON по курсу:
 /*
  {
  -"source": {
