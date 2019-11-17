@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+//По этой инструкции настроен TableView и отображение й новости: https://www.youtube.com/watch?v=lCDTcGJ5Nwg&list=PLcmaZSNs2TKhWZSUVA8sFt2ETdbH7LCP3
     
     @IBAction func refreshControllAction(_ sender: Any) {
         loadNews {

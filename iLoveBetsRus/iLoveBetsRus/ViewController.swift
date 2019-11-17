@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI //библиотека для отправки e-mail
+//Инструкция по отправке E-mail: https://www.youtube.com/watch?v=J-pn5V2jcfo&t=2s
 
 class ViewController: UIViewController {
 
