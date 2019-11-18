@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
+		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525822368B3D0002428AB /* AppDelegate.swift */; };
 		EDB525872368B3D0002428AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525862368B3D0002428AB /* ViewController.swift */; };
 		EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB525882368B3D0002428AB /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		EDB5257F2368B3D0002428AB /* iLoveBetsRus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLoveBetsRus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB525862368B3D0002428AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
 				EDB525902368B3D3002428AB /* Info.plist */,
+				ED54299E238303BB00F501F1 /* AboutUsViewController.swift */,
 			);
 			path = iLoveBetsRus;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */,
 				EDBE2061237337D500E206C9 /* Model.swift in Sources */,
 				EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */,
 				EDBE205F237337C800E206C9 /* Article.swift in Sources */,
