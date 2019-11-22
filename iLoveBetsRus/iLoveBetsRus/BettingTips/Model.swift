@@ -25,7 +25,7 @@ return urlPath
 func loadNews(completionHandler: (()->Void)?) {
   /*  let url = URL(string: "https://newsapi.org/v2/everything?q=bitcoin&from=2019-10-06&sortBy=publishedAt&apiKey=239de8b6b6ed404ebcb61b80dfcf7bbc") */
     
-    let url = URL(string: "https://ilovebets.ru/mynewsapi2019/")
+    let url = URL(string: "https://ilovebets.ru/myApp2019/ru/bettingTipsRus/")
     
     let session = URLSession(configuration: .default)
     

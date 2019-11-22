@@ -27,12 +27,12 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //https://ilovebets.ru/app/aboutUsRus/
-        //https://ilovebets.ru/app/helpRus/
-        //https://ilovebets.ru/app/currentStatRus/
                 
-                let URL = NSURL(string: "https://ilovebets.ru/app/currentStatRus/")
-                webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
+    let URL = NSURL(string: "https://ilovebets.ru/myApp2019/ru/aboutUsRus/")
+    webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
+        
+        
+
     }
     
 

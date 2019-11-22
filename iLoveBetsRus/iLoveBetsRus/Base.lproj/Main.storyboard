@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Help Us View Controller-->
+        <scene sceneID="xgf-2R-56U">
+            <objects>
+                <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="iLoveBetsRus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jjb-VB-jld"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kCj-K3-CTA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIt-Ic-bnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="541"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -50,6 +66,9 @@
                                 <state key="normal" image="5. Help">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lih-4P-Ldy">
                                 <rect key="frame" x="202" y="392" width="153" height="129"/>
@@ -67,6 +86,9 @@
                                 <state key="normal" image="2. Statistics">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iGG-G0-tQr" kind="show" id="LoY-Gg-Kvm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -105,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYt-xj-AnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647.826086956522" y="-222.55434782608697"/>
+            <point key="canvasLocation" x="1670" y="542"/>
         </scene>
         <!--One News View Controller-->
         <scene sceneID="iD3-1A-J6b">
@@ -161,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnW-q1-HhQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="460"/>
+            <point key="canvasLocation" x="2462" y="-223"/>
         </scene>
         <!--Прогнозы-->
         <scene sceneID="Rbh-Jp-6DW">
@@ -216,7 +238,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGD-mM-pNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="461"/>
+            <point key="canvasLocation" x="1648" y="-222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hka-8x-dbD">
@@ -235,6 +257,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW6-JC-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="814" y="-893"/>
+        </scene>
+        <!--Statistics View Controller-->
+        <scene sceneID="s4H-Vy-pnJ">
+            <objects>
+                <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="iLoveBetsRus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCM-sD-fdy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="a9u-1R-dYo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OCY-cY-9H1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Rp-2t-wNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="-893"/>
         </scene>
     </scenes>
     <resources>
