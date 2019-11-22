@@ -6,8 +6,9 @@
 //  Copyright © 2019 Roman Bobrov. All rights reserved.
 //
 
-import UIKit
 import WebKit
+import UIKit
+
 class AboutUsViewController: UIViewController, WKUIDelegate {
 
  var webView: WKWebView!
