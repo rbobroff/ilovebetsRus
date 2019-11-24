@@ -11,6 +11,11 @@ import UIKit
 
 class AboutUsViewController: UIViewController, WKUIDelegate {
 
+    //добавление заголовка
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "#О нас"
+    }
+    
  var webView: WKWebView!
 
  override func loadView() {

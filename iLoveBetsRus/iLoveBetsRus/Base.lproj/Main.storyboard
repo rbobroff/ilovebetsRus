@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1670" y="542"/>
         </scene>
-        <!--One News View Controller-->
+        <!--Прогнозы-->
         <scene sceneID="iD3-1A-J6b">
             <objects>
-                <viewController id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="iLoveBetsRus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="iLoveBetsRus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JF-me-xqW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="2462" y="-223"/>
         </scene>
-        <!--Прогнозы-->
+        <!--#Прогнозы-->
         <scene sceneID="Rbh-Jp-6DW">
             <objects>
                 <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="iLoveBetsRus" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,7 +224,7 @@
                             <outlet property="delegate" destination="yYx-sr-2tP" id="ip0-Ux-waG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Прогнозы" id="Fap-S9-YuI"/>
+                    <navigationItem key="navigationItem" title="#Прогнозы" id="Fap-S9-YuI"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="rRY-Th-pdF">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

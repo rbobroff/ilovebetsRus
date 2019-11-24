@@ -11,6 +11,11 @@ import UIKit
 
 class StatisticsViewController: UIViewController, WKUIDelegate {
 
+    //добавление заголовка
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "#Статистика"
+    }
+    
     var webView: WKWebView!
 
     override func loadView() {

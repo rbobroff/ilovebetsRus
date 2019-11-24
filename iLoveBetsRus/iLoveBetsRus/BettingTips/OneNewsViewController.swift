@@ -10,6 +10,12 @@ import UIKit
 
 class OneNewsViewController: UIViewController {
 
+    //добавление заголовка
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "#Прогнозы"
+    }
+    
+    
     //создаем переменную, в которую будем передавать из нашего TableViewController
     var article: Article!
     

@@ -11,6 +11,11 @@ import UIKit
 
 class HelpUsViewController: UIViewController, WKUIDelegate {
 
+    //добавление заголовка
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "#Справка"
+    }
+    
     var webView: WKWebView!
 
     override func loadView() {
