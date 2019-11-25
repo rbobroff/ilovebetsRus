@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase //при настройке push-уведомления
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure() //при настройке push-уведомления
+        
         
         //загружаем новости при загрузке приложения. использовали на начальных парах, чтоюы проверить, что новости загружаются и записываются в файл
         //loadNews()
