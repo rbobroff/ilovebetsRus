@@ -11,7 +11,7 @@
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
 		ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */; };
-		ED8536D5239AD37200BC408C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8536D4239AD37200BC408C /* GoogleService-Info.plist */; };
+		ED8B4CBF239AD46700A61FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */; };
 		EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525822368B3D0002428AB /* AppDelegate.swift */; };
 		EDB525872368B3D0002428AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525862368B3D0002428AB /* ViewController.swift */; };
 		EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB525882368B3D0002428AB /* Main.storyboard */; };
@@ -33,7 +33,7 @@
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUsViewController.swift; sourceTree = "<group>"; };
-		ED8536D4239AD37200BC408C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDB5257F2368B3D0002428AB /* Ставки ХП Спортивные Прогнозы.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ставки ХП Спортивные Прогнозы.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB525862368B3D0002428AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				ED1FF1DE236A02F00023F948 /* SupportingFiles */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
 				EDB525902368B3D3002428AB /* Info.plist */,
-				ED8536D4239AD37200BC408C /* GoogleService-Info.plist */,
+				ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */,
 			);
 			path = iLoveBetsRus;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB5258F2368B3D3002428AB /* LaunchScreen.storyboard in Resources */,
-				ED8536D5239AD37200BC408C /* GoogleService-Info.plist in Resources */,
+				ED8B4CBF239AD46700A61FAD /* GoogleService-Info.plist in Resources */,
 				EDB5258C2368B3D3002428AB /* Assets.xcassets in Resources */,
 				EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */,
 			);
