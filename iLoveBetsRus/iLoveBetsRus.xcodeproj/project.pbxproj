@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED096A00239C32FC00F88568 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0969FF239C32FC00F88568 /* ChatViewController.swift */; };
+		ED096A04239C3DEC00F88568 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED096A03239C3DEC00F88568 /* Constants.swift */; };
 		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
@@ -31,6 +32,7 @@
 		2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLoveBetsRus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0969FF239C32FC00F88568 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED096A02239C38E300F88568 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		ED096A03239C3DEC00F88568 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED10D595238D97DF00B9EC30 /* Ставки ХП Спортивные Прогнозы.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ставки ХП Спортивные Прогнозы.entitlements"; sourceTree = "<group>"; };
 		ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				ED0969FF239C32FC00F88568 /* ChatViewController.swift */,
+				ED096A03239C3DEC00F88568 /* Constants.swift */,
 			);
 			name = Chat;
 			path = "New Group";
@@ -282,6 +285,7 @@
 				ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */,
 				EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */,
 				ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */,
+				ED096A04239C3DEC00F88568 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
