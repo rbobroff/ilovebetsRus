@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED096A00239C32FC00F88568 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0969FF239C32FC00F88568 /* ChatViewController.swift */; };
 		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
@@ -28,6 +29,7 @@
 		1D91200137ABD4CDC6312B6C /* Pods-iLoveBetsRus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLoveBetsRus.debug.xcconfig"; path = "Target Support Files/Pods-iLoveBetsRus/Pods-iLoveBetsRus.debug.xcconfig"; sourceTree = "<group>"; };
 		2170E0722EF71E1FF3C5957D /* Pods-iLoveBetsRus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLoveBetsRus.release.xcconfig"; path = "Target Support Files/Pods-iLoveBetsRus/Pods-iLoveBetsRus.release.xcconfig"; sourceTree = "<group>"; };
 		2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLoveBetsRus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0969FF239C32FC00F88568 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED10D595238D97DF00B9EC30 /* Ставки ХП Спортивные Прогнозы.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ставки ХП Спортивные Прогнозы.entitlements"; sourceTree = "<group>"; };
 		ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,15 @@
 				2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED0969FE239C32B600F88568 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				ED0969FF239C32FC00F88568 /* ChatViewController.swift */,
+			);
+			name = Chat;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		ED1FF1DE236A02F00023F948 /* SupportingFiles */ = {
@@ -125,6 +136,7 @@
 		EDB525812368B3D0002428AB /* iLoveBetsRus */ = {
 			isa = PBXGroup;
 			children = (
+				ED0969FE239C32B600F88568 /* Chat */,
 				ED10D595238D97DF00B9EC30 /* Ставки ХП Спортивные Прогнозы.entitlements */,
 				EDB525822368B3D0002428AB /* AppDelegate.swift */,
 				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
@@ -259,6 +271,7 @@
 			files = (
 				ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */,
 				EDBE2061237337D500E206C9 /* Model.swift in Sources */,
+				ED096A00239C32FC00F88568 /* ChatViewController.swift in Sources */,
 				EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */,
 				EDBE205F237337C800E206C9 /* Article.swift in Sources */,
 				EDB525872368B3D0002428AB /* ViewController.swift in Sources */,
