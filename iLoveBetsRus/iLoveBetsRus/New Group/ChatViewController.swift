@@ -83,6 +83,17 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     }
     
     
+    //при нажатии кнопки отправить
+    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
+    {
+        let ref = Constants.refs.databaseChats.childByAutoId()
+        //создается словарь message
+        let message = ["sender_id": senderId, "name": senderDisplayName, "text": text]
+
+        ref.setValue(message)
+
+        finishSendingMessage()
+    }
     
     
     
