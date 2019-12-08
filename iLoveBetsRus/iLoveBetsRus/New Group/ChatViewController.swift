@@ -38,6 +38,31 @@ class ChatViewController: JSQMessagesViewController {
 collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
 collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
+       
+        //Observing Firebase For New Chat Messages
+        let query = Constants.refs.databaseChats.queryLimited(toLast: 10)
+
+        _ = query.observe(.childAdded, with: { [weak self] snapshot in
+
+            if  let data        = snapshot.value as? [String: String],
+                let id          = data["sender_id"],
+                let name        = data["name"],
+                let text        = data["text"],
+                !text.isEmpty
+            {
+                if let message = JSQMessage(senderId: id, displayName: name, text: text)
+                {
+                    self?.messages.append(message)
+
+                    self?.finishReceivingMessage()
+                }
+            }
+        })
+        
+        
+        
+        
+        
         
     } //закрытие viewDidLoad
     
