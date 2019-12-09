@@ -22,8 +22,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+        
+        //белая рамка вокруг кнопок
+        bettingTipsButton.layer.borderWidth = 2
+        bettingTipsButton.layer.borderColor = UIColor.white.cgColor
+        statisticsButton.layer.borderWidth = 2
+        statisticsButton.layer.borderColor = UIColor.white.cgColor
+        chatButton.layer.borderWidth = 2
+        chatButton.layer.borderColor = UIColor.white.cgColor
+        emailButton.layer.borderWidth = 2
+        emailButton.layer.borderColor = UIColor.white.cgColor
+        helpButton.layer.borderWidth = 2
+        helpButton.layer.borderColor = UIColor.white.cgColor
+        aboutUsButton.layer.borderWidth = 2
+        aboutUsButton.layer.borderColor = UIColor.white.cgColor
+        
+        
+    } //конец функции viewDidLoad
 
 
     
@@ -35,9 +50,6 @@ class ViewController: UIViewController {
         showMailComposer()
     }
     
-    
-    
-        
         func showMailComposer() {
         //проверяем, что устройство может отправлять e-mail:
             guard MFMailComposeViewController.canSendMail() else {
