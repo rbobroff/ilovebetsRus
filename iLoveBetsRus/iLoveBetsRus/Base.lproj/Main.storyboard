@@ -120,6 +120,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="JOH-zc-VPh"/>
+                    <connections>
+                        <outlet property="aboutUsButton" destination="lih-4P-Ldy" id="FJ2-eV-prc"/>
+                        <outlet property="bettingTipsButton" destination="uBP-K8-Wix" id="cGh-cI-jG6"/>
+                        <outlet property="chatButton" destination="ZCO-g1-1p3" id="3e5-Qg-CbC"/>
+                        <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
+                        <outlet property="helpButton" destination="N4C-3Q-fJ3" id="L4y-P7-Y65"/>
+                        <outlet property="statisticsButton" destination="WuE-nr-FZO" id="n7g-cM-IeP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

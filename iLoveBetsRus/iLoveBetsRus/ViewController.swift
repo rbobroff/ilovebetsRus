@@ -12,6 +12,14 @@ import MessageUI //библиотека для отправки e-mail
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bettingTipsButton: UIButton!
+    @IBOutlet weak var statisticsButton: UIButton!
+    @IBOutlet weak var chatButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
+    @IBOutlet weak var aboutUsButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,11 +28,15 @@ class ViewController: UIViewController {
 
     
     
+    
     //вызов почтового клиента при нажатии по кнопке
     @IBAction func emailButtonTapped(_ sender: Any) {
         //это необходимо тестировать на устройстве
         showMailComposer()
     }
+    
+    
+    
         
         func showMailComposer() {
         //проверяем, что устройство может отправлять e-mail:
