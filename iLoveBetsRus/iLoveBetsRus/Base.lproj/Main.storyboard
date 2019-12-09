@@ -59,10 +59,10 @@
                                     <segue destination="yYx-sr-2tP" kind="show" id="G5h-Um-auu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-g1-1p3">
-                                <rect key="frame" x="9" y="273" width="174" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-g1-1p3">
+                                <rect key="frame" x="20" y="277" width="153" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Архив">
+                                <state key="normal" image="3. Chat">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -77,16 +77,6 @@
                                 </state>
                                 <connections>
                                     <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qt1-WH-iXJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-3Q-fJ3">
-                                <rect key="frame" x="20" y="392" width="153" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="5. Help">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lih-4P-Ldy">
@@ -107,6 +97,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="iGG-G0-tQr" kind="show" id="LoY-Gg-Kvm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-3Q-fJ3">
+                                <rect key="frame" x="41" y="439" width="153" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="5. Help">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -297,6 +297,7 @@
     <resources>
         <image name="1. BettingTips" width="152.5" height="129"/>
         <image name="2. Statistics" width="101.66666412353516" height="86"/>
+        <image name="3. Chat" width="153" height="110"/>
         <image name="4. E-Mail" width="101.66666412353516" height="86"/>
         <image name="5. Help" width="101.66666412353516" height="86"/>
         <image name="6. AboutUS" width="101.66666412353516" height="86"/>
