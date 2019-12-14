@@ -20,11 +20,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var aboutUsButton: UIButton!
     
     
+    //темный StatusBar на главном экране
+ //   override func viewDidAppear(_ animated: Bool) {
+      // 1
+  //    let nav = self.navigationController?.navigationBar
+      // 2
+ //     nav?.barStyle = UIBarStyle.black
+ //   }
     
     //скрывать navigation bar (или показывать)
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
+ //     override func viewWillAppear(_ animated: Bool) {
+ //   self.navigationController?.isNavigationBarHidden = true
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -43,9 +43,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //при настройке push-уведомлений
     let gcmMessageIDKey = "gcm.message_id"
+    
+    //функция для смены цвета
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+          let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+          let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+          let blue = CGFloat(rgbValue & 0xFF)/256.0
+
+          return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+      }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+  
+        
+        //цвет NavigationBar
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = uicolorFromHex(rgbValue: 0xffffff)
+        navigationBarAppearace.barTintColor = uicolorFromHex(rgbValue: 0x034517)
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        //Change status bar color
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        
         
         //для push notification:
         if #available(iOS 10.0, *) {
@@ -170,3 +193,5 @@ extension AppDelegate: MessagingDelegate {
       // Note: This callback is fired at each app startup and whenever a new token is generated.
     }
 }
+
+
