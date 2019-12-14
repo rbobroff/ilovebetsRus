@@ -28,10 +28,12 @@ class ViewController: UIViewController {
  //     nav?.barStyle = UIBarStyle.black
  //   }
     
-    //скрывать navigation bar (или показывать)
- //     override func viewWillAppear(_ animated: Bool) {
- //   self.navigationController?.isNavigationBarHidden = true
-//    }
+    
+   // скрывать navigation bar (или показывать)
+     override func viewWillAppear(_ animated: Bool) {
+   self.navigationController?.isNavigationBarHidden = true
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

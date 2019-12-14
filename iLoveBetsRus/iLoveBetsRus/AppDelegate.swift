@@ -67,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         //Change status bar color
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+             UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
         
         //для push notification:
