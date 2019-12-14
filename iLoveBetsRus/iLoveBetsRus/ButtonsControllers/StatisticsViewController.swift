@@ -14,7 +14,11 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "#Статистика"
+       
+       //добавление строки навигации при загрузке ViewControllera
+    self.navigationController?.isNavigationBarHidden = false
     }
+    
     
     var webView: WKWebView!
 
@@ -29,6 +33,8 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+
         
         let URL = NSURL(string: "https://ilovebets.ru/myApp2019/ru/StatisticsRus/currentStatRus")
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)

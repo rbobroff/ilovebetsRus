@@ -14,6 +14,8 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "#О нас"
+              //добавление строки навигации при загрузке ViewControllera
+    self.navigationController?.isNavigationBarHidden = false
     }
     
  var webView: WKWebView!

@@ -21,8 +21,19 @@ class TableViewController: UITableViewController {
         }
     }
     
+    
+    //добавление заголовка
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "#Прогнозы"
+               //добавление строки навигации при загрузке ViewControllera
+    self.navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        
         //при загрузке нашего контроллера с таблицей запускаем метод загрузки новостей
         loadNews {
             //обновляем наше табличное представление и это надо делать в основном потоке с помощью dispatchQueue

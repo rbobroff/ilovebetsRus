@@ -20,6 +20,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var aboutUsButton: UIButton!
     
     
+    
+    //скрывать navigation bar (или показывать)
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

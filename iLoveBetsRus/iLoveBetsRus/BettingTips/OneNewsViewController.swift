@@ -13,6 +13,8 @@ class OneNewsViewController: UIViewController {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "#Прогнозы"
+               //добавление строки навигации при загрузке ViewControllera
+    self.navigationController?.isNavigationBarHidden = false
     }
     
     
@@ -29,6 +31,8 @@ class OneNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
 //на основании переменной article, в которую записываются данные из структуру Article, заполняем все поля для экрана с одной новостью
         labelTitle.text = article.title
         labelDescription.text = article.description

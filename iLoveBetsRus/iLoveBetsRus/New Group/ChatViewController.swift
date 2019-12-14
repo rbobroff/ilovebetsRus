@@ -12,6 +12,11 @@ import UIKit
 import JSQMessagesViewController
 
 class ChatViewController: JSQMessagesViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+       //добавление строки навигации при загрузке ViewControllera
+    self.navigationController?.isNavigationBarHidden = false
+    }
 
     //mwssages сохраняет в себе множественные объекты из массима JSQMessage, к которым позже можно обращаться по индексам
     var messages = [JSQMessage]()

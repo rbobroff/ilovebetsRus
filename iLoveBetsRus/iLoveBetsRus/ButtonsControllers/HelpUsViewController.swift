@@ -14,6 +14,9 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "#Справка"
+               //добавление строки навигации при загрузке ViewControllera
+         self.navigationController?.isNavigationBarHidden = false
+
     }
     
     var webView: WKWebView!
@@ -28,6 +31,9 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+               //добавление строки навигации при загрузке ViewControllera
+
+        
 
        let URL = NSURL(string: "https://ilovebets.ru/myApp2019/ru/helprus/")
        webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
