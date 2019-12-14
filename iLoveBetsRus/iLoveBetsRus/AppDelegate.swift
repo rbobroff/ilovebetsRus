@@ -45,14 +45,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let gcmMessageIDKey = "gcm.message_id"
     
     
+    
+    
     //функция для смены цвета NavigationBar
     func UIColorFromHex(rgbValue:UInt32)->UIColor{
           let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
           let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
           let blue = CGFloat(rgbValue & 0xFF)/256.0
-
           return UIColor(red:red, green:green, blue:blue, alpha:1.0)
       }
+    
+    
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -61,15 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
   
         
-        //цвет NavigationBar
+        //цвет NavigationBar, кнопка "Назад"
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColorFromHex(rgbValue: 0xffffff)
-        navigationBarAppearace.barTintColor = UIColorFromHex(rgbValue: 0x034517)
-        // change navigation item title color
+        //цвет фона NavigationBar
+        navigationBarAppearace.barTintColor = UIColorFromHex(rgbValue: 0x161c1f)
+        // цвет заголовка NavigationBar
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        //принудительная смета цвета StatusBar, но метод Deprecated
+        //принудительная смета цвета StatusBar, но метод Deprecated. В настройках приложения выставлено по умолчанию StatusBar = Ligh. В Info.plist добавлена запись "View controller-based status bar appearance" = NO
       //  UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
       //  UIApplication.shared.statusBarStyle = .lightContent
+        
+        
+        
+        
         
         //для push notification:
         if #available(iOS 10.0, *) {
