@@ -44,8 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //при настройке push-уведомлений
     let gcmMessageIDKey = "gcm.message_id"
     
-    //функция для смены цвета
-    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+    
+    //функция для смены цвета NavigationBar
+    func UIColorFromHex(rgbValue:UInt32)->UIColor{
           let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
           let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
           let blue = CGFloat(rgbValue & 0xFF)/256.0
@@ -61,14 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
         
         //цвет NavigationBar
-        var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = uicolorFromHex(rgbValue: 0xffffff)
-        navigationBarAppearace.barTintColor = uicolorFromHex(rgbValue: 0x034517)
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColorFromHex(rgbValue: 0xffffff)
+        navigationBarAppearace.barTintColor = UIColorFromHex(rgbValue: 0x034517)
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        //Change status bar color
-             UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
-        
+        //принудительная смета цвета StatusBar, но метод Deprecated
+      //  UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+      //  UIApplication.shared.statusBarStyle = .lightContent
         
         //для push notification:
         if #available(iOS 10.0, *) {
