@@ -39,7 +39,7 @@
 		ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUsViewController.swift; sourceTree = "<group>"; };
 		ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EDB5257F2368B3D0002428AB /* Ставки ХП Спортивные Прогнозы.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ставки ХП Спортивные Прогнозы.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB5257F2368B3D0002428AB /* нСтавки ХП Спортивные Прогнозы.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "нСтавки ХП Спортивные Прогнозы.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB525862368B3D0002428AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDB525892368B3D0002428AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		EDB525802368B3D0002428AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDB5257F2368B3D0002428AB /* Ставки ХП Спортивные Прогнозы.app */,
+				EDB5257F2368B3D0002428AB /* нСтавки ХП Спортивные Прогнозы.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			);
 			name = iLoveBetsRus;
 			productName = iLoveBetsRus;
-			productReference = EDB5257F2368B3D0002428AB /* Ставки ХП Спортивные Прогнозы.app */;
+			productReference = EDB5257F2368B3D0002428AB /* нСтавки ХП Спортивные Прогнозы.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +442,7 @@
 				);
 				MARKETING_VERSION = 16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapps.bettingadvisor;
-				PRODUCT_NAME = "Ставки ХП Спортивные Прогнозы";
+				PRODUCT_NAME = "нСтавки ХП Спортивные Прогнозы";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -466,7 +466,7 @@
 				);
 				MARKETING_VERSION = 16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapps.bettingadvisor;
-				PRODUCT_NAME = "Ставки ХП Спортивные Прогнозы";
+				PRODUCT_NAME = "нСтавки ХП Спортивные Прогнозы";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
