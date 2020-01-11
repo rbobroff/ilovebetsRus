@@ -99,18 +99,16 @@
                                     <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
-                                <rect key="frame" x="0.0" y="38" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
+                                <rect key="frame" x="16" y="38" width="343" height="41"/>
                                 <string key="text">ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК
 В МИРЕ СПОРТИВНОГО бЕТТИНГА</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iLoveBets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-Vi-Eeg">
-                                <rect key="frame" x="3" y="80" width="375" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iLoveBets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-Vi-Eeg">
+                                <rect key="frame" x="16" y="80" width="343" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -125,9 +123,8 @@
                                     <segue destination="iGG-G0-tQr" kind="show" id="LoY-Gg-Kvm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Спортивные                             прогнозы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
-                                <rect key="frame" x="0.0" y="570" width="369" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спортивные прогнозы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
+                                <rect key="frame" x="71" y="592" width="233" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -135,10 +132,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XMk-Vi-Eeg" secondAttribute="trailing" constant="16" id="6mU-pj-i12"/>
+                            <constraint firstItem="XMk-Vi-Eeg" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="1" id="8Fk-WS-4Mc"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="8pe-Je-RLJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PMF-W3-YlE" secondAttribute="bottom" constant="20" id="GmL-bX-eH0"/>
+                            <constraint firstItem="Pdb-3d-KjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NaY-Hr-zzU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pdb-3d-KjB" secondAttribute="trailing" constant="16" id="flT-UJ-mBK"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fqc-ga-kTN"/>
+                            <constraint firstItem="XMk-Vi-Eeg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gwJ-9d-aG6"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lMz-Qf-1Fg"/>
+                            <constraint firstItem="Pdb-3d-KjB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="mfF-kZ-Hzc"/>
+                            <constraint firstItem="PMF-W3-YlE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="pBa-pN-piJ"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="spf-E0-SQv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PMF-W3-YlE" secondAttribute="trailing" constant="71" id="uzs-WI-t7N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -155,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.59420289855075" y="-222.99107142857142"/>
+            <point key="canvasLocation" x="810.39999999999998" y="-223.53823088455775"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="RZU-No-Rto">
