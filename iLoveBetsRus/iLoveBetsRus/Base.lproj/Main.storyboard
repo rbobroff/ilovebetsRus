@@ -323,12 +323,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1. BettingTips" width="152.5" height="129"/>
-        <image name="2. Statistics" width="152.5" height="129"/>
-        <image name="3. Chat" width="152.5" height="129"/>
-        <image name="4. E-Mail" width="152.5" height="129"/>
-        <image name="5. Help" width="152.5" height="129"/>
-        <image name="6. AboutUS" width="152.5" height="129"/>
+        <image name="1. BettingTips" width="305" height="258"/>
+        <image name="2. Statistics" width="305" height="258"/>
+        <image name="3. Chat" width="305" height="258"/>
+        <image name="4. E-Mail" width="305" height="258"/>
+        <image name="5. Help" width="305" height="258"/>
+        <image name="6. AboutUS" width="305" height="258"/>
         <image name="MainScreenBackground" width="320" height="568"/>
     </resources>
 </document>
