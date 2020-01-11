@@ -53,7 +53,13 @@ class ViewController: UIViewController {
         helpButton.layer.borderColor = UIColor.white.cgColor
         aboutUsButton.layer.borderWidth = 2
         aboutUsButton.layer.borderColor = UIColor.white.cgColor
+      
+    //высота экрана iphone SE = 568.0
+    //высота экрана iphone 7 = 667.0
+    //высота экрана iphone X = 812.0
         
+        var h = UIScreen.main.bounds.height
+        print("Высота экрана = ",h)
         
     } //конец функции viewDidLoad
 
