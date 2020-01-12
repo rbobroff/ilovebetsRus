@@ -185,10 +185,14 @@
                     <connections>
                         <outlet property="aboutUsButton" destination="lih-4P-Ldy" id="FJ2-eV-prc"/>
                         <outlet property="bettingTipsButton" destination="uBP-K8-Wix" id="cGh-cI-jG6"/>
+                        <outlet property="bettingTipsButtonTopConstraint" destination="Kbs-2u-knd" id="Cd7-ft-Bdb"/>
                         <outlet property="chatButton" destination="ZCO-g1-1p3" id="3e5-Qg-CbC"/>
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
                         <outlet property="helpButton" destination="N4C-3Q-fJ3" id="L4y-P7-Y65"/>
+                        <outlet property="sportBetsLabel" destination="PMF-W3-YlE" id="bPK-jM-LmP"/>
                         <outlet property="statisticsButton" destination="WuE-nr-FZO" id="n7g-cM-IeP"/>
+                        <outlet property="statisticsButtonTopConstraint" destination="hr2-JV-6pt" id="8j8-y3-IEG"/>
+                        <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

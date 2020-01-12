@@ -20,7 +20,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var aboutUsButton: UIButton!
-    
+    //аутлет label внизу на главном экране = Спортивные прогнозы:
+    @IBOutlet weak var sportBetsLabel: UILabel!
+    //аутлет верхнего Constraint ^ для label = Ваш персональный помощник в мире спортивного беттинга:
+    @IBOutlet weak var upConstraintYourPersonalSportsBettingAdvisor: NSLayoutConstraint!
+      //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
+    @IBOutlet weak var bettingTipsButtonTopConstraint: NSLayoutConstraint!
+      //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
+    @IBOutlet weak var statisticsButtonTopConstraint: NSLayoutConstraint!
     
     //темный StatusBar на главном экране
  //   override func viewDidAppear(_ animated: Bool) {
@@ -55,13 +62,39 @@ class ViewController: UIViewController {
         aboutUsButton.layer.borderColor = UIColor.white.cgColor
       
     //высота экрана iphone SE = 568.0
+    //высота экрана iphone 5S = 568.0
+    //высота экрана iphone 6 = 667.0
+    //высота экрана iphone 6 Plus = 736.0
+    //высота экрана iphone 6S = 667.0
+    //высота экрана iphone 6S Plus = 736.0
     //высота экрана iphone 7 = 667.0
+    //высота экрана iphone 7 Plus = 736.0
+    //высота экрана iphone 8 = 667.0
+    //высота экрана iphone 8 Plus = 736.0
     //высота экрана iphone X = 812.0
+    //высота экрана iphone 11 = 896.0
+    //высота экрана iphone 11 Pro = 812.0
+    //высота экрана iphone 11 Pro Max = 896.0
         
-        var h = UIScreen.main.bounds.height
-        print("Высота экрана = ",h)
+        //проверяем размер экрана
+   //     var h = UIScreen.main.bounds.height
+   //     print("Высота экрана = ",h)
+       
         
-  //  bettingTipsButton.widthAnchor = 900
+        //если размер экрана не iphone 5S и SE, то показывать нижний label на главном экране = "Спортивные прогнозы"
+        if UIScreen.main.bounds.height != 568 {
+            sportBetsLabel.isHidden = false
+        }
+        
+        //Для iPhone 6, 6S, 7, 8 (с высотой экрана 667.0) - настроены Constraints
+        if UIScreen.main.bounds.height == 667 {
+            //top Constraint для верхнего label
+            upConstraintYourPersonalSportsBettingAdvisor.constant = 17
+            //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
+            bettingTipsButtonTopConstraint.constant = 88
+            statisticsButtonTopConstraint.constant = 88
+        }
+
         
         
     } //конец функции viewDidLoad
