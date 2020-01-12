@@ -61,6 +61,9 @@ class ViewController: UIViewController {
         var h = UIScreen.main.bounds.height
         print("Высота экрана = ",h)
         
+  //  bettingTipsButton.widthAnchor = 900
+        
+        
     } //конец функции viewDidLoad
 
 

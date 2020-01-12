@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDV-ab-oJY">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Jjb-VB-jld"/>
@@ -29,7 +29,7 @@
             <objects>
                 <viewController id="j5s-k1-m0o" customClass="ChatViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHf-7H-uIA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sej-Ef-nF0"/>
@@ -45,23 +45,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ae8-bm-Ufl">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="646"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="745"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-K8-Wix">
-                                <rect key="frame" x="3" y="167" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="1. BettingTips"/>
-                                <connections>
-                                    <segue destination="yYx-sr-2tP" kind="show" id="G5h-Um-auu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-g1-1p3">
-                                <rect key="frame" x="3" y="299" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-g1-1p3">
+                                <rect key="frame" x="3" y="283" width="157" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="SBh-I2-2E0"/>
+                                    <constraint firstAttribute="height" constant="129" id="VDt-8s-pz3"/>
+                                </constraints>
                                 <state key="normal" image="3. Chat">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -69,9 +64,12 @@
                                     <segue destination="j5s-k1-m0o" kind="show" id="hqH-pK-Crj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-pS-pvF">
-                                <rect key="frame" x="189" y="299" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-pS-pvF">
+                                <rect key="frame" x="215" y="283" width="157" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="Gg0-oE-kTB"/>
+                                    <constraint firstAttribute="width" constant="157" id="OOh-3C-fMQ"/>
+                                </constraints>
                                 <state key="normal" image="4. E-Mail">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -79,19 +77,12 @@
                                     <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qt1-WH-iXJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lih-4P-Ldy">
-                                <rect key="frame" x="189" y="431" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="6. AboutUS">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="XgA-X0-SKs" kind="show" id="2Hp-3P-ko1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-3Q-fJ3">
-                                <rect key="frame" x="3" y="431" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-3Q-fJ3">
+                                <rect key="frame" x="3" y="415" width="157" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="PGJ-68-PfL"/>
+                                    <constraint firstAttribute="width" constant="157" id="oNs-K0-dws"/>
+                                </constraints>
                                 <state key="normal" image="5. Help">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -100,7 +91,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
-                                <rect key="frame" x="16" y="38" width="288" height="41"/>
+                                <rect key="frame" x="16" y="38" width="343" height="41"/>
                                 <string key="text">ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК
 В МИРЕ СПОРТИВНОГО бЕТТИНГА</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -108,14 +99,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iLoveBets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-Vi-Eeg">
-                                <rect key="frame" x="16" y="80" width="288" height="77"/>
+                                <rect key="frame" x="16" y="80" width="343" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-nr-FZO">
-                                <rect key="frame" x="189" y="167" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-nr-FZO">
+                                <rect key="frame" x="215" y="151" width="157" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="HBh-en-XCh"/>
+                                    <constraint firstAttribute="height" constant="129" id="Lgh-r8-HOQ"/>
+                                </constraints>
                                 <state key="normal" image="2. Statistics">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -123,27 +117,68 @@
                                     <segue destination="iGG-G0-tQr" kind="show" id="LoY-Gg-Kvm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спортивные прогнозы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
-                                <rect key="frame" x="71" y="493" width="178" height="55"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спортивные прогнозы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
+                                <rect key="frame" x="71" y="592" width="233" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lih-4P-Ldy">
+                                <rect key="frame" x="215" y="415" width="157" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="WbK-z5-FPf"/>
+                                    <constraint firstAttribute="height" constant="129" id="fXc-ai-iMY"/>
+                                </constraints>
+                                <state key="normal" image="6. AboutUS">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XgA-X0-SKs" kind="show" id="2Hp-3P-ko1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-K8-Wix">
+                                <rect key="frame" x="3" y="151" width="157" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="OO1-9X-3gA"/>
+                                    <constraint firstAttribute="width" constant="157" id="qPt-i8-b23"/>
+                                </constraints>
+                                <state key="normal" image="1. BettingTips"/>
+                                <connections>
+                                    <segue destination="yYx-sr-2tP" kind="show" id="G5h-Um-auu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XMk-Vi-Eeg" secondAttribute="trailing" constant="16" id="6mU-pj-i12"/>
+                            <constraint firstItem="N4C-3Q-fJ3" firstAttribute="top" secondItem="ZCO-g1-1p3" secondAttribute="bottom" constant="3" id="7Ts-hg-AwG"/>
                             <constraint firstItem="XMk-Vi-Eeg" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="1" id="8Fk-WS-4Mc"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="8pe-Je-RLJ"/>
+                            <constraint firstItem="lih-4P-Ldy" firstAttribute="top" secondItem="iq7-pS-pvF" secondAttribute="bottom" constant="3" id="Cf0-mF-33N"/>
+                            <constraint firstItem="ZCO-g1-1p3" firstAttribute="width" secondItem="iq7-pS-pvF" secondAttribute="width" id="E3B-Vr-sgW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PMF-W3-YlE" secondAttribute="bottom" constant="20" id="GmL-bX-eH0"/>
+                            <constraint firstItem="ZCO-g1-1p3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="Jxe-a5-yR1"/>
+                            <constraint firstItem="uBP-K8-Wix" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="72" id="Kbs-2u-knd"/>
                             <constraint firstItem="Pdb-3d-KjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NaY-Hr-zzU"/>
+                            <constraint firstItem="uBP-K8-Wix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="Wgl-Ik-beb"/>
+                            <constraint firstItem="lih-4P-Ldy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-3" id="XjF-Ym-NFe"/>
+                            <constraint firstItem="N4C-3Q-fJ3" firstAttribute="width" secondItem="lih-4P-Ldy" secondAttribute="width" id="dgI-Qz-tHD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pdb-3d-KjB" secondAttribute="trailing" constant="16" id="flT-UJ-mBK"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fqc-ga-kTN"/>
+                            <constraint firstItem="ZCO-g1-1p3" firstAttribute="top" secondItem="uBP-K8-Wix" secondAttribute="bottom" constant="3" id="gL7-Wj-Zxe"/>
                             <constraint firstItem="XMk-Vi-Eeg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gwJ-9d-aG6"/>
+                            <constraint firstItem="WuE-nr-FZO" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="72" id="hr2-JV-6pt"/>
+                            <constraint firstItem="uBP-K8-Wix" firstAttribute="width" secondItem="WuE-nr-FZO" secondAttribute="width" id="isR-GN-KzJ"/>
+                            <constraint firstItem="uBP-K8-Wix" firstAttribute="height" secondItem="ZCO-g1-1p3" secondAttribute="height" id="kOu-OO-gND"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lMz-Qf-1Fg"/>
                             <constraint firstItem="Pdb-3d-KjB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="mfF-kZ-Hzc"/>
                             <constraint firstItem="PMF-W3-YlE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="pBa-pN-piJ"/>
+                            <constraint firstItem="WuE-nr-FZO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-3" id="pYM-Hi-LjS"/>
+                            <constraint firstItem="iq7-pS-pvF" firstAttribute="top" secondItem="WuE-nr-FZO" secondAttribute="bottom" constant="3" id="qx9-Bq-DST"/>
+                            <constraint firstItem="N4C-3Q-fJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="sGU-gp-l1O"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="spf-E0-SQv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iq7-pS-pvF" secondAttribute="trailing" constant="3" id="stD-Fs-8ul"/>
+                            <constraint firstItem="ZCO-g1-1p3" firstAttribute="height" secondItem="N4C-3Q-fJ3" secondAttribute="height" id="u1D-2U-CWJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PMF-W3-YlE" secondAttribute="trailing" constant="71" id="uzs-WI-t7N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -161,14 +196,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810.39999999999998" y="-223.53823088455775"/>
+            <point key="canvasLocation" x="810" y="-223.94366197183098"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="RZU-No-Rto">
             <objects>
                 <viewController id="XgA-X0-SKs" customClass="AboutUsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HE8-S9-S1K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hxE-kz-BHD"/>
@@ -184,11 +219,11 @@
             <objects>
                 <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JF-me-xqW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T49-9W-h1i">
-                                <rect key="frame" x="26" y="215" width="278" height="20.5"/>
+                                <rect key="frame" x="26" y="314" width="333" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -198,10 +233,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-GX-SQ4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-xP-PjE">
-                                <rect key="frame" x="26" y="266.5" width="278" height="20.5"/>
+                                <rect key="frame" x="26" y="365.5" width="333" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -240,15 +275,15 @@
             <objects>
                 <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygR-7M-hPu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="aBs-wd-CZh" detailTextLabel="5mF-oi-s4p" style="IBUITableViewCellStyleSubtitle" id="rRT-Pa-jmB">
-                                <rect key="frame" x="0.0" y="28" width="320" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rRT-Pa-jmB" id="vH3-EQ-Vkw">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aBs-wd-CZh">
@@ -296,7 +331,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qDV-ab-oJY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0G-xv-gZD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -316,7 +351,7 @@
             <objects>
                 <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCM-sD-fdy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a9u-1R-dYo"/>
