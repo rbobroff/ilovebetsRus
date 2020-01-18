@@ -29,6 +29,14 @@ class ViewController: UIViewController {
       //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
     @IBOutlet weak var statisticsButtonTopConstraint: NSLayoutConstraint!
     
+    //аутлет левого Constraint для нижнего label "Спортивные прогнозы" или "SportBettingTips"
+    @IBOutlet weak var sportBetsLabelLeftConstraint: NSLayoutConstraint!
+    
+        //аутлет правого Constraint для нижнего label "Спортивные прогнозы" или "SportBettingTips"
+    @IBOutlet weak var sportBetsLabelRightConstraint: NSLayoutConstraint!
+    
+    
+    
     //темный StatusBar на главном экране
  //   override func viewDidAppear(_ animated: Bool) {
       // 1
@@ -113,6 +121,9 @@ class ViewController: UIViewController {
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 111
             statisticsButtonTopConstraint.constant = 111
+            //left right Constraint для нижнего label "Спортивные прогнозы" "Sport Betting Tips"
+            sportBetsLabelLeftConstraint.constant = 100
+            sportBetsLabelRightConstraint.constant = 100
         }
         
         

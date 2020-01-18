@@ -190,6 +190,8 @@
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
                         <outlet property="helpButton" destination="N4C-3Q-fJ3" id="L4y-P7-Y65"/>
                         <outlet property="sportBetsLabel" destination="PMF-W3-YlE" id="bPK-jM-LmP"/>
+                        <outlet property="sportBetsLabelLeftConstraint" destination="pBa-pN-piJ" id="Ses-Av-ipl"/>
+                        <outlet property="sportBetsLabelRightConstraint" destination="uzs-WI-t7N" id="kZO-B6-haP"/>
                         <outlet property="statisticsButton" destination="WuE-nr-FZO" id="n7g-cM-IeP"/>
                         <outlet property="statisticsButtonTopConstraint" destination="hr2-JV-6pt" id="8j8-y3-IEG"/>
                         <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
