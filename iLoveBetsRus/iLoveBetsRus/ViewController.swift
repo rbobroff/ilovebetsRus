@@ -129,12 +129,18 @@ class ViewController: UIViewController {
         
         //Для iPhone X, 11pro (с высотой экрана 812.0) - настроены Constraints
             if UIScreen.main.bounds.height == 812 {
-
-                //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
                 bettingTipsButtonTopConstraint.constant = 111
                 statisticsButtonTopConstraint.constant = 111
             }
         
+        
+        //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0) - настроены Constraints
+        if UIScreen.main.bounds.height == 896 {
+            bettingTipsButtonTopConstraint.constant = 161
+            statisticsButtonTopConstraint.constant = 161
+            sportBetsLabelLeftConstraint.constant = 100
+            sportBetsLabelRightConstraint.constant = 100
+        }
         
         
         
