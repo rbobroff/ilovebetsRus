@@ -86,15 +86,47 @@ class ViewController: UIViewController {
             sportBetsLabel.isHidden = false
         }
         
+        //Для iPhone 5S, SE (с высотой экрана 568.0) - настроены Constraints
+        if UIScreen.main.bounds.height == 568 {
+             //top Constraint для верхнего label
+    upConstraintYourPersonalSportsBettingAdvisor.constant = 17
+            //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
+            bettingTipsButtonTopConstraint.constant = 93
+            statisticsButtonTopConstraint.constant = 93
+        }
+        
         //Для iPhone 6, 6S, 7, 8 (с высотой экрана 667.0) - настроены Constraints
         if UIScreen.main.bounds.height == 667 {
+            
             //top Constraint для верхнего label
-            upConstraintYourPersonalSportsBettingAdvisor.constant = 17
+    upConstraintYourPersonalSportsBettingAdvisor.constant = 17
+            
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 88
             statisticsButtonTopConstraint.constant = 88
         }
 
+        
+        //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 667.0) - настроены Constraints
+        if UIScreen.main.bounds.height == 736 {
+
+            //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
+            bettingTipsButtonTopConstraint.constant = 111
+            statisticsButtonTopConstraint.constant = 111
+        }
+        
+        
+        //Для iPhone X, 11pro (с высотой экрана 812.0) - настроены Constraints
+            if UIScreen.main.bounds.height == 812 {
+
+                //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
+                bettingTipsButtonTopConstraint.constant = 111
+                statisticsButtonTopConstraint.constant = 111
+            }
+        
+        
+        
+        
         
         
     } //конец функции viewDidLoad
