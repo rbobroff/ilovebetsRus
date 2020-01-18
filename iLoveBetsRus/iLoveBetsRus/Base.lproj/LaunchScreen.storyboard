@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="2yx-Ki-Xkl">
-                                <rect key="frame" x="0.0" y="-22" width="414" height="940"/>
+                                <rect key="frame" x="0.0" y="-34" width="414" height="964"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спортивные прогнозы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iMZ-Bc-wJZ">
                                 <rect key="frame" x="16" y="267" width="382" height="372"/>
@@ -27,14 +27,14 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="2yx-Ki-Xkl" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-22" id="8kH-gv-t7C"/>
+                            <constraint firstItem="2yx-Ki-Xkl" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-34" id="8kH-gv-t7C"/>
                             <constraint firstItem="iMZ-Bc-wJZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="223" id="BlG-1t-tRB"/>
                             <constraint firstItem="iMZ-Bc-wJZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ELT-jb-AmZ"/>
                             <constraint firstItem="2yx-Ki-Xkl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WKH-4l-MXR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iMZ-Bc-wJZ" secondAttribute="bottom" constant="223" id="bsP-Sd-oQ1"/>
                             <constraint firstItem="2yx-Ki-Xkl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e1L-nA-RkE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iMZ-Bc-wJZ" secondAttribute="trailing" constant="16" id="hit-n0-Wph"/>
-                            <constraint firstAttribute="bottom" secondItem="2yx-Ki-Xkl" secondAttribute="bottom" constant="-22" id="yXD-TO-ZJL"/>
+                            <constraint firstAttribute="bottom" secondItem="2yx-Ki-Xkl" secondAttribute="bottom" constant="-34" id="yXD-TO-ZJL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

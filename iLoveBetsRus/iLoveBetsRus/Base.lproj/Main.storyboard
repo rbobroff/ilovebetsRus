@@ -367,7 +367,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1. BettingTips" width="101.66666412353516" height="86"/>
+        <image name="1. BettingTips" width="152.5" height="129"/>
         <image name="2. Statistics" width="305" height="258"/>
         <image name="3. Chat" width="305" height="258"/>
         <image name="4. E-Mail" width="305" height="258"/>
