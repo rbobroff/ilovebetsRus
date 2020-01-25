@@ -36,7 +36,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
     
 
         
-        let URL = NSURL(string: "https://ilovebets.ru/myApp2019/ru/StatisticsRus/currentStatRus")
+        let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/")
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
        
     }

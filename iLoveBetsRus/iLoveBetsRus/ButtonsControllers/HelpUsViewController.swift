@@ -35,7 +35,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
 
         
 
-       let URL = NSURL(string: "https://ilovebets.ru/myApp2019/ru/helprus/")
+       let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/helpRus/")
        webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
         
     }
