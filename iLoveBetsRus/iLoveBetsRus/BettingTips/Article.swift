@@ -35,6 +35,8 @@ struct Article {
     var url: String
     var urlToImage: String
     var publishedAt: String
+    var content: String
+    
     var sourceName: String
     
     //метод-конструктор в который будем передавать словарь. ПО КЛЮЧАМ ИЗ СТАТЬИ БУДЕМ ПЕРЕДВАТЬ ЗНАЧЕНИЯ!!!
@@ -51,6 +53,7 @@ struct Article {
         url = dictionary["url"] as? String ?? ""
         urlToImage = dictionary["urlToImage"] as? String ?? ""
         publishedAt = dictionary["publishedAt"] as? String ?? ""
+        content = dictionary["content"] as? String ?? ""
         
         //sourceName сделан, как словарь на ресурсе newsapi.org. поэтому к одному из значений этого словаря обращаемся по одному из ключей:
         /*source": {

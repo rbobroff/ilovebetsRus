@@ -26,16 +26,34 @@ class OneNewsViewController: UIViewController {
     
  
     @IBOutlet weak var imageView: UIImageView!
+    //Название Чемпионата
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    
+    //дата прогноза
+    @IBOutlet weak var publishedAt: UILabel!
+    
+    //команды
+    @IBOutlet weak var url: UILabel!
+    
+    //ставка, tip
+    @IBOutlet weak var author: UILabel!
+    
+    //коэффициент
+    @IBOutlet weak var content: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
 //на основании переменной article, в которую записываются данные из структуру Article, заполняем все поля для экрана с одной новостью
-        labelTitle.text = article.title
+        labelTitle.text = article.title //чемпионат
         labelDescription.text = article.description
+        publishedAt.text = "Начало: " + article.publishedAt
+        url.text = article.url
+        author.text = article.author
+        content.text = article.content
         
  //       urlImage.text = article.urlToImage
  
