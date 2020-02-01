@@ -26,6 +26,7 @@ class OneNewsViewController: UIViewController {
     
  
     @IBOutlet weak var imageView: UIImageView!
+    
     //Название Чемпионата
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!

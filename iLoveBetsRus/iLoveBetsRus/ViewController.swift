@@ -71,17 +71,21 @@ class ViewController: UIViewController {
       
     //высота экрана iphone SE = 568.0
     //высота экрана iphone 5S = 568.0
+        
     //высота экрана iphone 6 = 667.0
-    //высота экрана iphone 6 Plus = 736.0
     //высота экрана iphone 6S = 667.0
-    //высота экрана iphone 6S Plus = 736.0
     //высота экрана iphone 7 = 667.0
-    //высота экрана iphone 7 Plus = 736.0
     //высота экрана iphone 8 = 667.0
+        
+    //высота экрана iphone 6 Plus = 736.0
+    //высота экрана iphone 6S Plus = 736.0
+    //высота экрана iphone 7 Plus = 736.0
     //высота экрана iphone 8 Plus = 736.0
+    
     //высота экрана iphone X = 812.0
-    //высота экрана iphone 11 = 896.0
     //высота экрана iphone 11 Pro = 812.0
+        
+    //высота экрана iphone 11 = 896.0
     //высота экрана iphone 11 Pro Max = 896.0
         
         //проверяем размер экрана
