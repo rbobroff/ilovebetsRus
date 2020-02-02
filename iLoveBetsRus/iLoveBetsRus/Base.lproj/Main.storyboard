@@ -225,64 +225,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title - Чемпионат" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T49-9W-h1i">
-                                <rect key="frame" x="16" y="458" width="343" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gTC-As-F3i">
-                                <rect key="frame" x="158" y="152" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-GX-SQ4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-LY-Cgj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-uT-HgC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-GX-SQ4">
+                                                <rect key="frame" x="2" y="0.0" width="371" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="kLl-Lf-4hh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title - Чемпионат" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T49-9W-h1i">
+                                                <rect key="frame" x="8" y="468" width="359" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description - Вид спорта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-xP-PjE">
+                                                <rect key="frame" x="8" y="496" width="359" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="url - Команды" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-0X-zNj">
+                                                <rect key="frame" x="8" y="524" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="publishedAt - Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-qv-PiQ">
+                                                <rect key="frame" x="8" y="553" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="author - Ставка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSw-Zy-e72">
+                                                <rect key="frame" x="8" y="582" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="content - Коэффициент" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGi-cd-2kl">
+                                                <rect key="frame" x="8" y="611" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cOv-qv-PiQ" firstAttribute="top" secondItem="Nbp-0X-zNj" secondAttribute="bottom" constant="8" id="01f-bg-M7d"/>
+                                            <constraint firstAttribute="bottom" secondItem="eGi-cd-2kl" secondAttribute="bottom" constant="35" id="Fzf-jB-icS"/>
+                                            <constraint firstItem="gR3-xP-PjE" firstAttribute="top" secondItem="T49-9W-h1i" secondAttribute="bottom" constant="8" id="YSj-FT-bf8"/>
+                                            <constraint firstItem="Nbp-0X-zNj" firstAttribute="top" secondItem="gR3-xP-PjE" secondAttribute="bottom" constant="8" id="acv-jS-Czo"/>
+                                            <constraint firstItem="HDb-GX-SQ4" firstAttribute="top" secondItem="CcO-uT-HgC" secondAttribute="top" id="dX2-yy-ke0"/>
+                                            <constraint firstItem="eGi-cd-2kl" firstAttribute="top" secondItem="tSw-Zy-e72" secondAttribute="bottom" constant="8" id="lqZ-63-fp5"/>
+                                            <constraint firstItem="tSw-Zy-e72" firstAttribute="top" secondItem="cOv-qv-PiQ" secondAttribute="bottom" constant="8" id="ykM-Ae-v55"/>
+                                            <constraint firstItem="T49-9W-h1i" firstAttribute="top" secondItem="HDb-GX-SQ4" secondAttribute="bottom" constant="18" id="ze3-gh-nCG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="450" id="kLl-Lf-4hh"/>
+                                    <constraint firstAttribute="trailing" secondItem="CcO-uT-HgC" secondAttribute="trailing" id="3gX-ZP-AmG"/>
+                                    <constraint firstItem="CcO-uT-HgC" firstAttribute="top" secondItem="S7w-LY-Cgj" secondAttribute="top" id="5ts-vt-b4w"/>
+                                    <constraint firstAttribute="bottom" secondItem="CcO-uT-HgC" secondAttribute="bottom" id="HCR-n5-F0P"/>
+                                    <constraint firstItem="CcO-uT-HgC" firstAttribute="height" secondItem="S7w-LY-Cgj" secondAttribute="height" priority="250" id="ZmS-XG-opo"/>
+                                    <constraint firstItem="CcO-uT-HgC" firstAttribute="width" secondItem="S7w-LY-Cgj" secondAttribute="width" id="a9e-ov-Y3u"/>
+                                    <constraint firstItem="CcO-uT-HgC" firstAttribute="leading" secondItem="S7w-LY-Cgj" secondAttribute="leading" id="ue2-Ow-Fki"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description - Вид спорта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-xP-PjE">
-                                <rect key="frame" x="16" y="486" width="343" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="publishedAt - Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-qv-PiQ">
-                                <rect key="frame" x="16" y="543" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url - Команды" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-0X-zNj">
-                                <rect key="frame" x="16" y="514" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="author - Ставка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSw-Zy-e72">
-                                <rect key="frame" x="16" y="572" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="content - Коэффициент" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGi-cd-2kl">
-                                <rect key="frame" x="16" y="601" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <viewLayoutGuide key="contentLayoutGuide" id="can-Jn-Avw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="MdR-MY-EOa"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HDb-GX-SQ4" firstAttribute="trailing" secondItem="Lqr-hP-SbW" secondAttribute="trailing" id="0Fm-yQ-8SU"/>
-                            <constraint firstItem="HDb-GX-SQ4" firstAttribute="leading" secondItem="Lqr-hP-SbW" secondAttribute="leading" id="Rot-SS-tng"/>
-                            <constraint firstItem="HDb-GX-SQ4" firstAttribute="top" secondItem="Lqr-hP-SbW" secondAttribute="top" id="W8I-6d-ibD"/>
+                            <constraint firstItem="Lqr-hP-SbW" firstAttribute="trailing" secondItem="S7w-LY-Cgj" secondAttribute="trailing" id="2BO-lH-Fxk"/>
+                            <constraint firstItem="S7w-LY-Cgj" firstAttribute="top" secondItem="Lqr-hP-SbW" secondAttribute="top" id="3Ca-Ad-EAA"/>
+                            <constraint firstItem="S7w-LY-Cgj" firstAttribute="leading" secondItem="Lqr-hP-SbW" secondAttribute="leading" id="9mr-Hx-ufZ"/>
+                            <constraint firstItem="Lqr-hP-SbW" firstAttribute="bottom" secondItem="S7w-LY-Cgj" secondAttribute="bottom" id="XrT-pi-eJb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lqr-hP-SbW"/>
                     </view>
@@ -299,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnW-q1-HhQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460" y="-224.4377811094453"/>
+            <point key="canvasLocation" x="2458.4000000000001" y="-225.33733133433284"/>
         </scene>
         <!--#Прогнозы-->
         <scene sceneID="Rbh-Jp-6DW">
