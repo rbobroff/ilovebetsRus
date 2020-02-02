@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     //высота экрана iphone SE = 568.0
     //высота экрана iphone 5S = 568.0
         
-    //высота экрана iphone 6 = 667.0
+    //высота экрана iphone 6 = 667.0 (w=375)
     //высота экрана iphone 6S = 667.0
     //высота экрана iphone 7 = 667.0
     //высота экрана iphone 8 = 667.0
@@ -88,9 +88,12 @@ class ViewController: UIViewController {
     //высота экрана iphone 11 = 896.0
     //высота экрана iphone 11 Pro Max = 896.0
         
-        //проверяем размер экрана
-   //     var h = UIScreen.main.bounds.height
-   //     print("Высота экрана = ",h)
+        //проверяем размер экрана!!!!
+        var h = UIScreen.main.bounds.height
+        var w = UIScreen.main.bounds.width
+        print("Высота экрана = ",h)
+        print("Ширина экрана = ",w)
+        
        
         
         //если размер экрана не iphone 5S и SE, то показывать нижний label на главном экране = "Спортивные прогнозы"

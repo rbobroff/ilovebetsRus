@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Jjb-VB-jld"/>
@@ -231,6 +231,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-uT-HgC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="671"/>
                                         <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-Jz-aG4">
+                                                <rect key="frame" x="177.5" y="215" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="H56-hf-07s"/>
+                                                    <constraint firstAttribute="height" constant="20" id="w9A-qw-MRk"/>
+                                                </constraints>
+                                            </activityIndicatorView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-GX-SQ4">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
                                                 <constraints>
@@ -278,6 +285,7 @@
                                         <constraints>
                                             <constraint firstItem="cOv-qv-PiQ" firstAttribute="top" secondItem="Nbp-0X-zNj" secondAttribute="bottom" constant="8" id="01f-bg-M7d"/>
                                             <constraint firstAttribute="trailing" secondItem="eGi-cd-2kl" secondAttribute="trailing" constant="8" id="0hh-eg-0hq"/>
+                                            <constraint firstItem="tGu-Jz-aG4" firstAttribute="centerY" secondItem="HDb-GX-SQ4" secondAttribute="centerY" id="5z4-Kw-ouO"/>
                                             <constraint firstAttribute="bottom" secondItem="eGi-cd-2kl" secondAttribute="bottom" constant="35" id="Fzf-jB-icS"/>
                                             <constraint firstAttribute="trailing" secondItem="Nbp-0X-zNj" secondAttribute="trailing" constant="8" id="GuG-Ug-rtt"/>
                                             <constraint firstItem="eGi-cd-2kl" firstAttribute="leading" secondItem="CcO-uT-HgC" secondAttribute="leading" constant="8" id="Ozo-2M-xr1"/>
@@ -290,6 +298,7 @@
                                             <constraint firstAttribute="trailing" secondItem="tSw-Zy-e72" secondAttribute="trailing" constant="8" id="fYe-g9-8j4"/>
                                             <constraint firstItem="T49-9W-h1i" firstAttribute="leading" secondItem="CcO-uT-HgC" secondAttribute="leading" constant="8" id="gLc-OW-RtF"/>
                                             <constraint firstAttribute="trailing" secondItem="gR3-xP-PjE" secondAttribute="trailing" constant="8" id="gzr-CR-n8e"/>
+                                            <constraint firstItem="tGu-Jz-aG4" firstAttribute="centerX" secondItem="T49-9W-h1i" secondAttribute="centerX" id="jne-hk-4Ep"/>
                                             <constraint firstItem="eGi-cd-2kl" firstAttribute="top" secondItem="tSw-Zy-e72" secondAttribute="bottom" constant="8" id="lqZ-63-fp5"/>
                                             <constraint firstAttribute="trailing" secondItem="cOv-qv-PiQ" secondAttribute="trailing" constant="8" id="nt6-CV-SN8"/>
                                             <constraint firstItem="Nbp-0X-zNj" firstAttribute="leading" secondItem="CcO-uT-HgC" secondAttribute="leading" constant="8" id="qj5-kN-u8A"/>
