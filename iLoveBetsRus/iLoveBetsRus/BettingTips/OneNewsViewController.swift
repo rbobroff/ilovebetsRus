@@ -51,7 +51,7 @@ class OneNewsViewController: UIViewController {
 //на основании переменной article, в которую записываются данные из структуру Article, заполняем все поля для экрана с одной новостью
         labelTitle.text = article.title //чемпионат
         labelDescription.text = article.description
-        publishedAt.text = "Начало: " + article.publishedAt
+        publishedAt.text = article.publishedAt
         url.text = article.url
         author.text = article.author
         content.text = article.content
