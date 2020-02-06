@@ -53,7 +53,19 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
     //https://spin.atomicobject.com/2018/12/01/reload-wkwebview/
     @objc
     func refreshWebView(_ sender: UIRefreshControl) {
-        webView?.reload()
+        
+        //// The first time load web page fail at offline. Then webview.url be nil. Try the following code to refresh the view
+        //
+        let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/")
+        webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
+        ////При первой загрузке веб-страницы происходит сбой в автономном режиме. Тогда webview.url будет нулевым. Попробуйте следующий код, чтобы обновить вид.
+        //Для этого ввожу условие обновить вид или загрузить повторно
+        
+        if webView.url != nil {
+            webView?.reload()
+                }else{
+            webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
+            }
         sender.endRefreshing()
     }
     
