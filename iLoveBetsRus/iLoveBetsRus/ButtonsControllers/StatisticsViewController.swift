@@ -17,6 +17,9 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
        
        //добавление строки навигации при загрузке ViewControllera
     self.navigationController?.isNavigationBarHidden = false
+        
+    
+        
     }
     
     
@@ -32,16 +35,13 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
     
 
-        
         let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/")
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
-       
-    }
-    
-
-
-
+        
+        
+}
 }
