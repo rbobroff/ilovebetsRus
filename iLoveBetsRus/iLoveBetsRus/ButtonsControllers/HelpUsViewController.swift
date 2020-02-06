@@ -31,7 +31,15 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-               //добавление строки навигации при загрузке ViewControllera
+        
+        
+  //для UIRefreshControl
+  //https://spin.atomicobject.com/2018/12/01/reload-wkwebview/
+  let refreshControl = UIRefreshControl()
+  refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
+  webView.scrollView.addSubview(refreshControl)
+  webView.scrollView.bounces = true
+        
 
         
 
@@ -41,6 +49,14 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
     }
     
 
+    //для UIRefreshControl
+    //https://spin.atomicobject.com/2018/12/01/reload-wkwebview/
+    @objc
+    func refreshWebView(_ sender: UIRefreshControl) {
+        webView?.reload()
+        sender.endRefreshing()
+    }
+    
 
 
 }
