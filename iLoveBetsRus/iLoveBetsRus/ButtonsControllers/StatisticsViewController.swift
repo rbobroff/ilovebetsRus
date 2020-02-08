@@ -13,14 +13,11 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
 
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "#Статистика"
-       
+    self.navigationItem.title = "#Статистика"
        //добавление строки навигации при загрузке ViewControllera
     self.navigationController?.isNavigationBarHidden = false
-        
-    
-        
     }
+    
     
     
     var webView: WKWebView!
@@ -37,7 +34,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-    
+        
         //для UIRefreshControl
         //https://spin.atomicobject.com/2018/12/01/reload-wkwebview/
         let refreshControl = UIRefreshControl()
