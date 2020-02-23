@@ -58,8 +58,14 @@ class ViewController: UIViewController {
         //показать язык локализации и вывести в консоль
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
-     print("Текущий язык = ",currentLangID)
-        ///
+     print("Текущий язык телефон-Регион = ",currentLangID)
+        var currentPhoneLangID = currentLangID
+            // symbols.insert("!", at: symbols.endIndex)
+            // print("измененный_Текущий язык = ",symbols)
+        let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+        currentPhoneLangID.removeSubrange(range)
+        print("Только текущий язык телефона, без региона = ",currentPhoneLangID)
+        
         
         
         //белая рамка вокруг кнопок
