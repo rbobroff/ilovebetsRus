@@ -179,12 +179,24 @@ class ViewController: UIViewController {
             return
             }
         
+            //проверка языка локализации!!!!!!!!!!
+            let locale = NSLocale.current
+            let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+            
             let composer = MFMailComposeViewController()
+            
+            if currentLangID == "ru-RU" {
             composer.mailComposeDelegate = self
             composer.setToRecipients(["ilovebets@ya.ru"])
             composer.setSubject("Обратная связь iLoveBets")
             composer.setMessageBody("<b>Имя:</b>&nbsp<br><br><b>Сообщение:</b>&nbsp", isHTML: true)
-  
+            }else{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Write to iLoveBets")
+                composer.setMessageBody("<b>Name:</b>&nbsp<br><br><b>Message:</b>&nbsp", isHTML: true)
+                
+            }
     
             present(composer, animated: true)
     }
