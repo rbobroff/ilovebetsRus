@@ -16,8 +16,12 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
             //проверка языка локализации!!!!!!!!!!
             let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+            var currentPhoneLangID = currentLangID
+            //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+            let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+            currentPhoneLangID.removeSubrange(range)
             //если русский язык, отображать ЗАГОЛОВОК по-русски
-            if currentLangID == "ru-RU" {
+            if currentPhoneLangID == "ru" {
         self.navigationItem.title = "#О нас"
            //добавление строки навигации при загрузке ViewControllera
             } else{
@@ -51,8 +55,29 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         webView.scrollView.addSubview(refreshControl)
         webView.scrollView.bounces = true
         
-                
-    let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/")
+          
+        
+        
+        //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
+        var aboutUsLink = "https://yandex.ru/"
+        //проверка языка локализации!!!!!!!!!!
+        let locale = NSLocale.current
+        let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+        var currentPhoneLangID = currentLangID
+        //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+        let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+        currentPhoneLangID.removeSubrange(range)
+        //в зависимости от языка телефона загружается ссылка
+           // if currentLangID == "ru-RU"
+              if currentPhoneLangID == "ru"{
+        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
+            } else {
+        aboutUsLink = "https://yandex.ru/"
+        }
+        
+        
+        
+    let URL = NSURL(string: aboutUsLink)
     webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
         
     }
@@ -64,8 +89,28 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
     func refreshWebView(_ sender: UIRefreshControl) {
         
         //// The first time load web page fail at offline. Then webview.url be nil. Try the following code to refresh the view
-        //
-        let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/")
+        
+        
+        //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
+        var aboutUsLink = "https://yandex.ru/"
+        //проверка языка локализации!!!!!!!!!!
+        let locale = NSLocale.current
+        let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+        var currentPhoneLangID = currentLangID
+        //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+        let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+        currentPhoneLangID.removeSubrange(range)
+        //в зависимости от языка телефона загружается ссылка
+           // if currentLangID == "ru-RU"
+              if currentPhoneLangID == "ru"{
+        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
+            } else {
+        aboutUsLink = "https://yandex.ru/"
+        }
+        
+        
+        
+        let URL = NSURL(string: aboutUsLink)
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
         ////При первой загрузке веб-страницы происходит сбой в автономном режиме. Тогда webview.url будет нулевым. Попробуйте следующий код, чтобы обновить вид.
         //Для этого ввожу условие обновить вид или загрузить повторно

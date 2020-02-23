@@ -62,6 +62,8 @@ class ViewController: UIViewController {
         var currentPhoneLangID = currentLangID
             // symbols.insert("!", at: symbols.endIndex)
             // print("измененный_Текущий язык = ",symbols)
+        //https://swiftbook.ru/content/languageguide/strings-and-characters/
+        //от полученного значения "языктелефона-Регион", вычитаем 3 символа, чтобы вместо "ru-Us" и тд, оставалось только "ru", то есть, проверялся только русский язык телефона, а регион не учитывался
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         print("Только текущий язык телефона, без региона = ",currentPhoneLangID)
@@ -188,10 +190,16 @@ class ViewController: UIViewController {
             //проверка языка локализации!!!!!!!!!!
             let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+            var currentPhoneLangID = currentLangID
+            //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+            let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+            currentPhoneLangID.removeSubrange(range)
+            
             
             let composer = MFMailComposeViewController()
             
-            if currentLangID == "ru-RU" {
+           // if currentLangID == "ru-RU"
+               if currentPhoneLangID == "ru" {
             composer.mailComposeDelegate = self
             composer.setToRecipients(["ilovebets@ya.ru"])
             composer.setSubject("Обратная связь iLoveBets")
