@@ -10,12 +10,31 @@ import UIKit
 
 class OneNewsViewController: UIViewController {
 
+    
+    
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "#Прогнозы"
-               //добавление строки навигации при загрузке ViewControllera
-    self.navigationController?.isNavigationBarHidden = false
-    }
+        //проверка языка локализации!!!!!!!!!!
+                   let locale = NSLocale.current
+                   let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+                   var currentPhoneLangID = currentLangID
+                   //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+                   let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+                   currentPhoneLangID.removeSubrange(range)
+                   //если русский язык, отображать ЗАГОЛОВОК по-русски
+                   
+               //    if currentLangID == "ru-RU"
+                     if currentPhoneLangID == "ru" {
+               self.navigationItem.title = "#Прогноз"
+                  //добавление строки навигации при загрузке ViewControllera
+                   } else{
+                       self.navigationItem.title = "#BettingTip"
+               }
+               self.navigationController?.isNavigationBarHidden = false
+               }
+    
+    
+    
     
     
     //создаем переменную, в которую будем передавать из нашего TableViewController

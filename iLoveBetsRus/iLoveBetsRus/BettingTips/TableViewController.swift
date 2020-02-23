@@ -24,10 +24,27 @@ class TableViewController: UITableViewController {
     
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
+        //проверка языка локализации!!!!!!!!!!
+            let locale = NSLocale.current
+            let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+            var currentPhoneLangID = currentLangID
+            //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+            let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+            currentPhoneLangID.removeSubrange(range)
+            //если русский язык, отображать ЗАГОЛОВОК по-русски
+            
+        //    if currentLangID == "ru-RU"
+              if currentPhoneLangID == "ru" {
         self.navigationItem.title = "#Прогнозы"
-               //добавление строки навигации при загрузке ViewControllera
-    self.navigationController?.isNavigationBarHidden = false
-    }
+           //добавление строки навигации при загрузке ViewControllera
+            } else{
+                self.navigationItem.title = "#BettingTips"
+        }
+        self.navigationController?.isNavigationBarHidden = false
+        }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
