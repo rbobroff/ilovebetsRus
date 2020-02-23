@@ -62,10 +62,22 @@ class ChatViewController: JSQMessagesViewController {
             showDisplayNameDialog()
         }
 
-        //в русской-английской версии заменить слово Чат
+        
+        
+        //проверка языка локализации!!!!!!!!!!
+                   let locale = NSLocale.current
+                   let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+                   var currentPhoneLangID = currentLangID
+                   //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+                   let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+                   currentPhoneLangID.removeSubrange(range)
+                   //если русский язык, отображать ЗАГОЛОВОК по-русски
+                   if currentPhoneLangID == "ru" {
+        //заголовок ViewController
         title = "Чат: \(senderDisplayName!)"
-//для английской версии
-            //  title = "Chat: \(senderDisplayName!)"
+                   } else {
+        title = "Chat: \(senderDisplayName!)"
+        }
         
         
         
@@ -112,13 +124,30 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         let defaults = UserDefaults.standard
 
         
+        
+        
+        //проверка языка локализации!!!!!!!!!!
+                          let locale = NSLocale.current
+                          let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+                          var currentPhoneLangID = currentLangID
+                          //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+                          let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+                          currentPhoneLangID.removeSubrange(range)
+        
+        //сообщение при входе в чат о необходимости ввести имя. по умолчанию - английский язык
+            var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
+        
+                          //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
+                          if currentPhoneLangID == "ru" {
         //Сообщение, где предлагается ввести имя
      //для русской версии
-     let alert = UIAlertController(title: "Введите имя", message: "Прежде чем Вы сможете общаться, введите имя. Другие пользователи увидят Ваше имя при отправке сообщений чата. Вы можете изменить свое имя, нажав на панель навигации", preferredStyle: .alert)
+     alert = UIAlertController(title: "Введите имя", message: "Прежде чем Вы сможете общаться, введите имя. Другие пользователи увидят Ваше имя при отправке сообщений чата. Вы можете изменить свое имя, нажав на панель навигации", preferredStyle: .alert)
+        
+                          } else {
         
       //  для английской версии
-    /*    let alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
-*/
+    alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
+        }
         
         
         
@@ -141,8 +170,24 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
 
                 self?.senderDisplayName = textField.text
 
+                
+                
+                //проверка языка локализации!!!!!!!!!!
+                let locale = NSLocale.current
+                let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+                var currentPhoneLangID = currentLangID
+                //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+                let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+                currentPhoneLangID.removeSubrange(range)
+                
+                if currentPhoneLangID == "ru" {
+                self?.title = "Чат: \(self!.senderDisplayName!)"
+                } else {
                 self?.title = "Chat: \(self!.senderDisplayName!)"
-
+                }
+                
+                
+                
                 defaults.set(textField.text, forKey: "jsq_name")
                 defaults.synchronize()
             }
