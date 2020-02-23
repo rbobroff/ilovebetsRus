@@ -13,11 +13,20 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
 
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
+            //проверка языка локализации!!!!!!!!!!
+            let locale = NSLocale.current
+            let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+            //если русский язык, отображать ЗАГОЛОВОК по-русски
+            if currentLangID == "ru-RU" {
         self.navigationItem.title = "#Справка"
-               //добавление строки навигации при загрузке ViewControllera
-         self.navigationController?.isNavigationBarHidden = false
+           //добавление строки навигации при загрузке ViewControllera
+            } else{
+                self.navigationItem.title = "#Help"
+        }
+        self.navigationController?.isNavigationBarHidden = false
+        }
 
-    }
+    
     
     var webView: WKWebView!
 

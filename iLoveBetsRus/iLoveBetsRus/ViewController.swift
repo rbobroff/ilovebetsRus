@@ -55,6 +55,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //показать язык локализации и вывести в консоль
+        let locale = NSLocale.current
+        let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+     print("Текущий язык = ",currentLangID)
+        ///
+        
+        
         //белая рамка вокруг кнопок
         bettingTipsButton.layer.borderWidth = 2
         bettingTipsButton.layer.borderColor = UIColor.white.cgColor

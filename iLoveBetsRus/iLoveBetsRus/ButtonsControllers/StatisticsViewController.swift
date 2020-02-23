@@ -13,8 +13,17 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
 
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
+        
+        //проверка языка локализации!!!!!!!!!!
+        let locale = NSLocale.current
+        let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+        //если русский язык, отображать ЗАГОЛОВОК по-русски
+        if currentLangID == "ru-RU" {
     self.navigationItem.title = "#Статистика"
        //добавление строки навигации при загрузке ViewControllera
+        } else{
+            self.navigationItem.title = "#Statistics"
+    }
     self.navigationController?.isNavigationBarHidden = false
     }
     
@@ -42,8 +51,23 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         webView.scrollView.addSubview(refreshControl)
         webView.scrollView.bounces = true
         
+        
+        
+        
 
-        let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/")
+        //переменная "statisticLink" отвечает за ссылку на статистику
+        var statisticLink = "https://yandex.ru/"
+        //извлекаем язык из настроек телефона
+        let locale = NSLocale.current
+        let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+        //в зависимости от языка телефона загружается ссылка
+            if currentLangID == "ru-RU" {
+        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
+            } else{
+        statisticLink = "https://yandex.ru/"
+        }
+        
+        let URL = NSURL(string: statisticLink)
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
         
         
@@ -56,7 +80,20 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         //// The first time load web page fail at offline. Then webview.url be nil. Try the following code to refresh the view
         //
-        let URL = NSURL(string: "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/")
+        //переменная "statisticLink" отвечает за ссылку на статистику
+        var statisticLink = "https://yandex.ru/"
+        //извлекаем язык из настроек телефона
+        let locale = NSLocale.current
+        let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+        //в зависимости от языка телефона загружается ссылка
+            if currentLangID == "ru-RU" {
+        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
+            } else{
+        statisticLink = "https://yandex.ru/"
+        }
+        
+        
+        let URL = NSURL(string: statisticLink)
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
         ////При первой загрузке веб-страницы происходит сбой в автономном режиме. Тогда webview.url будет нулевым. Попробуйте следующий код, чтобы обновить вид.
         //Для этого ввожу условие обновить вид или загрузить повторно
