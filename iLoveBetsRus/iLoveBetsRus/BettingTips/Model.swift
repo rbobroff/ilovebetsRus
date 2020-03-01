@@ -27,7 +27,37 @@ func loadNews(completionHandler: (()->Void)?) {
     
     //  let url = URL(string: "https://ilovebets.ru/myApp2019/ru/bettingTipsRus/")
     
-        let url = URL(string: "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/")
+    
+    
+      //переменная "bettingTipsLink" отвечает за ссылку на раздел "Прогнозы"
+    //по умолчанию грузится английская версия
+            var bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"
+            //проверка языка локализации!!!!!!!!!!
+            let locale = NSLocale.current
+            let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
+            var currentPhoneLangID = currentLangID
+            //вычитаем 3 символа, чтобы получилось только ru (ru-US)
+            let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
+            currentPhoneLangID.removeSubrange(range)
+            //в зависимости от языка телефона загружается ссылка
+               // if currentLangID == "ru-RU"
+                  if currentPhoneLangID == "ru"{
+            bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"
+                } else {
+    //иначе грузится английская версия прогнозов
+            bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"
+            }
+      
+       
+        let url = URL(string: bettingTipsLink)
+    
+    
+    
+    //Оригинал работающих новостей
+    /*    let url = URL(string: "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/")
+ */
+    
+    
     
     let session = URLSession(configuration: .default)
     
