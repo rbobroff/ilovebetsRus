@@ -20,8 +20,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var aboutUsButton: UIButton!
+    
     //аутлет label внизу на главном экране = Спортивные прогнозы:
     @IBOutlet weak var sportBetsLabel: UILabel!
+     //аутлет label вверху на главном экране = Ваш персональный помощник в мире спортивного беттинга:
+    @IBOutlet weak var yourPersonalSportsBettingAdvisorLabel: UILabel!
+    //аутлет iLoveBets label
+    @IBOutlet weak var iLoveBetsLabel: UILabel!
+    
+    
+    
+    
+    
     //аутлет верхнего Constraint ^ для label = Ваш персональный помощник в мире спортивного беттинга:
     @IBOutlet weak var upConstraintYourPersonalSportsBettingAdvisor: NSLayoutConstraint!
       //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
@@ -67,6 +77,46 @@ class ViewController: UIViewController {
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         print("Только текущий язык телефона, без региона = ",currentPhoneLangID)
+        
+    
+        //Локализуем главный вид приложения!!!
+                if currentPhoneLangID == "ru" {
+        yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
+        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
+                    sportBetsLabel.text = "Спортивные прогнозы"
+                    sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+                    
+                    //Заменяем картинки из Assets.xcassets на кнопках, если русский язык
+                    let button1 = UIImage(named: "1. BettingTips")
+                    bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+                    
+                    let button2 = UIImage(named: "2. Statistics")
+                    statisticsButton.setImage(button2, for: UIControl.State.normal)
+                    
+                    let button3 = UIImage(named: "3. Chat")
+                    chatButton.setImage(button3, for: UIControl.State.normal)
+                    
+                    let button4 = UIImage(named: "4. E-Mail")
+                    emailButton.setImage(button4, for: UIControl.State.normal)
+                    
+                    let button5 = UIImage(named: "5. Help")
+                    helpButton.setImage(button5, for: UIControl.State.normal)
+
+                    let button6 = UIImage(named: "6. AboutUS")
+                    aboutUsButton.setImage(button6, for: UIControl.State.normal)
+                    
+                    
+        }
+      
+         /*
+                } else {
+        yourPersonalSportsBettingAdvisorLabel.text = "Your Personal Sports Betting Advisor"
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                    
+                    sportBetsLabel.text = "Sports Betting Tips"
+                    sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        */
         
         
         
@@ -134,6 +184,11 @@ class ViewController: UIViewController {
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 88
             statisticsButtonTopConstraint.constant = 88
+        
+            //левый и правый constraint нижнего Label = Спортивные прогнозы
+            sportBetsLabelLeftConstraint.constant = 100
+            sportBetsLabelRightConstraint.constant = 100
+       
         }
 
         

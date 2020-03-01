@@ -28,7 +28,7 @@ class OneNewsViewController: UIViewController {
                self.navigationItem.title = "#Прогноз"
                   //добавление строки навигации при загрузке ViewControllera
                    } else{
-                       self.navigationItem.title = "#BettingTip"
+                       self.navigationItem.title = "#Tip"
                }
                self.navigationController?.isNavigationBarHidden = false
                }

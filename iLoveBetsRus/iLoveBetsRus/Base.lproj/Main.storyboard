@@ -11,7 +11,7 @@
         <!--Help Us View Controller-->
         <scene sceneID="xgf-2R-56U">
             <objects>
-                <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--Chat View Controller-->
         <scene sceneID="0ZG-S7-Rca">
             <objects>
-                <viewController id="j5s-k1-m0o" customClass="ChatViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j5s-k1-m0o" customClass="ChatViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHf-7H-uIA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,11 +52,11 @@
                                 <rect key="frame" x="0.0" y="-44" width="375" height="745"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-g1-1p3">
-                                <rect key="frame" x="3" y="283" width="183" height="129"/>
+                                <rect key="frame" x="3" y="295" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="VDt-8s-pz3"/>
                                 </constraints>
-                                <state key="normal" image="3. Chat">
+                                <state key="normal" image="3. Chat_eng">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -64,11 +64,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-pS-pvF">
-                                <rect key="frame" x="189" y="283" width="183" height="129"/>
+                                <rect key="frame" x="189" y="295" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="Gg0-oE-kTB"/>
                                 </constraints>
-                                <state key="normal" image="4. E-Mail">
+                                <state key="normal" image="4. E-Mail_eng">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -76,55 +76,53 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-3Q-fJ3">
-                                <rect key="frame" x="3" y="415" width="183" height="129"/>
+                                <rect key="frame" x="3" y="427" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="PGJ-68-PfL"/>
                                 </constraints>
-                                <state key="normal" image="5. Help">
+                                <state key="normal" image="5. Help_eng">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
-                                <rect key="frame" x="16" y="38" width="343" height="41"/>
-                                <string key="text">ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК
-В МИРЕ СПОРТИВНОГО бЕТТИНГА</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Personal Sports Betting Advisor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
+                                <rect key="frame" x="16" y="38" width="343" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iLoveBets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-Vi-Eeg">
-                                <rect key="frame" x="16" y="80" width="343" height="77"/>
+                                <rect key="frame" x="16" y="92" width="343" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-nr-FZO">
-                                <rect key="frame" x="189" y="151" width="183" height="129"/>
+                                <rect key="frame" x="189" y="163" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="Lgh-r8-HOQ"/>
                                 </constraints>
-                                <state key="normal" image="2. Statistics">
+                                <state key="normal" image="2. Statistics_eng">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="iGG-G0-tQr" kind="show" id="LoY-Gg-Kvm"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спортивные прогнозы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
-                                <rect key="frame" x="71" y="592" width="233" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Betting Tips" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
+                                <rect key="frame" x="71" y="620.5" width="233" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lih-4P-Ldy">
-                                <rect key="frame" x="189" y="415" width="183" height="129"/>
+                                <rect key="frame" x="189" y="427" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="fXc-ai-iMY"/>
                                 </constraints>
-                                <state key="normal" image="6. AboutUS">
+                                <state key="normal" image="6. AboutUS_eng">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -132,11 +130,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-K8-Wix">
-                                <rect key="frame" x="3" y="151" width="183" height="129"/>
+                                <rect key="frame" x="3" y="163" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="OO1-9X-3gA"/>
                                 </constraints>
-                                <state key="normal" image="1. BettingTips"/>
+                                <state key="normal" image="1. BettingTips_eng"/>
                                 <connections>
                                     <segue destination="yYx-sr-2tP" kind="show" id="G5h-Um-auu"/>
                                 </connections>
@@ -189,12 +187,14 @@
                         <outlet property="chatButton" destination="ZCO-g1-1p3" id="3e5-Qg-CbC"/>
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
                         <outlet property="helpButton" destination="N4C-3Q-fJ3" id="L4y-P7-Y65"/>
+                        <outlet property="iLoveBetsLabel" destination="XMk-Vi-Eeg" id="9Vo-hT-PAQ"/>
                         <outlet property="sportBetsLabel" destination="PMF-W3-YlE" id="bPK-jM-LmP"/>
                         <outlet property="sportBetsLabelLeftConstraint" destination="pBa-pN-piJ" id="Ses-Av-ipl"/>
                         <outlet property="sportBetsLabelRightConstraint" destination="uzs-WI-t7N" id="kZO-B6-haP"/>
                         <outlet property="statisticsButton" destination="WuE-nr-FZO" id="n7g-cM-IeP"/>
                         <outlet property="statisticsButtonTopConstraint" destination="hr2-JV-6pt" id="8j8-y3-IEG"/>
                         <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
+                        <outlet property="yourPersonalSportsBettingAdvisorLabel" destination="Pdb-3d-KjB" id="9eL-QB-lTD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -204,7 +204,7 @@
         <!--About Us View Controller-->
         <scene sceneID="RZU-No-Rto">
             <objects>
-                <viewController id="XgA-X0-SKs" customClass="AboutUsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XgA-X0-SKs" customClass="AboutUsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HE8-S9-S1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
         <!--Прогнозы-->
         <scene sceneID="iD3-1A-J6b">
             <objects>
-                <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JF-me-xqW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +349,7 @@
         <!--#Прогнозы-->
         <scene sceneID="Rbh-Jp-6DW">
             <objects>
-                <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygR-7M-hPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +425,7 @@
         <!--Statistics View Controller-->
         <scene sceneID="s4H-Vy-pnJ">
             <objects>
-                <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="нСтавки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCM-sD-fdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -440,12 +440,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1. BettingTips" width="152.5" height="129"/>
-        <image name="2. Statistics" width="152.5" height="129"/>
-        <image name="3. Chat" width="152.5" height="129"/>
-        <image name="4. E-Mail" width="152.5" height="129"/>
-        <image name="5. Help" width="152.5" height="129"/>
-        <image name="6. AboutUS" width="152.5" height="129"/>
+        <image name="1. BettingTips_eng" width="152.5" height="129"/>
+        <image name="2. Statistics_eng" width="152.5" height="129"/>
+        <image name="3. Chat_eng" width="152.5" height="129"/>
+        <image name="4. E-Mail_eng" width="152.5" height="129"/>
+        <image name="5. Help_eng" width="152.5" height="129"/>
+        <image name="6. AboutUS_eng" width="152.5" height="129"/>
         <image name="MainScreenBackground" width="320" height="568"/>
     </resources>
 </document>

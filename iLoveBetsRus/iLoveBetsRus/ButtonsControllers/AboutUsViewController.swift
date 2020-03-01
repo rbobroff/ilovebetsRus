@@ -22,7 +22,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
             currentPhoneLangID.removeSubrange(range)
             //если русский язык, отображать ЗАГОЛОВОК по-русски
             if currentPhoneLangID == "ru" {
-        self.navigationItem.title = "#О нас"
+        self.navigationItem.title = "#О Нас"
            //добавление строки навигации при загрузке ViewControllera
             } else{
                 self.navigationItem.title = "#About Us"
