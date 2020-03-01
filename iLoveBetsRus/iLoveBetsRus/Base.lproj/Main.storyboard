@@ -11,7 +11,7 @@
         <!--Help Us View Controller-->
         <scene sceneID="xgf-2R-56U">
             <objects>
-                <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--Chat View Controller-->
         <scene sceneID="0ZG-S7-Rca">
             <objects>
-                <viewController id="j5s-k1-m0o" customClass="ChatViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j5s-k1-m0o" customClass="ChatViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHf-7H-uIA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +188,8 @@
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
                         <outlet property="helpButton" destination="N4C-3Q-fJ3" id="L4y-P7-Y65"/>
                         <outlet property="iLoveBetsLabel" destination="XMk-Vi-Eeg" id="9Vo-hT-PAQ"/>
+                        <outlet property="leftConstraintYourPersonalSportsBettingAdvisor" destination="NaY-Hr-zzU" id="Jdk-ft-ypm"/>
+                        <outlet property="rightConstraintYourPersonalSportsBettingAdvisor" destination="flT-UJ-mBK" id="SB8-iO-QuU"/>
                         <outlet property="sportBetsLabel" destination="PMF-W3-YlE" id="bPK-jM-LmP"/>
                         <outlet property="sportBetsLabelLeftConstraint" destination="pBa-pN-piJ" id="Ses-Av-ipl"/>
                         <outlet property="sportBetsLabelRightConstraint" destination="uzs-WI-t7N" id="kZO-B6-haP"/>
@@ -204,7 +206,7 @@
         <!--About Us View Controller-->
         <scene sceneID="RZU-No-Rto">
             <objects>
-                <viewController id="XgA-X0-SKs" customClass="AboutUsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XgA-X0-SKs" customClass="AboutUsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HE8-S9-S1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +222,7 @@
         <!--Прогнозы-->
         <scene sceneID="iD3-1A-J6b">
             <objects>
-                <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JF-me-xqW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +351,7 @@
         <!--#Прогнозы-->
         <scene sceneID="Rbh-Jp-6DW">
             <objects>
-                <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygR-7M-hPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +427,7 @@
         <!--Statistics View Controller-->
         <scene sceneID="s4H-Vy-pnJ">
             <objects>
-                <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="Ставки_ХП_Спортивные_Прогнозы" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCM-sD-fdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

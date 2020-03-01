@@ -32,8 +32,12 @@ class ViewController: UIViewController {
     
     
     
-    //аутлет верхнего Constraint ^ для label = Ваш персональный помощник в мире спортивного беттинга:
+    //аутлет верхнего,левого,правого Constraint ^ для label = Ваш персональный помощник в мире спортивного беттинга:
     @IBOutlet weak var upConstraintYourPersonalSportsBettingAdvisor: NSLayoutConstraint!
+    @IBOutlet weak var leftConstraintYourPersonalSportsBettingAdvisor: NSLayoutConstraint!
+    @IBOutlet weak var rightConstraintYourPersonalSportsBettingAdvisor: NSLayoutConstraint!
+    
+    
       //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
     @IBOutlet weak var bettingTipsButtonTopConstraint: NSLayoutConstraint!
       //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
@@ -64,7 +68,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         
+        
+        
+        /*//снять комментарий после скриншотов
         //показать язык локализации и вывести в консоль
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -106,8 +114,10 @@ class ViewController: UIViewController {
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
                     
                     
-        }
+         } */ //снять комментарий после скриншотов
       
+        
+        
          /*
                 } else {
         yourPersonalSportsBettingAdvisorLabel.text = "Your Personal Sports Betting Advisor"
@@ -192,15 +202,17 @@ class ViewController: UIViewController {
         }
 
         
-        //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 667.0) - настроены Constraints
+        //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, 414) - настроены Constraints
         if UIScreen.main.bounds.height == 736 {
 
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 111
             statisticsButtonTopConstraint.constant = 111
             //left right Constraint для нижнего label "Спортивные прогнозы" "Sport Betting Tips"
-            sportBetsLabelLeftConstraint.constant = 100
-            sportBetsLabelRightConstraint.constant = 100
+            sportBetsLabelLeftConstraint.constant = 120
+            sportBetsLabelRightConstraint.constant = 120
+            leftConstraintYourPersonalSportsBettingAdvisor.constant = 36
+            rightConstraintYourPersonalSportsBettingAdvisor.constant = 36
         }
         
         
