@@ -59,7 +59,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         
         
         //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
-        var aboutUsLink = "https://yandex.ru/"
+        var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -72,7 +72,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
               if currentPhoneLangID == "ru"{
         aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
             } else {
-        aboutUsLink = "https://yandex.ru/"
+        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         }
         
         
@@ -92,7 +92,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         
         
         //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
-        var aboutUsLink = "https://yandex.ru/"
+        var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -105,7 +105,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
               if currentPhoneLangID == "ru"{
         aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
             } else {
-        aboutUsLink = "https://yandex.ru/"
+        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         }
         
         

@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         
         
         
-        /*//снять комментарий после скриншотов
+        //снять комментарий после скриншотов
         //показать язык локализации и вывести в консоль
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -114,7 +114,7 @@ class ViewController: UIViewController {
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
                     
                     
-         } */ //снять комментарий после скриншотов
+         }  //снять комментарий после скриншотов
       
         
         

@@ -62,7 +62,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
 
         //переменная "statisticLink" отвечает за ссылку на статистику
-        var statisticLink = "https://yandex.ru/"
+        var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -75,7 +75,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
               if currentPhoneLangID == "ru"{
         statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
             } else{
-        statisticLink = "https://yandex.ru/"
+        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         }
         
         let URL = NSURL(string: statisticLink)
@@ -93,7 +93,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         
         //переменная "statisticLink" отвечает за ссылку на статистику
-        var statisticLink = "https://yandex.ru/"
+        var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -106,7 +106,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         if currentPhoneLangID == "ru" {
         statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
             } else {
-        statisticLink = "https://yandex.ru/"
+        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         }
         
         

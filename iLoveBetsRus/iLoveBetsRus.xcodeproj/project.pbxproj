@@ -101,8 +101,8 @@
 		ED5E9A39238850C900C32F30 /* ButtonsControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED54299E238303BB00F501F1 /* AboutUsViewController.swift */,
 				ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */,
+				ED54299E238303BB00F501F1 /* AboutUsViewController.swift */,
 				ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */,
 			);
 			path = ButtonsControllers;
@@ -141,15 +141,15 @@
 		EDB525812368B3D0002428AB /* iLoveBetsRus */ = {
 			isa = PBXGroup;
 			children = (
-				ED0969FE239C32B600F88568 /* Chat */,
 				ED10D595238D97DF00B9EC30 /* Ставки ХП Спортивные Прогнозы.entitlements */,
 				EDB525822368B3D0002428AB /* AppDelegate.swift */,
 				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
 				EDB525862368B3D0002428AB /* ViewController.swift */,
 				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
-				ED5E9A39238850C900C32F30 /* ButtonsControllers */,
 				ED7B7080236CA44200784F55 /* BettingTips */,
+				ED0969FE239C32B600F88568 /* Chat */,
+				ED5E9A39238850C900C32F30 /* ButtonsControllers */,
 				ED1FF1DE236A02F00023F948 /* SupportingFiles */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
 				EDB525902368B3D3002428AB /* Info.plist */,

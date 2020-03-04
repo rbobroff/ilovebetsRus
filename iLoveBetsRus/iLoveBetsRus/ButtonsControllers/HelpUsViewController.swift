@@ -56,7 +56,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
 
         
         //переменная "helpLink" отвечает за ссылку на раздел "Справка"
-        var helpLink = "https://yandex.ru/"
+        var helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -69,7 +69,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
               if currentPhoneLangID == "ru"{
         helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
             } else {
-        helpLink = "https://yandex.ru/"
+        helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
         }
         
         
