@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>19152383796-9glga5j2njs9kffigm5hai4sjke1j8vu.apps.googleusercontent.com</string>
+	<string>315185749424-79natmbapiv5r9der44jb0qavt4ejohc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.19152383796-9glga5j2njs9kffigm5hai4sjke1j8vu</string>
+	<string>com.googleusercontent.apps.315185749424-79natmbapiv5r9der44jb0qavt4ejohc</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCd9Lnf8eCz56Wubf-xvDX423RIZZt66xM</string>
+	<string>AIzaSyAJ37KkMquiBX_xjHLCNOg1qQNZEop-b3E</string>
 	<key>GCM_SENDER_ID</key>
-	<string>19152383796</string>
+	<string>315185749424</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.ibuildapp.ilovebets</string>
+	<string>com.iloveapps.bettingadvisor</string>
 	<key>PROJECT_ID</key>
-	<string>ilovebetsrus</string>
+	<string>bettingtips-6cff2</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ilovebetsrus.appspot.com</string>
+	<string>bettingtips-6cff2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:19152383796:ios:963a2ee547b81bc5093f61</string>
+	<string>1:315185749424:ios:447d47825e325bb4708a75</string>
 	<key>DATABASE_URL</key>
-	<string>https://ilovebetsrus.firebaseio.com</string>
+	<string>https://bettingtips-6cff2.firebaseio.com</string>
 </dict>
 </plist>
