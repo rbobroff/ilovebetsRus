@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED06AD75241427E400BCB1E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED06AD74241427E400BCB1E0 /* GoogleService-Info.plist */; };
 		ED096A00239C32FC00F88568 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0969FF239C32FC00F88568 /* ChatViewController.swift */; };
 		ED096A04239C3DEC00F88568 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED096A03239C3DEC00F88568 /* Constants.swift */; };
 		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
 		ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */; };
-		ED8B4CBF239AD46700A61FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */; };
 		EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525822368B3D0002428AB /* AppDelegate.swift */; };
 		EDB525872368B3D0002428AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525862368B3D0002428AB /* ViewController.swift */; };
 		EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB525882368B3D0002428AB /* Main.storyboard */; };
@@ -30,6 +30,7 @@
 		1D91200137ABD4CDC6312B6C /* Pods-iLoveBetsRus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLoveBetsRus.debug.xcconfig"; path = "Target Support Files/Pods-iLoveBetsRus/Pods-iLoveBetsRus.debug.xcconfig"; sourceTree = "<group>"; };
 		2170E0722EF71E1FF3C5957D /* Pods-iLoveBetsRus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLoveBetsRus.release.xcconfig"; path = "Target Support Files/Pods-iLoveBetsRus/Pods-iLoveBetsRus.release.xcconfig"; sourceTree = "<group>"; };
 		2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLoveBetsRus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED06AD74241427E400BCB1E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED0969FF239C32FC00F88568 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED096A02239C38E300F88568 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		ED096A03239C3DEC00F88568 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUsViewController.swift; sourceTree = "<group>"; };
-		ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDB5257F2368B3D0002428AB /* iLoveBets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLoveBets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB525862368B3D0002428AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 				ED5E9A39238850C900C32F30 /* ButtonsControllers */,
 				ED1FF1DE236A02F00023F948 /* SupportingFiles */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
+				ED06AD74241427E400BCB1E0 /* GoogleService-Info.plist */,
 				EDB525902368B3D3002428AB /* Info.plist */,
-				ED8B4CBE239AD46600A61FAD /* GoogleService-Info.plist */,
 			);
 			path = iLoveBetsRus;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB5258F2368B3D3002428AB /* LaunchScreen.storyboard in Resources */,
-				ED8B4CBF239AD46700A61FAD /* GoogleService-Info.plist in Resources */,
+				ED06AD75241427E400BCB1E0 /* GoogleService-Info.plist in Resources */,
 				EDB5258C2368B3D3002428AB /* Assets.xcassets in Resources */,
 				EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */,
 			);
@@ -441,7 +441,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibuildapp.ilovebets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapps.bettingadvisor;
 				PRODUCT_NAME = iLoveBets;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -465,7 +465,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibuildapp.ilovebets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapps.bettingadvisor;
 				PRODUCT_NAME = iLoveBets;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
