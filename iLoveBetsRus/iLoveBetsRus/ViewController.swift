@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         
         
         //снять комментарий после скриншотов
+         
         //показать язык локализации и вывести в консоль
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -93,6 +94,8 @@ class ViewController: UIViewController {
         yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
                     sportBetsLabel.text = "Спортивные прогнозы"
                     sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+         
+
                     
                     //Заменяем картинки из Assets.xcassets на кнопках, если русский язык
                     let button1 = UIImage(named: "1. BettingTips")
@@ -114,7 +117,8 @@ class ViewController: UIViewController {
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
                     
                     
-         }  //снять комментарий после скриншотов
+         }  
+        //снять комментарий после скриншотов
       
         
         
@@ -229,6 +233,7 @@ class ViewController: UIViewController {
             statisticsButtonTopConstraint.constant = 161
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
+            
         }
         
         

@@ -24,6 +24,18 @@ class TableViewController: UITableViewController {
     
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
+        //закомментировать после скриншотов
+        //self.navigationItem.title = "#BettingTips"
+        //self.navigationController?.isNavigationBarHidden = false
+        //закомментировать после скриншотов
+        
+        
+        
+        //снять комментарий после скриншотов
+ 
         //проверка языка локализации!!!!!!!!!!
             let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -41,6 +53,12 @@ class TableViewController: UITableViewController {
                 self.navigationItem.title = "#BettingTips"
         }
         self.navigationController?.isNavigationBarHidden = false
+ 
+         
+        //снять комментарий после скриншотов
+ 
+ 
+ 
         }
     
     

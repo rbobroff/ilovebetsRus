@@ -14,6 +14,17 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         
+        
+        //закомментировать после скриншотов
+       // self.navigationItem.title = "#Statistics"
+       // self.navigationController?.isNavigationBarHidden = false
+        //закомментировать после скриншотов
+        
+        
+        
+        
+        //снять комментарий после скриншотов
+        
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -31,6 +42,11 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
             self.navigationItem.title = "#Statistics"
     }
     self.navigationController?.isNavigationBarHidden = false
+        
+        
+        //снять комментарий после скриншотов
+        
+        
     }
     
     
@@ -60,6 +76,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         
         
+        //снять комментарий после скриншотов
 
         //переменная "statisticLink" отвечает за ссылку на статистику
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
@@ -77,6 +94,17 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
             } else{
         statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         }
+ 
+        
+        //снять комментарий после скриншотов
+     
+    
+        
+        //закомметировать после скриншотов
+       // var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+        //закомметировать после скриншотов
+        
+        
         
         let URL = NSURL(string: statisticLink)
         webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
@@ -91,6 +119,9 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         //// The first time load web page fail at offline. Then webview.url be nil. Try the following code to refresh the view
         
+        
+        
+        //снять комментарий после скриншотов
         
         //переменная "statisticLink" отвечает за ссылку на статистику
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
@@ -108,6 +139,15 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
             } else {
         statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         }
+        
+        
+        //снять комментарий после скриншотов
+        
+        
+        
+        //закомментировать после скриншотов
+        //var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+        //закомментировать после скриншотов
         
         
         let URL = NSURL(string: statisticLink)

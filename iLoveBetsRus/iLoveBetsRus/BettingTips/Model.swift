@@ -29,7 +29,11 @@ func loadNews(completionHandler: (()->Void)?) {
     
     
     
-      //переменная "bettingTipsLink" отвечает за ссылку на раздел "Прогнозы"
+    
+    
+    //снять комментарий после скриншотов
+    
+    //переменная "bettingTipsLink" отвечает за ссылку на раздел "Прогнозы"
     //по умолчанию грузится английская версия
             var bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
             //проверка языка локализации!!!!!!!!!!
@@ -48,7 +52,14 @@ func loadNews(completionHandler: (()->Void)?) {
             bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
             }
       
-       
+    
+    //снять комментарий после скриншотов
+    
+    //закомментировать после скриншотов
+    //var bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
+    //закомментировать после скриншотов
+    
+    
         let url = URL(string: bettingTipsLink)
     
     

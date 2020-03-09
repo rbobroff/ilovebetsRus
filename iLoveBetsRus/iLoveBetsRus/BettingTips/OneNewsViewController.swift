@@ -14,6 +14,17 @@ class OneNewsViewController: UIViewController {
     
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        //закомментировать после скриншотов
+        //self.navigationItem.title = "#Tip"
+       // self.navigationController?.isNavigationBarHidden = false
+        //закомментировать после скриншотов
+        
+        
+        
+        //снять комментарий после скриншотов
+         
         //проверка языка локализации!!!!!!!!!!
                    let locale = NSLocale.current
                    let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -31,6 +42,14 @@ class OneNewsViewController: UIViewController {
                        self.navigationItem.title = "#Tip"
                }
                self.navigationController?.isNavigationBarHidden = false
+         
+        
+        //снять комментарий после скриншотов
+        
+        
+        
+        
+        
                }
     
     
