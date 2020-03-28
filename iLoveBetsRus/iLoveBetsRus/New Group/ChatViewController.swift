@@ -63,15 +63,18 @@ class ChatViewController: JSQMessagesViewController {
         }
 
         
-        
+        //v.2.3 комментируем
         //проверка языка локализации!!!!!!!!!!
-                   let locale = NSLocale.current
+             /*      let locale = NSLocale.current
                    let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
                    var currentPhoneLangID = currentLangID
                    //вычитаем 3 символа, чтобы получилось только ru (ru-US)
                    let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
                    currentPhoneLangID.removeSubrange(range)
-                   //если русский язык, отображать ЗАГОЛОВОК по-русски
+                */
+        
+        //v2.3
+        //если русский язык, отображать ЗАГОЛОВОК по-русски
                    if currentPhoneLangID == "ru" {
         //заголовок ViewController
         title = "Чат: \(senderDisplayName!)"
@@ -125,18 +128,20 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
 
         
         
-        
+        //v2.3
         //проверка языка локализации!!!!!!!!!!
-                          let locale = NSLocale.current
+                /*          let locale = NSLocale.current
                           let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
                           var currentPhoneLangID = currentLangID
                           //вычитаем 3 символа, чтобы получилось только ru (ru-US)
                           let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
                           currentPhoneLangID.removeSubrange(range)
+        */
         
         //сообщение при входе в чат о необходимости ввести имя. по умолчанию - английский язык
             var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
         
+        //v.2.3
                           //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
                           if currentPhoneLangID == "ru" {
         //Сообщение, где предлагается ввести имя
@@ -171,15 +176,17 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                 self?.senderDisplayName = textField.text
 
                 
-                
+                //v.2.3
                 //проверка языка локализации!!!!!!!!!!
-                let locale = NSLocale.current
+               /* let locale = NSLocale.current
                 let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
                 var currentPhoneLangID = currentLangID
                 //вычитаем 3 символа, чтобы получилось только ru (ru-US)
                 let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
                 currentPhoneLangID.removeSubrange(range)
+                */
                 
+                //v.2.3
                 if currentPhoneLangID == "ru" {
                 self?.title = "Чат: \(self!.senderDisplayName!)"
                 } else {

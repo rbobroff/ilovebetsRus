@@ -25,7 +25,9 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         //снять комментарий после скриншотов
         
+        //v.2.3
         //проверка языка локализации!!!!!!!!!!
+        /*
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
         var currentPhoneLangID = currentLangID
@@ -33,7 +35,9 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         //если русский язык, отображать ЗАГОЛОВОК по-русски
-        
+ */
+ 
+        //v.2.3
     //    if currentLangID == "ru-RU"
           if currentPhoneLangID == "ru" {
     self.navigationItem.title = "#Статистика"
@@ -80,13 +84,18 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
 
         //переменная "statisticLink" отвечает за ссылку на статистику
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+       
+        //v.2.3
         //проверка языка локализации!!!!!!!!!!
+       /*
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
         var currentPhoneLangID = currentLangID
         //вычитаем 3 символа, чтобы получилось только ru (ru-US)
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
+ */
+        //v.2.3
         //в зависимости от языка телефона загружается ссылка
            // if currentLangID == "ru-RU"
               if currentPhoneLangID == "ru"{
@@ -123,8 +132,12 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         //снять комментарий после скриншотов
         
+        //v.2.3
         //переменная "statisticLink" отвечает за ссылку на статистику
+        
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+        
+        /*
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -133,7 +146,10 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         //в зависимости от языка телефона загружается ссылка
-      //  if currentLangID == "ru-RU" {
+     */
+        
+        //v.2.3
+        //  if currentLangID == "ru-RU" {
         if currentPhoneLangID == "ru" {
         statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
             } else {

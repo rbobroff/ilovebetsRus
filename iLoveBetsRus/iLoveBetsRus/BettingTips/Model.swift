@@ -8,7 +8,17 @@
 
 import Foundation
 
-
+//v2.3
+//объявляем глобальную переменную для определения языка приложения
+var currentPhoneLangID: String {
+    if Locale.preferredLanguages.count == 0 {
+        return "en"
+    }
+    guard let language = Locale.preferredLanguages.first else {
+        return "en"
+    }
+    return String(language.prefix(2))
+}
 
 
 
@@ -38,17 +48,21 @@ func loadNews(completionHandler: (()->Void)?) {
     
     //снять комментарий после скриншотов
     
+    //v.2.3 комментируем
     //переменная "bettingTipsLink" отвечает за ссылку на раздел "Прогнозы"
     //по умолчанию грузится английская версия
             var bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
-            //проверка языка локализации!!!!!!!!!!
-            let locale = NSLocale.current
+         
+    //проверка языка локализации!!!!!!!!!!
+    /*        let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
             var currentPhoneLangID = currentLangID
             //вычитаем 3 символа, чтобы получилось только ru (ru-US)
             let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
             currentPhoneLangID.removeSubrange(range)
             //в зависимости от языка телефона загружается ссылка
+     */
+             //v2.3
                // if currentLangID == "ru-RU"
                   if currentPhoneLangID == "ru"{
             bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"

@@ -13,14 +13,19 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
 
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
-            //проверка языка локализации!!!!!!!!!!
-            let locale = NSLocale.current
+           
+        
+        
+        //проверка языка локализации!!!!!!!!!!
+         /*   let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
             var currentPhoneLangID = currentLangID
             //вычитаем 3 символа, чтобы получилось только ru (ru-US)
             let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
             currentPhoneLangID.removeSubrange(range)
             //если русский язык, отображать ЗАГОЛОВОК по-русски
+ */
+        
             if currentPhoneLangID == "ru" {
         self.navigationItem.title = "#О Нас"
            //добавление строки навигации при загрузке ViewControllera
@@ -60,14 +65,18 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         
         //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
         var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
+        
+        
         //проверка языка локализации!!!!!!!!!!
-        let locale = NSLocale.current
+       /* let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
         var currentPhoneLangID = currentLangID
         //вычитаем 3 символа, чтобы получилось только ru (ru-US)
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         //в зависимости от языка телефона загружается ссылка
+ */
+ 
            // if currentLangID == "ru-RU"
               if currentPhoneLangID == "ru"{
         aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
@@ -93,14 +102,19 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         
         //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
         var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
+       
+        
         //проверка языка локализации!!!!!!!!!!
-        let locale = NSLocale.current
+       /* let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
         var currentPhoneLangID = currentLangID
         //вычитаем 3 символа, чтобы получилось только ru (ru-US)
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         //в зависимости от языка телефона загружается ссылка
+ */
+ 
+ 
            // if currentLangID == "ru-RU"
               if currentPhoneLangID == "ru"{
         aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"

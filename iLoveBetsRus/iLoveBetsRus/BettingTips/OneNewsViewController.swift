@@ -25,7 +25,9 @@ class OneNewsViewController: UIViewController {
         
         //снять комментарий после скриншотов
          
+        //v.2.3 - комментируем, тк объявляем глобальную переменную
         //проверка языка локализации!!!!!!!!!!
+        /*
                    let locale = NSLocale.current
                    let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
                    var currentPhoneLangID = currentLangID
@@ -33,15 +35,17 @@ class OneNewsViewController: UIViewController {
                    let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
                    currentPhoneLangID.removeSubrange(range)
                    //если русский язык, отображать ЗАГОЛОВОК по-русски
-                   
+        */
+        
                //    if currentLangID == "ru-RU"
-                     if currentPhoneLangID == "ru" {
-               self.navigationItem.title = "#Прогноз"
-                  //добавление строки навигации при загрузке ViewControllera
-                   } else{
-                       self.navigationItem.title = "#Tip"
-               }
-               self.navigationController?.isNavigationBarHidden = false
+        //v.2.3
+        if currentPhoneLangID == "ru" {
+            self.navigationItem.title = "#Прогноз"
+            //добавление строки навигации при загрузке ViewControllera
+        } else {
+            self.navigationItem.title = "#Tip"
+        }
+        self.navigationController?.isNavigationBarHidden = false
          
         
         //снять комментарий после скриншотов

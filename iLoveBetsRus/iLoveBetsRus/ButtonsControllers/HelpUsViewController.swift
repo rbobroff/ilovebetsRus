@@ -14,13 +14,17 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
                 //проверка языка локализации!!!!!!!!!!
-                let locale = NSLocale.current
+               
+        /*
+        let locale = NSLocale.current
                 let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
                 var currentPhoneLangID = currentLangID
                 //вычитаем 3 символа, чтобы получилось только ru (ru-US)
                 let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
                 currentPhoneLangID.removeSubrange(range)
                 //если русский язык, отображать ЗАГОЛОВОК по-русски
+        */
+        
                 if currentPhoneLangID == "ru" {
             self.navigationItem.title = "#Справка"
                //добавление строки навигации при загрузке ViewControllera
@@ -57,14 +61,19 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         
         //переменная "helpLink" отвечает за ссылку на раздел "Справка"
         var helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
+        
+        
         //проверка языка локализации!!!!!!!!!!
-        let locale = NSLocale.current
+       /* let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
         var currentPhoneLangID = currentLangID
         //вычитаем 3 символа, чтобы получилось только ru (ru-US)
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         //в зависимости от языка телефона загружается ссылка
+ */
+ 
+ 
            // if currentLangID == "ru-RU"
               if currentPhoneLangID == "ru"{
         helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
@@ -90,14 +99,17 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         
         //переменная "helpLink" отвечает за ссылку на раздел "Справка"
         var helpLink = "https://yandex.ru/"
+      
         //проверка языка локализации!!!!!!!!!!
-        let locale = NSLocale.current
+      /*  let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
         var currentPhoneLangID = currentLangID
         //вычитаем 3 символа, чтобы получилось только ru (ru-US)
         let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
         currentPhoneLangID.removeSubrange(range)
         //в зависимости от языка телефона загружается ссылка
+ */
+ 
            // if currentLangID == "ru-RU"
               if currentPhoneLangID == "ru"{
         helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
