@@ -93,7 +93,7 @@ class OneNewsViewController: UIViewController {
  //       urlImage.text = article.urlToImage
  
         
-        
+        //v2.3 - закомментировали. ниже новый код, что не замораживался интерфейс
         //загрузка картинки 1-я версия
 /*          DispatchQueue.main.async {
             if let url = URL(string: self.article.urlToImage) {
@@ -103,7 +103,8 @@ class OneNewsViewController: UIViewController {
             }
         }
 */
-        //загрзука картинки не в основном потоке. чтобы не замораживался экран при загрузке картинки
+        //v2.3
+        //загрузка картинки не в основном потоке. чтобы не замораживался экран при загрузке картинки
         DispatchQueue.global(qos: .background).async {
             if let url = URL(string: self.article.urlToImage) {
                 if let data = try? Data(contentsOf: url) {

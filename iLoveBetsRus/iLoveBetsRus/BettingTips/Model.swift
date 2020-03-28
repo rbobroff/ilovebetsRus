@@ -8,6 +8,11 @@
 
 import Foundation
 
+
+
+
+
+
 //создаем массив Новостей. [] - пустой массив новостей
 var articles: [Article] = []
 
