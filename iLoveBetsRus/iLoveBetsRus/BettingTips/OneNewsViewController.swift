@@ -46,10 +46,6 @@ class OneNewsViewController: UIViewController {
         
         //снять комментарий после скриншотов
         
-        
-        
-        
-        
                }
     
     
@@ -86,7 +82,7 @@ class OneNewsViewController: UIViewController {
         super.viewDidLoad()
 
         
-//на основании переменной article, в которую записываются данные из структуру Article, заполняем все поля для экрана с одной новостью
+//на основании переменной article, в которую записываются данные из структуры Article, заполняем все поля для экрана с одной новостью
         labelTitle.text = article.title //чемпионат
         labelDescription.text = article.description
         publishedAt.text = article.publishedAt
@@ -96,13 +92,30 @@ class OneNewsViewController: UIViewController {
         
  //       urlImage.text = article.urlToImage
  
-        DispatchQueue.main.async {
+        
+        
+        //загрузка картинки 1-я версия
+/*          DispatchQueue.main.async {
             if let url = URL(string: self.article.urlToImage) {
                 if let data = try? Data(contentsOf: url) {
                     self.imageView.image = UIImage(data: data)
                 }
             }
         }
+*/
+        //загрзука картинки не в основном потоке. чтобы не замораживался экран при загрузке картинки
+        DispatchQueue.global(qos: .background).async {
+            if let url = URL(string: self.article.urlToImage) {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
+        
+        
         
         
         // Do any additional setup after loading the view.

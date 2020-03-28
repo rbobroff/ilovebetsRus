@@ -432,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iLoveBetsRus/Ставки ХП Спортивные Прогнозы.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16.2;
+				CURRENT_PROJECT_VERSION = 2.2;
 				DEVELOPMENT_TEAM = HQ63WJBDTX;
 				INFOPLIST_FILE = iLoveBetsRus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -440,7 +440,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 16;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapps.bettingadvisor;
 				PRODUCT_NAME = iLoveBets;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
@@ -456,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iLoveBetsRus/Ставки ХП Спортивные Прогнозы.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16.2;
+				CURRENT_PROJECT_VERSION = 2.2;
 				DEVELOPMENT_TEAM = HQ63WJBDTX;
 				INFOPLIST_FILE = iLoveBetsRus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -464,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 16;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapps.bettingadvisor;
 				PRODUCT_NAME = iLoveBets;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
