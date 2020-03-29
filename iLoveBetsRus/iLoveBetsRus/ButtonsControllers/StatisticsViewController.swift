@@ -38,14 +38,14 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
  */
  
         //v.2.3
-    //    if currentLangID == "ru-RU"
-          if currentPhoneLangID == "ru" {
-    self.navigationItem.title = "#Статистика"
+        //    if currentLangID == "ru-RU"
+    if currentPhoneLangID == "ru" {
+        self.navigationItem.title = "#Статистика"
        //добавление строки навигации при загрузке ViewControllera
-        } else{
-            self.navigationItem.title = "#Statistics"
+    } else {
+        self.navigationItem.title = "#Statistics"
     }
-    self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         
         
         //снять комментарий после скриншотов
@@ -97,11 +97,11 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
  */
         //v.2.3
         //в зависимости от языка телефона загружается ссылка
-           // if currentLangID == "ru-RU"
-              if currentPhoneLangID == "ru"{
-        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
-            } else{
-        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+        // if currentLangID == "ru-RU"
+        if currentPhoneLangID == "ru"{
+            statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
+        } else {
+            statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         }
  
         
@@ -137,6 +137,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         
+        //v.2.3
         /*
         //проверка языка локализации!!!!!!!!!!
         let locale = NSLocale.current
@@ -151,9 +152,9 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         //v.2.3
         //  if currentLangID == "ru-RU" {
         if currentPhoneLangID == "ru" {
-        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
-            } else {
-        statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+            statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
+        } else {
+            statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
         }
         
         
@@ -173,11 +174,11 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         if webView.url != nil {
             webView?.reload()
-                }else{
+        } else {
             webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
-            }
-        sender.endRefreshing()
-    }
+        }
+            sender.endRefreshing()
+        }
     
     
     

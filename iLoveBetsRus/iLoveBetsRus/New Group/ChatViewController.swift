@@ -75,11 +75,11 @@ class ChatViewController: JSQMessagesViewController {
         
         //v2.3
         //если русский язык, отображать ЗАГОЛОВОК по-русски
-                   if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" {
         //заголовок ViewController
-        title = "Чат: \(senderDisplayName!)"
-                   } else {
-        title = "Chat: \(senderDisplayName!)"
+            title = "Чат: \(senderDisplayName!)"
+        } else {
+            title = "Chat: \(senderDisplayName!)"
         }
         
         
@@ -142,16 +142,16 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
             var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
         
         //v.2.3
-                          //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
-                          if currentPhoneLangID == "ru" {
+        //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
+        if currentPhoneLangID == "ru" {
         //Сообщение, где предлагается ввести имя
      //для русской версии
-     alert = UIAlertController(title: "Введите имя", message: "Прежде чем Вы сможете общаться, введите имя. Другие пользователи увидят Ваше имя при отправке сообщений чата. Вы можете изменить свое имя, нажав на панель навигации", preferredStyle: .alert)
+            alert = UIAlertController(title: "Введите имя", message: "Прежде чем Вы сможете общаться, введите имя. Другие пользователи увидят Ваше имя при отправке сообщений чата. Вы можете изменить свое имя, нажав на панель навигации", preferredStyle: .alert)
         
-                          } else {
+        } else {
         
       //  для английской версии
-    alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
+            alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
         }
         
         
@@ -186,12 +186,12 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                 currentPhoneLangID.removeSubrange(range)
                 */
                 
-                //v.2.3
-                if currentPhoneLangID == "ru" {
+            //v.2.3
+            if currentPhoneLangID == "ru" {
                 self?.title = "Чат: \(self!.senderDisplayName!)"
-                } else {
+            } else {
                 self?.title = "Chat: \(self!.senderDisplayName!)"
-                }
+            }
                 
                 
                 

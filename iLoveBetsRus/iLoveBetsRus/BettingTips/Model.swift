@@ -48,11 +48,12 @@ func loadNews(completionHandler: (()->Void)?) {
     
     //снять комментарий после скриншотов
     
-    //v.2.3 комментируем
+    
     //переменная "bettingTipsLink" отвечает за ссылку на раздел "Прогнозы"
     //по умолчанию грузится английская версия
             var bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
-         
+
+    //v.2.3 комментируем
     //проверка языка локализации!!!!!!!!!!
     /*        let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -62,13 +63,14 @@ func loadNews(completionHandler: (()->Void)?) {
             currentPhoneLangID.removeSubrange(range)
             //в зависимости от языка телефона загружается ссылка
      */
-             //v2.3
+            
+    //v2.3
                // if currentLangID == "ru-RU"
-                  if currentPhoneLangID == "ru"{
-            bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"
-                } else {
+            if currentPhoneLangID == "ru"{
+                bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"
+            } else {
     //иначе грузится английская версия прогнозов
-            bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
+                bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
             }
       
     

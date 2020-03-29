@@ -21,10 +21,10 @@ class OneNewsViewController: UIViewController {
        // self.navigationController?.isNavigationBarHidden = false
         //закомментировать после скриншотов
         
-        
-        
         //снять комментарий после скриншотов
          
+        
+        
         //v.2.3 - комментируем, тк объявляем глобальную переменную
         //проверка языка локализации!!!!!!!!!!
         /*
@@ -38,6 +38,7 @@ class OneNewsViewController: UIViewController {
         */
         
                //    if currentLangID == "ru-RU"
+       
         //v.2.3
         if currentPhoneLangID == "ru" {
             self.navigationItem.title = "#Прогноз"
@@ -45,12 +46,12 @@ class OneNewsViewController: UIViewController {
         } else {
             self.navigationItem.title = "#Tip"
         }
-        self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.isNavigationBarHidden = false
          
         
         //снять комментарий после скриншотов
         
-               }
+        }
     
     
     
@@ -97,7 +98,7 @@ class OneNewsViewController: UIViewController {
  //       urlImage.text = article.urlToImage
  
         
-        //v2.3 - закомментировали. ниже новый код, что не замораживался интерфейс
+        //v2.3 - закомментировали. ниже новый код, чтобы не замораживался интерфейс
         //загрузка картинки 1-я версия
 /*          DispatchQueue.main.async {
             if let url = URL(string: self.article.urlToImage) {

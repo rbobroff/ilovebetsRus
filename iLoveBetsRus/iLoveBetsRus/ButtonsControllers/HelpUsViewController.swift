@@ -14,7 +14,8 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
                 //проверка языка локализации!!!!!!!!!!
-               
+          
+        //v.2.3
         /*
         let locale = NSLocale.current
                 let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -25,14 +26,15 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
                 //если русский язык, отображать ЗАГОЛОВОК по-русски
         */
         
-                if currentPhoneLangID == "ru" {
+        //v.2.3
+        if currentPhoneLangID == "ru" {
             self.navigationItem.title = "#Справка"
                //добавление строки навигации при загрузке ViewControllera
-                } else{
-                    self.navigationItem.title = "#Help"
-            }
+        } else {
+            self.navigationItem.title = "#Help"
+        }
             self.navigationController?.isNavigationBarHidden = false
-            }
+        }
 
     
     
@@ -62,7 +64,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         //переменная "helpLink" отвечает за ссылку на раздел "Справка"
         var helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
         
-        
+        //v.2.3
         //проверка языка локализации!!!!!!!!!!
        /* let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -73,12 +75,12 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         //в зависимости от языка телефона загружается ссылка
  */
  
- 
-           // if currentLangID == "ru-RU"
-              if currentPhoneLangID == "ru"{
-        helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
-            } else {
-        helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
+        //v.2.3
+        // if currentLangID == "ru-RU"
+        if currentPhoneLangID == "ru"{
+            helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
+        } else {
+            helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
         }
         
         
@@ -98,8 +100,9 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         
         
         //переменная "helpLink" отвечает за ссылку на раздел "Справка"
-        var helpLink = "https://yandex.ru/"
+        var helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
       
+        //v.2.3
         //проверка языка локализации!!!!!!!!!!
       /*  let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -110,11 +113,13 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         //в зависимости от языка телефона загружается ссылка
  */
  
-           // if currentLangID == "ru-RU"
-              if currentPhoneLangID == "ru"{
-        helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
-            } else {
-        helpLink = "https://yandex.ru/"
+        
+        //v.2.3
+        // if currentLangID == "ru-RU"
+        if currentPhoneLangID == "ru"{
+            helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
+        } else {
+            helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
         }
         
         
@@ -126,11 +131,11 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         
         if webView.url != nil {
             webView?.reload()
-                }else{
+        } else {
             webView.load(NSURLRequest(url: URL! as URL) as URLRequest)
-            }
-        sender.endRefreshing()
-    }
+        }
+            sender.endRefreshing()
+        }
     
 
 

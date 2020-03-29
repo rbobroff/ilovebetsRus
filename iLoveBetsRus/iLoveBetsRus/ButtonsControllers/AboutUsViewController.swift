@@ -15,7 +15,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
     override func viewWillAppear(_ animated: Bool) {
            
         
-        
+        //v2.3
         //проверка языка локализации!!!!!!!!!!
          /*   let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -25,14 +25,14 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
             currentPhoneLangID.removeSubrange(range)
             //если русский язык, отображать ЗАГОЛОВОК по-русски
  */
-        
-            if currentPhoneLangID == "ru" {
-        self.navigationItem.title = "#О Нас"
+        //v2.3
+        if currentPhoneLangID == "ru" {
+            self.navigationItem.title = "#О Нас"
            //добавление строки навигации при загрузке ViewControllera
-            } else{
-                self.navigationItem.title = "#About Us"
+        } else {
+            self.navigationItem.title = "#About Us"
         }
-        self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.isNavigationBarHidden = false
         }
     
     
@@ -66,7 +66,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         //переменная "aboutUsLink" отвечает за ссылку на раздел "О нас"
         var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         
-        
+        //v.2.3
         //проверка языка локализации!!!!!!!!!!
        /* let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -77,11 +77,12 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         //в зависимости от языка телефона загружается ссылка
  */
  
-           // if currentLangID == "ru-RU"
-              if currentPhoneLangID == "ru"{
-        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
-            } else {
-        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
+        //v.2.3
+        // if currentLangID == "ru-RU"
+        if currentPhoneLangID == "ru"{
+            aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
+        } else {
+            aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         }
         
         
@@ -104,6 +105,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
        
         
+        //v2.3
         //проверка языка локализации!!!!!!!!!!
        /* let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -114,12 +116,12 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         //в зависимости от языка телефона загружается ссылка
  */
  
- 
-           // if currentLangID == "ru-RU"
-              if currentPhoneLangID == "ru"{
-        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
-            } else {
-        aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
+        //v.2.3
+        // if currentLangID == "ru-RU"
+        if currentPhoneLangID == "ru"{
+            aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
+        } else {
+            aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
         }
         
         

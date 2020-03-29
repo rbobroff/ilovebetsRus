@@ -90,13 +90,15 @@ class ViewController: UIViewController {
         print("Только текущий язык телефона, без региона = ",currentPhoneLangID)
         */
     
+       
         //v2.3
+        print("Текущий язык телефон-Регион = ",currentPhoneLangID) //выводим в консоль язык телефона
         //Локализуем главный вид приложения!!!
-                if currentPhoneLangID == "ru" {
-        yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
-        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
-                    sportBetsLabel.text = "Спортивные прогнозы"
-                    sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        if currentPhoneLangID == "ru" {
+            yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
+            sportBetsLabel.text = "Спортивные прогнозы"
+            sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
          
 
                     
@@ -125,6 +127,7 @@ class ViewController: UIViewController {
       
         
         
+        //тк по умолчанию уже кнопки и надписи на английском языке
          /*
                 } else {
         yourPersonalSportsBettingAdvisorLabel.text = "Your Personal Sports Betting Advisor"
@@ -262,6 +265,8 @@ class ViewController: UIViewController {
             return
             }
         
+            //v.3.2
+            /*
             //проверка языка локализации!!!!!!!!!!
             let locale = NSLocale.current
             let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
@@ -269,10 +274,11 @@ class ViewController: UIViewController {
             //вычитаем 3 символа, чтобы получилось только ru (ru-US)
             let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
             currentPhoneLangID.removeSubrange(range)
-            
+            */
             
             let composer = MFMailComposeViewController()
             
+            //v.2.3
            // if currentLangID == "ru-RU"
                if currentPhoneLangID == "ru" {
             composer.mailComposeDelegate = self
