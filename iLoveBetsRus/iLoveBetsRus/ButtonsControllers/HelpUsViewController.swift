@@ -33,7 +33,20 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         } else {
             self.navigationItem.title = "#Help"
         }
-            self.navigationController?.isNavigationBarHidden = false
+        
+            // v.2.3 закомментировали
+            //self.navigationController?.isNavigationBarHidden = false
+        
+        //v.2.3 - строка ниже, чтобы срабатывала анимация скрытия navigationBar. возвращаем в первоначальное состояние. также прописана строка на viewController
+        self.navigationController?.navigationBar.transform = .identity
+        
+        self.navigationController?.isNavigationBarHidden = false
+        //v.2.3 для анмированного удаления navigationBar
+        self.navigationController?.navigationBar.alpha = 0
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.navigationController?.navigationBar.alpha = 1
+           })
         }
 
     

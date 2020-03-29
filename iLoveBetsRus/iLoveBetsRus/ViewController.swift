@@ -62,14 +62,26 @@ class ViewController: UIViewController {
     
    // скрывать navigation bar (или показывать)
    override func viewWillAppear(_ animated: Bool) {
-   self.navigationController?.isNavigationBarHidden = true
-        
+    
+    //v.2.3 комментируем
+    //self.navigationController?.isNavigationBarHidden = true
+    
+    //v.2.3 для анимированного удаления navigationBar
+        self.navigationController?.navigationBar.alpha = 1
+    UIView.animate(withDuration: 0.3, animations: {
+        //v.2.3 - строка ниже добавляем анимацию, чтобы увести navigationBar по оси "y" в -200
+        self.navigationController?.navigationBar.transform = CGAffineTransform(translationX: 0, y: -200)
+        self.navigationController?.navigationBar.alpha = 0 //убираем в ноль за 0.3 секунды
+    }) { (bool) in
+        self.navigationController?.isNavigationBarHidden = true
+ }
  }
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        
+    //v2.3 для анмированного navigationBar
+     self.navigationController?.isNavigationBarHidden = true
         
         
         //снять комментарий после скриншотов
