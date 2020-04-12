@@ -196,7 +196,7 @@
 				};
 			};
 			buildConfigurationList = EDB5257A2368B3D0002428AB /* Build configuration list for PBXProject "iLoveBetsRus" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
