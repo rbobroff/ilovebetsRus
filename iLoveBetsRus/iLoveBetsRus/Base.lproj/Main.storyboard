@@ -354,6 +354,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="GSq-0c-lJn">
+                            <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="aBs-wd-CZh" detailTextLabel="5mF-oi-s4p" rowHeight="76" style="IBUITableViewCellStyleSubtitle" id="rRT-Pa-jmB">
                                 <rect key="frame" x="0.0" y="28" width="414" height="76"/>
@@ -394,6 +398,7 @@
                         </connections>
                     </refreshControl>
                     <connections>
+                        <outlet property="loadTipsActivityIndicator" destination="GSq-0c-lJn" id="27z-hA-Fhj"/>
                         <segue destination="b3s-U7-OQD" kind="show" identifier="goToOneNews" id="aBq-EV-QDk"/>
                     </connections>
                 </tableViewController>
@@ -407,7 +412,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qDV-ab-oJY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0G-xv-gZD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

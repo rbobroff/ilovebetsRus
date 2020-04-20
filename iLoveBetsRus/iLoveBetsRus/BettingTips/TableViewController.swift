@@ -11,13 +11,18 @@ import UIKit
 class TableViewController: UITableViewController {
 //По этой инструкции настроен TableView и отображение й новости: https://www.youtube.com/watch?v=lCDTcGJ5Nwg&list=PLcmaZSNs2TKhWZSUVA8sFt2ETdbH7LCP3
     
+    //v2.4
+    //аутлет ActivityIndicator для списка новостей
+    @IBOutlet weak var loadTipsActivityIndicator: UIActivityIndicatorView!
+    
     @IBAction func refreshControllAction(_ sender: Any) {
+        //v.2.4 - activity indicator при загрузке новостей
+    self.loadTipsActivityIndicator.stopAnimating()
         loadNews {
             DispatchQueue.main.async {
     self.refreshControl?.endRefreshing()
     self.tableView.reloadData()
-            
-        }
+           }
         }
     }
     

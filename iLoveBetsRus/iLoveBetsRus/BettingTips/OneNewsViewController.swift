@@ -11,7 +11,6 @@ import UIKit
 class OneNewsViewController: UIViewController {
 
     
-    
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         
