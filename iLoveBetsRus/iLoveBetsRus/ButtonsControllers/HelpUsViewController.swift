@@ -27,7 +27,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         */
         
         //v.2.3
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             self.navigationItem.title = "#Справка"
                //добавление строки навигации при загрузке ViewControllera
         } else {
@@ -90,7 +90,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
  
         //v.2.3
         // if currentLangID == "ru-RU"
-        if currentPhoneLangID == "ru"{
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"{
             helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
         } else {
             helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"
@@ -129,7 +129,7 @@ class HelpUsViewController: UIViewController, WKUIDelegate {
         
         //v.2.3
         // if currentLangID == "ru-RU"
-        if currentPhoneLangID == "ru"{
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"{
             helpLink = "https://ilovebets.ru/mobileApp/iOS/helpRus/"
         } else {
             helpLink = "https://ilovebets.ru/mobileApp/iOS/helpEng/"

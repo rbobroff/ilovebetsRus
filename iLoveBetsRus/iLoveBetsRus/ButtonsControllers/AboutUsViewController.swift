@@ -26,7 +26,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
             //если русский язык, отображать ЗАГОЛОВОК по-русски
  */
         //v2.3
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             self.navigationItem.title = "#О Нас"
            //добавление строки навигации при загрузке ViewControllera
         } else {
@@ -91,7 +91,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
  
         //v.2.3
         // if currentLangID == "ru-RU"
-        if currentPhoneLangID == "ru"{
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"{
             aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
         } else {
             aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"
@@ -130,7 +130,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
  
         //v.2.3
         // if currentLangID == "ru-RU"
-        if currentPhoneLangID == "ru"{
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"{
             aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsRus/"
         } else {
             aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/aboutUsEng/"

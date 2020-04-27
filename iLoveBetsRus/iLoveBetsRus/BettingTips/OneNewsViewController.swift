@@ -70,7 +70,7 @@ class OneNewsViewController: UIViewController {
                //    if currentLangID == "ru-RU"
        
         //v.2.3
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             self.navigationItem.title = "#Прогноз"
             //добавление строки навигации при загрузке ViewControllera
         } else {

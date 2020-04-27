@@ -66,7 +66,7 @@ func loadNews(completionHandler: (()->Void)?) {
             
     //v2.3
                // if currentLangID == "ru-RU"
-            if currentPhoneLangID == "ru"{
+            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"{
                 bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsRus/"
             } else {
     //иначе грузится английская версия прогнозов

@@ -39,7 +39,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
  
         //v.2.3
         //    if currentLangID == "ru-RU"
-    if currentPhoneLangID == "ru" {
+    if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
         self.navigationItem.title = "#Статистика"
        //добавление строки навигации при загрузке ViewControllera
     } else {
@@ -109,7 +109,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         //v.2.3
         //в зависимости от языка телефона загружается ссылка
         // if currentLangID == "ru-RU"
-        if currentPhoneLangID == "ru"{
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"{
             statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
         } else {
             statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
@@ -162,7 +162,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         //v.2.3
         //  if currentLangID == "ru-RU" {
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
         } else {
             statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"

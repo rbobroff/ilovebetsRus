@@ -106,7 +106,7 @@ class ViewController: UIViewController {
         //v2.3
         print("Текущий язык телефон-Регион = ",currentPhoneLangID) //выводим в консоль язык телефона
         //Локализуем главный вид приложения!!!
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
             sportBetsLabel.text = "Спортивные прогнозы"
@@ -294,7 +294,7 @@ class ViewController: UIViewController {
             
             //v.2.3
            // if currentLangID == "ru-RU"
-               if currentPhoneLangID == "ru" {
+               if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             composer.mailComposeDelegate = self
             composer.setToRecipients(["ilovebets@ya.ru"])
             composer.setSubject("Обратная связь iLoveBets")

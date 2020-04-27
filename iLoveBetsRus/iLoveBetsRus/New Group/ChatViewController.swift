@@ -92,7 +92,7 @@ class ChatViewController: JSQMessagesViewController {
         
         //v2.3
         //если русский язык, отображать ЗАГОЛОВОК по-русски
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
         //заголовок ViewController
             title = "Чат: \(senderDisplayName!)"
         } else {
@@ -160,7 +160,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
         //v.2.3
         //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
-        if currentPhoneLangID == "ru" {
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
         //Сообщение, где предлагается ввести имя
      //для русской версии
             alert = UIAlertController(title: "Введите имя", message: "Прежде чем Вы сможете общаться, введите имя. Другие пользователи увидят Ваше имя при отправке сообщений чата. Вы можете изменить свое имя, нажав на панель навигации", preferredStyle: .alert)
@@ -204,7 +204,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                 */
                 
             //v.2.3
-            if currentPhoneLangID == "ru" {
+            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
                 self?.title = "Чат: \(self!.senderDisplayName!)"
             } else {
                 self?.title = "Chat: \(self!.senderDisplayName!)"

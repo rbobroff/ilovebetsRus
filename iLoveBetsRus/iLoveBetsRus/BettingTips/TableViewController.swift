@@ -55,7 +55,7 @@ class TableViewController: UITableViewController {
         
         //v.2.3
         //    if currentLangID == "ru-RU"
-              if currentPhoneLangID == "ru" {
+              if currentPhoneLangID == "ru" || currentPhoneLangID == "uk"  {
                   self.navigationItem.title = "#Прогнозы"
                   //добавление строки навигации при загрузке ViewControllera
               } else {
