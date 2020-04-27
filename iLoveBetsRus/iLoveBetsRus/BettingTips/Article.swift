@@ -36,6 +36,7 @@ struct Article {
     var urlToImage: String
     var publishedAt: String
     var content: String
+    var dot: String
     
     var sourceName: String
     
@@ -54,6 +55,7 @@ struct Article {
         urlToImage = dictionary["urlToImage"] as? String ?? ""
         publishedAt = dictionary["publishedAt"] as? String ?? ""
         content = dictionary["content"] as? String ?? ""
+        dot = dictionary["dot"] as? String ?? ""
         
         //sourceName сделан, как словарь на ресурсе newsapi.org. поэтому к одному из значений этого словаря обращаемся по одному из ключей:
         /*source": {

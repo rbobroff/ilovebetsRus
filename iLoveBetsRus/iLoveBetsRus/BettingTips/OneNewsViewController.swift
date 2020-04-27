@@ -11,8 +11,39 @@ import UIKit
 class OneNewsViewController: UIViewController {
 
     
+    //default "imageHeight" = 450
+    //UIScreen.main.bounds.width == 375
+    //for iPhone 6, 6S, 7, 8, SE_2nd, iPhone X, 11pro
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
+    
+    
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
+        
+        //Масштабирование картинки для разной ширины экрана
+        //iPhone 5S, SE
+       if UIScreen.main.bounds.width == 320 {
+        imageHeightConstraint.constant = 384
+        }
+        //iPhone 6+, 6S+ 7+, 8+, iPhone 11, 11 Pro Max
+       else if UIScreen.main.bounds.width == 414 {
+        imageHeightConstraint.constant = 496.8
+        }
+        //iPhone X, 11pro
+        
+        
+        
+        
+        
+        
+        //v.2.5 - масштабируем изображение
+               //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0) - настроены Constraints
+        //    if UIScreen.main.bounds.height == 896 {
+            
+                //Для iPhone 5S, SE (с высотой экрана 568.0) - настроены Constraints
+     //   if UIScreen.main.bounds.height == 568 {
+        
+        
         
         
         //закомментировать после скриншотов

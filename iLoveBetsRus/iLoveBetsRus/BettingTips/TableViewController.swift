@@ -11,12 +11,12 @@ import UIKit
 class TableViewController: UITableViewController {
 //По этой инструкции настроен TableView и отображение й новости: https://www.youtube.com/watch?v=lCDTcGJ5Nwg&list=PLcmaZSNs2TKhWZSUVA8sFt2ETdbH7LCP3
     
-    //v.2.4
+    //v2.4
     //аутлет ActivityIndicator для списка новостей
     @IBOutlet weak var loadTipsActivityIndicator: UIActivityIndicatorView!
     
     @IBAction func refreshControllAction(_ sender: Any) {
-    //v.2.4 - activity indicator при загрузке новостей
+        //v.2.4 - activity indicator при загрузке новостей
     self.loadTipsActivityIndicator.stopAnimating()
         loadNews {
             DispatchQueue.main.async {
@@ -120,7 +120,10 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! newTableViewCell
+        //v.2.5 добавление точки в список прогнозов
+        //добавлено: as! newTableViewCell
+        
 //указываем идентификатор Cell и тут же его переносим на Main StoryBoard TableView в поле Identifier. Для этого надо выделить ячейку и перейти в Attributes Inspector
 //Далее здесь в StoryBoard меняем стиль нашей таблицы с Custom на Subtitle - появляется Title и Subtitle в ячейке
         
@@ -128,8 +131,12 @@ class TableViewController: UITableViewController {
         //получаем новость для нашей ячейки
         let article = articles[indexPath.row]
         //берем название статьи (новости) и дату публикации
-        cell.textLabel?.text = article.title
-        cell.detailTextLabel?.text = article.publishedAt
+        
+        //v.2.5 добавление точки в список прогнозов
+        cell.initCell(article: article)
+        //если стиль ячейки Subtitle
+        //cell.textLabel?.text = article.title
+        //cell.detailTextLabel?.text = article.publishedAt
         return cell
     }
     

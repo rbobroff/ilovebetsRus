@@ -22,6 +22,7 @@
 		EDBE205F237337C800E206C9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE205E237337C800E206C9 /* Article.swift */; };
 		EDBE2061237337D500E206C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE2060237337D500E206C9 /* Model.swift */; };
 		EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */; };
+		EDC97D632455F0EE0035E95F /* newTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC97D622455F0EE0035E95F /* newTableViewCell.swift */; };
 		EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF6BF123748C61005816C7 /* TableViewController.swift */; };
 		F3E66F53F7DC5AA22D1871C4 /* Pods_iLoveBetsRus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		EDBE205E237337C800E206C9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EDBE2060237337D500E206C9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
+		EDC97D622455F0EE0035E95F /* newTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = newTableViewCell.swift; path = /Users/rbobroff/Documents/GitProjects/ilovebetsRus/iLoveBetsRus/iLoveBetsRus/BettingTips/newTableViewCell.swift; sourceTree = "<absolute>"; };
 		EDFF6BF123748C61005816C7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				EDBE205E237337C800E206C9 /* Article.swift */,
 				EDBE2060237337D500E206C9 /* Model.swift */,
 				EDFF6BF123748C61005816C7 /* TableViewController.swift */,
+				EDC97D622455F0EE0035E95F /* newTableViewCell.swift */,
 				EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */,
 			);
 			path = BettingTips;
@@ -283,6 +286,7 @@
 				EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */,
 				ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */,
 				ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */,
+				EDC97D632455F0EE0035E95F /* newTableViewCell.swift in Sources */,
 				EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */,
 				ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */,
 				ED096A04239C3DEC00F88568 /* Constants.swift in Sources */,

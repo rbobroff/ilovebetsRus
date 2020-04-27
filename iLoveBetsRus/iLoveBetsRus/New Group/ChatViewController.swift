@@ -114,7 +114,7 @@ class ChatViewController: JSQMessagesViewController {
 collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
 collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        //v.2.4 - отображать 50 последних сообщений чата
+       
         //Observing Firebase For New Chat Messages
         let query = Constants.refs.databaseChats.queryLimited(toLast: 50)
 

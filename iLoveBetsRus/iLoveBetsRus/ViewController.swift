@@ -186,8 +186,8 @@ class ViewController: UIViewController {
     //высота экрана iphone 11 Pro Max = 896.0
         
         //проверяем размер экрана!!!!
-        var h = UIScreen.main.bounds.height
-        var w = UIScreen.main.bounds.width
+        let h = UIScreen.main.bounds.height
+        let w = UIScreen.main.bounds.width
         print("Высота экрана = ",h)
         print("Ширина экрана = ",w)
         
@@ -198,16 +198,18 @@ class ViewController: UIViewController {
             sportBetsLabel.isHidden = false
         }
         
-        //Для iPhone 5S, SE (с высотой экрана 568.0) - настроены Constraints
+        //Для iPhone 5S, SE (с высотой экрана 568.0, width = 320) - настроены Constraints
         if UIScreen.main.bounds.height == 568 {
              //top Constraint для верхнего label
-    upConstraintYourPersonalSportsBettingAdvisor.constant = 17
+            //17
+    upConstraintYourPersonalSportsBettingAdvisor.constant = 12
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
-            bettingTipsButtonTopConstraint.constant = 93
-            statisticsButtonTopConstraint.constant = 93
+            //93
+            bettingTipsButtonTopConstraint.constant = 80
+            statisticsButtonTopConstraint.constant = 80
         }
         
-        //Для iPhone 6, 6S, 7, 8 (с высотой экрана 667.0) - настроены Constraints
+        //Для iPhone 6, 6S, 7, 8, SE_2nd (с высотой экрана 667.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 667 {
             
             //top Constraint для верхнего label
@@ -224,7 +226,7 @@ class ViewController: UIViewController {
         }
 
         
-        //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, 414) - настроены Constraints
+        //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, width - 414) - настроены Constraints
         if UIScreen.main.bounds.height == 736 {
 
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
@@ -238,14 +240,14 @@ class ViewController: UIViewController {
         }
         
         
-        //Для iPhone X, 11pro (с высотой экрана 812.0) - настроены Constraints
+        //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
             if UIScreen.main.bounds.height == 812 {
                 bettingTipsButtonTopConstraint.constant = 111
                 statisticsButtonTopConstraint.constant = 111
             }
         
         
-        //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0) - настроены Constraints
+        //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0, width = 414) - настроены Constraints
         if UIScreen.main.bounds.height == 896 {
             bettingTipsButtonTopConstraint.constant = 161
             statisticsButtonTopConstraint.constant = 161
