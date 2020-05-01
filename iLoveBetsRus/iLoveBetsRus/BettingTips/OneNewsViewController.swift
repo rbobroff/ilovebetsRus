@@ -16,6 +16,7 @@ class OneNewsViewController: UIViewController {
     //for iPhone 6, 6S, 7, 8, SE_2nd, iPhone X, 11pro
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +34,7 @@ class OneNewsViewController: UIViewController {
         }
         else if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
         imageHeightConstraint.constant = 921.6
+        imageViewTopConstraint.constant = -65
         }
         
         

@@ -343,6 +343,7 @@
                         <outlet property="content" destination="eGi-cd-2kl" id="xIj-hP-faw"/>
                         <outlet property="imageHeightConstraint" destination="kLl-Lf-4hh" id="K13-pX-Uuy"/>
                         <outlet property="imageView" destination="HDb-GX-SQ4" id="ho1-l5-vdV"/>
+                        <outlet property="imageViewTopConstraint" destination="dX2-yy-ke0" id="Snc-d1-zo8"/>
                         <outlet property="labelDescription" destination="gR3-xP-PjE" id="3pu-eH-KEc"/>
                         <outlet property="labelTitle" destination="T49-9W-h1i" id="c0H-Ix-80q"/>
                         <outlet property="publishedAt" destination="cOv-qv-PiQ" id="Fei-ab-gGA"/>

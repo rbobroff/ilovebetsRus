@@ -193,15 +193,18 @@ class ViewController: UIViewController {
     //высота экрана iphone 11 = 896.0
     //высота экрана iphone 11 Pro Max = 896.0
         
+    // Высота экрана ipadPro 9.7 =  1024.0
+    // Ширина экрана ipadPro 9. =  768.0
         
-       // Высота экрана ipadPro 9.7 =  1024.0
-       // Ширина экрана ipadPro 9. =  768.0
+    //ipad Pro (12.9) 4th gen
+    //Высота экрана =  1366.0
+    //Ширина экрана =  1024.0
         
         //проверяем размер экрана!!!!
         let h = UIScreen.main.bounds.height
         let w = UIScreen.main.bounds.width
-        print("Высота экрана = ",h)
-        print("Ширина экрана = ",w)
+        print("//Высота экрана = ",h)
+        print("//Ширина экрана = ",w)
         
        
         
