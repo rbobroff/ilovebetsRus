@@ -48,6 +48,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var sportBetsLabelLeftConstraint: NSLayoutConstraint!
     //аутлет правого Constraint для нижнего label "Спортивные прогнозы" или "SportBettingTips"
     @IBOutlet weak var sportBetsLabelRightConstraint: NSLayoutConstraint!
+    //аутлет нижнего Constraint для label "Спортивные прогнозы" или "SportBettingTips"
+    @IBOutlet weak var sportBetsLabelBottomConstraint: NSLayoutConstraint!
+    
+    
     
     
     //аутлет высоты кнопок
@@ -325,10 +329,12 @@ class ViewController: UIViewController {
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 106.72)
             sportBetsLabel.font = UIFont.systemFont(ofSize: 40.2)
             iLoveBetsTopConstraints.constant  = 50
+            sportBetsLabelBottomConstraint.constant = 60
+        }
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 26.68)
             }
-        }
+        
         
         //iPad Pro (11-inch) 2nd gen
         //Высота экрана =  1194.0
