@@ -49,6 +49,14 @@ class ViewController: UIViewController {
         //аутлет правого Constraint для нижнего label "Спортивные прогнозы" или "SportBettingTips"
     @IBOutlet weak var sportBetsLabelRightConstraint: NSLayoutConstraint!
     
+    //аутлет высоты кнопок
+    @IBOutlet weak var bettingTipsButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var statisticsButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var chatButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var emailButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var helpButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var aboutUsButtonHeight: NSLayoutConstraint!
+    
     
     
     //темный StatusBar на главном экране
@@ -185,6 +193,10 @@ class ViewController: UIViewController {
     //высота экрана iphone 11 = 896.0
     //высота экрана iphone 11 Pro Max = 896.0
         
+        
+       // Высота экрана ipadPro 9.7 =  1024.0
+       // Ширина экрана ipadPro 9. =  768.0
+        
         //проверяем размер экрана!!!!
         let h = UIScreen.main.bounds.height
         let w = UIScreen.main.bounds.width
@@ -256,7 +268,25 @@ class ViewController: UIViewController {
             
         }
         
-        
+        //ipadPro 9.7
+        if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
+            bettingTipsButtonHeight.constant = 235
+            statisticsButtonHeight.constant = 235
+            chatButtonHeight.constant = 235
+            emailButtonHeight.constant = 235
+            helpButtonHeight.constant = 235
+            aboutUsButtonHeight.constant = 235
+            bettingTipsButtonTopConstraint.constant = 130
+            statisticsButtonTopConstraint.constant = 130
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 30)
+            iLoveBetsLabel.font = UIFont.systemFont(ofSize: 80)
+            sportBetsLabel.font = UIFont.systemFont(ofSize: 30)
+            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 20)
+            }
+            
+        }
+
         
         
         

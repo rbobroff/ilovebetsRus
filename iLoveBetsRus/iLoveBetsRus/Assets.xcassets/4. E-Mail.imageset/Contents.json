@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "filename" : "4. Почта.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
       "filename" : "4. Почта-1.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
@@ -15,6 +15,7 @@
       "scale" : "3x"
     },
     {
+      "filename" : "4. Почта-2.png",
       "idiom" : "ipad",
       "scale" : "1x"
     },
@@ -24,7 +25,7 @@
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

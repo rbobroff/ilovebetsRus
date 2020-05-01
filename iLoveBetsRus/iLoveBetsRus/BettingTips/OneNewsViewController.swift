@@ -20,7 +20,9 @@ class OneNewsViewController: UIViewController {
     //добавление заголовка
     override func viewWillAppear(_ animated: Bool) {
         
-        //Масштабирование картинки для разной ширины экрана
+        
+        
+        //Масштабирование КАРТИНКИ для разной ширины экрана
         //iPhone 5S, SE
        if UIScreen.main.bounds.width == 320 {
         imageHeightConstraint.constant = 384
@@ -29,8 +31,9 @@ class OneNewsViewController: UIViewController {
        else if UIScreen.main.bounds.width == 414 {
         imageHeightConstraint.constant = 496.8
         }
-        //iPhone X, 11pro
-        
+        else if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
+        imageHeightConstraint.constant = 921.6
+        }
         
         
         
