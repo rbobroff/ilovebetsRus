@@ -32,10 +32,31 @@ class OneNewsViewController: UIViewController {
        else if UIScreen.main.bounds.width == 414 {
         imageHeightConstraint.constant = 496.8
         }
+        //iPadPro 9.7, iPad Air2, iPad Air, iPad 5th gen
         else if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
         imageHeightConstraint.constant = 921.6
-        imageViewTopConstraint.constant = -65
+        imageViewTopConstraint.constant = 0
+       }
+        //ipad Pro (12.9) 2nd, 4th gen
+        else if UIScreen.main.bounds.height == 1366 && UIScreen.main.bounds.width == 1024 {
+            imageHeightConstraint.constant = 1229.41
+           imageViewTopConstraint.constant = 0
+       }
+        //iPad Pro (11) 2nd gen
+       else if UIScreen.main.bounds.height == 1194 && UIScreen.main.bounds.width == 834 {
+            imageHeightConstraint.constant = 1074.60
+           imageViewTopConstraint.constant = 0
         }
+        //iPadPro (10.5-inch), iPad Air (3rd gen)
+        else if UIScreen.main.bounds.height == 1112 && UIScreen.main.bounds.width == 834 {
+             imageHeightConstraint.constant = 1074.60
+            imageViewTopConstraint.constant = 0
+         }
+        //iPad 7th gen
+        else if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
+             imageHeightConstraint.constant = 972
+            imageViewTopConstraint.constant = 0
+         }
         
         
         
