@@ -37,7 +37,7 @@ class ChatViewController: JSQMessagesViewController {
     
     //mwssages сохраняет в себе множественные объекты из массима JSQMessage, к которым позже можно обращаться по индексам
     var messages = [JSQMessage]()
-    
+  
     
         //Create message bubbles in the right colors
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
@@ -90,14 +90,21 @@ class ChatViewController: JSQMessagesViewController {
                    currentPhoneLangID.removeSubrange(range)
                 */
         
+        /*
+        //убираем слово Чат или Chat из заголовка Чата
         //v2.3
         //если русский язык, отображать ЗАГОЛОВОК по-русски
         if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
         //заголовок ViewController
-            title = "Чат: \(senderDisplayName!)"
+            title = "Чат: \(senderDisplayName! + "_id" + senderId)"
         } else {
-            title = "Chat: \(senderDisplayName!)"
+            title = "Chat: \(senderDisplayName! + "_id" + senderId)"
         }
+        */
+        
+        //v.3.1
+        //заголовок чата. Имя + id
+        title = senderDisplayName! + "_id" + senderId
         
         
         
@@ -202,14 +209,16 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                 let range = currentPhoneLangID.index(currentPhoneLangID.endIndex, offsetBy: -3)..<currentPhoneLangID.endIndex
                 currentPhoneLangID.removeSubrange(range)
                 */
-                
+              
+                //v.3.1
+                /*
             //v.2.3
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
                 self?.title = "Чат: \(self!.senderDisplayName!)"
             } else {
                 self?.title = "Chat: \(self!.senderDisplayName!)"
             }
-                
+                */
                 
                 
                 defaults.set(textField.text, forKey: "jsq_name")
@@ -269,7 +278,8 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     {
         let ref = Constants.refs.databaseChats.childByAutoId()
         //создается словарь message
-        let message = ["sender_id": senderId, "name": senderDisplayName, "text": text]
+        //!!!!добавление id к имени пользователя при отправке сообщения!!!!
+        let message = ["sender_id": senderId, "name": senderDisplayName + "_id" + senderId, "text": text]
 
         ref.setValue(message)
 
