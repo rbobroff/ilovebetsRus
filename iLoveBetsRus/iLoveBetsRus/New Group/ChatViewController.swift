@@ -264,12 +264,21 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     //is called when the label text is needed
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString!
     {
-        return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
+
+        //v.3.1 добавить имя пользователя и к моим сообщениям
+        return NSAttributedString(string: messages[indexPath.item].senderDisplayName)
+        //убрать имя пользователя из моих сообщений:
+        /*return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)*/
+    
     }
-//is called when the height of the top label is needed
+//is called when the height of the top label is needed - для отображения имени у сообщений
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat
     {
-        return messages[indexPath.item].senderId == senderId ? 0 : 15
+        //v.3.1 добавить имя пользователя и к моим сообщениям
+        return messages[indexPath.item].senderId == senderId ? 15 : 15
+        // 0 - убрать имя пользователя с моих сообщений:
+        //return messages[indexPath.item].senderId == senderId ? 0 : 15
+        
     }
     
     
