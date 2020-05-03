@@ -11,7 +11,11 @@
 import UIKit
 import JSQMessagesViewController
 
+@available(iOS 13.0, *)
 class ChatViewController: JSQMessagesViewController {
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
        
@@ -54,6 +58,7 @@ class ChatViewController: JSQMessagesViewController {
         super.viewDidLoad()
      
         
+        
             //этот блок использовался для тестирования чата для одного пользователя
             /*   senderId = "1234"
         senderDisplayName = "RomanB" */
@@ -76,7 +81,13 @@ class ChatViewController: JSQMessagesViewController {
             defaults.set(senderId, forKey: "jsq_id")
             defaults.synchronize()
 
-            showDisplayNameDialog()
+            
+            //вывести сообщение о соглашении EULA!!!!!!!!!!!!
+            showDisplayEULADialog()
+            //v3.1 - этот метод уже не надо выводить. его выполнение запихивается в кнопку yes. ввод имени
+            //showDisplayNameDialog()
+            
+            
         }
 
         
@@ -102,9 +113,11 @@ class ChatViewController: JSQMessagesViewController {
         }
         */
         
+        
         //v.3.1
-        //заголовок чата. Имя + id
-        title = senderDisplayName! + "_id" + senderId
+        //заголовок чата после 2-го входа в чат. при первом входе записывается имя заголовка "Чат" или "Chat"
+       title = senderDisplayName!
+        //+ "_id" + senderId
         
         
         
@@ -140,11 +153,36 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                 }
             }
         })
-    } //закрытие viewDidLoad
+    } //закрытие viewDidLoad =============================================
     
+
+    
+    //v.3.1 - создание оповещения согласия EULA
+    func showDisplayEULADialog() {
+    //v.3.1 - создание оповещения согласия EULA
+    let alertEULA = UIAlertController(title: "EULA", message: "Rules of EULA", preferredStyle: .actionSheet)
+        let yesAgreeEULA = UIAlertAction(title: "Yes", style: .default, handler: { action in
+            //при нажатии кнопка "yes", показать окно ввода имени
+            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+               //заголовок ViewController
+                self.title = "Чат"
+               } else {
+                self.title = "Chat"
+               }
+            self.showDisplayNameDialog()
+        })
+        //надо вернуться на главный экран при нажатии "нет"
+    let noAgreeEULA = UIAlertAction(title: "No", style: .cancel, handler: { action in
+        print("hello")
+    })
+    alertEULA.addAction(yesAgreeEULA)
+    alertEULA.addAction(noAgreeEULA)
+        //показать оповещение
+    self.present(alertEULA, animated: true, completion: nil)
+    }
     
     //Setting A User’s Display Name With A Dialog
-    //чтобы были разные имена у прльзователей
+    //чтобы были разные имена у пользователей
     @objc func showDisplayNameDialog()
     {
         let defaults = UserDefaults.standard
@@ -162,9 +200,10 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         */
         
         //сообщение при входе в чат о необходимости ввести имя. по умолчанию - английский язык
+        //v.3.1 - изменил: preferredStyle: .alert на .actionSheet - чтобы было 2 кнопки
             var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
-        
-        
+           
+                        
         
         //v.3.1 - Создание оповещения при вводе имени Anonymous или anonymous
         let noAnonymousAlert = UIAlertController(title: "You can't use this name", message: nil, preferredStyle: .actionSheet)
@@ -180,7 +219,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
         if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
         //Сообщение, где предлагается ввести имя
-     //для русской версии
+     //для русской версии, v.3.1 - изменил preferredStyle: .alert на actionSheet, чтобы бло 2 сообщения
             alert = UIAlertController(title: "Введите имя", message: "Прежде чем Вы сможете общаться, введите имя. Другие пользователи увидят Ваше имя при отправке сообщений чата. Вы можете изменить свое имя, нажав на панель навигации", preferredStyle: .alert)
         
         } else {
@@ -215,7 +254,9 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                 }
                 
                 self?.senderDisplayName = textField.text
-
+                
+              
+                
                 
                 //v.2.3
                 //проверка языка локализации!!!!!!!!!!
