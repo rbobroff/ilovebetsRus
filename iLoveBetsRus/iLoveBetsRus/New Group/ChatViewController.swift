@@ -112,8 +112,7 @@ class ChatViewController: JSQMessagesViewController {
         tapGesture.numberOfTapsRequired = 1
 
         navigationController?.navigationBar.addGestureRecognizer(tapGesture)
-        
-        
+
         
         
         //The first line hides the attachment button on the left of the chat text input field. The other two lines of code set the avatar size to zero, again, hiding it.
@@ -165,6 +164,18 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         //сообщение при входе в чат о необходимости ввести имя. по умолчанию - английский язык
             var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
         
+        
+        
+        //v.3.1 - Создание оповещения при вводе имени Anonymous или anonymous
+        let noAnonymousAlert = UIAlertController(title: "You can't use this name", message: nil, preferredStyle: .actionSheet)
+        let yesAction = UIAlertAction(title: "Try again", style: .cancel, handler: {action in
+            //v.3.1 - повторно вывести сообщение с вводом имени
+            self.present(alert, animated: true, completion: nil)
+        })
+        noAnonymousAlert.addAction(yesAction)
+        
+        
+        
         //v.2.3
         //если русский язык телефона, отображать всплывающее сообщение о вводе имени по-русски
         if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
@@ -196,7 +207,13 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self, weak alert] _ in
 
             if let textField = alert?.textFields?[0], !textField.text!.isEmpty {
-
+               //v.3.1 - если имя пользователя анонимный, то вывести предупреждение, когда нажимаю ОК, что это недопустимое имя
+                if textField.text == "anonymous" || textField.text == "Anonymous" {
+                    print("привет анонимный пользователь")
+                    self?.present(noAnonymousAlert, animated: true, completion: nil)
+                    
+                }
+                
                 self?.senderDisplayName = textField.text
 
                 
