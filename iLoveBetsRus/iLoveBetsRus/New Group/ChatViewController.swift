@@ -131,6 +131,7 @@ class ChatViewController: JSQMessagesViewController {
         
         //The first line hides the attachment button on the left of the chat text input field. The other two lines of code set the avatar size to zero, again, hiding it.
         inputToolbar.contentView.leftBarButtonItem = nil
+        
 collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
 collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
@@ -161,7 +162,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     //v.3.1 - создание оповещения согласия EULA
     func showDisplayEULADialog() {
     //v.3.1 - создание оповещения согласия EULA
-    let alertEULA = UIAlertController(title: "User generated contents rules", message: "By clicking “Agree” you agree with our content generated rules. By posting User Content you warrant that you own all rights in and to the User Content shared by you and that you are not breaching any other party’s rights to privacy, publicity rights, copyrights or contractual rights. User Content must not be illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights, violate any confidentiality agreement or other contract or be otherwise injurious to third parties or objectionable and must not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of “spam.We have the right but not the obligation to refuse to post, remove or edit any posting or submission User Content. Any User Content submitted by you will remain on iLoveBets App indefinitely. You will not have the option to remove your User Content from iLoveBets at any time, except where you submit a request in writing an email to iLoveBets App (ilovebets@ya.ru) to remove your or other inappropriate User Content (copy the text from message and send to us). You understand and agree that if you post any User Content to iLoveBets which breaches any of these Terms, we have the right to remove the content, at our sole discretion, and terminate your account and you will be responsible to us for any issues arising out of breach of these Terms.", preferredStyle: .actionSheet)
+    let alertEULA = UIAlertController(title: "User generated contents rules", message: "By clicking “Agree” you agree with our content generated rules. By posting User Content you warrant that you own all rights in and to the User Content shared by you and that you are not breaching any other party’s rights to privacy, publicity rights, copyrights or contractual rights. User Content must not be illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights, violate any confidentiality agreement or other contract or be otherwise injurious to third parties or objectionable and must not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of “spam.We have the right but not the obligation to refuse to post, remove or edit any posting or submission User Content. Any User Content submitted by you will remain on iLoveBets App indefinitely. You will not have the option to remove your User Content from iLoveBets at any time, except where you submit a request in writing an email to iLoveBets App (ilovebets@ya.ru) to remove your or other inappropriate User Content (you can copy the text from a message and send to us). You understand and agree that if you post any User Content to iLoveBets which breaches any of these Terms, we have the right to remove the content, at our sole discretion, and terminate your account and you will be responsible to us for any issues arising out of breach of these Terms.", preferredStyle: .actionSheet)
         let yesAgreeEULA = UIAlertAction(title: "Agree", style: .default, handler: { action in
             //при нажатии кнопка "yes", показать окно ввода имени
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
@@ -170,11 +171,15 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
                } else {
                 self.title = "Chat"
                }
+            
             self.showDisplayNameDialog()
         })
         //надо вернуться на главный экран при нажатии "нет"
     let noAgreeEULA = UIAlertAction(title: "Cancel", style: .destructive, handler: { action in
         print("hello")
+        //если нажимают Cancel, то пропадает кнопка отправить
+        self.inputToolbar.contentView.rightBarButtonItem = nil
+        self.title = " "
     })
     alertEULA.addAction(yesAgreeEULA)
     alertEULA.addAction(noAgreeEULA)
