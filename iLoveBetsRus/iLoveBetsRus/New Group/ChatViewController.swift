@@ -76,7 +76,8 @@ class ChatViewController: JSQMessagesViewController {
         else
         {
             senderId = String(arc4random_uniform(999999))
-            senderDisplayName = ""
+            //v.3.1 - если пустое имя, вводить user. + добавляется id
+            senderDisplayName = "user"
 
             defaults.set(senderId, forKey: "jsq_id")
             defaults.synchronize()
@@ -160,8 +161,8 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     //v.3.1 - создание оповещения согласия EULA
     func showDisplayEULADialog() {
     //v.3.1 - создание оповещения согласия EULA
-    let alertEULA = UIAlertController(title: "EULA", message: "Rules of EULA", preferredStyle: .actionSheet)
-        let yesAgreeEULA = UIAlertAction(title: "Yes", style: .default, handler: { action in
+    let alertEULA = UIAlertController(title: "User generated contents rules", message: "By clicking “Agree” you agree with our content generated rules. By posting User Content you warrant that you own all rights in and to the User Content shared by you and that you are not breaching any other party’s rights to privacy, publicity rights, copyrights or contractual rights. User Content must not be illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights, violate any confidentiality agreement or other contract or be otherwise injurious to third parties or objectionable and must not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of “spam.We have the right but not the obligation to refuse to post, remove or edit any posting or submission User Content. Any User Content submitted by you will remain on iLoveBets App indefinitely. You will not have the option to remove your User Content from iLoveBets at any time, except where you submit a request in writing an email to iLoveBets App (ilovebets@ya.ru) to remove your or other inappropriate User Content (copy the text from message and send to us). You understand and agree that if you post any User Content to iLoveBets which breaches any of these Terms, we have the right to remove the content, at our sole discretion, and terminate your account and you will be responsible to us for any issues arising out of breach of these Terms.", preferredStyle: .actionSheet)
+        let yesAgreeEULA = UIAlertAction(title: "Agree", style: .default, handler: { action in
             //при нажатии кнопка "yes", показать окно ввода имени
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
                //заголовок ViewController
@@ -172,7 +173,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
             self.showDisplayNameDialog()
         })
         //надо вернуться на главный экран при нажатии "нет"
-    let noAgreeEULA = UIAlertAction(title: "No", style: .cancel, handler: { action in
+    let noAgreeEULA = UIAlertAction(title: "Cancel", style: .destructive, handler: { action in
         print("hello")
     })
     alertEULA.addAction(yesAgreeEULA)
@@ -235,6 +236,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
             if let name = defaults.string(forKey: "jsq_name")
             {
                 textField.text = name
+            
             }
             else
             {
@@ -247,7 +249,7 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
 
             if let textField = alert?.textFields?[0], !textField.text!.isEmpty {
                //v.3.1 - если имя пользователя анонимный, то вывести предупреждение, когда нажимаю ОК, что это недопустимое имя
-                if textField.text == "anonymous" || textField.text == "Anonymous" {
+                if textField.text!.isEmpty || textField.text == "anonymous" || textField.text == "Anonymous" || textField.text == "fuck" || textField.text == "Fuck" || textField.text == " "{
                     print("привет анонимный пользователь")
                     self?.present(noAnonymousAlert, animated: true, completion: nil)
                     
