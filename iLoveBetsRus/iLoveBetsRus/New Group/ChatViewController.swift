@@ -11,7 +11,7 @@
 import UIKit
 import JSQMessagesViewController
 
-@available(iOS 13.0, *)
+
 class ChatViewController: JSQMessagesViewController {
     
     
@@ -76,18 +76,40 @@ class ChatViewController: JSQMessagesViewController {
         else
         {
             senderId = String(arc4random_uniform(999999))
-            //v.3.1 - если пустое имя, вводить user. + добавляется id
-            senderDisplayName = "user"
+            
+            //v.3.1 - если пустое имя, вводить user
+            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+            //заголовок ViewController
+                senderDisplayName = "Пользователь"
+                defaults.set(senderId, forKey: "jsq_id")
+                defaults.synchronize()
+                //вывести сообщение о соглашении EULA!!!!!!!!!!!!
+                showDisplayEULADialog()
+                //v3.1 - этот метод уже не надо выводить. его выполнение запихивается в кнопку yes. ввод имени
+                //showDisplayNameDialog()
+            } else {
+                senderDisplayName = "User"
+                defaults.set(senderId, forKey: "jsq_id")
+                defaults.synchronize()
+                //вывести сообщение о соглашении EULA!!!!!!!!!!!!
+                showDisplayEULADialog()
+                //v3.1 - этот метод уже не надо выводить. его выполнение запихивается в кнопку yes. ввод имени
+                //showDisplayNameDialog()
+            }
+           
+            //senderDisplayName = "user"
 
+            //тк добавил условие выше, это комментирую
+            /*
             defaults.set(senderId, forKey: "jsq_id")
             defaults.synchronize()
 
-            
             //вывести сообщение о соглашении EULA!!!!!!!!!!!!
             showDisplayEULADialog()
             //v3.1 - этот метод уже не надо выводить. его выполнение запихивается в кнопку yes. ввод имени
             //showDisplayNameDialog()
             
+            */
             
         }
 
@@ -115,9 +137,18 @@ class ChatViewController: JSQMessagesViewController {
         */
         
         
+        //v3.1
+        //если русский язык, отображать ЗАГОЛОВОК по-русски
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+        //заголовок ViewController
+            title = "Чат: \(senderDisplayName!)"
+        } else {
+            title = "Chat: \(senderDisplayName!)"
+        }
+        
         //v.3.1
         //заголовок чата после 2-го входа в чат. при первом входе записывается имя заголовка "Чат" или "Chat"
-       title = senderDisplayName!
+       //title = senderDisplayName!
         //+ "_id" + senderId
         
         
@@ -162,30 +193,80 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     //v.3.1 - создание оповещения согласия EULA
     func showDisplayEULADialog() {
     //v.3.1 - создание оповещения согласия EULA
-    let alertEULA = UIAlertController(title: "User generated contents rules", message: "By clicking “Agree” you agree with our content generated rules. By posting User Content you warrant that you own all rights in and to the User Content shared by you and that you are not breaching any other party’s rights to privacy, publicity rights, copyrights or contractual rights. User Content must not be illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights, violate any confidentiality agreement or other contract or be otherwise injurious to third parties or objectionable and must not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of spam. We have the right but not the obligation to refuse to post, remove or edit any posting or submission User Content. Any User Content submitted by you will remain on iLoveBets App indefinitely. You will not have the option to remove your User Content from iLoveBets App at any time, except where you submit a request in writing an email to iLoveBets App (ilovebets@ya.ru) to remove your or other inappropriate User Content (you can copy the text from a message and send to us). You understand and agree that if you post any User Content to iLoveBets which breaches any of these Terms, we have the right to remove the content, at our sole discretion, and terminate your account and you will be responsible to us for any issues arising out of breach of these Terms.", preferredStyle: .actionSheet)
-        let yesAgreeEULA = UIAlertAction(title: "Agree", style: .default, handler: { action in
-            //при нажатии кнопка "yes", показать окно ввода имени
-            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-               //заголовок ViewController
-                self.title = "Чат"
-               } else {
-                self.title = "Chat"
-               }
-            
-            self.showDisplayNameDialog()
-        })
-        //надо вернуться на главный экран при нажатии "нет"
-    let noAgreeEULA = UIAlertAction(title: "Cancel", style: .destructive, handler: { action in
-        print("hello")
-        //если нажимают Cancel, то пропадает кнопка отправить
-        self.inputToolbar.contentView.rightBarButtonItem = nil
-        self.title = " "
-    })
+        //по умолчанию
+                    var alertEULA = UIAlertController(title: "User generated contents rules", message: "By clicking “Agree” you agree with our content generated rules. By posting User Content you warrant that you own all rights in and to the User Content shared by you and that you are not breaching any other party’s rights to privacy, publicity rights, copyrights or contractual rights. User Content must not be illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights, violate any confidentiality agreement or other contract or be otherwise injurious to third parties or objectionable and must not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of spam. We have the right but not the obligation to refuse to post, remove or edit any posting or submission User Content. Any User Content submitted by you will remain on iLoveBets App indefinitely. You will not have the option to remove your User Content from iLoveBets App at any time, except where you submit a request by email to iLoveBets App (ilovebets@ya.ru) to remove your or other inappropriate User Content (copy the text from a message and send to us). You understand and agree that if you post any User Content to iLoveBets App which breaches any of these Terms, we have the right to remove the content, terminate your account and you will be responsible to us for any issues arising out of breach of these Terms.", preferredStyle: .actionSheet)
+        
+                    var yesAgreeEULA = UIAlertAction(title: "Agree", style: .default, handler: { action in
+                        //при нажатии кнопка "yes", показать окно ввода имени
+                        self.showDisplayNameDialog()
+                    })
+        
+                    //при нажатии "нет" убирать кнопку Send и заголовок чата
+                    var noAgreeEULA = UIAlertAction(title: "Cancel", style: .destructive, handler: { action in
+                        print("hello")
+                        //если нажимают Cancel, то пропадает кнопка отправить и стирается заголовок чата
+                        self.inputToolbar.contentView.rightBarButtonItem = nil
+                        self.title = " "
+                    })
+        
+        //v.3.1 EULA для русского языка
+        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+            alertEULA = UIAlertController(title: "Пользовательское соглашение", message: "Нажав “Согласен”, вы соглашаетесь с нашими правилами, созданными для контента. Размещая Пользовательский контент, вы гарантируете, что вы владеете всеми правами на Пользовательский контент, которым вы делитесь, и что вы не нарушаете права любой другой стороны на неприкосновенность частной жизни, права на публичность, авторские права или договорные права. Пользовательский контент не должен быть незаконным, непристойным, угрожающим, дискредитирующим, нарушающим конфиденциальность, нарушающим права интеллектуальной собственности, нарушающим любое соглашение о конфиденциальности или иной договор, или причиняющим иные вредные последствия для третьих сторон и не должен состоять из политических кампаний, коммерческих предложений, рассылки писем, массовых рассылок или любой формы спама. Мы имеем право, но не обязаны отказать в размещении, удалении или редактировании любого Пользовательского контента. Любой предоставленный вами Пользовательский контент останется в iLoveBets App на неопределенный срок. У вас не будет возможности удалить ваш Пользовательский контент из приложения iLoveBets App в любое время, кроме случаев отправления запроса по электронной почте в приложении iLoveBets App (ilovebets@ya.ru), чтобы удалить ваш или другой неподходящий Пользовательский контент (необходимо скопировать текст из сообщения и отправить нам). Вы понимаете и соглашаетесь с тем, что если вы публикуете какой-либо Пользовательский контент в iLoveBets App, который нарушает какое-либо из этих Условий, мы имеем право удалить его по собственному усмотрению и закрыть ваш аккаунт. Вы будете нести ответственность перед нами за любые возникающие проблемы из-за нарушения настоящих Условий.", preferredStyle: .actionSheet)
+           
+            yesAgreeEULA = UIAlertAction(title: "Согласен", style: .default, handler: { action in
+                //при нажатии кнопка "yes", показать окно ввода имени
+                self.showDisplayNameDialog()
+            })
+           
+            noAgreeEULA = UIAlertAction(title: "Отмена", style: .destructive, handler: { action in
+                print("hello")
+                //если нажимают Cancel, то пропадает кнопка отправить и стирается заголовок чата
+                self.inputToolbar.contentView.rightBarButtonItem = nil
+                self.title = " "
+            })
+        } // конец локализации EULA для русского языка
+        
+    
     alertEULA.addAction(yesAgreeEULA)
     alertEULA.addAction(noAgreeEULA)
-        //показать оповещение
+        
+        //v.3.1. Без этих строк на ipad уведомление с типом actionSheet вызывает ошибку выполнения приложения. Решение: https://medium.com/@nickmeehan/actionsheet-popover-on-ipad-in-swift-5768dfa82094
+        //добавил строчку для корректной работы оповещения на iPad
+    if let popoverController = alertEULA.popoverPresentationController {
+    popoverController.sourceView = self.view
+    popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+    //popoverController.permittedArrowDirections = []
+        }
+        
+        
+        
+        //проверка языка телефона. Если РУССКИЙ ЯЗЫК, то оповещение EULA для русского языка
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      //показать оповещение
     self.present(alertEULA, animated: true, completion: nil)
-    }
+    } //конец функции func showDisplayEULADialog()
+    
+    
+    
+    
+    
+    
+    
+    
     
     //Setting A User’s Display Name With A Dialog
     //чтобы были разные имена у пользователей
