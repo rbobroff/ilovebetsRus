@@ -239,34 +239,12 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         }
         
         
-        
-        //проверка языка телефона. Если РУССКИЙ ЯЗЫК, то оповещение EULA для русского языка
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       //показать оповещение
     self.present(alertEULA, animated: true, completion: nil)
     } //конец функции func showDisplayEULADialog()
     
     
-    
-    
-    
-    
-    
-    
+
     
     //Setting A User’s Display Name With A Dialog
     //чтобы были разные имена у пользователей
@@ -288,17 +266,33 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
         //сообщение при входе в чат о необходимости ввести имя. по умолчанию - английский язык
         //v.3.1 - изменил: preferredStyle: .alert на .actionSheet - чтобы было 2 кнопки
-            var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
+            var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .actionSheet)
            
                         
         
         //v.3.1 - Создание оповещения при вводе имени Anonymous или anonymous
-        let noAnonymousAlert = UIAlertController(title: "You can't use this name", message: nil, preferredStyle: .actionSheet)
-        let yesAction = UIAlertAction(title: "Try again", style: .cancel, handler: {action in
-            //v.3.1 - повторно вывести сообщение с вводом имени
+            var noAnonymousAlert = UIAlertController(title: "You can't use this name", message: nil, preferredStyle: .alert)
+            var yesAction = UIAlertAction(title: "Try again", style: .cancel, handler: {action in
+                 //v.3.1 - повторно вывести сообщение с вводом имени
             self.present(alert, animated: true, completion: nil)
         })
-        noAnonymousAlert.addAction(yesAction)
+        
+            //локализация для русского языка. Оповещение при вводе имени Аноним или аноним и тд
+                if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+                    noAnonymousAlert = UIAlertController(title: "Вы не можете использовать это имя", message: nil, preferredStyle: .alert)
+                    yesAction = UIAlertAction(title: "Попробуйте еще раз", style: .cancel, handler: {action in
+                //v.3.1 - повторно вывести сообщение с вводом имени
+                self.present(alert, animated: true, completion: nil)
+                    })
+                }
+
+            noAnonymousAlert.addAction(yesAction)
+        //для iPad оповещения, если ввели имя "аноним" и тд. без этих строк ниже, ошибка при появлении данного оповещения
+        if let popoverController = noAnonymousAlert.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
         
         
         
@@ -333,10 +327,15 @@ collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self, weak alert] _ in
 
+            
+            
             if let textField = alert?.textFields?[0], !textField.text!.isEmpty {
                //v.3.1 - если имя пользователя анонимный, то вывести предупреждение, когда нажимаю ОК, что это недопустимое имя
-                if textField.text!.isEmpty || textField.text == "anonymous" || textField.text == "Anonymous" || textField.text == "fuck" || textField.text == "Fuck" || textField.text == " "{
+                if textField.text!.isEmpty || textField.text == "anonymous" || textField.text == "Anonymous" || textField.text == "fuck" || textField.text == "Fuck" || textField.text == " " || textField.text == "Аноним" || textField.text == "аноним" || textField.text == "хуй" || textField.text == "Хуй" || textField.text == "Сука" || textField.text == "сука" || textField.text == "Пизда" || textField.text == "пизда" || textField.text == "Пиздец" || textField.text == "пиздец" {
                     print("привет анонимный пользователь")
+                   
+// для уведомления
+                    
                     self?.present(noAnonymousAlert, animated: true, completion: nil)
                     
                 }
