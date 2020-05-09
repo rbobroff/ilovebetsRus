@@ -105,10 +105,10 @@ class ViewController: UIViewController {
          
         //v2.3 комментируем
         //показать язык локализации и вывести в консоль
-            /*
+          /*
         let locale = NSLocale.current
         let currentLangID = (NSLocale.preferredLanguages as [String]) [0]
-     print("Текущий язык телефон-Регион = ",currentLangID)
+        print("Текущий язык long телефон-Регион = ",currentLangID)
         var currentPhoneLangID = currentLangID
             // symbols.insert("!", at: symbols.endIndex)
             // print("измененный_Текущий язык = ",symbols)
@@ -122,6 +122,44 @@ class ViewController: UIViewController {
        
         //v2.3
         print("Текущий язык телефон-Регион = ",currentPhoneLangID) //выводим в консоль язык телефона
+        
+        //1) Английский США = en
+        //2) Арабский = ar
+        //3) Венгерский = hu
+        //4) Вьетнамский = vi
+        //5) Греческий = el
+        //6) Датский = da
+        //7) Иврит = he
+        //8) Индонезийский = id
+        //9) Испанский = es
+        //10) Итальянский = it
+        //11) Каталанский = ca
+        //12) Китайский =zh
+        //13) Корейский = ko
+        //14) Малайский = ms
+        //15) Немецкий = de
+        //16) Нидерландский = nl
+        //17) Норвежский = nb
+        //18) Польский = pl
+        //19) Португальский = pt
+        //20) Румынский = ro
+        //21) Русский = ru
+        //22) Словацкий = sk
+        //23) Тайский = th
+        //24) Турецкий = tr
+        //25) Украинский = uk
+        //26) Финский = fi
+        //27) Французский = fr
+        //28) Хинди = hi
+        //29) Хорватский = hr
+        //30) Чешский = cs
+        //31) Шведский = sv
+        //32) Японский = ja
+        
+
+        //Китайский = zh
+        
+        
         //Локализуем главный вид приложения!!!
         if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
