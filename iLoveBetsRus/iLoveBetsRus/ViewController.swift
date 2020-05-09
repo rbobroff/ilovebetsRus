@@ -156,19 +156,15 @@ class ViewController: UIViewController {
         //31) Шведский = sv
         //32) Японский = ja
         
-
-        //Китайский = zh
         
         
         //Локализуем главный вид приложения!!!
-        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+        if currentPhoneLangID == "ru" {
             yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
             sportBetsLabel.text = "Спортивные прогнозы"
             sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
-         
-
-                    
+        
                     //Заменяем картинки из Assets.xcassets на кнопках, если русский язык
                     let button1 = UIImage(named: "1. BettingTips")
                     bettingTipsButton.setImage(button1, for: UIControl.State.normal)
@@ -187,23 +183,223 @@ class ViewController: UIViewController {
 
                     let button6 = UIImage(named: "6. AboutUS")
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
-                    
-                    
-         }  
-        //снять комментарий после скриншотов
-      
-        
-        
-        //тк по умолчанию уже кнопки и надписи на английском языке
-         /*
-                } else {
-        yourPersonalSportsBettingAdvisorLabel.text = "Your Personal Sports Betting Advisor"
-            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
-                    
-                    sportBetsLabel.text = "Sports Betting Tips"
-                    sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
         }
-        */
+        //2) Арабский = ar
+        else if currentPhoneLangID == "ar"{
+                yourPersonalSportsBettingAdvisorLabel.text = "مرشد الرياضة الرياضي الخاص بك"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "نصائح الرهان الرياضي"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //3) Венгерский = hu
+        else if currentPhoneLangID == "hu"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Az Ön személyes sportfogadási tanácsadója"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Sportfogadási tippek"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //4) Вьетнамский = vi
+        else if currentPhoneLangID == "vi"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Cố vấn cá cược thể thao cá nhân của bạn"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Mẹo cá cược thể thao"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //5) Греческий = el
+        else if currentPhoneLangID == "el"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Ο προσωπικός σας σύμβουλος αθλητικών στοιχημάτων"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 20)
+                sportBetsLabel.text = "Συμβουλές για αθλητικά στοιχήματα"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //6) Датский = da
+        else if currentPhoneLangID == "da"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Din personlige sportsvæddelsesrådgiver"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Tips til sportsspil"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //7) Иврит = he
+        else if currentPhoneLangID == "he"{
+                yourPersonalSportsBettingAdvisorLabel.text = "יועץ ההימורים האישי שלך"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "טיפים להימורי ספורט"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //8) Индонезийский = id
+        else if currentPhoneLangID == "id"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Penasihat Taruhan Olahraga Pribadi Anda"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Tips Taruhan Olahraga"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //9) Испанский = es
+        else if currentPhoneLangID == "es"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Su asesor personal de apuestas deportivas"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Consejos de apuestas deportivas"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //10) Итальянский = it
+        else if currentPhoneLangID == "it"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Il tuo consulente di scommesse sportive personali"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Suggerimenti per le scommesse sportive"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //11) Каталанский = ca
+        else if currentPhoneLangID == "ca"{
+                yourPersonalSportsBettingAdvisorLabel.text = "El vostre assessor d'apostes personals d'esports"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Consells d'apostes esportives"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //12) Китайский = zh
+        else if currentPhoneLangID == "zh"{
+                yourPersonalSportsBettingAdvisorLabel.text = "您的个人体育博彩顾问"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "体育博彩技巧"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //13) Корейский = ko
+        else if currentPhoneLangID == "ko"{
+                yourPersonalSportsBettingAdvisorLabel.text = "개인 스포츠 베팅 어드바이저"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "스포츠 베팅 팁"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //14) Малайский = ms
+        else if currentPhoneLangID == "ms"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Penasihat Pertaruhan Sukan Peribadi anda"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Petua Pertaruhan Sukan"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //15) Немецкий = de
+        else if currentPhoneLangID == "de"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Ihr persönlicher Sportwettenberater"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Sportwetten Tipps"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //16) Нидерландский = nl
+        else if currentPhoneLangID == "nl"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Uw persoonlijke adviseur voor sportweddenschappen"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Tips voor sportweddenschappen"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //17) Норвежский = nb
+        else if currentPhoneLangID == "nb"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Din personlige sportsrådgiver"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Tips om sportsspill"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //18) Польский = pl
+        else if currentPhoneLangID == "pl"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Twój osobisty doradca bukmacherski"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Prognozy sportowe"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //19) Португальский = pt
+        else if currentPhoneLangID == "pt"{
+                yourPersonalSportsBettingAdvisorLabel.text = "O seu conselheiro pessoal de apostas desportivas"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Dicas de apostas esportivas"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //20) Румынский = ro
+        else if currentPhoneLangID == "ro"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Consilierul dvs. personal de pariuri sportive"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Sfaturi pentru pariuri sportive"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //21) Русский = ru
+        
+        //22) Словацкий = sk
+        else if currentPhoneLangID == "sk"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Váš osobný športový poradca"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Tipy na športové stávky"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //23) Тайский = th
+        else if currentPhoneLangID == "th"{
+                yourPersonalSportsBettingAdvisorLabel.text = "ที่ปรึกษาการเดิมพันกีฬาส่วนบุคคลของคุณ"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "เคล็ดลับการเดิมพันกีฬา"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //24) Турецкий = tr
+        else if currentPhoneLangID == "tr"{
+                yourPersonalSportsBettingAdvisorLabel.text = "Kişisel Spor Bahis Danışmanınız"
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                sportBetsLabel.text = "Spor Bahis İpuçları"
+                sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+        }
+        //25) Украинский = uk
+        else if currentPhoneLangID == "uk"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "Ваш особистий радник на спортивні ставки"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 16)
+                       sportBetsLabel.text = "Спортивні прогнози"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //26) Финский = fi
+        else if currentPhoneLangID == "fi"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "Henkilökohtainen urheiluvedonlyöntisi"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                       sportBetsLabel.text = "Vedonlyönnin vinkkejä"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //27) Французский = fr
+        else if currentPhoneLangID == "fr"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "Votre conseiller en paris sportifs personnels"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                       sportBetsLabel.text = "Conseils de paris sportifs"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //28) Хинди = hi
+        else if currentPhoneLangID == "hi"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "आपकी व्यक्तिगत खेल सट्टेबाजी सलाहकार"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                       sportBetsLabel.text = "खेल सट्टेबाजी युक्तियाँ"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //29) Хорватский = hr
+        else if currentPhoneLangID == "hr"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "Vaš osobni savjetnik za klađenje u sportu"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                       sportBetsLabel.text = "Savjeti za klađenje u sportu"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //30) Чешский = cs
+        else if currentPhoneLangID == "cs"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "Váš osobní sportovní sázkový poradce"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                       sportBetsLabel.text = "Tipy pro sportovní sázení"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //31) Шведский = sv
+        else if currentPhoneLangID == "sv"{
+                       yourPersonalSportsBettingAdvisorLabel.text = "Din personliga sportspelrådgivare"
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
+                       sportBetsLabel.text = "Sportspel tips"
+                       sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+               }
+        //32) Японский = ja
+        else if currentPhoneLangID == "ja"{
+                              yourPersonalSportsBettingAdvisorLabel.text = "あなたのパーソナルスポーツベッティングアドバイザー"
+                              yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 14)
+                              sportBetsLabel.text = "スポーツ賭博のヒント"
+                              sportBetsLabel.font = UIFont.systemFont(ofSize: 18)
+                      }
+        
+        
+        
+        
         
         
         
@@ -278,7 +474,7 @@ class ViewController: UIViewController {
         if UIScreen.main.bounds.height == 568 {
              //top Constraint для верхнего label
             //17
-    upConstraintYourPersonalSportsBettingAdvisor.constant = 12
+            upConstraintYourPersonalSportsBettingAdvisor.constant = 12
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             //93
             bettingTipsButtonTopConstraint.constant = 80
@@ -289,7 +485,7 @@ class ViewController: UIViewController {
         if UIScreen.main.bounds.height == 667 {
             
             //top Constraint для верхнего label
-    upConstraintYourPersonalSportsBettingAdvisor.constant = 17
+            upConstraintYourPersonalSportsBettingAdvisor.constant = 17
             
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 88
