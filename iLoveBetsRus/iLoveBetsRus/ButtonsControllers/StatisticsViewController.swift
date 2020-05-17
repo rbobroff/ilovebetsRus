@@ -16,8 +16,9 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         
         //закомментировать после скриншотов
-       // self.navigationItem.title = "#Statistics"
-       // self.navigationController?.isNavigationBarHidden = false
+        // self.navigationItem.title = "#Statistics"
+        //v.2.3 - закоментировано, тк настроена анимация для navigationBar
+        // self.navigationController?.isNavigationBarHidden = false
         //закомментировать после скриншотов
         
         
@@ -46,17 +47,21 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         self.navigationItem.title = "#Statistics"
     }
         
+        
+        
         //v.2.3 - строка ниже, чтобы срабатывала анимация скрытия navigationBar. возвращаем в первоначальное состояние. также прописана строка на viewController
         self.navigationController?.navigationBar.transform = .identity
-        
         self.navigationController?.isNavigationBarHidden = false
         //v.2.3 для анмированного удаления navigationBar
         self.navigationController?.navigationBar.alpha = 0
-        
         UIView.animate(withDuration: 0.3, animations: {
             self.navigationController?.navigationBar.alpha = 1
            })
-        }
+        
+        
+        
+        
+        } //конец функции viewWillAppear
         
         
         

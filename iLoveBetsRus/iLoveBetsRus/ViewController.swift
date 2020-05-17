@@ -80,10 +80,16 @@ class ViewController: UIViewController {
    // скрывать navigation bar (или показывать)
    override func viewWillAppear(_ animated: Bool) {
     
-    //v.2.3 комментируем
-    //self.navigationController?.isNavigationBarHidden = true
     
+    //v.3.2 - раскомментировано. чинит проблему с NavigationBar!!!!!!
+    //v.2.3 комментируем
+    self.navigationController?.isNavigationBarHidden = true
+    
+    
+    
+    //v.3.2 - закомментировано на ViewController - чинит проблему с исчезновением NavigationBar!!!
     //v.2.3 для анимированного удаления navigationBar
+    /*
         self.navigationController?.navigationBar.alpha = 1
     UIView.animate(withDuration: 0.3, animations: {
         //v.2.3 - строка ниже добавляем анимацию, чтобы увести navigationBar по оси "y" в -200
@@ -91,8 +97,13 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.alpha = 0 //убираем в ноль за 0.3 секунды
     }) { (bool) in
         self.navigationController?.isNavigationBarHidden = true
- }
- }
+        }
+     */
+    
+    
+    
+    } //конец функции viewWillAppear
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,22 +177,22 @@ class ViewController: UIViewController {
             sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
         
                     //Заменяем картинки из Assets.xcassets на кнопках, если русский язык
-                    let button1 = UIImage(named: "1. BettingTips")
+                    let button1 = UIImage(named: "ru-1")
                     bettingTipsButton.setImage(button1, for: UIControl.State.normal)
                     
-                    let button2 = UIImage(named: "2. Statistics")
+                    let button2 = UIImage(named: "ru-2")
                     statisticsButton.setImage(button2, for: UIControl.State.normal)
                     
-                    let button3 = UIImage(named: "3. Chat")
+                    let button3 = UIImage(named: "ru-3")
                     chatButton.setImage(button3, for: UIControl.State.normal)
                     
-                    let button4 = UIImage(named: "4. E-Mail")
+                    let button4 = UIImage(named: "ru-4")
                     emailButton.setImage(button4, for: UIControl.State.normal)
                     
-                    let button5 = UIImage(named: "5. Help")
+                    let button5 = UIImage(named: "ru-5")
                     helpButton.setImage(button5, for: UIControl.State.normal)
 
-                    let button6 = UIImage(named: "6. AboutUS")
+                    let button6 = UIImage(named: "ru-6")
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //2) Арабский = ar
@@ -190,6 +201,25 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "نصائح الرهان الرياضي"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "ar-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+                
+            let button2 = UIImage(named: "ar-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+                
+            let button3 = UIImage(named: "ar-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+                
+            let button4 = UIImage(named: "ar-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+                
+            let button5 = UIImage(named: "ar-5")
+                helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "ar-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            
         }
         //3) Венгерский = hu
         else if currentPhoneLangID == "hu"{
@@ -197,6 +227,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Sportfogadási tippek"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "hu-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "hu-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "hu-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "hu-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "hu-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "hu-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //4) Вьетнамский = vi
         else if currentPhoneLangID == "vi"{
@@ -204,6 +251,24 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Mẹo cá cược thể thao"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "vi-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "vi-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "vi-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "vi-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "vi-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "vi-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
         }
         //5) Греческий = el
         else if currentPhoneLangID == "el"{
@@ -211,6 +276,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 20)
                 sportBetsLabel.text = "Συμβουλές για αθλητικά στοιχήματα"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "el-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "el-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "el-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "el-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "el-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "el-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //6) Датский = da
         else if currentPhoneLangID == "da"{
@@ -218,6 +300,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Tips til sportsspil"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "da-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "da-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "da-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "da-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "da-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "da-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //7) Иврит = he
         else if currentPhoneLangID == "he"{
@@ -225,6 +324,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "טיפים להימורי ספורט"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "he-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "he-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "he-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "he-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "he-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "he-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //8) Индонезийский = id
         else if currentPhoneLangID == "id"{
@@ -232,6 +348,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Tips Taruhan Olahraga"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "id-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "id-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "id-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "id-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "id-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "id-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //9) Испанский = es
         else if currentPhoneLangID == "es"{
@@ -239,6 +372,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Consejos de apuestas deportivas"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "es-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "es-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "es-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "es-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "es-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "es-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //10) Итальянский = it
         else if currentPhoneLangID == "it"{
@@ -246,6 +396,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Suggerimenti per le scommesse sportive"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "it-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "it-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "it-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "it-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "it-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "it-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //11) Каталанский = ca
         else if currentPhoneLangID == "ca"{
@@ -253,6 +420,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Consells d'apostes esportives"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "ca-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "ca-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "ca-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "ca-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "ca-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "ca-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //12) Китайский = zh
         else if currentPhoneLangID == "zh"{
@@ -260,6 +444,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "体育博彩技巧"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "zh-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "zh-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "zh-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "zh-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "zh-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "zh-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //13) Корейский = ko
         else if currentPhoneLangID == "ko"{
@@ -267,6 +468,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "스포츠 베팅 팁"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "ko-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "ko-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "ko-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "ko-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "ko-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "ko-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //14) Малайский = ms
         else if currentPhoneLangID == "ms"{
@@ -274,6 +492,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Petua Pertaruhan Sukan"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "ms-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "ms-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "ms-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "ms-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "ms-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "ms-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //15) Немецкий = de
         else if currentPhoneLangID == "de"{
@@ -281,6 +516,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Sportwetten Tipps"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "de-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "de-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "de-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "de-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "de-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "de-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //16) Нидерландский = nl
         else if currentPhoneLangID == "nl"{
@@ -288,6 +540,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Tips voor sportweddenschappen"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "nl-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "nl-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "nl-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "nl-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "nl-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "nl-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //17) Норвежский = nb
         else if currentPhoneLangID == "nb"{
@@ -295,6 +564,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Tips om sportsspill"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "nb-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "nb-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "nb-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "nb-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "nb-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "nb-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //18) Польский = pl
         else if currentPhoneLangID == "pl"{
@@ -302,6 +588,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Prognozy sportowe"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "pl-1")
+             bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+             
+             let button2 = UIImage(named: "pl-2")
+             statisticsButton.setImage(button2, for: UIControl.State.normal)
+             
+             let button3 = UIImage(named: "pl-3")
+             chatButton.setImage(button3, for: UIControl.State.normal)
+             
+             let button4 = UIImage(named: "pl-4")
+             emailButton.setImage(button4, for: UIControl.State.normal)
+             
+             let button5 = UIImage(named: "pl-5")
+             helpButton.setImage(button5, for: UIControl.State.normal)
+
+             let button6 = UIImage(named: "pl-6")
+             aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //19) Португальский = pt
         else if currentPhoneLangID == "pt"{
@@ -309,6 +612,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Dicas de apostas esportivas"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "pt-1")
+             bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+             
+             let button2 = UIImage(named: "pt-2")
+             statisticsButton.setImage(button2, for: UIControl.State.normal)
+             
+             let button3 = UIImage(named: "pt-3")
+             chatButton.setImage(button3, for: UIControl.State.normal)
+             
+             let button4 = UIImage(named: "pt-4")
+             emailButton.setImage(button4, for: UIControl.State.normal)
+             
+             let button5 = UIImage(named: "pt-5")
+             helpButton.setImage(button5, for: UIControl.State.normal)
+
+             let button6 = UIImage(named: "pt-6")
+             aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //20) Румынский = ro
         else if currentPhoneLangID == "ro"{
@@ -316,6 +636,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Sfaturi pentru pariuri sportive"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+             let button1 = UIImage(named: "ro-1")
+             bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+             
+             let button2 = UIImage(named: "ro-2")
+             statisticsButton.setImage(button2, for: UIControl.State.normal)
+             
+             let button3 = UIImage(named: "ro-3")
+             chatButton.setImage(button3, for: UIControl.State.normal)
+             
+             let button4 = UIImage(named: "ro-4")
+             emailButton.setImage(button4, for: UIControl.State.normal)
+             
+             let button5 = UIImage(named: "ro-5")
+             helpButton.setImage(button5, for: UIControl.State.normal)
+
+             let button6 = UIImage(named: "ro-6")
+             aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //21) Русский = ru
         
@@ -325,6 +662,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Tipy na športové stávky"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "sk-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "sk-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "sk-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "sk-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "sk-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "sk-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //23) Тайский = th
         else if currentPhoneLangID == "th"{
@@ -332,6 +686,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "เคล็ดลับการเดิมพันกีฬา"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "th-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "th-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "th-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "th-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "th-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "th-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //24) Турецкий = tr
         else if currentPhoneLangID == "tr"{
@@ -339,6 +710,23 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                 sportBetsLabel.text = "Spor Bahis İpuçları"
                 sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "tr-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "tr-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "tr-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "tr-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "tr-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "tr-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
         //25) Украинский = uk
         else if currentPhoneLangID == "uk"{
@@ -346,6 +734,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 16)
                        sportBetsLabel.text = "Спортивні прогнози"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "uk-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "uk-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "uk-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "uk-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "uk-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "uk-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //26) Финский = fi
         else if currentPhoneLangID == "fi"{
@@ -353,6 +758,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "Vedonlyönnin vinkkejä"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "fi-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "fi-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "fi-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "fi-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "fi-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "fi-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //27) Французский = fr
         else if currentPhoneLangID == "fr"{
@@ -360,6 +782,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "Conseils de paris sportifs"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "fr-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "fr-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "fr-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "fr-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "fr-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "fr-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //28) Хинди = hi
         else if currentPhoneLangID == "hi"{
@@ -367,6 +806,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "खेल सट्टेबाजी युक्तियाँ"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "hi-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "hi-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "hi-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "hi-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "hi-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "hi-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //29) Хорватский = hr
         else if currentPhoneLangID == "hr"{
@@ -374,6 +830,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "Savjeti za klađenje u sportu"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "hr-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "hr-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "hr-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "hr-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "hr-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "hr-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //30) Чешский = cs
         else if currentPhoneLangID == "cs"{
@@ -381,6 +854,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "Tipy pro sportovní sázení"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "cs-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "cs-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "cs-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "cs-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "cs-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "cs-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //31) Шведский = sv
         else if currentPhoneLangID == "sv"{
@@ -388,6 +878,23 @@ class ViewController: UIViewController {
                        yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "Sportspel tips"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
+            let button1 = UIImage(named: "sv-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "sv-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "sv-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "sv-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "sv-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "sv-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                }
         //32) Японский = ja
         else if currentPhoneLangID == "ja"{
@@ -395,6 +902,23 @@ class ViewController: UIViewController {
                               yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 14)
                               sportBetsLabel.text = "スポーツ賭博のヒント"
                               sportBetsLabel.font = UIFont.systemFont(ofSize: 18)
+            let button1 = UIImage(named: "ja-1")
+            bettingTipsButton.setImage(button1, for: UIControl.State.normal)
+            
+            let button2 = UIImage(named: "ja-2")
+            statisticsButton.setImage(button2, for: UIControl.State.normal)
+            
+            let button3 = UIImage(named: "ja-3")
+            chatButton.setImage(button3, for: UIControl.State.normal)
+            
+            let button4 = UIImage(named: "ja-4")
+            emailButton.setImage(button4, for: UIControl.State.normal)
+            
+            let button5 = UIImage(named: "ja-5")
+            helpButton.setImage(button5, for: UIControl.State.normal)
+
+            let button6 = UIImage(named: "ja-6")
+            aboutUsButton.setImage(button6, for: UIControl.State.normal)
                       }
         
         
