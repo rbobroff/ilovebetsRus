@@ -26,35 +26,35 @@ class OneNewsViewController: UIViewController {
         //Масштабирование КАРТИНКИ для разной ширины экрана
         //iPhone 5S, SE
        if UIScreen.main.bounds.width == 320 {
-        imageHeightConstraint.constant = 384
+            imageHeightConstraint.constant = 384
         }
         //iPhone 6+, 6S+ 7+, 8+, iPhone 11, 11 Pro Max
        else if UIScreen.main.bounds.width == 414 {
-        imageHeightConstraint.constant = 496.8
+            imageHeightConstraint.constant = 496.8
         }
         //iPadPro 9.7, iPad Air2, iPad Air, iPad 5th gen
         else if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
-        imageHeightConstraint.constant = 921.6
-        imageViewTopConstraint.constant = 0
+            imageHeightConstraint.constant = 921.6
+            imageViewTopConstraint.constant = 0
        }
         //ipad Pro (12.9) 2nd, 4th gen
         else if UIScreen.main.bounds.height == 1366 && UIScreen.main.bounds.width == 1024 {
             imageHeightConstraint.constant = 1229.41
-           imageViewTopConstraint.constant = 0
+            imageViewTopConstraint.constant = 0
        }
         //iPad Pro (11) 2nd gen
        else if UIScreen.main.bounds.height == 1194 && UIScreen.main.bounds.width == 834 {
             imageHeightConstraint.constant = 1074.60
-           imageViewTopConstraint.constant = 0
+            imageViewTopConstraint.constant = 0
         }
         //iPadPro (10.5-inch), iPad Air (3rd gen)
         else if UIScreen.main.bounds.height == 1112 && UIScreen.main.bounds.width == 834 {
-             imageHeightConstraint.constant = 1074.60
+            imageHeightConstraint.constant = 1074.60
             imageViewTopConstraint.constant = 0
          }
         //iPad 7th gen
         else if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
-             imageHeightConstraint.constant = 972
+            imageHeightConstraint.constant = 972
             imageViewTopConstraint.constant = 0
          }
         
@@ -73,7 +73,10 @@ class OneNewsViewController: UIViewController {
         
         
         //закомментировать после скриншотов
-        //self.navigationItem.title = "#Tip"
+        
+        //v.3.2
+        //Заголовок по умолчанию
+        self.navigationItem.title = "#Tip"
        // self.navigationController?.isNavigationBarHidden = false
         //закомментировать после скриншотов
         
@@ -96,12 +99,141 @@ class OneNewsViewController: UIViewController {
                //    if currentLangID == "ru-RU"
        
         //v.2.3
-        if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-            self.navigationItem.title = "#Прогноз"
-            //добавление строки навигации при загрузке ViewControllera
-        } else {
-            self.navigationItem.title = "#Tip"
-        }
+        if currentPhoneLangID == "ru"    {
+                   self.navigationItem.title = "#Прогноз"
+                   //добавление строки навигации при загрузке ViewControllera
+                   }
+            
+                   //v.3.2
+                   //2) арабский
+                   else if currentPhoneLangID == "ar"{
+                        self.navigationItem.title = "نصائح الرهان"
+                       
+                   }
+                   //3) Венгерский = hu
+                   else if currentPhoneLangID == "hu"{
+                        self.navigationItem.title = "#Fogadási tippek"
+                   }
+                   //4) Вьетнамский = vi
+                   else if currentPhoneLangID == "vi"{
+                        self.navigationItem.title = "#Mẹo cá cược"
+                       
+                   }
+                   //5) Греческий = el
+                   else if currentPhoneLangID == "el"{
+                        self.navigationItem.title = "#Προβλέψεις"
+                   }
+                   //6) Датский = da
+                   else if currentPhoneLangID == "da"{
+                        self.navigationItem.title = "#Væddemålstip"
+                   }
+                   //7) Иврит = he
+                   else if currentPhoneLangID == "he"{
+                        self.navigationItem.title = "תחזיות ספורט"
+                   }
+                   //8) Индонезийский = id
+                   else if currentPhoneLangID == "id"{
+                        self.navigationItem.title = "#Kiat taruhan"
+                   }
+                   //9) Испанский = es
+                   else if currentPhoneLangID == "es"{
+                        self.navigationItem.title = "#Predicción"
+                   }
+                   //10) Итальянский = it
+                   else if currentPhoneLangID == "it"{
+                        self.navigationItem.title = "#Predizioni"
+                   }
+                   //11) Каталанский = ca
+                   else if currentPhoneLangID == "ca"{
+                        self.navigationItem.title = "#Prediccions"
+                   }
+                   //12) Китайский = zh
+                   else if currentPhoneLangID == "zh"{
+                        self.navigationItem.title = "#投注技巧"
+                     
+                   }
+                   //13) Корейский = ko
+                   else if currentPhoneLangID == "ko"{
+                        self.navigationItem.title = "#도박 팁"
+                   }
+                   //14) Малайский = ms
+                   else if currentPhoneLangID == "ms"{
+                        self.navigationItem.title = "#Ramalan Sukan"
+                   }
+                   //15) Немецкий = de
+                   else if currentPhoneLangID == "de"{
+                        self.navigationItem.title = "#Wett-Tipps"
+                   }
+                   //16) Нидерландский = nl
+                   else if currentPhoneLangID == "nl"{
+                        self.navigationItem.title = "#Voorspellingen"
+                   }
+                   //17) Норвежский = nb
+                   else if currentPhoneLangID == "nb"{
+                        self.navigationItem.title = "#Spilltips"
+                   }
+                   //18) Польский = pl
+                   else if currentPhoneLangID == "pl"{
+                        self.navigationItem.title = "#Prognozy"
+                   }
+                   //19) Португальский = pt
+                   else if currentPhoneLangID == "pt"{
+                        self.navigationItem.title = "#Previsões"
+                   }
+                   //20) Румынский = ro
+                   else if currentPhoneLangID == "ro"{
+                        self.navigationItem.title = "#Predictii"
+                   }
+                   //21) Русский = ru
+                   
+                   //22) Словацкий = sk
+                   else if currentPhoneLangID == "sk"{
+                        self.navigationItem.title = "#Stávkové tipy"
+                   }
+                   //23) Тайский = th
+                   else if currentPhoneLangID == "th"{
+                        self.navigationItem.title = "#การทำนายผลกีฬา"
+                   }
+                   //24) Турецкий = tr
+                   else if currentPhoneLangID == "tr"{
+                        self.navigationItem.title = "#Bahis ipuçları"
+                   }
+                   //25) Украинский = uk
+                   else if currentPhoneLangID == "uk"{
+                        self.navigationItem.title = "#Прогноз"
+                   }
+                   //26) Финский = fi
+                   else if currentPhoneLangID == "fi"{
+                        self.navigationItem.title = "#Urheiluennusteet"
+                   }
+                   //27) Французский = fr
+                   else if currentPhoneLangID == "fr"{
+                        self.navigationItem.title = "#Prédictions"
+                   }
+                   //28) Хинди = hi
+                   else if currentPhoneLangID == "hi"{
+                        self.navigationItem.title = "#भविष्यवाणियों"
+                   }
+                   //29) Хорватский = hr
+                   else if currentPhoneLangID == "hr"{
+                        self.navigationItem.title = "#Predviđanja"
+                   }
+                   //30) Чешский = cs
+                   else if currentPhoneLangID == "cs"{
+                        self.navigationItem.title = "#Sázkové tipy"
+                   }
+                   //31) Шведский = sv
+                   else if currentPhoneLangID == "sv"{
+                        self.navigationItem.title = "#Sportprognoser"
+                   }
+                   //32) Японский = ja
+                   else if currentPhoneLangID == "ja"{
+                        self.navigationItem.title = "#スポーツ予測"
+                   }
+        
+        
+        
+        
         
         //v2.3
         //self.navigationController?.isNavigationBarHidden = false

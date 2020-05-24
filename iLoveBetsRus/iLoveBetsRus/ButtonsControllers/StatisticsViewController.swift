@@ -16,7 +16,10 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         
         //закомментировать после скриншотов
-        // self.navigationItem.title = "#Statistics"
+        
+        //v.3.2
+        //заголовок по умолчанию
+         self.navigationItem.title = "#Statistics"
         //v.2.3 - закоментировано, тк настроена анимация для navigationBar
         // self.navigationController?.isNavigationBarHidden = false
         //закомментировать после скриншотов
@@ -40,12 +43,139 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
  
         //v.2.3
         //    if currentLangID == "ru-RU"
-    if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-        self.navigationItem.title = "#Статистика"
-       //добавление строки навигации при загрузке ViewControllera
-    } else {
-        self.navigationItem.title = "#Statistics"
-    }
+                  if currentPhoneLangID == "ru"     {
+                    self.navigationItem.title = "#Статистика"
+      
+                  }
+    
+                  //v.3.2
+                  //2) арабский
+                  else if currentPhoneLangID == "ar"{
+                       self.navigationItem.title = "الإحصاء"
+                      
+                  }
+                  //3) Венгерский = hu
+                  else if currentPhoneLangID == "hu"{
+                       self.navigationItem.title = "#Statisztika"
+                  }
+                  //4) Вьетнамский = vi
+                  else if currentPhoneLangID == "vi"{
+                       self.navigationItem.title = "#Số liệu thống kê"
+                      
+                  }
+                  //5) Греческий = el
+                  else if currentPhoneLangID == "el"{
+                       self.navigationItem.title = "#Στατιστική"
+                  }
+                  //6) Датский = da
+                  else if currentPhoneLangID == "da"{
+                       self.navigationItem.title = "#Statistikker"
+                  }
+                  //7) Иврит = he
+                  else if currentPhoneLangID == "he"{
+                       self.navigationItem.title = "סטטיסטיקה"
+                  }
+                  //8) Индонезийский = id
+                  else if currentPhoneLangID == "id"{
+                       self.navigationItem.title = "#Statistik"
+                  }
+                  //9) Испанский = es
+                  else if currentPhoneLangID == "es"{
+                       self.navigationItem.title = "#Estadísticas"
+                  }
+                  //10) Итальянский = it
+                  else if currentPhoneLangID == "it"{
+                       self.navigationItem.title = "#Statistica"
+                  }
+                  //11) Каталанский = ca
+                  else if currentPhoneLangID == "ca"{
+                       self.navigationItem.title = "#Estadístiques"
+                  }
+                  //12) Китайский = zh
+                  else if currentPhoneLangID == "zh"{
+                       self.navigationItem.title = "#統計"
+                    
+                  }
+                  //13) Корейский = ko
+                  else if currentPhoneLangID == "ko"{
+                       self.navigationItem.title = "#통계"
+                  }
+                  //14) Малайский = ms
+                  else if currentPhoneLangID == "ms"{
+                       self.navigationItem.title = "#Statistik"
+                  }
+                  //15) Немецкий = de
+                  else if currentPhoneLangID == "de"{
+                       self.navigationItem.title = "#Statistiken"
+                  }
+                  //16) Нидерландский = nl
+                  else if currentPhoneLangID == "nl"{
+                       self.navigationItem.title = "#Statistieken"
+                  }
+                  //17) Норвежский = nb
+                  else if currentPhoneLangID == "nb"{
+                       self.navigationItem.title = "#Statistikk"
+                  }
+                  //18) Польский = pl
+                  else if currentPhoneLangID == "pl"{
+                       self.navigationItem.title = "#Statystyka"
+                  }
+                  //19) Португальский = pt
+                  else if currentPhoneLangID == "pt"{
+                       self.navigationItem.title = "#Estatisticas"
+                  }
+                  //20) Румынский = ro
+                  else if currentPhoneLangID == "ro"{
+                       self.navigationItem.title = "#Statistici"
+                  }
+                  //21) Русский = ru
+                  
+                  //22) Словацкий = sk
+                  else if currentPhoneLangID == "sk"{
+                       self.navigationItem.title = "#Štatistik"
+                  }
+                  //23) Тайский = th
+                  else if currentPhoneLangID == "th"{
+                       self.navigationItem.title = "#สถิติ"
+                  }
+                  //24) Турецкий = tr
+                  else if currentPhoneLangID == "tr"{
+                       self.navigationItem.title = "#İstatistik"
+                  }
+                  //25) Украинский = uk
+                  else if currentPhoneLangID == "uk"{
+                       self.navigationItem.title = "#Статистика"
+                  }
+                  //26) Финский = fi
+                  else if currentPhoneLangID == "fi"{
+                       self.navigationItem.title = "#Tilastot"
+                  }
+                  //27) Французский = fr
+                  else if currentPhoneLangID == "fr"{
+                       self.navigationItem.title = "#Statistiques"
+                  }
+                  //28) Хинди = hi
+                  else if currentPhoneLangID == "hi"{
+                       self.navigationItem.title = "#सांख्यिकी"
+                  }
+                  //29) Хорватский = hr
+                  else if currentPhoneLangID == "hr"{
+                       self.navigationItem.title = "#Statistika"
+                  }
+                  //30) Чешский = cs
+                  else if currentPhoneLangID == "cs"{
+                       self.navigationItem.title = "#Statistika"
+                  }
+                  //31) Шведский = sv
+                  else if currentPhoneLangID == "sv"{
+                       self.navigationItem.title = "#Statistik"
+                  }
+                  //32) Японский = ja
+                  else if currentPhoneLangID == "ja"{
+                       self.navigationItem.title = "#統計"
+                  }
+        
+        
         
         
         
@@ -55,7 +185,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         //v.2.3 для анмированного удаления navigationBar
         self.navigationController?.navigationBar.alpha = 0
         UIView.animate(withDuration: 0.3, animations: {
-            self.navigationController?.navigationBar.alpha = 1
+        self.navigationController?.navigationBar.alpha = 1
            })
         
         
@@ -98,7 +228,7 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
         
         //снять комментарий после скриншотов
 
-        //переменная "statisticLink" отвечает за ссылку на статистику
+        //переменная "statisticLink" отвечает за ссылку на статистику - по умолчанию ссылка
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
        
         //v.2.3

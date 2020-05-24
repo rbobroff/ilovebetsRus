@@ -171,8 +171,9 @@ class ViewController: UIViewController {
         
         //Локализуем главный вид приложения!!!
         if currentPhoneLangID == "ru" {
-            yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
-            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 17)
+            //yourPersonalSportsBettingAdvisorLabel.text = "ВАШ ПЕРСОНАЛЬНЫЙ ПОМОЩНИК В МИРЕ СПОРТИВНОГО бЕТТИНГА"
+            yourPersonalSportsBettingAdvisorLabel.text = "Ваш персональный помощник в мире спортивного беттинга"
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
             sportBetsLabel.text = "Спортивные прогнозы"
             sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
         
@@ -195,6 +196,8 @@ class ViewController: UIViewController {
                     let button6 = UIImage(named: "ru-6")
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
         }
+        
+        //v.3.2
         //2) Арабский = ar
         else if currentPhoneLangID == "ar"{
                 yourPersonalSportsBettingAdvisorLabel.text = "مرشد الرياضة الرياضي الخاص بك"
@@ -731,7 +734,7 @@ class ViewController: UIViewController {
         //25) Украинский = uk
         else if currentPhoneLangID == "uk"{
                        yourPersonalSportsBettingAdvisorLabel.text = "Ваш особистий радник на спортивні ставки"
-                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 16)
+                       yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
                        sportBetsLabel.text = "Спортивні прогнози"
                        sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
             let button1 = UIImage(named: "uk-1")
@@ -751,6 +754,7 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "uk-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
                }
         //26) Финский = fi
         else if currentPhoneLangID == "fi"{
@@ -1037,7 +1041,7 @@ class ViewController: UIViewController {
         
         
         //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
-            if UIScreen.main.bounds.height == 812 {
+        if UIScreen.main.bounds.height == 812 {
                 bettingTipsButtonTopConstraint.constant = 111
                 statisticsButtonTopConstraint.constant = 111
             }
@@ -1067,7 +1071,9 @@ class ViewController: UIViewController {
             sportBetsLabel.font = UIFont.systemFont(ofSize: 30)
             iLoveBetsTopConstraints.constant  = 15
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 20)
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 28)
+            bettingTipsButtonTopConstraint.constant = 120
+            statisticsButtonTopConstraint.constant = 120
             }
         }
         
@@ -1088,11 +1094,15 @@ class ViewController: UIViewController {
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 106.72)
             sportBetsLabel.font = UIFont.systemFont(ofSize: 40.2)
             iLoveBetsTopConstraints.constant  = 50
-            sportBetsLabelBottomConstraint.constant = 60
-        }
+            sportBetsLabelBottomConstraint.constant = 40
+
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 26.68)
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 40.2) //26.68
+                sportBetsLabelBottomConstraint.constant = 40
+                bettingTipsButtonTopConstraint.constant = 240
+                statisticsButtonTopConstraint.constant = 240
             }
+        }
         
         
         //iPad Pro (11-inch) 2nd gen
@@ -1112,7 +1122,7 @@ class ViewController: UIViewController {
             sportBetsLabel.font = UIFont.systemFont(ofSize: 34.98)
             iLoveBetsTopConstraints.constant  = 17.49
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 23.32)
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 33)
             }
         }
         
@@ -1121,20 +1131,20 @@ class ViewController: UIViewController {
             //Высота экрана =  1112.0
             //Ширина экрана =  834.0
         if UIScreen.main.bounds.height == 1112 && UIScreen.main.bounds.width == 834 {
-            bettingTipsButtonHeight.constant = 250
+            bettingTipsButtonHeight.constant = 540
             statisticsButtonHeight.constant = 250
             chatButtonHeight.constant = 250
             emailButtonHeight.constant = 250
             helpButtonHeight.constant = 250
             aboutUsButtonHeight.constant = 250
-            bettingTipsButtonTopConstraint.constant = 171
-            statisticsButtonTopConstraint.constant = 171
+            bettingTipsButtonTopConstraint.constant = 150
+            statisticsButtonTopConstraint.constant = 150
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 35)
-            iLoveBetsLabel.font = UIFont.systemFont(ofSize: 93.28)
-            sportBetsLabel.font = UIFont.systemFont(ofSize: 34.98)
+            iLoveBetsLabel.font = UIFont.systemFont(ofSize: 85)
+            sportBetsLabel.font = UIFont.systemFont(ofSize: 32)
             iLoveBetsTopConstraints.constant  = 17.49
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 23.32)
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 30)
             }
         }
         
@@ -1152,10 +1162,7 @@ class ViewController: UIViewController {
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 80)
             sportBetsLabel.font = UIFont.systemFont(ofSize: 30)
             iLoveBetsTopConstraints.constant  = 25
-            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 20)
             }
-        }
         
         
     } //конец функции viewDidLoad
@@ -1192,16 +1199,22 @@ class ViewController: UIViewController {
             
             //v.2.3
            // if currentLangID == "ru-RU"
-               if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
-            composer.mailComposeDelegate = self
-            composer.setToRecipients(["ilovebets@ya.ru"])
-            composer.setSubject("Обратная связь iLoveBets")
-            composer.setMessageBody("<b>Имя:</b>&nbsp<br><br><b>Сообщение:</b>&nbsp", isHTML: true)
-            }else{
+            if currentPhoneLangID == "ru" {
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Обратная связь iLoveBets")
+                composer.setMessageBody("<b>Имя:</b>&nbsp<br><br><b>Сообщение:</b>&nbsp", isHTML: true)
+            }
+            else if currentPhoneLangID == "en" {
                 composer.mailComposeDelegate = self
                 composer.setToRecipients(["ilovebets@ya.ru"])
                 composer.setSubject("Write to iLoveBets")
                 composer.setMessageBody("<b>Name:</b>&nbsp<br><br><b>Message:</b>&nbsp", isHTML: true)
+            } else {
+                //v.3.2
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets")
                 
             }
     
