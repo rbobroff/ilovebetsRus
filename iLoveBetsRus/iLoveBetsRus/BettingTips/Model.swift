@@ -71,6 +71,8 @@ func loadNews(completionHandler: (()->Void)?) {
             } else {
     //иначе грузится английская версия прогнозов
                 bettingTipsLink = "https://ilovebets.ru/mobileApp/iOS/bettingTipsEng/"
+                //for test
+                //bettingTipsLink = "https://ilovebets.ru//mobileApp/iOS/Localization/forTest/tips/"
             }
       
     

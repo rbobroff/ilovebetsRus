@@ -37,7 +37,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         }
         
         else if currentPhoneLangID == "ar"{
-           self.navigationItem.title = "#معلومات عنا"
+           self.navigationItem.title = "معلومات عنا"
             
         }
         //3) Венгерский = hu
@@ -58,7 +58,7 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         }
         //7) Иврит = he
         else if currentPhoneLangID == "he"{
-             self.navigationItem.title = "#עלינו"
+             self.navigationItem.title = "עלינו"
         }
         //8) Индонезийский = id
         else if currentPhoneLangID == "id"{
@@ -78,7 +78,8 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
         }
         //12) Китайский = zh
         else if currentPhoneLangID == "zh"{
-             self.navigationItem.title = "#關於我們"              }
+             self.navigationItem.title = "#關於我們"
+        }
         //13) Корейский = ko
         else if currentPhoneLangID == "ko"{
              self.navigationItem.title = "#회사 소개"
@@ -226,126 +227,126 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
             }
         
             else if currentPhoneLangID == "ar"{
-                               
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ar/"
             }
             //3) Венгерский = hu
             else if currentPhoneLangID == "hu"{
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/hu/"
             }
             //4) Вьетнамский = vi
             else if currentPhoneLangID == "vi"{
-                 
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/vi/"
             }
             //5) Греческий = el
             else if currentPhoneLangID == "el"{
-                 
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/el/"
             }
             //6) Датский = da
             else if currentPhoneLangID == "da"{
-                 
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/da/"
             }
             //7) Иврит = he
             else if currentPhoneLangID == "he"{
-                   
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/he/"
             }
             //8) Индонезийский = id
             else if currentPhoneLangID == "id"{
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/id/"
             }
             //9) Испанский = es
             else if currentPhoneLangID == "es"{
-                 
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/es/"
             }
             //10) Итальянский = it
             else if currentPhoneLangID == "it"{
-                 
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/it/"
             }
             //11) Каталанский = ca
             else if currentPhoneLangID == "ca"{
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ca/"
             }
             //12) Китайский = zh
             else if currentPhoneLangID == "zh"{
-                                }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/zh/"
+            }
             //13) Корейский = ko
             else if currentPhoneLangID == "ko"{
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ko/"
             }
             //14) Малайский = ms
             else if currentPhoneLangID == "ms"{
-              
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ms/"
             }
             //15) Немецкий = de
             else if currentPhoneLangID == "de"{
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/de/"
             }
             //16) Нидерландский = nl
             else if currentPhoneLangID == "nl"{
-                  
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/nl/"
             }
             //17) Норвежский = nb
             else if currentPhoneLangID == "nb"{
-                  
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/nb/"
             }
             //18) Польский = pl
             else if currentPhoneLangID == "pl"{
-               
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/pl/"
             }
             //19) Португальский = pt
             else if currentPhoneLangID == "pt"{
-                   
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/pt/"
             }
             //20) Румынский = ro
             else if currentPhoneLangID == "ro"{
-                  
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ro/"
             }
             //21) Русский = ru
             
             //22) Словацкий = sk
             else if currentPhoneLangID == "sk"{
-                
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/sk/"
             }
             //23) Тайский = th
             else if currentPhoneLangID == "th"{
-               
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/th/"
             }
             //24) Турецкий = tr
             else if currentPhoneLangID == "tr"{
-                  
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/tr/"
             }
             //25) Украинский = uk
             else if currentPhoneLangID == "uk"{
-                         
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/uk/"
+            }
             //26) Финский = fi
             else if currentPhoneLangID == "fi"{
-                    
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/fi/"
+            }
             //27) Французский = fr
             else if currentPhoneLangID == "fr"{
-                         
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/fr/"
+            }
             //28) Хинди = hi
             else if currentPhoneLangID == "hi"{
-                   
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/hi/"
+            }
             //29) Хорватский = hr
             else if currentPhoneLangID == "hr"{
-                      
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/hr/"
+            }
             //30) Чешский = cs
             else if currentPhoneLangID == "cs"{
-                       
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/cs/"
+            }
             //31) Шведский = sv
             else if currentPhoneLangID == "sv"{
-                        
-                   }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/sv/"
+            }
             //32) Японский = ja
             else if currentPhoneLangID == "ja"{
-                             
-                          }
+                aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ja/"
+            }
         
         
         
@@ -380,132 +381,131 @@ class AboutUsViewController: UIViewController, WKUIDelegate {
  
         //v.2.3
         // if currentLangID == "ru-RU"
-            if currentPhoneLangID == "ru"     {
+          if currentPhoneLangID == "ru"     {
                 aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ru/"
-            }
+          }
         
-            else if currentPhoneLangID == "ar"{
-                                  
-                
-            }
-            //3) Венгерский = hu
-            else if currentPhoneLangID == "hu"{
-                
-            }
-            //4) Вьетнамский = vi
-            else if currentPhoneLangID == "vi"{
-                 
-                
-            }
-            //5) Греческий = el
-            else if currentPhoneLangID == "el"{
-                 
-            }
-            //6) Датский = da
-            else if currentPhoneLangID == "da"{
-                 
-            }
-            //7) Иврит = he
-            else if currentPhoneLangID == "he"{
-                   
-            }
-            //8) Индонезийский = id
-            else if currentPhoneLangID == "id"{
-                
-            }
-            //9) Испанский = es
-            else if currentPhoneLangID == "es"{
-                 
-            }
-            //10) Итальянский = it
-            else if currentPhoneLangID == "it"{
-                 
-            }
-            //11) Каталанский = ca
-            else if currentPhoneLangID == "ca"{
-                
-            }
-            //12) Китайский = zh
-            else if currentPhoneLangID == "zh"{
-                                }
-            //13) Корейский = ko
-            else if currentPhoneLangID == "ko"{
-                
-            }
-            //14) Малайский = ms
-            else if currentPhoneLangID == "ms"{
-              
-            }
-            //15) Немецкий = de
-            else if currentPhoneLangID == "de"{
-                
-            }
-            //16) Нидерландский = nl
-            else if currentPhoneLangID == "nl"{
-                  
-            }
-            //17) Норвежский = nb
-            else if currentPhoneLangID == "nb"{
-                  
-            }
-            //18) Польский = pl
-            else if currentPhoneLangID == "pl"{
-               
-            }
-            //19) Португальский = pt
-            else if currentPhoneLangID == "pt"{
-                   
-            }
-            //20) Румынский = ro
-            else if currentPhoneLangID == "ro"{
-                  
-            }
-            //21) Русский = ru
-            
-            //22) Словацкий = sk
-            else if currentPhoneLangID == "sk"{
-                
-            }
-            //23) Тайский = th
-            else if currentPhoneLangID == "th"{
-               
-            }
-            //24) Турецкий = tr
-            else if currentPhoneLangID == "tr"{
-                  
-            }
-            //25) Украинский = uk
-            else if currentPhoneLangID == "uk"{
-                         
-                   }
-            //26) Финский = fi
-            else if currentPhoneLangID == "fi"{
-                    
-                   }
-            //27) Французский = fr
-            else if currentPhoneLangID == "fr"{
-                         
-                   }
-            //28) Хинди = hi
-            else if currentPhoneLangID == "hi"{
-                   
-                   }
-            //29) Хорватский = hr
-            else if currentPhoneLangID == "hr"{
-                      
-                   }
-            //30) Чешский = cs
-            else if currentPhoneLangID == "cs"{
-                       
-                   }
-            //31) Шведский = sv
-            else if currentPhoneLangID == "sv"{
-                        
-                   }
-            //32) Японский = ja
-            else if currentPhoneLangID == "ja"{
-                             
-                          }
+          else if currentPhoneLangID == "ar"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ar/"
+          }
+          //3) Венгерский = hu
+          else if currentPhoneLangID == "hu"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/hu/"
+          }
+          //4) Вьетнамский = vi
+          else if currentPhoneLangID == "vi"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/vi/"
+          }
+          //5) Греческий = el
+          else if currentPhoneLangID == "el"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/el/"
+          }
+          //6) Датский = da
+          else if currentPhoneLangID == "da"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/da/"
+          }
+          //7) Иврит = he
+          else if currentPhoneLangID == "he"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/he/"
+          }
+          //8) Индонезийский = id
+          else if currentPhoneLangID == "id"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/id/"
+          }
+          //9) Испанский = es
+          else if currentPhoneLangID == "es"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/es/"
+          }
+          //10) Итальянский = it
+          else if currentPhoneLangID == "it"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/it/"
+          }
+          //11) Каталанский = ca
+          else if currentPhoneLangID == "ca"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ca/"
+          }
+          //12) Китайский = zh
+          else if currentPhoneLangID == "zh"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/zh/"
+          }
+          //13) Корейский = ko
+          else if currentPhoneLangID == "ko"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ko/"
+          }
+          //14) Малайский = ms
+          else if currentPhoneLangID == "ms"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ms/"
+          }
+          //15) Немецкий = de
+          else if currentPhoneLangID == "de"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/de/"
+          }
+          //16) Нидерландский = nl
+          else if currentPhoneLangID == "nl"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/nl/"
+          }
+          //17) Норвежский = nb
+          else if currentPhoneLangID == "nb"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/nb/"
+          }
+          //18) Польский = pl
+          else if currentPhoneLangID == "pl"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/pl/"
+          }
+          //19) Португальский = pt
+          else if currentPhoneLangID == "pt"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/pt/"
+          }
+          //20) Румынский = ro
+          else if currentPhoneLangID == "ro"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ro/"
+          }
+          //21) Русский = ru
+          
+          //22) Словацкий = sk
+          else if currentPhoneLangID == "sk"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/sk/"
+          }
+          //23) Тайский = th
+          else if currentPhoneLangID == "th"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/th/"
+          }
+          //24) Турецкий = tr
+          else if currentPhoneLangID == "tr"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/tr/"
+          }
+          //25) Украинский = uk
+          else if currentPhoneLangID == "uk"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/uk/"
+          }
+          //26) Финский = fi
+          else if currentPhoneLangID == "fi"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/fi/"
+          }
+          //27) Французский = fr
+          else if currentPhoneLangID == "fr"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/fr/"
+          }
+          //28) Хинди = hi
+          else if currentPhoneLangID == "hi"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/hi/"
+          }
+          //29) Хорватский = hr
+          else if currentPhoneLangID == "hr"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/hr/"
+          }
+          //30) Чешский = cs
+          else if currentPhoneLangID == "cs"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/cs/"
+          }
+          //31) Шведский = sv
+          else if currentPhoneLangID == "sv"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/sv/"
+          }
+          //32) Японский = ja
+          else if currentPhoneLangID == "ja"{
+              aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ja/"
+          }
         
         
         

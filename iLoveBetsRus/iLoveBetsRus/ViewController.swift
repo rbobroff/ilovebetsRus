@@ -1210,13 +1210,165 @@ class ViewController: UIViewController {
                 composer.setToRecipients(["ilovebets@ya.ru"])
                 composer.setSubject("Write to iLoveBets")
                 composer.setMessageBody("<b>Name:</b>&nbsp<br><br><b>Message:</b>&nbsp", isHTML: true)
-            } else {
+            }
+            else if currentPhoneLangID == "ar"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (ar)")
+            }
+            else if currentPhoneLangID == "hu"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (hu)")
+            }
+            else if currentPhoneLangID == "vi"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (vi)")
+            }
+            else if currentPhoneLangID == "el"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (el)")
+            }
+            else if currentPhoneLangID == "da"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (da)")
+            }
+            else if currentPhoneLangID == "he"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (he)")
+            }
+            else if currentPhoneLangID == "id"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (id)")
+            }
+            else if currentPhoneLangID == "es"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (es)")
+            }
+            else if currentPhoneLangID == "it"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (it)")
+            }
+            else if currentPhoneLangID == "ca"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (ca)")
+            }
+            else if currentPhoneLangID == "zh"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (zh)")
+            }
+            else if currentPhoneLangID == "ko"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (ko)")
+            }
+            else if currentPhoneLangID == "ms"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (ms)")
+            }
+            else if currentPhoneLangID == "de"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (de)")
+            }
+            else if currentPhoneLangID == "nl"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (nl)")
+            }
+            else if currentPhoneLangID == "nb"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (nb)")
+            }
+            else if currentPhoneLangID == "pl"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (pl)")
+            }
+            else if currentPhoneLangID == "pt"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (pt)")
+            }
+            else if currentPhoneLangID == "ro"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (ro)")
+            }
+            else if currentPhoneLangID == "sk"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (sk)")
+            }
+            else if currentPhoneLangID == "th"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (th)")
+            }
+            else if currentPhoneLangID == "tr"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (tr)")
+            }
+            else if currentPhoneLangID == "uk"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (uk)")
+            }
+            else if currentPhoneLangID == "fi"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (fi)")
+            }
+            else if currentPhoneLangID == "fr"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (fr)")
+            }
+            else if currentPhoneLangID == "hi"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (hi)")
+            }
+            else if currentPhoneLangID == "hr"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (hr)")
+            }
+            else if currentPhoneLangID == "cs"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (cs)")
+            }
+            else if currentPhoneLangID == "sv"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (sv)")
+            }
+            else if currentPhoneLangID == "ja"{
+                composer.mailComposeDelegate = self
+                composer.setToRecipients(["ilovebets@ya.ru"])
+                composer.setSubject("Support iLoveBets (ja)")
+            }
+            else {
                 //v.3.2
                 composer.mailComposeDelegate = self
                 composer.setToRecipients(["ilovebets@ya.ru"])
                 composer.setSubject("Support iLoveBets")
-                
             }
+            
+            
     
             present(composer, animated: true)
     }

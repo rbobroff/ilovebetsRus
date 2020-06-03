@@ -230,7 +230,8 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
 
         //переменная "statisticLink" отвечает за ссылку на статистику - по умолчанию ссылка
         var statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
-       
+        
+        
         //v.2.3
         //проверка языка локализации!!!!!!!!!!
        /*
@@ -248,6 +249,8 @@ class StatisticsViewController: UIViewController, WKUIDelegate {
             statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsRus/"
         } else {
             statisticLink = "https://ilovebets.ru/mobileApp/iOS/StatisticsEng/"
+            //for test
+            //statisticLink = "https://ilovebets.ru//mobileApp/iOS/Localization/forTest/statistics/"
         }
  
         

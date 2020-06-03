@@ -306,7 +306,7 @@ class ChatViewController: JSQMessagesViewController {
                 }
                 //другой язык не из списка или английский
                 else {
-                                         senderDisplayName = "User"
+                     senderDisplayName = "User"
                 defaults.set(senderId, forKey: "jsq_id")
                 defaults.synchronize()
                 //вывести сообщение о соглашении EULA!!!!!!!!!!!!
@@ -492,8 +492,9 @@ class ChatViewController: JSQMessagesViewController {
                          }
             
                         //Заголовок по умолчанию или на Английском языке
-                        else {
-                        title = "Chat: \(senderDisplayName!)"
+                        else
+                        {
+                            title = "Chat: \(senderDisplayName!)"
                         }
         
         
@@ -1053,6 +1054,7 @@ By posting User Content you warrant that you own all rights in and to the User C
         
         
         
+        
     alertEULA.addAction(yesAgreeEULA)
     alertEULA.addAction(noAgreeEULA)
         
@@ -1063,9 +1065,15 @@ By posting User Content you warrant that you own all rights in and to the User C
     //добавил строчку для корректной работы оповещения на iPad
     if let popoverController = alertEULA.popoverPresentationController {
     popoverController.sourceView = self.view
-    popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-    //popoverController.permittedArrowDirections = []
+        //v.3.2 - закомментировал, чтобы выводилось сообщение EULA по центру на ipad
+        //  popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+
+    popoverController.permittedArrowDirections = []
         }
+        
+    //
+        
+        
         
         
       //показать оповещение
@@ -1097,7 +1105,7 @@ By posting User Content you warrant that you own all rights in and to the User C
         
         //сообщение при входе в чат о необходимости ввести имя. по умолчанию - английский язык
         //v.3.1 - изменил: preferredStyle: .alert на .actionSheet - чтобы было 2 кнопки
-        var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .actionSheet)
+        var alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
            
               
         //v.2.3
@@ -1232,9 +1240,9 @@ By posting User Content you warrant that you own all rights in and to the User C
         //32) Японский = ja
         else if currentPhoneLangID == "ja"{
                           alert = UIAlertController(title: "あなたの名前を入力してください", message: "ナビゲーションバーをタップすると、表示名を再度変更できます", preferredStyle: .alert)
+      
         }
         
-    
         
         
         //v.3.1 - Создание оповещения при вводе имени Anonymous или anonymous - по умолчанию
@@ -1466,7 +1474,7 @@ By posting User Content you warrant that you own all rights in and to the User C
             self.present(alert, animated: true, completion: nil)
         })
         }
-
+     
         
         
             noAnonymousAlert.addAction(yesAction)
@@ -1602,7 +1610,12 @@ By posting User Content you warrant that you own all rights in and to the User C
         let ref = Constants.refs.databaseChats.childByAutoId()
         //создается словарь message
         //!!!!добавление id к имени пользователя при отправке сообщения!!!!
-        let message = ["sender_id": senderId, "name": senderDisplayName + "_id" + senderId, "text": text]
+        
+        //v3.2
+        //вместо id добавлю язык телефона и цифры
+        //let message = ["sender_id": senderId, "name": senderDisplayName + "_id" + senderId, "text": text]
+        let message = ["sender_id": senderId, "name": senderDisplayName + "_" + currentPhoneLangID + senderId, "text": text]
+        
 
         ref.setValue(message)
 
