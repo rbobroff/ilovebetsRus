@@ -1169,6 +1169,19 @@ class ViewController: UIViewController {
 
 
     
+    //v.3.2 - кастомная кнопка назад на всех экранах
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // подготовка к переходу
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //v.3.2 - кастомная кнопка назад на следующем экране
+        let backItem = UIBarButtonItem()
+        backItem.title = "              "
+        navigationItem.backBarButtonItem = backItem
+    }
+    
+    
+    
+    
     
     
     //вызов почтового клиента при нажатии по кнопке
