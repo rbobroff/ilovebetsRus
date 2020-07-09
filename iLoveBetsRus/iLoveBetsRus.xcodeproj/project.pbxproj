@@ -14,6 +14,7 @@
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
 		ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */; };
+		ED9BA40924B7B44300078577 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9BA40824B7B44300078577 /* StoreKit.framework */; };
 		EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525822368B3D0002428AB /* AppDelegate.swift */; };
 		EDB525872368B3D0002428AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525862368B3D0002428AB /* ViewController.swift */; };
 		EDB5258A2368B3D0002428AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB525882368B3D0002428AB /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUsViewController.swift; sourceTree = "<group>"; };
+		ED9BA40824B7B44300078577 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EDB5257F2368B3D0002428AB /* iLoveBets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLoveBets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB525862368B3D0002428AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3E66F53F7DC5AA22D1871C4 /* Pods_iLoveBetsRus.framework in Frameworks */,
+				ED9BA40924B7B44300078577 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		76CF7BAE3DA13D359A170DF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED9BA40824B7B44300078577 /* StoreKit.framework */,
 				2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */,
 			);
 			name = Frameworks;
