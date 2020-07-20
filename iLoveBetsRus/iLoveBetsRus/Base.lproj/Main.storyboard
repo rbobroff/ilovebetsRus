@@ -215,6 +215,15 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="Y5x-Ib-CBF">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="242"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0OB-c7-ien">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="242"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
                 <view contentMode="scaleToFill" id="TsE-6t-Suf">
                     <rect key="frame" x="0.0" y="0.0" width="334" height="235"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -511,7 +520,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW6-JC-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="-1011"/>
+            <point key="canvasLocation" x="-114" y="-1029"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="s4H-Vy-pnJ">
