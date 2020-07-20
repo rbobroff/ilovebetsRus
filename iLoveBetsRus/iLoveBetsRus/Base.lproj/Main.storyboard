@@ -216,9 +216,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="TsE-6t-Suf">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <rect key="frame" x="0.0" y="0.0" width="334" height="235"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подписка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-NL-7f0">
+                            <rect key="frame" x="15" y="20" width="304" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="nhH-c5-IN2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Первые 30 дней бесплатно, далее 69р / мес" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vci-to-dX8">
+                            <rect key="frame" x="15" y="75" width="304" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsb-dm-pJ3">
+                            <rect key="frame" x="0.0" y="195" width="334" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cAN-y1-kJu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Оформить подписку">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Dsb-dm-pJ3" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" id="RMT-h4-4Sr"/>
+                        <constraint firstItem="SEO-4a-SWf" firstAttribute="bottom" secondItem="Dsb-dm-pJ3" secondAttribute="bottom" id="TOJ-MO-Sar"/>
+                        <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="Dsb-dm-pJ3" secondAttribute="trailing" id="XhT-uN-m65"/>
+                        <constraint firstItem="IcH-NL-7f0" firstAttribute="top" secondItem="SEO-4a-SWf" secondAttribute="top" constant="20" id="XxG-c1-knK"/>
+                        <constraint firstItem="vci-to-dX8" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="kHi-py-ohB"/>
+                        <constraint firstItem="IcH-NL-7f0" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="pDl-kZ-kOG"/>
+                        <constraint firstItem="vci-to-dX8" firstAttribute="top" secondItem="IcH-NL-7f0" secondAttribute="bottom" constant="30" id="tTr-L2-qgE"/>
+                        <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="IcH-NL-7f0" secondAttribute="trailing" constant="15" id="xnR-xj-H8X"/>
+                        <constraint firstAttribute="trailing" secondItem="vci-to-dX8" secondAttribute="trailing" constant="15" id="zm0-Jv-dYa"/>
+                    </constraints>
                     <viewLayoutGuide key="safeArea" id="SEO-4a-SWf"/>
                 </view>
             </objects>
@@ -472,7 +511,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW6-JC-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="-1009"/>
+            <point key="canvasLocation" x="172" y="-1011"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="s4H-Vy-pnJ">
