@@ -14,12 +14,18 @@ import MessageUI //библиотека для отправки e-mail
 class ViewController: UIViewController {
     
     
-    
-//v.3.3 - всплывающее окно подписки
+//https://www.youtube.com/watch?v=gLTDY8Qj6EM&feature=youtu.be
+//v.3.3 - actions и outlets для всплывающего окна подписки
+    //при нажатии кнопки "Купить" на главном экране ViewController срабатывает blur-эффект и после этого появляется Pop-Up View
     @IBAction func buyButton(_ sender: Any) {
+        animateIn(desiredView: blurView)
+        animateIn(desiredView: popupView)
     }
 
+    //v.3.3
     @IBAction func subscribeButton(_ sender: Any) {
+        animateOut(desiredView: popupView) //убираем Pop-Up View с анимацией
+        animateOut(desiredView: blurView)  //убираем Pop-Up View с анимацией
     }
     
     @IBOutlet var blurView: UIVisualEffectView!
@@ -1201,6 +1207,48 @@ class ViewController: UIViewController {
         
         
     } //конец функции viewDidLoad
+    
+    
+    
+    
+    //v.3.3 - animate in a specified view для pop-Up
+    //будем вызывать эту функцию дважды, один раз для blurView outlet, и 2-й для popupView outlet
+    //desiredView - будет = blurView или popupView
+    func animateIn(desiredView: UIView) {
+        let backgroundView = self.view!
+        
+        //attach our desired view to the screen (self.view / backgroundView)
+        backgroundView.addSubview(desiredView)
+        
+        //starting the animation - начинается анимация
+        //sets the view's scaling to be 120%. zooming the screen
+        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        desiredView.alpha = 0 //0% - прозрачности
+        desiredView.center = backgroundView.center //чтобы всплывающее окно высвечивалось по центру и blur-эффект тоже
+        
+        //через 0.3 секунды заканчивается анимация со 100% прозрачностью и изменением zooming the screen
+        //animate effect
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            desiredView.alpha = 1 //100% - прозрачности
+        })
+    }
+    
+    //v.3.3 - animate OUT in a specified view для pop-Up
+    func animateOut(desiredView: UIView) {
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            desiredView.alpha = 0
+        }, completion: { _ in
+            desiredView.removeFromSuperview()
+        })
+        
+    }
+    
+    
+    
+    
+
 
 
     
