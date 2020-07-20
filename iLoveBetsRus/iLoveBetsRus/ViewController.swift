@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     @IBAction func subscribeButton(_ sender: Any) {
     }
+    
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popupView: UIView!
     
@@ -123,6 +124,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        //v.3.3 добавляем blur-эффект при нажатии кнопки buyButton
+        //устанавливаем размер blur view равным всему viewController
+        blurView.bounds = self.view.bounds
+        
+        //x - справа, y - снизу. определяем границы popupView
+        //width - ширина всплывающего окна. устанавливаем равной 90% от ширины ViewController
+        //height - высота всплывающего окна. устанавливаем равной 40% от высоты ViewController
+        popupView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
+        
+        
+        
+        
+        
+        
+        
      
     //v2.3 для анмированного navigationBar
      self.navigationController?.isNavigationBarHidden = true
