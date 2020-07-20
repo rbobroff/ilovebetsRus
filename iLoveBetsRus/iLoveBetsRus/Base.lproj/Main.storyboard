@@ -215,6 +215,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="TsE-6t-Suf">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="SEO-4a-SWf"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="810" y="-223.94366197183098"/>
         </scene>
@@ -466,7 +472,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW6-JC-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-893"/>
+            <point key="canvasLocation" x="241" y="-1009"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="s4H-Vy-pnJ">
