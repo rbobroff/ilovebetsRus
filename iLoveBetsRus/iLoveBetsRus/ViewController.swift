@@ -13,7 +13,21 @@ import MessageUI //библиотека для отправки e-mail
 
 class ViewController: UIViewController {
     
+    
+    
+//v.3.3 - всплывающее окно подписки
+    @IBAction func buyButton(_ sender: Any) {
+    }
 
+    @IBAction func subscribeButton(_ sender: Any) {
+    }
+    @IBOutlet var blurView: UIVisualEffectView!
+    @IBOutlet var popupView: UIView!
+    
+    
+    
+    
+    
 
     @IBOutlet weak var bettingTipsButton: UIButton!
     @IBOutlet weak var statisticsButton: UIButton!
@@ -103,6 +117,8 @@ class ViewController: UIViewController {
     
     
     } //конец функции viewWillAppear
+    
+    
     
     
     override func viewDidLoad() {

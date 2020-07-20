@@ -146,6 +146,9 @@
                                 <state key="normal" title="buyButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yih-Mm-czm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -193,6 +196,7 @@
                         <outlet property="bettingTipsButton" destination="uBP-K8-Wix" id="cGh-cI-jG6"/>
                         <outlet property="bettingTipsButtonHeight" destination="OO1-9X-3gA" id="fsZ-Jx-cLw"/>
                         <outlet property="bettingTipsButtonTopConstraint" destination="Kbs-2u-knd" id="Cd7-ft-Bdb"/>
+                        <outlet property="blurView" destination="Y5x-Ib-CBF" id="kIo-z7-8ga"/>
                         <outlet property="chatButton" destination="ZCO-g1-1p3" id="3e5-Qg-CbC"/>
                         <outlet property="chatButtonHeight" destination="VDt-8s-pz3" id="5rO-7x-Mzj"/>
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
@@ -202,6 +206,7 @@
                         <outlet property="iLoveBetsLabel" destination="XMk-Vi-Eeg" id="9Vo-hT-PAQ"/>
                         <outlet property="iLoveBetsTopConstraints" destination="8Fk-WS-4Mc" id="RSn-st-TnQ"/>
                         <outlet property="leftConstraintYourPersonalSportsBettingAdvisor" destination="NaY-Hr-zzU" id="Jdk-ft-ypm"/>
+                        <outlet property="popupView" destination="TsE-6t-Suf" id="wJd-XY-oef"/>
                         <outlet property="rightConstraintYourPersonalSportsBettingAdvisor" destination="flT-UJ-mBK" id="SB8-iO-QuU"/>
                         <outlet property="sportBetsLabel" destination="PMF-W3-YlE" id="bPK-jM-LmP"/>
                         <outlet property="sportBetsLabelBottomConstraint" destination="GmL-bX-eH0" id="ZKM-7l-tBi"/>
@@ -253,6 +258,9 @@
                             <state key="normal" title="Оформить подписку">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="subscribeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5X-Oe-oZ5"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
