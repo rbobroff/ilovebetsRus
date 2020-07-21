@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDV-ab-oJY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDV-ab-oJY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -129,7 +129,7 @@
                                     <segue destination="XgA-X0-SKs" kind="show" id="2Hp-3P-ko1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-K8-Wix">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-K8-Wix">
                                 <rect key="frame" x="3" y="214" width="183" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="OO1-9X-3gA"/>
@@ -197,6 +197,7 @@
                         <outlet property="bettingTipsButtonHeight" destination="OO1-9X-3gA" id="fsZ-Jx-cLw"/>
                         <outlet property="bettingTipsButtonTopConstraint" destination="Kbs-2u-knd" id="Cd7-ft-Bdb"/>
                         <outlet property="blurView" destination="Y5x-Ib-CBF" id="kIo-z7-8ga"/>
+                        <outlet property="buyButtonOutlet" destination="Pct-Wi-3AT" id="KoB-mh-xcl"/>
                         <outlet property="chatButton" destination="ZCO-g1-1p3" id="3e5-Qg-CbC"/>
                         <outlet property="chatButtonHeight" destination="VDt-8s-pz3" id="5rO-7x-Mzj"/>
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
@@ -215,6 +216,7 @@
                         <outlet property="statisticsButton" destination="WuE-nr-FZO" id="n7g-cM-IeP"/>
                         <outlet property="statisticsButtonHeight" destination="Lgh-r8-HOQ" id="UsF-cj-qMh"/>
                         <outlet property="statisticsButtonTopConstraint" destination="hr2-JV-6pt" id="8j8-y3-IEG"/>
+                        <outlet property="subscribeLabelPopUpView" destination="IcH-NL-7f0" id="T7u-8N-0hd"/>
                         <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
                         <outlet property="yourPersonalSportsBettingAdvisorLabel" destination="Pdb-3d-KjB" id="9eL-QB-lTD"/>
                     </connections>

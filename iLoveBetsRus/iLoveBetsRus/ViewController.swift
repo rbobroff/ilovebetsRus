@@ -20,20 +20,35 @@ class ViewController: UIViewController {
     @IBAction func buyButton(_ sender: Any) {
         animateIn(desiredView: blurView)
         animateIn(desiredView: popupView)
+        if currentPhoneLangID == "en" {
+            subscribeLabelPopUpView.text = "Subscribe"
+        }
+    }
+    
+    //v.3.3 - функция обновления интерфейса, если осуществлена подписка
+    func updateUI() {
+        bettingTipsButton.isHidden = false
+        buyButtonOutlet.isHidden = true
+        
     }
 
     //v.3.3
     @IBAction func subscribeButton(_ sender: Any) {
         animateOut(desiredView: popupView) //убираем Pop-Up View с анимацией
         animateOut(desiredView: blurView)  //убираем Pop-Up View с анимацией
+        //updateUI()
     }
     
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popupView: UIView!
     
     
+    @IBOutlet weak var subscribeLabelPopUpView: UILabel!
+    //            yourPersonalSportsBettingAdvisorLabel.text = "Ваш персональный помощник в мире спортивного беттинга"
     
     
+    //v.3.3 - outlet кнопки buyButton
+    @IBOutlet weak var buyButtonOutlet: UIButton!
     
 
     @IBOutlet weak var bettingTipsButton: UIButton!
