@@ -1,4 +1,5 @@
 PODS:
+  - ApphudSDK (0.16)
   - Firebase/Analytics (6.13.0):
     - Firebase/Core
   - Firebase/Auth (6.13.0):
@@ -109,6 +110,7 @@ PODS:
   - Protobuf (3.10.0)
 
 DEPENDENCIES:
+  - ApphudSDK
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -119,6 +121,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ApphudSDK
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -143,6 +146,7 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
+  ApphudSDK: 8a4c78d6812d04ea62199026b9302fb299870bb6
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
   FirebaseAnalytics: 45f36d9c429fc91d206283900ab75390cd05ee8a
   FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
@@ -166,6 +170,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
-PODFILE CHECKSUM: 382900c85fd7ae4932306497c1f89e63b83cc108
+PODFILE CHECKSUM: dd85b73ab802bc5fda6528d8d21001781ca28d75
 
 COCOAPODS: 1.8.4
