@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ApphudSDK //v.3.3
 import Firebase //при настройке push-уведомлений
 import Messages //при настройке push-уведомлений
 @UIApplicationMain
@@ -63,7 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //v3.3 - встроенная покупка (https://app.apphud.com/configureapp/28f9f6bd/1?utm_campaign=integration_assistance&utm_campaign=63e0797c9b-LOST_USER&utm_medium=automatic&utm_medium=email&utm_source=email&utm_source=Apphud&utm_term=0_b71f4636f5-63e0797c9b-409861989)
         
+        Apphud.setFinishAllTransactions()
+        Apphud.start(apiKey: "app_ZtqM5pRQ8x2b5sawKmgjGFgwQa5jBL")
         
   
         
@@ -105,7 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //loadNews()
         
         return true
-    }
+    } //конец метода didFinishLaunchingWithOptions
 
     // MARK: UISceneSession Lifecycle
 
