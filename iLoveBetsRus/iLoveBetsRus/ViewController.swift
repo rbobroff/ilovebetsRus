@@ -34,8 +34,12 @@ class ViewController: UIViewController {
 
     //v.3.3
     @IBAction func subscribeButton(_ sender: Any) {
-        animateOut(desiredView: popupView) //убираем Pop-Up View с анимацией
-        animateOut(desiredView: blurView)  //убираем Pop-Up View с анимацией
+        // when purchase button tapped
+        Apphud.purchase(product) { result in
+          // handle result
+        }
+        //animateOut(desiredView: popupView) //убираем Pop-Up View с анимацией - это для кнопки отмена или крестика
+        //animateOut(desiredView: blurView)  //убираем Pop-Up View с анимацией - это для кнопки отмена или крестика
         //updateUI()
     }
     
