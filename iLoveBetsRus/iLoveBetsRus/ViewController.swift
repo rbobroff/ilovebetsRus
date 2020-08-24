@@ -29,6 +29,14 @@ class ViewController: UIViewController {
     }
     
     
+    //v.3.3 кнопка закрыть на всплывающем окне
+    @IBAction func closeButton(_ sender: Any) {
+        self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+        self.animateOut(desiredView: self.blurView)
+    }
+    
+    
+    
     
     //v.3.3 - функция обновления интерфейса, если осуществлена подписка
     func reloadUI() {

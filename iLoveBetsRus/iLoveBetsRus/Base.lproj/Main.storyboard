@@ -264,6 +264,14 @@
                                 <action selector="subscribeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5X-Oe-oZ5"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnQ-pP-luN">
+                            <rect key="frame" x="253" y="15" width="39" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Close"/>
+                            <connections>
+                                <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsN-6A-vcv"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
