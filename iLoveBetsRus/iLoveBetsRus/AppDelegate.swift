@@ -8,7 +8,7 @@
 
 import UIKit
 import ApphudSDK //v.3.3
-import iAd
+import iAd       //v.3.3
 import Firebase //при настройке push-уведомлений
 import Messages //при настройке push-уведомлений
 @UIApplicationMain
@@ -67,7 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //v.3.3 - добавлена интеграция iAd с Apphud
-        //https://docs.apphud.com/integrations/attribution/apple-search-ads?utm_campaign=integration_assistance&utm_campaign=63e0797c9b-LOST_USER&utm_medium=automatic&utm_medium=email&utm_source=email&utm_source=Apphud&utm_term=0_b71f4636f5-63e0797c9b-409861989
+        //https://docs.apphud.com/integrations/attribution/apple-search-ads?utm_campaign=integration_assistance&utm_campaign=63e0797c9b-LOST_USER&utm_medium=automatic&utm_medium=email&utm_source=email&utm_source=Apphud&utm_term=0_b71f4636f5-63e0797c9b-409861989setFinishAllTransactions
+        Apphud.setFinishAllTransactions() // Add if using SDK in purchase mode
         Apphud.start(apiKey: "app_ZtqM5pRQ8x2b5sawKmgjGFgwQa5jBL")
         // send search ads attribution data to Apphud
         ADClient.shared().requestAttributionDetails { (data, error) in
@@ -75,11 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 Apphud.addAttribution(data: data, from: .appleSearchAds, callback: nil)
             }
         }
-        
-        
-        //v3.3 - встроенная покупка (https://app.apphud.com/configureapp/28f9f6bd/1?utm_campaign=integration_assistance&utm_campaign=63e0797c9b-LOST_USER&utm_medium=automatic&utm_medium=email&utm_source=email&utm_source=Apphud&utm_term=0_b71f4636f5-63e0797c9b-409861989)
-        Apphud.setFinishAllTransactions()
-        Apphud.start(apiKey: "app_ZtqM5pRQ8x2b5sawKmgjGFgwQa5jBL")
         
   
         
@@ -123,6 +119,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     } //конец метода didFinishLaunchingWithOptions
 
+    
+    
+    
+    
     // MARK: UISceneSession Lifecycle
 
     @available(iOS 13.0, *)

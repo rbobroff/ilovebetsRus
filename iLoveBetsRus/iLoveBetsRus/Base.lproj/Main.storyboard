@@ -139,7 +139,7 @@
                                     <segue destination="yYx-sr-2tP" kind="show" id="G5h-Um-auu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Wi-3AT">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Wi-3AT">
                                 <rect key="frame" x="32" y="125" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,7 +257,7 @@
                                 <constraint firstAttribute="height" constant="40" id="cAN-y1-kJu"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Оформить подписку">
+                            <state key="normal" title="Subscribe">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -280,7 +280,7 @@
                     <viewLayoutGuide key="safeArea" id="SEO-4a-SWf"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="810" y="-223.94366197183098"/>
+            <point key="canvasLocation" x="873" y="-225"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="RZU-No-Rto">

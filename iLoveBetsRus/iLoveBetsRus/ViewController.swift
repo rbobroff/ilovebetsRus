@@ -8,11 +8,14 @@
 
 import UIKit
 import MessageUI //библиотека для отправки e-mail
+import ApphudSDK //v.3.3 - подписка
+import StoreKit  //v.3.3 - подписка
 
 //Инструкция по отправке E-mail: https://www.youtube.com/watch?v=J-pn5V2jcfo&t=2s
 
 class ViewController: UIViewController {
     
+
     
 //https://www.youtube.com/watch?v=gLTDY8Qj6EM&feature=youtu.be
 //v.3.3 - actions и outlets для всплывающего окна подписки
@@ -20,28 +23,82 @@ class ViewController: UIViewController {
     @IBAction func buyButton(_ sender: Any) {
         animateIn(desiredView: blurView)
         animateIn(desiredView: popupView)
-        if currentPhoneLangID == "en" {
-            subscribeLabelPopUpView.text = "Subscribe"
+        // if currentPhoneLangID == "en" {
+        //    subscribeLabelPopUpView.text = "Подписка"
+        //}
+    }
+    
+    
+    
+    //v.3.3 - функция обновления интерфейса, если осуществлена подписка
+    func reloadUI() {
+        if let product = Apphud.product(productIdentifier: "com.iloveapps.bettingadvisor.mysubscription") {
+        // set up pricing for this product
+         //   subscribeLabelPopUpView.text = product.price
+         
+           
+            //выводим цену в местной валюте и формате
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = product.priceLocale
+            numberFormatter.numberStyle = .currency
+            let priceString = numberFormatter.string(from: product.price)
+            subscribeLabelPopUpView.text = priceString
+            
         }
     }
     
-    //v.3.3 - функция обновления интерфейса, если осуществлена подписка
-    func updateUI() {
-        bettingTipsButton.isHidden = false
-        buyButtonOutlet.isHidden = true
-        
-    }
 
-    //v.3.3
+    
+    //v.3.3 - покупка продукта. Используем в кнопке "subscribeButton"
     @IBAction func subscribeButton(_ sender: Any) {
         // when purchase button tapped
-        Apphud.purchase(product) { result in
-          // handle result
-        }
+           
+           if let product = Apphud.product(productIdentifier: "com.iloveapps.bettingadvisor.mysubscription") {
+               Apphud.purchase(product) { result in
+                   if Apphud.hasActiveSubscription() {
+                       print("подписка оформлена")
+                    self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+                    self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
+                    self.buyButtonOutlet.isHidden = true
+                    self.bettingTipsButton.isHidden = false
+                    
+                   } else {
+                       print("покупка отменена")
+                   }
+               }
+           } else {
+              print("продукты еще не загрузились из App Store, покупка невозможна")
+          }
+    
+        
+        //v.1 - method
+     /*   func purchaseProduct(product : SKProduct) {
+                Apphud.purchase(product) { result in
+                  if let subscription = result.subscription, subscription.isActive(){
+                      // has active subscription
+                   
+                  } else if let purchase = result.nonRenewingPurchase, purchase.isActive(){
+                      // has active non-renewing purchase
+                    
+                  } else {
+                      // handle error or check transaction status.
+
+                  }
+                }
+             } */
+        //конец V1 method
+        
+        
+        
+        
         //animateOut(desiredView: popupView) //убираем Pop-Up View с анимацией - это для кнопки отмена или крестика
         //animateOut(desiredView: blurView)  //убираем Pop-Up View с анимацией - это для кнопки отмена или крестика
-        //updateUI()
+        //reloadUI()
     }
+    
+    
+    
+    
     
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popupView: UIView!
@@ -150,6 +207,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+            //v.3.3 - загружаем продукты
+        if Apphud.products() != nil {
+            reloadUI()
+            buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов
+            buyButtonOutlet.backgroundColor = UIColor.green
+            } else {
+            Apphud.refreshStoreKitProducts { products in
+            self.reloadUI()
+                self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов
+                self.buyButtonOutlet.backgroundColor = UIColor.green
+            }
+        }
+        
+        if Apphud.hasActiveSubscription() {
+            buyButtonOutlet.isHidden = true
+            bettingTipsButton.isHidden = false
+            print("!Есть активная подписка!")
+        } else {
+            print("!Подписка закончилась!")
+            buyButtonOutlet.isHidden = false
+            bettingTipsButton.isHidden = true
+        }
+        
+    
+     
         
         
         //v.3.3 добавляем blur-эффект при нажатии кнопки buyButton
@@ -160,10 +242,6 @@ class ViewController: UIViewController {
         //width - ширина всплывающего окна. устанавливаем равной 90% от ширины ViewController
         //height - высота всплывающего окна. устанавливаем равной 40% от высоты ViewController
         popupView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
-        
-        
-        
-        
         
         
         
