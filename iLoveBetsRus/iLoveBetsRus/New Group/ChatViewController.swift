@@ -519,8 +519,8 @@ collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
 collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
        
-        //Observing Firebase For New Chat Messages
-        let query = Constants.refs.databaseChats.queryLimited(toLast: 50)
+        //Observing Firebase For New Chat Messages - количество сообщений чата
+        let query = Constants.refs.databaseChats.queryLimited(toLast: 100)
 
         _ = query.observe(.childAdded, with: { [weak self] snapshot in
 

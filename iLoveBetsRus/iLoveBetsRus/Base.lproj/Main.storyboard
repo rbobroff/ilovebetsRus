@@ -150,6 +150,11 @@
                                     <action selector="buyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yih-Mm-czm"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-bu-9x6">
+                                <rect key="frame" x="84" y="234" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -264,12 +269,20 @@
                                 <action selector="subscribeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5X-Oe-oZ5"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnQ-pP-luN">
-                            <rect key="frame" x="253" y="15" width="39" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnQ-pP-luN">
+                            <rect key="frame" x="270" y="9" width="48" height="51"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Close"/>
+                            <state key="normal" title="Close" image="arrows_long_left"/>
                             <connections>
                                 <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsN-6A-vcv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxj-bO-6OP">
+                            <rect key="frame" x="86" y="134" width="162" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Восстановить покупки"/>
+                            <connections>
+                                <action selector="restorePurchasesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8x-QQ-mca"/>
                             </connections>
                         </button>
                     </subviews>
@@ -565,5 +578,6 @@
         <image name="5. Help_eng" width="152.5" height="129"/>
         <image name="6. AboutUS_eng" width="152.5" height="129"/>
         <image name="MainScreenBackground" width="320" height="568"/>
+        <image name="arrows_long_left" width="106" height="106"/>
     </resources>
 </document>

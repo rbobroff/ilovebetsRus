@@ -29,6 +29,34 @@ class ViewController: UIViewController {
     }
     
     
+    
+    //v.3.3 - кнопка восстановить покупки
+    @IBAction func restorePurchasesButton(_ sender: Any) {
+            Apphud.restorePurchases { _, _, _ in
+                if Apphud.hasActiveSubscription() {
+                // success, dismiss purchase screen and unlock premium content
+                    self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+                    self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
+                    self.buyButtonOutlet.isHidden = true
+                    self.bettingTipsButton.isHidden = false
+                
+                } else {
+                // no active in-app purchases found
+                    //сообщение у Вас нет активных подписок
+                let controller = UIAlertController(title: "У Вас нет активных подписок", message: nil, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "Ок", style: .default, handler: nil)
+                controller.addAction(ok)
+                self.present(controller, animated: true, completion: nil)
+                    // self.buyButtonOutlet.isHidden = true
+                    //self.bettingTipsButton.isHidden = false
+                }
+            }
+    }
+    
+    
+    
+    
+    
     //v.3.3 кнопка закрыть на всплывающем окне
     @IBAction func closeButton(_ sender: Any) {
         self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
@@ -77,31 +105,6 @@ class ViewController: UIViewController {
            } else {
               print("продукты еще не загрузились из App Store, покупка невозможна")
           }
-    
-        
-        //v.1 - method
-     /*   func purchaseProduct(product : SKProduct) {
-                Apphud.purchase(product) { result in
-                  if let subscription = result.subscription, subscription.isActive(){
-                      // has active subscription
-                   
-                  } else if let purchase = result.nonRenewingPurchase, purchase.isActive(){
-                      // has active non-renewing purchase
-                    
-                  } else {
-                      // handle error or check transaction status.
-
-                  }
-                }
-             } */
-        //конец V1 method
-        
-        
-        
-        
-        //animateOut(desiredView: popupView) //убираем Pop-Up View с анимацией - это для кнопки отмена или крестика
-        //animateOut(desiredView: blurView)  //убираем Pop-Up View с анимацией - это для кнопки отмена или крестика
-        //reloadUI()
     }
     
     
@@ -184,6 +187,45 @@ class ViewController: UIViewController {
     
    // скрывать navigation bar (или показывать)
    override func viewWillAppear(_ animated: Bool) {
+    
+    
+    
+    
+    //v.3.3 - !!!!!!!!!!!проверка подписки при появлении главного экрана!!!!!!!!!!!!!!!
+ /*   if Apphud.hasActiveSubscription() {
+        buyButtonOutlet.isHidden = true
+        bettingTipsButton.isHidden = false
+        print("!Есть активная подписка!")
+    } else {
+        print("!Подписка закончилась!")
+        buyButtonOutlet.isHidden = false
+        bettingTipsButton.isHidden = true
+    }
+ */
+    
+    //=========================================
+   /* if Apphud.products() != nil {
+        reloadUI()
+        buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов
+        buyButtonOutlet.backgroundColor = UIColor.green
+        } else {
+        Apphud.refreshStoreKitProducts { products in
+        self.reloadUI()
+            self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов
+            self.buyButtonOutlet.backgroundColor = UIColor.green
+        }
+    } else if
+     Apphud.products() = nil
+     buyButtonOutlet.isEnabled = false ???
+ */
+    
+    //==================================
+    
+    
+    
+    
+    
+    
     
     
     //v.3.2 - раскомментировано. чинит проблему с NavigationBar!!!!!!
