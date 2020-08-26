@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDV-ab-oJY">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Jjb-VB-jld"/>
@@ -29,7 +29,7 @@
             <objects>
                 <viewController id="j5s-k1-m0o" customClass="ChatViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHf-7H-uIA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sej-Ef-nF0"/>
@@ -45,14 +45,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ae8-bm-Ufl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="701"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="602"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-g1-1p3">
-                                <rect key="frame" x="3" y="346" width="183" height="129"/>
+                                <rect key="frame" x="3" y="346" width="155.5" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="VDt-8s-pz3"/>
                                 </constraints>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-pS-pvF">
-                                <rect key="frame" x="189" y="346" width="183" height="129"/>
+                                <rect key="frame" x="161.5" y="346" width="155.5" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="Gg0-oE-kTB"/>
                                 </constraints>
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4C-3Q-fJ3">
-                                <rect key="frame" x="3" y="478" width="183" height="129"/>
+                                <rect key="frame" x="3" y="478" width="155.5" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="PGJ-68-PfL"/>
                                 </constraints>
@@ -88,19 +88,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Personal Sports Betting Advisor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
-                                <rect key="frame" x="16" y="82" width="343" height="60"/>
+                                <rect key="frame" x="16" y="82" width="288" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iLoveBets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-Vi-Eeg">
-                                <rect key="frame" x="16" y="143" width="343" height="77"/>
+                                <rect key="frame" x="16" y="143" width="288" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-nr-FZO">
-                                <rect key="frame" x="189" y="214" width="183" height="129"/>
+                                <rect key="frame" x="161.5" y="214" width="155.5" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="Lgh-r8-HOQ"/>
                                 </constraints>
@@ -112,13 +112,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Betting Tips" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-W3-YlE">
-                                <rect key="frame" x="71" y="618" width="233" height="29"/>
+                                <rect key="frame" x="71" y="490.5" width="178" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lih-4P-Ldy">
-                                <rect key="frame" x="189" y="478" width="183" height="129"/>
+                                <rect key="frame" x="161.5" y="478" width="155.5" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="fXc-ai-iMY"/>
                                 </constraints>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-K8-Wix">
-                                <rect key="frame" x="3" y="214" width="183" height="129"/>
+                                <rect key="frame" x="3" y="214" width="155.5" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="OO1-9X-3gA"/>
                                 </constraints>
@@ -198,6 +198,7 @@
                     <connections>
                         <outlet property="aboutUsButton" destination="lih-4P-Ldy" id="FJ2-eV-prc"/>
                         <outlet property="aboutUsButtonHeight" destination="fXc-ai-iMY" id="GTK-QU-cHF"/>
+                        <outlet property="activityIndicatorButtonSubscribe" destination="w69-In-cCQ" id="N7Q-o7-YYd"/>
                         <outlet property="bettingTipsButton" destination="uBP-K8-Wix" id="cGh-cI-jG6"/>
                         <outlet property="bettingTipsButtonHeight" destination="OO1-9X-3gA" id="fsZ-Jx-cLw"/>
                         <outlet property="bettingTipsButtonTopConstraint" destination="Kbs-2u-knd" id="Cd7-ft-Bdb"/>
@@ -221,6 +222,7 @@
                         <outlet property="statisticsButton" destination="WuE-nr-FZO" id="n7g-cM-IeP"/>
                         <outlet property="statisticsButtonHeight" destination="Lgh-r8-HOQ" id="UsF-cj-qMh"/>
                         <outlet property="statisticsButtonTopConstraint" destination="hr2-JV-6pt" id="8j8-y3-IEG"/>
+                        <outlet property="subscribeButtonOutlet" destination="Dsb-dm-pJ3" id="rvS-3r-jD4"/>
                         <outlet property="subscribeLabelPopUpView" destination="IcH-NL-7f0" id="T7u-8N-0hd"/>
                         <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
                         <outlet property="yourPersonalSportsBettingAdvisorLabel" destination="Pdb-3d-KjB" id="9eL-QB-lTD"/>
@@ -285,6 +287,10 @@
                                 <action selector="restorePurchasesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8x-QQ-mca"/>
                             </connections>
                         </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="w69-In-cCQ">
+                            <rect key="frame" x="73" y="215" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -308,7 +314,7 @@
             <objects>
                 <viewController id="XgA-X0-SKs" customClass="AboutUsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HE8-S9-S1K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hxE-kz-BHD"/>
@@ -324,60 +330,60 @@
             <objects>
                 <viewController title="Прогнозы" id="b3s-U7-OQD" customClass="OneNewsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JF-me-xqW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-LY-Cgj">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-uT-HgC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="669.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="669.5"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-Jz-aG4">
-                                                <rect key="frame" x="177.5" y="215" width="20" height="20"/>
+                                                <rect key="frame" x="150" y="215" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="H56-hf-07s"/>
                                                     <constraint firstAttribute="height" constant="20" id="w9A-qw-MRk"/>
                                                 </constraints>
                                             </activityIndicatorView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-GX-SQ4">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="kLl-Lf-4hh"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title - Чемпионат" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T49-9W-h1i">
-                                                <rect key="frame" x="8" y="468" width="359" height="24"/>
+                                                <rect key="frame" x="8" y="468" width="304" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description - Вид спорта" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-xP-PjE">
-                                                <rect key="frame" x="8" y="500" width="359" height="20.5"/>
+                                                <rect key="frame" x="8" y="500" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url - Команды" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-0X-zNj">
-                                                <rect key="frame" x="8" y="528.5" width="359" height="20.5"/>
+                                                <rect key="frame" x="8" y="528.5" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="publishedAt - Дата" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-qv-PiQ">
-                                                <rect key="frame" x="8" y="557" width="359" height="20.5"/>
+                                                <rect key="frame" x="8" y="557" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author - Ставка" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSw-Zy-e72">
-                                                <rect key="frame" x="8" y="585.5" width="359" height="20.5"/>
+                                                <rect key="frame" x="8" y="585.5" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content - Коэффициент" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGi-cd-2kl">
-                                                <rect key="frame" x="8" y="614" width="359" height="20.5"/>
+                                                <rect key="frame" x="8" y="614" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -453,35 +459,35 @@
             <objects>
                 <tableViewController id="yYx-sr-2tP" customClass="TableViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygR-7M-hPu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="GSq-0c-lJn">
-                            <rect key="frame" x="0.0" y="151" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="151" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="rRT-Pa-jmB" customClass="newTableViewCell" customModule="iLoveBets" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="95"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rRT-Pa-jmB" id="vH3-EQ-Vkw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-LJ-TCP">
-                                            <rect key="frame" x="18" y="19" width="335" height="24"/>
+                                            <rect key="frame" x="18" y="19" width="280" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt1-Yy-jJx">
-                                            <rect key="frame" x="18" y="51" width="335" height="17"/>
+                                            <rect key="frame" x="18" y="51" width="280" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-BA-bjE">
-                                            <rect key="frame" x="357" y="6" width="10" height="81"/>
+                                            <rect key="frame" x="302" y="6" width="10" height="81"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="71" id="iR9-J0-FPq"/>
                                                 <constraint firstAttribute="width" constant="10" id="yhR-MI-ofJ"/>
@@ -538,7 +544,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qDV-ab-oJY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0G-xv-gZD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -558,7 +564,7 @@
             <objects>
                 <viewController id="iGG-G0-tQr" customClass="StatisticsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCM-sD-fdy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a9u-1R-dYo"/>

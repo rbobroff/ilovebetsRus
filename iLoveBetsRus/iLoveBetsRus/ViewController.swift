@@ -84,11 +84,17 @@ class ViewController: UIViewController {
     }
     
 
+  
     
     //v.3.3 - покупка продукта. Используем в кнопке "subscribeButton"
     @IBAction func subscribeButton(_ sender: Any) {
         // when purchase button tapped
-           
+        
+        //спиннер появляется, текст пропадает
+        activityIndicatorButtonSubscribe.startAnimating()
+        //subscribeButtonOutlet.setTitle("Text", for: .normal)
+        subscribeButtonOutlet.setTitleColor(UIColor.clear, for: .normal)
+        
            if let product = Apphud.product(productIdentifier: "com.iloveapps.bettingadvisor.mysubscription") {
                Apphud.purchase(product) { result in
                    if Apphud.hasActiveSubscription() {
@@ -97,9 +103,15 @@ class ViewController: UIViewController {
                     self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
                     self.buyButtonOutlet.isHidden = true
                     self.bettingTipsButton.isHidden = false
+                    self.activityIndicatorButtonSubscribe.stopAnimating()
+                    self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
                     
                    } else {
                        print("покупка отменена")
+                    
+                    //спиннер пропадает, текст появляется
+                    self.activityIndicatorButtonSubscribe.stopAnimating()
+                    self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
                    }
                }
            } else {
@@ -119,8 +131,15 @@ class ViewController: UIViewController {
     //            yourPersonalSportsBettingAdvisorLabel.text = "Ваш персональный помощник в мире спортивного беттинга"
     
     
+    //v.3.3 - activityIndocator кнопки Subscribe
+    @IBOutlet weak var activityIndicatorButtonSubscribe: UIActivityIndicatorView!
+    
+    
+    
     //v.3.3 - outlet кнопки buyButton
     @IBOutlet weak var buyButtonOutlet: UIButton!
+    @IBOutlet weak var subscribeButtonOutlet: UIButton!
+    
     
 
     @IBOutlet weak var bettingTipsButton: UIButton!
