@@ -65,25 +65,52 @@ class ViewController: UIViewController {
     
     
     
-    
     //v.3.3 - функция обновления интерфейса, если осуществлена подписка
     func reloadUI() {
         if let product = Apphud.product(productIdentifier: "com.iloveapps.bettingadvisor.mysubscription") {
         // set up pricing for this product
-         //   subscribeLabelPopUpView.text = product.price
          
-           
-            //выводим цену в местной валюте и формате
+            
+           // текст перед ценой подписки и после цены
+           var subscriptionPriceDescriptionBoldTextLabel = "Price: "
+           var month = " / month"
+            
+            
+            //локализация subscriptionPriceDescription перед ценой в местной валюте
+            if currentPhoneLangID == "ru" {
+                subscriptionPriceDescriptionBoldTextLabel = "Цена: "
+                month = " / мес."
+            }
+            
+            //записываем цену в местной валюте в priceString
             let numberFormatter = NumberFormatter()
             numberFormatter.locale = product.priceLocale
             numberFormatter.numberStyle = .currency
-            let priceString = numberFormatter.string(from: product.price)
-            subscribeLabelPopUpView.text = priceString
+            let priceString = numberFormatter.string(from: product.price)! + month
+            
+            //делаем часть текста жирным
+            let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attributedString2 = NSMutableAttributedString(string: subscriptionPriceDescriptionBoldTextLabel, attributes:attrs2)
+            //делаем часть label нормальным
+            let priceStringNormalTextLabel = priceString
+            let normalString2 = NSMutableAttributedString(string: priceStringNormalTextLabel)
+            //Соединяем 2 части текста:
+            attributedString2.append(normalString2)
+            
+            //Выводим текст с ценой и с оформление в label
+            subscriptionPriceLabelOutlet.attributedText = attributedString2
+            
+    
+            
+            
+            
+            
             
         }
     }
-    
 
+    //конец функции reloadUI()reloadUI()
+    
   
     
     //v.3.3 - покупка продукта. Используем в кнопке "subscribeButton"
@@ -127,18 +154,26 @@ class ViewController: UIViewController {
     @IBOutlet var popupView: UIView!
     
     
+    //v.3.3 - аутлеты labels окна подписки
     @IBOutlet weak var subscribeLabelPopUpView: UILabel!
-    //            yourPersonalSportsBettingAdvisorLabel.text = "Ваш персональный помощник в мире спортивного беттинга"
+    @IBOutlet weak var subscriptionPriceLabelOutlet: UILabel!
+    @IBOutlet weak var productDescriptionLabel: UILabel!
+    @IBOutlet weak var productTrialDurationLabel: UILabel!
+    @IBOutlet weak var productDurationLabel: UILabel!
+    
+    
+    
     
     
     //v.3.3 - activityIndocator кнопки Subscribe
     @IBOutlet weak var activityIndicatorButtonSubscribe: UIActivityIndicatorView!
-    
+    @IBOutlet weak var activityIndicatorPopupView: UIActivityIndicatorView!
     
     
     //v.3.3 - outlet кнопки buyButton
     @IBOutlet weak var buyButtonOutlet: UIButton!
     @IBOutlet weak var subscribeButtonOutlet: UIButton!
+    @IBOutlet weak var restorePurchasesButtonOutlet: UIButton!
     
     
 
@@ -279,13 +314,29 @@ class ViewController: UIViewController {
             //v.3.3 - загружаем продукты
         if Apphud.products() != nil {
             reloadUI()
-            buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов
-            buyButtonOutlet.backgroundColor = UIColor.green
-            } else {
+            activityIndicatorPopupView.stopAnimating()
+            subscribeLabelPopUpView.isHidden = false
+            subscriptionPriceLabelOutlet.isHidden = false
+            restorePurchasesButtonOutlet.isHidden = false
+            subscribeButtonOutlet.isHidden = false
+            
+            
+                //buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
+            //buyButtonOutlet.backgroundColor = UIColor.green
+           
+        } else {
+            
             Apphud.refreshStoreKitProducts { products in
             self.reloadUI()
-                self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов
-                self.buyButtonOutlet.backgroundColor = UIColor.green
+            self.activityIndicatorPopupView.stopAnimating()
+            self.subscribeLabelPopUpView.isHidden = false
+            self.subscriptionPriceLabelOutlet.isHidden = false
+            self.restorePurchasesButtonOutlet.isHidden = false
+            self.subscribeButtonOutlet.isHidden = false
+                
+                
+                //self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
+                //self.buyButtonOutlet.backgroundColor = UIColor.green
             }
         }
         
@@ -373,6 +424,71 @@ class ViewController: UIViewController {
         //30) Чешский = cs
         //31) Шведский = sv
         //32) Японский = ja
+    
+        
+        
+        
+        
+        //v.3.3 - ProductDescriptionBoldTextLabel и сразу локализуем
+        //делаем часть label жирным и сразу локализуем
+        var productDescriptionBoldTextLabel  = "Description: "
+            
+            //локализуем
+            if currentPhoneLangID == "ru" {
+               productDescriptionBoldTextLabel = "Описание: "
+            }
+        
+        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+        let attributedString = NSMutableAttributedString(string: productDescriptionBoldTextLabel, attributes:attrs)
+        //v.3.3
+        //делаем часть label нормальным и сразу локализуем
+        var productDescriptionNormalTextLabel = "Betting Tips"
+          
+        //локализуем
+            if currentPhoneLangID == "ru" {
+               productDescriptionNormalTextLabel = "Спортивные Прогнозы"
+            }
+        
+        let normalString = NSMutableAttributedString(string: productDescriptionNormalTextLabel)
+        //Соединяем 2 части текста:
+        attributedString.append(normalString)
+        //выводим текст в label
+        productDescriptionLabel.attributedText = attributedString
+        
+        
+        
+        //v.3.3 - productTrialDurationLabel и сразу локализуем
+        //делаем часть label жирным и сразу локализуем
+        var productTrialDurationBoldTextLabel  = "Trial: "
+            
+            if currentPhoneLangID == "ru" {
+               productTrialDurationBoldTextLabel = "Бесплатный период: "
+            }
+        
+        let attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+        let attributedString1 = NSMutableAttributedString(string: productTrialDurationBoldTextLabel, attributes:attrs1)
+        //v.3.3
+        //делаем часть label нормальным и сразу локализуем
+        var productTrialDurationNormalTextLabel = "30 days"
+            
+            if currentPhoneLangID == "ru" {
+               productTrialDurationNormalTextLabel = "30 дней"
+            }
+        
+        let normalString1 = NSMutableAttributedString(string: productTrialDurationNormalTextLabel)
+        //Соединяем 2 части текста:
+        attributedString1.append(normalString1)
+        //выводим текст в label
+        productTrialDurationLabel.attributedText = attributedString1
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -383,7 +499,17 @@ class ViewController: UIViewController {
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 22)
             sportBetsLabel.text = "Спортивные прогнозы"
             sportBetsLabel.font = UIFont.systemFont(ofSize: 22)
-        
+            
+            
+            
+            
+            
+            
+            
+            //v.3.3 - Описание товара при подписке:
+            //productDescriptionLabel.attributedText = attributedString
+            
+            
                     //Заменяем картинки из Assets.xcassets на кнопках, если русский язык
                     let button1 = UIImage(named: "ru-1")
                     bettingTipsButton.setImage(button1, for: UIControl.State.normal)
