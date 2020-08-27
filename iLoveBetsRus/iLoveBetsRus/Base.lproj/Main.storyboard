@@ -211,7 +211,6 @@
                         <outlet property="leftConstraintYourPersonalSportsBettingAdvisor" destination="NaY-Hr-zzU" id="Jdk-ft-ypm"/>
                         <outlet property="popupView" destination="TsE-6t-Suf" id="wJd-XY-oef"/>
                         <outlet property="productDescriptionLabel" destination="byh-7S-UoE" id="uGa-Pi-jU8"/>
-                        <outlet property="productDurationLabel" destination="v5l-QP-WKK" id="7tW-h0-exc"/>
                         <outlet property="productTrialDurationLabel" destination="XRy-cm-sUN" id="Y6r-Lg-XUo"/>
                         <outlet property="restorePurchasesButtonOutlet" destination="Sxj-bO-6OP" id="HbA-bX-BrI"/>
                         <outlet property="rightConstraintYourPersonalSportsBettingAdvisor" destination="flT-UJ-mBK" id="SB8-iO-QuU"/>
@@ -273,9 +272,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnQ-pP-luN">
-                            <rect key="frame" x="270" y="9" width="48" height="51"/>
+                            <rect key="frame" x="270" y="9" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Close" image="arrows_long_left"/>
+                            <state key="normal" title="Close" image="closeButton"/>
                             <connections>
                                 <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsN-6A-vcv"/>
                             </connections>
@@ -296,22 +295,15 @@
                             <rect key="frame" x="41" y="25" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productDescription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byh-7S-UoE">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productDescription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byh-7S-UoE">
                             <rect key="frame" x="16" y="124" width="303" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productTrialDuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-cm-sUN">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productTrialDuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-cm-sUN">
                             <rect key="frame" x="16" y="142" width="302" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productDuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5l-QP-WKK">
-                            <rect key="frame" x="15" y="166" width="138" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
@@ -610,6 +602,6 @@
         <image name="5. Help_eng" width="152.5" height="129"/>
         <image name="6. AboutUS_eng" width="152.5" height="129"/>
         <image name="MainScreenBackground" width="320" height="568"/>
-        <image name="arrows_long_left" width="106" height="106"/>
+        <image name="closeButton" width="491" height="491"/>
     </resources>
 </document>

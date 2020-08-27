@@ -159,7 +159,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var subscriptionPriceLabelOutlet: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var productTrialDurationLabel: UILabel!
-    @IBOutlet weak var productDurationLabel: UILabel!
+  
     
     
     
@@ -319,8 +319,8 @@ class ViewController: UIViewController {
             subscriptionPriceLabelOutlet.isHidden = false
             restorePurchasesButtonOutlet.isHidden = false
             subscribeButtonOutlet.isHidden = false
-            
-            
+            productDescriptionLabel.isHidden = false
+            productTrialDurationLabel.isHidden = false
                 //buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
             //buyButtonOutlet.backgroundColor = UIColor.green
            
@@ -333,7 +333,8 @@ class ViewController: UIViewController {
             self.subscriptionPriceLabelOutlet.isHidden = false
             self.restorePurchasesButtonOutlet.isHidden = false
             self.subscribeButtonOutlet.isHidden = false
-                
+            self.productDescriptionLabel.isHidden = false
+            self.productTrialDurationLabel.isHidden = false
                 
                 //self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
                 //self.buyButtonOutlet.backgroundColor = UIColor.green
@@ -360,8 +361,8 @@ class ViewController: UIViewController {
         
         //x - справа, y - снизу. определяем границы popupView
         //width - ширина всплывающего окна. устанавливаем равной 90% от ширины ViewController
-        //height - высота всплывающего окна. устанавливаем равной 40% от высоты ViewController
-        popupView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
+        //height - высота всплывающего окна. устанавливаем равной 80% от высоты ViewController
+        popupView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.8)
         
         
         
