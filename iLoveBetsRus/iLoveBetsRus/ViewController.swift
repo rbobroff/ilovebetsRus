@@ -77,9 +77,19 @@ class ViewController: UIViewController {
                 } else {
                 // no active in-app purchases found
                     //сообщение у Вас нет активных подписок
-                let controller = UIAlertController(title: "У Вас нет активных подписок", message: nil, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    var controller = UIAlertController(title: "You have no active subscriptions", message: nil, preferredStyle: .alert)
+                    var ok = UIAlertAction(title: "OK", style: .default, handler: nil)
                 controller.addAction(ok)
+                    
+                    
+                    //локализация
+                    if currentPhoneLangID == "ru" {
+                        controller = UIAlertController(title: "У Вас нет активных подписок", message: nil, preferredStyle: .alert)
+                        ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        controller.addAction(ok)
+                    }
+                    
+                    
                 self.present(controller, animated: true, completion: nil)
                 self.activityIndicatorButtonSubscribe.stopAnimating()
                 self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
@@ -249,6 +259,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var sportBetsLabelRightConstraint: NSLayoutConstraint!
     //аутлет нижнего Constraint для label "Спортивные прогнозы" или "SportBettingTips"
     @IBOutlet weak var sportBetsLabelBottomConstraint: NSLayoutConstraint!
+    
+    
+    
+    //v.3.3 - аутлеты Constraint окна подписки
+    @IBOutlet weak var subscriptionPriceLabelUpConstraint: NSLayoutConstraint!
+    @IBOutlet weak var productDescriptionLabelUpConstraint: NSLayoutConstraint!
+    @IBOutlet weak var productTrialDurationLabelUpConstraint: NSLayoutConstraint!
+    @IBOutlet weak var restorePurchasesButtonUpConstraint: NSLayoutConstraint!
+    @IBOutlet weak var aboutSubscriptionTitleUpConstraint: NSLayoutConstraint!
+    
     
     
     
@@ -1395,6 +1415,13 @@ class ViewController: UIViewController {
             //93
             bettingTipsButtonTopConstraint.constant = 80
             statisticsButtonTopConstraint.constant = 80
+            
+            //v.3.3 - для окна подписки
+            subscriptionPriceLabelUpConstraint.constant = 5
+            productDescriptionLabelUpConstraint.constant = 5
+            productTrialDurationLabelUpConstraint.constant = 5
+            restorePurchasesButtonUpConstraint.constant = 5
+            aboutSubscriptionTitleUpConstraint.constant = 5
         }
         
         //Для iPhone 6, 6S, 7, 8, SE_2nd (с высотой экрана 667.0, width = 375) - настроены Constraints
