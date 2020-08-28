@@ -26,15 +26,49 @@ class ViewController: UIViewController {
         // if currentPhoneLangID == "en" {
         //    subscribeLabelPopUpView.text = "Подписка"
         //}
+        
+        //!!!!!!!!!!!!!!!! - удалить, если не сработает
+        if Apphud.products() != nil {
+            reloadUI()
+            activityIndicatorPopupView.stopAnimating()
+            subscribeLabelPopUpView.isHidden = false
+            subscriptionPriceLabelOutlet.isHidden = false
+            restorePurchasesButtonOutlet.isHidden = false
+            subscribeButtonOutlet.isHidden = false
+            productDescriptionLabel.isHidden = false
+            productTrialDurationLabel.isHidden = false
+           
+        } else {
+            
+            Apphud.refreshStoreKitProducts { products in
+            self.reloadUI()
+            self.activityIndicatorPopupView.stopAnimating()
+            self.subscribeLabelPopUpView.isHidden = false
+            self.subscriptionPriceLabelOutlet.isHidden = false
+            self.restorePurchasesButtonOutlet.isHidden = false
+            self.subscribeButtonOutlet.isHidden = false
+            self.productDescriptionLabel.isHidden = false
+            self.productTrialDurationLabel.isHidden = false
+                
+
+            }
+        } //удалить, если не сработает !!!!!!!!!!!!!!!!!
+        
+        
+        
+        
     }
-    
+    //конец функции buyButton
     
     
     //v.3.3 - кнопка восстановить покупки
     @IBAction func restorePurchasesButton(_ sender: Any) {
+        activityIndicatorButtonSubscribe.startAnimating()
+        subscribeButtonOutlet.setTitleColor(UIColor.clear, for: .normal)
             Apphud.restorePurchases { _, _, _ in
                 if Apphud.hasActiveSubscription() {
                 // success, dismiss purchase screen and unlock premium content
+                    self.activityIndicatorButtonSubscribe.stopAnimating()
                     self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
                     self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
                     self.buyButtonOutlet.isHidden = true
@@ -44,9 +78,11 @@ class ViewController: UIViewController {
                 // no active in-app purchases found
                     //сообщение у Вас нет активных подписок
                 let controller = UIAlertController(title: "У Вас нет активных подписок", message: nil, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "Ок", style: .default, handler: nil)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
                 controller.addAction(ok)
                 self.present(controller, animated: true, completion: nil)
+                self.activityIndicatorButtonSubscribe.stopAnimating()
+                self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
                     // self.buyButtonOutlet.isHidden = true
                     //self.bettingTipsButton.isHidden = false
                 }
@@ -136,7 +172,7 @@ class ViewController: UIViewController {
                    } else {
                        print("покупка отменена")
                     
-                    //спиннер пропадает, текст появляется
+                    //спиннер пропадает, текст на кнопке "Subscribe" появляется
                     self.activityIndicatorButtonSubscribe.stopAnimating()
                     self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
                    }
@@ -242,6 +278,24 @@ class ViewController: UIViewController {
    // скрывать navigation bar (или показывать)
    override func viewWillAppear(_ animated: Bool) {
     
+    
+    //v.3.3 - проверка активна подписка или нет, если приложение запущено !!!!!!!!!!!!!!!-удалить, если не сработает
+    if Apphud.hasActiveSubscription() {
+        buyButtonOutlet.isHidden = true
+        bettingTipsButton.isHidden = false
+        print("!Есть активная подписка!")
+    } else {
+        print("!Подписка закончилась!")
+        buyButtonOutlet.isHidden = false
+        bettingTipsButton.isHidden = true
+        activityIndicatorPopupView.startAnimating()
+        subscribeLabelPopUpView.isHidden = true
+        subscriptionPriceLabelOutlet.isHidden = true
+        restorePurchasesButtonOutlet.isHidden = true
+        subscribeButtonOutlet.isHidden = true
+        productDescriptionLabel.isHidden = true
+        productTrialDurationLabel.isHidden = true
+    }
     
     
     
@@ -362,7 +416,7 @@ class ViewController: UIViewController {
         //x - справа, y - снизу. определяем границы popupView
         //width - ширина всплывающего окна. устанавливаем равной 90% от ширины ViewController
         //height - высота всплывающего окна. устанавливаем равной 80% от высоты ViewController
-        popupView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.8)
+        popupView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.95, height: self.view.bounds.height * 0.9)
         
         
         
