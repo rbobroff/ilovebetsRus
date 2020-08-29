@@ -135,20 +135,16 @@ class ViewController: UIViewController {
            // текст перед ценой подписки и после цены
            var subscriptionPriceDescriptionBoldTextLabel = "Price: "
            var month = " / month"
-            
-            
             //локализация subscriptionPriceDescription перед ценой в местной валюте
             if currentPhoneLangID == "ru" {
                 subscriptionPriceDescriptionBoldTextLabel = "Цена: "
                 month = " / мес."
             }
-            
             //записываем цену в местной валюте в priceString
             let numberFormatter = NumberFormatter()
             numberFormatter.locale = product.priceLocale
             numberFormatter.numberStyle = .currency
             let priceString = numberFormatter.string(from: product.price)! + month
-            
             //делаем часть текста жирным
             let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
             let attributedString2 = NSMutableAttributedString(string: subscriptionPriceDescriptionBoldTextLabel, attributes:attrs2)
@@ -157,12 +153,59 @@ class ViewController: UIViewController {
             let normalString2 = NSMutableAttributedString(string: priceStringNormalTextLabel)
             //Соединяем 2 части текста:
             attributedString2.append(normalString2)
-            
             //Выводим текст с ценой и с оформление в label
             subscriptionPriceLabelOutlet.attributedText = attributedString2
             
     
+            //делаем часть label жирным и сразу локализуем
+            var productDescriptionBoldTextLabel  = "Description: "
+                //локализуем
+                if currentPhoneLangID == "ru" {
+                   productDescriptionBoldTextLabel = "Описание: "
+                }
+            let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attributedString = NSMutableAttributedString(string: productDescriptionBoldTextLabel, attributes:attrs)
             
+            //v.3.3
+            //делаем часть label нормальным и сразу локализуем
+            var productDescriptionNormalTextLabel = "Betting Tips"
+              
+            //локализуем
+                if currentPhoneLangID == "ru" {
+                   productDescriptionNormalTextLabel = "Спортивные Прогнозы"
+                }
+            
+            let normalString = NSMutableAttributedString(string: productDescriptionNormalTextLabel)
+            //Соединяем 2 части текста:
+            attributedString.append(normalString)
+            //выводим текст в label
+            productDescriptionLabel.attributedText = attributedString
+            
+            
+            
+            //v.3.3 - productTrialDurationLabel и сразу локализуем
+            //делаем часть label жирным и сразу локализуем
+            var productTrialDurationBoldTextLabel  = "Free of charge: "
+                
+                if currentPhoneLangID == "ru" {
+                   productTrialDurationBoldTextLabel = "Бесплатный период: "
+                }
+            
+            let attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attributedString1 = NSMutableAttributedString(string: productTrialDurationBoldTextLabel, attributes:attrs1)
+            //v.3.3
+            //делаем часть label нормальным и сразу локализуем
+            var productTrialDurationNormalTextLabel = "30 days"
+                
+                if currentPhoneLangID == "ru" {
+                   productTrialDurationNormalTextLabel = "30 дней"
+                }
+            
+            let normalString1 = NSMutableAttributedString(string: productTrialDurationNormalTextLabel)
+            //Соединяем 2 части текста:
+            attributedString1.append(normalString1)
+            //выводим текст в label
+            productTrialDurationLabel.attributedText = attributedString1
             
             
             
@@ -540,71 +583,6 @@ class ViewController: UIViewController {
         //31) Шведский = sv
         //32) Японский = ja
     
-        
-        
-        
-        
-        //v.3.3 - ProductDescriptionBoldTextLabel и сразу локализуем
-        //делаем часть label жирным и сразу локализуем
-        var productDescriptionBoldTextLabel  = "Description: "
-            
-            //локализуем
-            if currentPhoneLangID == "ru" {
-               productDescriptionBoldTextLabel = "Описание: "
-            }
-        
-        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
-        let attributedString = NSMutableAttributedString(string: productDescriptionBoldTextLabel, attributes:attrs)
-        //v.3.3
-        //делаем часть label нормальным и сразу локализуем
-        var productDescriptionNormalTextLabel = "Betting Tips"
-          
-        //локализуем
-            if currentPhoneLangID == "ru" {
-               productDescriptionNormalTextLabel = "Спортивные Прогнозы"
-            }
-        
-        let normalString = NSMutableAttributedString(string: productDescriptionNormalTextLabel)
-        //Соединяем 2 части текста:
-        attributedString.append(normalString)
-        //выводим текст в label
-        productDescriptionLabel.attributedText = attributedString
-        
-        
-        
-        //v.3.3 - productTrialDurationLabel и сразу локализуем
-        //делаем часть label жирным и сразу локализуем
-        var productTrialDurationBoldTextLabel  = "Free of charge: "
-            
-            if currentPhoneLangID == "ru" {
-               productTrialDurationBoldTextLabel = "Бесплатный период: "
-            }
-        
-        let attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
-        let attributedString1 = NSMutableAttributedString(string: productTrialDurationBoldTextLabel, attributes:attrs1)
-        //v.3.3
-        //делаем часть label нормальным и сразу локализуем
-        var productTrialDurationNormalTextLabel = "30 days"
-            
-            if currentPhoneLangID == "ru" {
-               productTrialDurationNormalTextLabel = "30 дней"
-            }
-        
-        let normalString1 = NSMutableAttributedString(string: productTrialDurationNormalTextLabel)
-        //Соединяем 2 части текста:
-        attributedString1.append(normalString1)
-        //выводим текст в label
-        productTrialDurationLabel.attributedText = attributedString1
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         //Локализуем главный вид приложения!!!
