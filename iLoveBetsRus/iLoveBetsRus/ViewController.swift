@@ -23,9 +23,13 @@ class ViewController: UIViewController {
     @IBAction func buyButton(_ sender: Any) {
         animateIn(desiredView: blurView)
         animateIn(desiredView: popupView)
-        // if currentPhoneLangID == "en" {
-        //    subscribeLabelPopUpView.text = "Подписка"
-        //}
+         
+        
+        //v.3.3 - локализация верхнего label "Subscribe" окна подписки
+        if currentPhoneLangID == "en" {
+            subscribeLabelPopUpView.text = "Подписка"
+         }
+        
         
         //!!!!!!!!!!!!!!!! - удалить, если не сработает
         if Apphud.products() != nil {
@@ -268,6 +272,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var productTrialDurationLabelUpConstraint: NSLayoutConstraint!
     @IBOutlet weak var restorePurchasesButtonUpConstraint: NSLayoutConstraint!
     @IBOutlet weak var aboutSubscriptionTitleUpConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subscribeLabelPopUpViewUpConstraint: NSLayoutConstraint!
     
     
     
@@ -1422,6 +1427,13 @@ class ViewController: UIViewController {
             productTrialDurationLabelUpConstraint.constant = 5
             restorePurchasesButtonUpConstraint.constant = 5
             aboutSubscriptionTitleUpConstraint.constant = 5
+            subscribeLabelPopUpViewUpConstraint.constant = 5
+            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 16.0)
+            productDescriptionLabel.font = UIFont.systemFont(ofSize: 16.0)
+            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 16.0)
+            //делаем текст жирным в label
+            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 18.0)
+
         }
         
         //Для iPhone 6, 6S, 7, 8, SE_2nd (с высотой экрана 667.0, width = 375) - настроены Constraints

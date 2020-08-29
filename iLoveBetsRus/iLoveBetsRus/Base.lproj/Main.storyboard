@@ -227,6 +227,7 @@
                         <outlet property="statisticsButtonTopConstraint" destination="hr2-JV-6pt" id="8j8-y3-IEG"/>
                         <outlet property="subscribeButtonOutlet" destination="Dsb-dm-pJ3" id="rvS-3r-jD4"/>
                         <outlet property="subscribeLabelPopUpView" destination="IcH-NL-7f0" id="T7u-8N-0hd"/>
+                        <outlet property="subscribeLabelPopUpViewUpConstraint" destination="XxG-c1-knK" id="XWD-Fh-Hhp"/>
                         <outlet property="subscriptionPriceLabelOutlet" destination="vci-to-dX8" id="4Ap-31-BYO"/>
                         <outlet property="subscriptionPriceLabelUpConstraint" destination="tTr-L2-qgE" id="bdF-aw-LOb"/>
                         <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
@@ -300,8 +301,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
-                            <rect key="frame" x="15" y="494" width="304" height="30"/>
+                            <rect key="frame" x="15" y="489" width="91" height="30"/>
                             <state key="normal" title="Terms of Use"/>
+                            <connections>
+                                <segue destination="zUQ-xx-Ee9" kind="popoverPresentation" popoverAnchorView="U0u-N9-2VF" id="mgi-To-Fis">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read below about the auto-renewing subscription nature of this product:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-Gp-ojG">
                             <rect key="frame" x="15" y="229.5" width="304" height="54"/>
@@ -331,31 +337,35 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
-                            <rect key="frame" x="15" y="524" width="304" height="30"/>
-                            <state key="normal" title="Privacy Policy"/>
-                        </button>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="w69-In-cCQ">
                             <rect key="frame" x="157" y="569" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
+                            <rect key="frame" x="224" y="489" width="95" height="30"/>
+                            <state key="normal" title="Privacy Policy"/>
+                            <connections>
+                                <segue destination="Tux-tD-ntR" kind="popoverPresentation" popoverAnchorView="NeR-hg-4yU" id="F1J-hB-ekp">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="byh-7S-UoE" firstAttribute="top" secondItem="vci-to-dX8" secondAttribute="bottom" constant="15" id="0Zg-Dw-2uj"/>
-                        <constraint firstItem="NeR-hg-4yU" firstAttribute="top" secondItem="U0u-N9-2VF" secondAttribute="bottom" id="1Ww-pX-chM"/>
                         <constraint firstItem="BnQ-pP-luN" firstAttribute="top" secondItem="SEO-4a-SWf" secondAttribute="top" constant="20" id="2Cn-kc-kTB"/>
+                        <constraint firstItem="NeR-hg-4yU" firstAttribute="top" secondItem="uiG-iR-XDK" secondAttribute="bottom" id="2fC-OX-B9a"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="uiG-iR-XDK" secondAttribute="trailing" constant="15" id="4UV-Sz-egF"/>
+                        <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="NeR-hg-4yU" secondAttribute="trailing" constant="15" id="8jo-0V-kLy"/>
                         <constraint firstItem="Mth-Gp-ojG" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="Aju-QD-iZF"/>
-                        <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="NeR-hg-4yU" secondAttribute="trailing" constant="15" id="KWY-zq-wO3"/>
-                        <constraint firstItem="NeR-hg-4yU" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="MgB-cm-DaW"/>
+                        <constraint firstItem="U0u-N9-2VF" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="KxR-a7-5AG"/>
                         <constraint firstItem="byh-7S-UoE" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="O7k-w2-UoA"/>
+                        <constraint firstItem="U0u-N9-2VF" firstAttribute="top" secondItem="uiG-iR-XDK" secondAttribute="bottom" id="RHd-d5-SuU"/>
                         <constraint firstItem="Dsb-dm-pJ3" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" id="RMT-h4-4Sr"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="byh-7S-UoE" secondAttribute="trailing" constant="15" id="SZb-bG-uGe"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="bottom" secondItem="Dsb-dm-pJ3" secondAttribute="bottom" id="TOJ-MO-Sar"/>
-                        <constraint firstItem="U0u-N9-2VF" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="TmB-LI-3hE"/>
                         <constraint firstItem="XRy-cm-sUN" firstAttribute="top" secondItem="byh-7S-UoE" secondAttribute="bottom" constant="15" id="W3p-Js-oAN"/>
-                        <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="U0u-N9-2VF" secondAttribute="trailing" constant="15" id="Wg4-X2-ajC"/>
                         <constraint firstItem="XRy-cm-sUN" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="Wk1-Oa-sNq"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="Dsb-dm-pJ3" secondAttribute="trailing" id="XhT-uN-m65"/>
                         <constraint firstItem="IcH-NL-7f0" firstAttribute="top" secondItem="SEO-4a-SWf" secondAttribute="top" constant="20" id="XxG-c1-knK"/>
@@ -363,7 +373,6 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                         <constraint firstItem="uiG-iR-XDK" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="beB-9x-G1g"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="Mth-Gp-ojG" secondAttribute="trailing" constant="15" id="eaw-oi-9ED"/>
                         <constraint firstItem="Sxj-bO-6OP" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="fii-fr-JxF"/>
-                        <constraint firstItem="U0u-N9-2VF" firstAttribute="top" secondItem="uiG-iR-XDK" secondAttribute="bottom" constant="5" id="fsi-4P-Xh6"/>
                         <constraint firstItem="uiG-iR-XDK" firstAttribute="top" secondItem="Mth-Gp-ojG" secondAttribute="bottom" constant="5" id="gVa-s8-hYG"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="XRy-cm-sUN" secondAttribute="trailing" constant="15" id="hfw-XW-Tbo"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="Sxj-bO-6OP" secondAttribute="trailing" constant="15" id="iB3-hf-lEd"/>
@@ -629,6 +638,36 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW6-JC-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-114" y="-1029"/>
+        </scene>
+        <!--Terms of Use-->
+        <scene sceneID="5sa-hF-77G">
+            <objects>
+                <viewController title="Terms of Use" id="zUQ-xx-Ee9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbj-gM-1df">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Vbz-n8-FEN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YjM-9a-Xqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="-1684"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="cBt-Ht-dt6">
+            <objects>
+                <viewController title="Privacy Policy" id="Tux-tD-ntR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5m-JZ-ewn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Za4-kW-Pyg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb4-i5-6cC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="-1684"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="s4H-Vy-pnJ">
