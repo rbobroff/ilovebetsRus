@@ -191,6 +191,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="JOH-zc-VPh"/>
                     <connections>
+                        <outlet property="aboutSubscriptionTextLabel" destination="uiG-iR-XDK" id="vl5-pu-4ss"/>
+                        <outlet property="aboutSubscriptionTitleLabel" destination="Mth-Gp-ojG" id="jlr-Hq-gEc"/>
                         <outlet property="aboutSubscriptionTitleUpConstraint" destination="uOu-Dp-4D5" id="wII-fB-b0C"/>
                         <outlet property="aboutUsButton" destination="lih-4P-Ldy" id="FJ2-eV-prc"/>
                         <outlet property="aboutUsButtonHeight" destination="fXc-ai-iMY" id="GTK-QU-cHF"/>
@@ -211,6 +213,7 @@
                         <outlet property="iLoveBetsTopConstraints" destination="8Fk-WS-4Mc" id="RSn-st-TnQ"/>
                         <outlet property="leftConstraintYourPersonalSportsBettingAdvisor" destination="NaY-Hr-zzU" id="Jdk-ft-ypm"/>
                         <outlet property="popupView" destination="TsE-6t-Suf" id="wJd-XY-oef"/>
+                        <outlet property="privacyPolicyButtonOutlet" destination="NeR-hg-4yU" id="3wx-h4-qZV"/>
                         <outlet property="productDescriptionLabel" destination="byh-7S-UoE" id="uGa-Pi-jU8"/>
                         <outlet property="productDescriptionLabelUpConstraint" destination="0Zg-Dw-2uj" id="Yhd-hL-e2h"/>
                         <outlet property="productTrialDurationLabel" destination="XRy-cm-sUN" id="Y6r-Lg-XUo"/>
@@ -230,6 +233,7 @@
                         <outlet property="subscribeLabelPopUpViewUpConstraint" destination="XxG-c1-knK" id="XWD-Fh-Hhp"/>
                         <outlet property="subscriptionPriceLabelOutlet" destination="vci-to-dX8" id="4Ap-31-BYO"/>
                         <outlet property="subscriptionPriceLabelUpConstraint" destination="tTr-L2-qgE" id="bdF-aw-LOb"/>
+                        <outlet property="termsOfUseButtonOutlet" destination="U0u-N9-2VF" id="GK4-1i-35Y"/>
                         <outlet property="upConstraintYourPersonalSportsBettingAdvisor" destination="mfF-kZ-Hzc" id="Pd2-8J-Xs3"/>
                         <outlet property="yourPersonalSportsBettingAdvisorLabel" destination="Pdb-3d-KjB" id="9eL-QB-lTD"/>
                     </connections>
@@ -248,7 +252,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="334" height="604"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-NL-7f0">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subscribeLabelPopUpView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-NL-7f0">
                             <rect key="frame" x="15" y="20" width="304" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="nhH-c5-IN2"/>
@@ -285,7 +289,7 @@
                             </connections>
                         </button>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QPN-sN-Gd3">
-                            <rect key="frame" x="41" y="25" width="20" height="20"/>
+                            <rect key="frame" x="16" y="47" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="productDescription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byh-7S-UoE">
@@ -300,7 +304,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
                             <rect key="frame" x="15" y="489" width="91" height="30"/>
                             <state key="normal" title="Terms of Use"/>
                             <connections>
@@ -309,7 +313,7 @@
                                 </segue>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read below about the auto-renewing subscription nature of this product:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-Gp-ojG">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read below about the auto-renewing subscription nature of this product:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-Gp-ojG">
                             <rect key="frame" x="15" y="229.5" width="304" height="54"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <nil key="textColor"/>
@@ -326,7 +330,7 @@
                                 <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsN-6A-vcv"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-iR-XDK">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-iR-XDK">
                             <rect key="frame" x="15" y="288.5" width="304" height="200.5"/>
                             <string key="text">Payment will be charged to iTunes Account at confirmation of purchase 
 Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period 
@@ -337,11 +341,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="w69-In-cCQ">
-                            <rect key="frame" x="157" y="569" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </activityIndicatorView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
                             <rect key="frame" x="224" y="489" width="95" height="30"/>
                             <state key="normal" title="Privacy Policy"/>
                             <connections>
@@ -350,6 +350,10 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                 </segue>
                             </connections>
                         </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="w69-In-cCQ">
+                            <rect key="frame" x="157" y="569" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>

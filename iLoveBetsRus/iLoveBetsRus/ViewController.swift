@@ -37,10 +37,16 @@ class ViewController: UIViewController {
             activityIndicatorPopupView.stopAnimating()
             subscribeLabelPopUpView.isHidden = false
             subscriptionPriceLabelOutlet.isHidden = false
-            restorePurchasesButtonOutlet.isHidden = false
-            subscribeButtonOutlet.isHidden = false
             productDescriptionLabel.isHidden = false
             productTrialDurationLabel.isHidden = false
+            restorePurchasesButtonOutlet.isHidden = false
+            aboutSubscriptionTitleLabel.isHidden = false
+            aboutSubscriptionTextLabel.isHidden = false
+            termsOfUseButtonOutlet.isHidden = false
+            privacyPolicyButtonOutlet.isHidden = false
+            subscribeButtonOutlet.isHidden = false
+            
+            
            
         } else {
             
@@ -49,10 +55,14 @@ class ViewController: UIViewController {
             self.activityIndicatorPopupView.stopAnimating()
             self.subscribeLabelPopUpView.isHidden = false
             self.subscriptionPriceLabelOutlet.isHidden = false
-            self.restorePurchasesButtonOutlet.isHidden = false
-            self.subscribeButtonOutlet.isHidden = false
             self.productDescriptionLabel.isHidden = false
             self.productTrialDurationLabel.isHidden = false
+            self.restorePurchasesButtonOutlet.isHidden = false
+            self.aboutSubscriptionTitleLabel.isHidden = false
+            self.aboutSubscriptionTextLabel.isHidden = false
+            self.termsOfUseButtonOutlet.isHidden = false
+            self.privacyPolicyButtonOutlet.isHidden = false
+            self.subscribeButtonOutlet.isHidden = false
                 
 
             }
@@ -159,7 +169,7 @@ class ViewController: UIViewController {
         }
     }
 
-    //конец функции reloadUI()reloadUI()
+    //конец функции reloadUI()
     
   
     
@@ -209,7 +219,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var subscriptionPriceLabelOutlet: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var productTrialDurationLabel: UILabel!
-  
+    @IBOutlet weak var aboutSubscriptionTitleLabel: UILabel!
+    @IBOutlet weak var aboutSubscriptionTextLabel: UILabel!
+    
     
     
     
@@ -224,6 +236,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var buyButtonOutlet: UIButton!
     @IBOutlet weak var subscribeButtonOutlet: UIButton!
     @IBOutlet weak var restorePurchasesButtonOutlet: UIButton!
+    @IBOutlet weak var termsOfUseButtonOutlet: UIButton!
+    @IBOutlet weak var privacyPolicyButtonOutlet: UIButton!
+    
+    
     
     
 
@@ -316,10 +332,14 @@ class ViewController: UIViewController {
         activityIndicatorPopupView.startAnimating()
         subscribeLabelPopUpView.isHidden = true
         subscriptionPriceLabelOutlet.isHidden = true
-        restorePurchasesButtonOutlet.isHidden = true
-        subscribeButtonOutlet.isHidden = true
         productDescriptionLabel.isHidden = true
         productTrialDurationLabel.isHidden = true
+        restorePurchasesButtonOutlet.isHidden = true
+        aboutSubscriptionTitleLabel.isHidden = true
+        aboutSubscriptionTextLabel.isHidden = true
+        termsOfUseButtonOutlet.isHidden = true
+        privacyPolicyButtonOutlet.isHidden = true
+        subscribeButtonOutlet.isHidden = true
     }
     
     
@@ -396,10 +416,14 @@ class ViewController: UIViewController {
             activityIndicatorPopupView.stopAnimating()
             subscribeLabelPopUpView.isHidden = false
             subscriptionPriceLabelOutlet.isHidden = false
-            restorePurchasesButtonOutlet.isHidden = false
-            subscribeButtonOutlet.isHidden = false
             productDescriptionLabel.isHidden = false
             productTrialDurationLabel.isHidden = false
+            restorePurchasesButtonOutlet.isHidden = false
+            aboutSubscriptionTitleLabel.isHidden = false
+            aboutSubscriptionTextLabel.isHidden = false
+            termsOfUseButtonOutlet.isHidden = false
+            privacyPolicyButtonOutlet.isHidden = false
+            subscribeButtonOutlet.isHidden = false
                 //buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
             //buyButtonOutlet.backgroundColor = UIColor.green
            
@@ -410,10 +434,14 @@ class ViewController: UIViewController {
             self.activityIndicatorPopupView.stopAnimating()
             self.subscribeLabelPopUpView.isHidden = false
             self.subscriptionPriceLabelOutlet.isHidden = false
-            self.restorePurchasesButtonOutlet.isHidden = false
-            self.subscribeButtonOutlet.isHidden = false
             self.productDescriptionLabel.isHidden = false
             self.productTrialDurationLabel.isHidden = false
+            self.restorePurchasesButtonOutlet.isHidden = false
+            self.aboutSubscriptionTitleLabel.isHidden = false
+            self.aboutSubscriptionTextLabel.isHidden = false
+            self.termsOfUseButtonOutlet.isHidden = false
+            self.privacyPolicyButtonOutlet.isHidden = false
+            self.subscribeButtonOutlet.isHidden = false
                 
                 //self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
                 //self.buyButtonOutlet.backgroundColor = UIColor.green
