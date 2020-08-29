@@ -24,8 +24,9 @@ class ViewController: UIViewController {
         animateIn(desiredView: blurView)
         animateIn(desiredView: popupView)
          
-        
-        //v.3.3 - локализация верхнего label "Subscribe" окна подписки
+        //v.3.3 - язык по умолчанию
+        subscribeLabelPopUpView.text = "Subscription"
+        //Локализация верхнего label "Subscribe" окна подписки
         if currentPhoneLangID == "en" {
             subscribeLabelPopUpView.text = "Подписка"
          }
@@ -573,7 +574,7 @@ class ViewController: UIViewController {
         
         //v.3.3 - productTrialDurationLabel и сразу локализуем
         //делаем часть label жирным и сразу локализуем
-        var productTrialDurationBoldTextLabel  = "Trial: "
+        var productTrialDurationBoldTextLabel  = "Free of charge: "
             
             if currentPhoneLangID == "ru" {
                productTrialDurationBoldTextLabel = "Бесплатный период: "
