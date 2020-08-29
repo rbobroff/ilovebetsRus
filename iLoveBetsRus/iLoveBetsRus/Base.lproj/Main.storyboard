@@ -304,9 +304,7 @@
                             <rect key="frame" x="15" y="489" width="91" height="30"/>
                             <state key="normal" title="Terms of Use"/>
                             <connections>
-                                <segue destination="zUQ-xx-Ee9" kind="popoverPresentation" popoverAnchorView="U0u-N9-2VF" id="mgi-To-Fis">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="zUQ-xx-Ee9" kind="presentation" id="tIy-dE-gLi"/>
                             </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read below about the auto-renewing subscription nature of this product:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-Gp-ojG">
@@ -344,9 +342,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             <rect key="frame" x="224" y="489" width="95" height="30"/>
                             <state key="normal" title="Privacy Policy"/>
                             <connections>
-                                <segue destination="Tux-tD-ntR" kind="popoverPresentation" popoverAnchorView="NeR-hg-4yU" id="F1J-hB-ekp">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="Tux-tD-ntR" kind="presentation" id="xdp-H0-TKo"/>
                             </connections>
                         </button>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QPN-sN-Gd3">
