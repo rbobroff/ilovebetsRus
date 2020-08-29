@@ -139,11 +139,9 @@
                                     <segue destination="yYx-sr-2tP" kind="show" id="G5h-Um-auu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Wi-3AT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Wi-3AT">
                                 <rect key="frame" x="3" y="214" width="183" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="buyButton">
+                                <state key="normal" image="0. BuyButton_eng">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -163,15 +161,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PMF-W3-YlE" secondAttribute="bottom" constant="20" id="GmL-bX-eH0"/>
                             <constraint firstItem="ZCO-g1-1p3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="Jxe-a5-yR1"/>
                             <constraint firstItem="uBP-K8-Wix" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="72" id="Kbs-2u-knd"/>
+                            <constraint firstItem="Pct-Wi-3AT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="MkM-l2-lEk"/>
+                            <constraint firstItem="Pct-Wi-3AT" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="72" id="Mq3-zL-2iu"/>
                             <constraint firstItem="Pdb-3d-KjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NaY-Hr-zzU"/>
                             <constraint firstItem="lih-4P-Ldy" firstAttribute="leading" secondItem="N4C-3Q-fJ3" secondAttribute="trailing" constant="3" id="Uuf-BH-3qD"/>
                             <constraint firstItem="uBP-K8-Wix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="Wgl-Ik-beb"/>
                             <constraint firstItem="lih-4P-Ldy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-3" id="XjF-Ym-NFe"/>
+                            <constraint firstItem="Pct-Wi-3AT" firstAttribute="height" secondItem="ZCO-g1-1p3" secondAttribute="height" id="cCb-7y-b7M"/>
+                            <constraint firstItem="ZCO-g1-1p3" firstAttribute="top" secondItem="Pct-Wi-3AT" secondAttribute="bottom" constant="3" id="cV7-tt-xJB"/>
                             <constraint firstItem="N4C-3Q-fJ3" firstAttribute="width" secondItem="lih-4P-Ldy" secondAttribute="width" id="dgI-Qz-tHD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pdb-3d-KjB" secondAttribute="trailing" constant="16" id="flT-UJ-mBK"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fqc-ga-kTN"/>
+                            <constraint firstItem="ZCO-g1-1p3" firstAttribute="firstBaseline" secondItem="Pct-Wi-3AT" secondAttribute="baseline" constant="11.5" symbolType="layoutAnchor" id="gCQ-3K-QWq"/>
                             <constraint firstItem="ZCO-g1-1p3" firstAttribute="top" secondItem="uBP-K8-Wix" secondAttribute="bottom" constant="3" id="gL7-Wj-Zxe"/>
                             <constraint firstItem="XMk-Vi-Eeg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gwJ-9d-aG6"/>
+                            <constraint firstItem="Pct-Wi-3AT" firstAttribute="width" secondItem="WuE-nr-FZO" secondAttribute="width" id="hcr-60-4ac"/>
                             <constraint firstItem="WuE-nr-FZO" firstAttribute="top" secondItem="Pdb-3d-KjB" secondAttribute="bottom" constant="72" id="hr2-JV-6pt"/>
                             <constraint firstItem="uBP-K8-Wix" firstAttribute="width" secondItem="WuE-nr-FZO" secondAttribute="width" id="isR-GN-KzJ"/>
                             <constraint firstItem="iq7-pS-pvF" firstAttribute="leading" secondItem="ZCO-g1-1p3" secondAttribute="trailing" constant="3" id="jWa-hP-tV0"/>
@@ -184,6 +188,7 @@
                             <constraint firstItem="N4C-3Q-fJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="sGU-gp-l1O"/>
                             <constraint firstItem="Ae8-bm-Ufl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="spf-E0-SQv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iq7-pS-pvF" secondAttribute="trailing" constant="3" id="stD-Fs-8ul"/>
+                            <constraint firstItem="WuE-nr-FZO" firstAttribute="leading" secondItem="Pct-Wi-3AT" secondAttribute="trailing" constant="3" id="tIf-X2-uVu"/>
                             <constraint firstItem="ZCO-g1-1p3" firstAttribute="height" secondItem="N4C-3Q-fJ3" secondAttribute="height" id="u1D-2U-CWJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PMF-W3-YlE" secondAttribute="trailing" constant="71" id="uzs-WI-t7N"/>
                         </constraints>
@@ -203,6 +208,7 @@
                         <outlet property="bettingTipsButtonTopConstraint" destination="Kbs-2u-knd" id="Cd7-ft-Bdb"/>
                         <outlet property="blurView" destination="Y5x-Ib-CBF" id="kIo-z7-8ga"/>
                         <outlet property="buyButtonOutlet" destination="Pct-Wi-3AT" id="KoB-mh-xcl"/>
+                        <outlet property="buyButtonTopConstraint" destination="Mq3-zL-2iu" id="eF8-n9-0UG"/>
                         <outlet property="chatButton" destination="ZCO-g1-1p3" id="3e5-Qg-CbC"/>
                         <outlet property="chatButtonHeight" destination="VDt-8s-pz3" id="5rO-7x-Mzj"/>
                         <outlet property="emailButton" destination="iq7-pS-pvF" id="xmY-3C-C7w"/>
@@ -691,6 +697,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
         </scene>
     </scenes>
     <resources>
+        <image name="0. BuyButton_eng" width="152.5" height="129"/>
         <image name="1. BettingTips_eng" width="152.5" height="129"/>
         <image name="2. Statistics_eng" width="152.5" height="129"/>
         <image name="3. Chat_eng" width="152.5" height="129"/>

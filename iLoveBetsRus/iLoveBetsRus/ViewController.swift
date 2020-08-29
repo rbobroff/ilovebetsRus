@@ -273,6 +273,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var statisticsButtonTopConstraint: NSLayoutConstraint!
     
     
+    //v.3.3 аутлет верхнего Constraint ^ для кнопки buyButton
+    @IBOutlet weak var buyButtonTopConstraint: NSLayoutConstraint!
+    
+    
+    
     //аутлет левого Constraint для нижнего label "Спортивные прогнозы" или "SportBettingTips"
     @IBOutlet weak var sportBetsLabelLeftConstraint: NSLayoutConstraint!
     //аутлет правого Constraint для нижнего label "Спортивные прогнозы" или "SportBettingTips"
@@ -322,8 +327,9 @@ class ViewController: UIViewController {
     
     //v.3.3 - проверка активна подписка или нет, если приложение запущено !!!!!!!!!!!!!!!-удалить, если не сработает
     if Apphud.hasActiveSubscription() {
-        buyButtonOutlet.isHidden = true
-        bettingTipsButton.isHidden = false
+        //тк после переустановки приложения можно не нажимать на restorePurchase, премиум контент сразу разблокировался
+        //buyButtonOutlet.isHidden = true
+        //bettingTipsButton.isHidden = false
         print("!Есть активная подписка!")
     } else {
         print("!Подписка закончилась!")
@@ -1373,6 +1379,8 @@ class ViewController: UIViewController {
         
         
         //белая рамка вокруг кнопок
+        buyButtonOutlet.layer.borderWidth = 2
+        buyButtonOutlet.layer.borderColor = UIColor.white.cgColor
         bettingTipsButton.layer.borderWidth = 2
         bettingTipsButton.layer.borderColor = UIColor.white.cgColor
         statisticsButton.layer.borderWidth = 2
@@ -1447,6 +1455,7 @@ class ViewController: UIViewController {
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             //93
             bettingTipsButtonTopConstraint.constant = 80
+            buyButtonTopConstraint.constant = 80
             statisticsButtonTopConstraint.constant = 80
             
             //v.3.3 - для окна подписки
@@ -1472,6 +1481,7 @@ class ViewController: UIViewController {
             
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 88
+            buyButtonTopConstraint.constant = 88
             statisticsButtonTopConstraint.constant = 88
         
             //левый и правый constraint нижнего Label = Спортивные прогнозы
@@ -1486,6 +1496,7 @@ class ViewController: UIViewController {
 
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
             bettingTipsButtonTopConstraint.constant = 111
+            buyButtonTopConstraint.constant = 111
             statisticsButtonTopConstraint.constant = 111
             //left right Constraint для нижнего label "Спортивные прогнозы" "Sport Betting Tips"
             sportBetsLabelLeftConstraint.constant = 120
@@ -1498,6 +1509,7 @@ class ViewController: UIViewController {
         //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 812 {
                 bettingTipsButtonTopConstraint.constant = 111
+                buyButtonTopConstraint.constant = 111
                 statisticsButtonTopConstraint.constant = 111
             }
         
@@ -1505,6 +1517,7 @@ class ViewController: UIViewController {
         //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0, width = 414) - настроены Constraints
         if UIScreen.main.bounds.height == 896 {
             bettingTipsButtonTopConstraint.constant = 161
+            buyButtonTopConstraint.constant = 161
             statisticsButtonTopConstraint.constant = 161
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
@@ -1520,6 +1533,7 @@ class ViewController: UIViewController {
             helpButtonHeight.constant = 235
             aboutUsButtonHeight.constant = 235
             bettingTipsButtonTopConstraint.constant = 130
+            buyButtonTopConstraint.constant = 130
             statisticsButtonTopConstraint.constant = 130
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 30)
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 80)
@@ -1528,6 +1542,7 @@ class ViewController: UIViewController {
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 28)
             bettingTipsButtonTopConstraint.constant = 120
+            buyButtonTopConstraint.constant = 120
             statisticsButtonTopConstraint.constant = 120
             }
         }
@@ -1544,6 +1559,7 @@ class ViewController: UIViewController {
             helpButtonHeight.constant = 280
             aboutUsButtonHeight.constant = 280
             bettingTipsButtonTopConstraint.constant = 250
+            buyButtonTopConstraint.constant = 250
             statisticsButtonTopConstraint.constant = 250
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 40.2)
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 106.72)
@@ -1555,6 +1571,7 @@ class ViewController: UIViewController {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 40.2) //26.68
                 sportBetsLabelBottomConstraint.constant = 40
                 bettingTipsButtonTopConstraint.constant = 240
+                buyButtonTopConstraint.constant = 240
                 statisticsButtonTopConstraint.constant = 240
             }
         }
@@ -1571,6 +1588,7 @@ class ViewController: UIViewController {
             helpButtonHeight.constant = 250
             aboutUsButtonHeight.constant = 250
             bettingTipsButtonTopConstraint.constant = 171
+            buyButtonTopConstraint.constant = 171
             statisticsButtonTopConstraint.constant = 171
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 35)
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 93.28)
@@ -1593,6 +1611,7 @@ class ViewController: UIViewController {
             helpButtonHeight.constant = 250
             aboutUsButtonHeight.constant = 250
             bettingTipsButtonTopConstraint.constant = 150
+            buyButtonTopConstraint.constant = 150
             statisticsButtonTopConstraint.constant = 150
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 35)
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 85)
@@ -1612,6 +1631,7 @@ class ViewController: UIViewController {
             helpButtonHeight.constant = 235
             aboutUsButtonHeight.constant = 235
             bettingTipsButtonTopConstraint.constant = 160
+            buyButtonTopConstraint.constant = 160
             statisticsButtonTopConstraint.constant = 160
             yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 30)
             iLoveBetsLabel.font = UIFont.systemFont(ofSize: 80)
