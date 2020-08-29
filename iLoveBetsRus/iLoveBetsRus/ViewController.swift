@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         //v.3.3 - язык по умолчанию
         subscribeLabelPopUpView.text = "Subscription"
         //Локализация верхнего label "Subscribe" окна подписки
-        if currentPhoneLangID == "en" {
+        if currentPhoneLangID == "ru" {
             subscribeLabelPopUpView.text = "Подписка"
          }
         
