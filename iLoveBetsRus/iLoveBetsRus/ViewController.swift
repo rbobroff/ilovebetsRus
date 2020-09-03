@@ -26,10 +26,145 @@ class ViewController: UIViewController {
          
         //v.3.3 - язык по умолчанию
         subscribeLabelPopUpView.text = "Subscription"
-        //Локализация верхнего label "Subscribe" окна подписки
+        aboutSubscriptionTitleLabel.text = "Please read below about the auto-renewing subscription nature of this product:"
+        aboutSubscriptionTextLabel.text = "Payment will be charged to iTunes Account at confirmation of purchase. Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period. Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal. Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase. Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable."
+        restorePurchasesButtonOutlet.setTitle("Restore Purchase", for: .normal)
+        termsOfUseButtonOutlet.setTitle("Terms of Use", for: .normal)
+        privacyPolicyButtonOutlet.setTitle("Privacy Policy", for: .normal)
+        subscribeButtonOutlet.setTitle("Subscribe", for: .normal)
+        
+        //Локализация верхнего label "Subscribe" окна подписки, кнопок RestorePurchase-TermsOfUse-PrivacyPolicy, aboutSubscriptionTitleLabel, aboutSubscriptionTextLabel
         if currentPhoneLangID == "ru" {
             subscribeLabelPopUpView.text = "Подписка"
-         }
+            restorePurchasesButtonOutlet.setTitle("Восстановить покупки", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Условия использования", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Политика конфиденциальности", for: .normal)
+            subscribeButtonOutlet.setTitle("Подписаться", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Титул"
+            aboutSubscriptionTextLabel.text = "Описание правил"
+        }
+        //2) Арабский
+        else if currentPhoneLangID == "ar"{
+        subscribeLabelPopUpView.text = "الاشتراك"
+        }
+        //3) Венгерский = hu
+        else if currentPhoneLangID == "hu"{
+        subscribeLabelPopUpView.text = "Feliratkozás"
+        }
+        //4) Вьетнамский = vi
+        else if currentPhoneLangID == "vi"{
+        subscribeLabelPopUpView.text = "Đăng ký"
+        }
+        //5) Греческий = el
+        else if currentPhoneLangID == "el"{
+        subscribeLabelPopUpView.text = "Συνδρομή"
+        }
+        //6) Датский = da
+        else if currentPhoneLangID == "da"{
+        subscribeLabelPopUpView.text = "Abonnement"
+        }
+        //7) Иврит = he
+        else if currentPhoneLangID == "he"{
+        subscribeLabelPopUpView.text = "מִנוּי"
+        }
+        //8) Индонезийский = id
+        else if currentPhoneLangID == "id"{
+        subscribeLabelPopUpView.text = "Berlangganan"
+        }
+        //9) Испанский = es
+        else if currentPhoneLangID == "es"{
+        subscribeLabelPopUpView.text = "Suscripción"
+        }
+        //10) Итальянский = it
+        else if currentPhoneLangID == "it"{
+        subscribeLabelPopUpView.text = "Sottoscrizione"
+        }
+        //11) Каталанский = ca
+        else if currentPhoneLangID == "ca"{
+        subscribeLabelPopUpView.text = "Subscripció"
+        }
+        //12) Китайский = zh
+        else if currentPhoneLangID == "zh"{
+        subscribeLabelPopUpView.text = "訂閱"
+        }
+        //13) Корейский = ko
+        else if currentPhoneLangID == "ko"{
+        subscribeLabelPopUpView.text = "신청"
+        }
+        //14) Малайский = ms
+        else if currentPhoneLangID == "ms"{
+        subscribeLabelPopUpView.text = "Langganan"
+        }
+        //15) Немецкий = de
+        else if currentPhoneLangID == "de"{
+        subscribeLabelPopUpView.text = "Abonnement"
+        }
+        //16) Нидерландский = nl
+        else if currentPhoneLangID == "nl"{
+        subscribeLabelPopUpView.text = "Abonnement"
+        }
+        //17) Норвежский = nb
+        else if currentPhoneLangID == "nb"{
+        subscribeLabelPopUpView.text = "Abonnement"
+        }
+        //18) Польский = pl
+        else if currentPhoneLangID == "pl"{
+        subscribeLabelPopUpView.text = "Subskrypcja"
+        }
+        //19) Португальский = pt
+        else if currentPhoneLangID == "pt"{
+        subscribeLabelPopUpView.text = "Inscrição"
+        }
+        //20) Румынский = ro
+        else if currentPhoneLangID == "ro"{
+        subscribeLabelPopUpView.text = "Abonament"
+        }
+        //21) Русский = ru
+        
+        //22) Словацкий = sk
+        else if currentPhoneLangID == "sk"{
+        subscribeLabelPopUpView.text = "Predplatné"
+        }
+        //23) Тайский = th
+        else if currentPhoneLangID == "th"{
+        subscribeLabelPopUpView.text = "การสมัครสมาชิก"
+        }
+        //24) Турецкий = tr
+        else if currentPhoneLangID == "tr"{
+        subscribeLabelPopUpView.text = "Abonelik"
+        }
+        //25) Украинский = uk
+        else if currentPhoneLangID == "uk"{
+        subscribeLabelPopUpView.text = "Передплата"
+        }
+        //26) Финский = fi
+        else if currentPhoneLangID == "fi"{
+        subscribeLabelPopUpView.text = "Tilaus"
+        }
+        //27) Французский = fr
+        else if currentPhoneLangID == "fr"{
+        subscribeLabelPopUpView.text = "Abonnement"
+        }
+        //28) Хинди = hi
+        else if currentPhoneLangID == "hi"{
+        subscribeLabelPopUpView.text = "अंशदान"
+        }
+        //29) Хорватский = hr
+        else if currentPhoneLangID == "hr"{
+        subscribeLabelPopUpView.text = "Pretplata"
+        }
+        //30) Чешский = cs
+        else if currentPhoneLangID == "cs"{
+        subscribeLabelPopUpView.text = "Předplatné"
+        }
+        //31) Шведский = sv
+        else if currentPhoneLangID == "sv"{
+        subscribeLabelPopUpView.text = "Prenumeration"
+        }
+        //32) Японский = ja
+        else if currentPhoneLangID == "ja"{
+        subscribeLabelPopUpView.text = "申し込み"
+        }
         
         
         //!!!!!!!!!!!!!!!! - удалить, если не сработает
@@ -96,13 +231,134 @@ class ViewController: UIViewController {
                     var ok = UIAlertAction(title: "OK", style: .default, handler: nil)
                 controller.addAction(ok)
                     
-                    
-                    //локализация
-                    if currentPhoneLangID == "ru" {
+                            //локализация
+                           if currentPhoneLangID == "ru" {
                         controller = UIAlertController(title: "У Вас нет активных подписок", message: nil, preferredStyle: .alert)
                         ok = UIAlertAction(title: "OK", style: .default, handler: nil)
                         controller.addAction(ok)
-                    }
+                           }
+                           //2) Арабский = ar
+                           else if currentPhoneLangID == "ar"{
+                        controller = UIAlertController(title: "ليس لديك اشتراكات نشطة", message: nil, preferredStyle: .alert)
+                           }
+                           //3) Венгерский = hu
+                           else if currentPhoneLangID == "hu"{
+                        controller = UIAlertController(title: "Nincs aktív előfizetésed", message: nil, preferredStyle: .alert)
+                           }
+                           //4) Вьетнамский = vi
+                           else if currentPhoneLangID == "vi"{
+                        controller = UIAlertController(title: "Bạn không có đăng ký nào đang hoạt động", message: nil, preferredStyle: .alert)
+                           }
+                           //5) Греческий = el
+                           else if currentPhoneLangID == "el"{
+                        controller = UIAlertController(title: "Δεν έχετε ενεργές συνδρομές", message: nil, preferredStyle: .alert)
+                           }
+                           //6) Датский = da
+                           else if currentPhoneLangID == "da"{
+                        controller = UIAlertController(title: "Du har ingen aktive abonnementer", message: nil, preferredStyle: .alert)
+                           }
+                           //7) Иврит = he
+                           else if currentPhoneLangID == "he"{
+                        controller = UIAlertController(title: "אין לך מינויים פעילים", message: nil, preferredStyle: .alert)
+                           }
+                           //8) Индонезийский = id
+                           else if currentPhoneLangID == "id"{
+                        controller = UIAlertController(title: "Anda tidak memiliki langganan aktif", message: nil, preferredStyle: .alert)
+                           }
+                           //9) Испанский = es
+                           else if currentPhoneLangID == "es"{
+                        controller = UIAlertController(title: "No tienes suscripciones activas", message: nil, preferredStyle: .alert)
+                           }
+                           //10) Итальянский = it
+                           else if currentPhoneLangID == "it"{
+                        controller = UIAlertController(title: "Non hai abbonamenti attivi", message: nil, preferredStyle: .alert)
+                           }
+                           //11) Каталанский = ca
+                           else if currentPhoneLangID == "ca"{
+                        controller = UIAlertController(title: "No teniu cap subscripció activa", message: nil, preferredStyle: .alert)
+                           }
+                           //12) Китайский = zh
+                           else if currentPhoneLangID == "zh"{
+                        controller = UIAlertController(title: "您沒有有效的訂閱", message: nil, preferredStyle: .alert)
+                           }
+                           //13) Корейский = ko
+                           else if currentPhoneLangID == "ko"{
+                        controller = UIAlertController(title: "활성 구독이 없습니다.", message: nil, preferredStyle: .alert)
+                           }
+                           //14) Малайский = ms
+                           else if currentPhoneLangID == "ms"{
+                        controller = UIAlertController(title: "Anda tidak mempunyai langganan aktif", message: nil, preferredStyle: .alert)
+                           }
+                           //15) Немецкий = de
+                           else if currentPhoneLangID == "de"{
+                        controller = UIAlertController(title: "Sie haben keine aktiven Abonnements", message: nil, preferredStyle: .alert)
+                           }
+                           //16) Нидерландский = nl
+                           else if currentPhoneLangID == "nl"{
+                        controller = UIAlertController(title: "Je hebt geen actieve abonnementen", message: nil, preferredStyle: .alert)
+                           }
+                           //17) Норвежский = nb
+                           else if currentPhoneLangID == "nb"{
+                        controller = UIAlertController(title: "Du har ingen aktive abonnementer", message: nil, preferredStyle: .alert)
+                           }
+                           //18) Польский = pl
+                           else if currentPhoneLangID == "pl"{
+                        controller = UIAlertController(title: "Nie masz żadnych aktywnych subskrypcji", message: nil, preferredStyle: .alert)
+                           }
+                           //19) Португальский = pt
+                           else if currentPhoneLangID == "pt"{
+                        controller = UIAlertController(title: "Você não tem assinaturas ativas", message: nil, preferredStyle: .alert)
+                           }
+                           //20) Румынский = ro
+                           else if currentPhoneLangID == "ro"{
+                        controller = UIAlertController(title: "Nu aveți abonamente active", message: nil, preferredStyle: .alert)
+                           }
+                           //21) Русский = ru
+                           
+                           //22) Словацкий = sk
+                           else if currentPhoneLangID == "sk"{
+                        controller = UIAlertController(title: "Nemáte žiadne aktívne predplatné", message: nil, preferredStyle: .alert)
+                           }
+                           //23) Тайский = th
+                           else if currentPhoneLangID == "th"{
+                        controller = UIAlertController(title: "คุณไม่มีการสมัครสมาชิกที่ใช้งานอยู่", message: nil, preferredStyle: .alert)
+                           }
+                           //24) Турецкий = tr
+                           else if currentPhoneLangID == "tr"{
+                        controller = UIAlertController(title: "Aktif aboneliğiniz yok", message: nil, preferredStyle: .alert)
+                           }
+                           //25) Украинский = uk
+                           else if currentPhoneLangID == "uk"{
+                        controller = UIAlertController(title: "У вас немає активних підписок", message: nil, preferredStyle: .alert)
+                           }
+                           //26) Финский = fi
+                           else if currentPhoneLangID == "fi"{
+                        controller = UIAlertController(title: "Sinulla ei ole aktiivisia tilauksia", message: nil, preferredStyle: .alert)
+                           }
+                           //27) Французский = fr
+                           else if currentPhoneLangID == "fr"{
+                        controller = UIAlertController(title: "Vous n'avez aucun abonnement actif", message: nil, preferredStyle: .alert)
+                           }
+                           //28) Хинди = hi
+                           else if currentPhoneLangID == "hi"{
+                        controller = UIAlertController(title: "आपके पास कोई सक्रिय सदस्यता नहीं है", message: nil, preferredStyle: .alert)
+                           }
+                           //29) Хорватский = hr
+                           else if currentPhoneLangID == "hr"{
+                        controller = UIAlertController(title: "Nemate aktivnih pretplata", message: nil, preferredStyle: .alert)
+                           }
+                           //30) Чешский = cs
+                           else if currentPhoneLangID == "cs"{
+                        controller = UIAlertController(title: "Nemáte žádné aktivní předplatné", message: nil, preferredStyle: .alert)
+                           }
+                           //31) Шведский = sv
+                           else if currentPhoneLangID == "sv"{
+                        controller = UIAlertController(title: "Du har inga aktiva prenumerationer", message: nil, preferredStyle: .alert)
+                           }
+                           //32) Японский = ja
+                           else if currentPhoneLangID == "ja"{
+                        controller = UIAlertController(title: "アクティブなサブスクリプションはありません", message: nil, preferredStyle: .alert)
+                           }
                     
                     
                 self.present(controller, animated: true, completion: nil)
@@ -126,7 +382,7 @@ class ViewController: UIViewController {
     
     
     
-    //v.3.3 - функция обновления интерфейса, если осуществлена подписка
+    //v.3.3 - функция обновления интерфейса данными о продукте "Цена", когда загружены продукты из AppStore -> AppHud
     func reloadUI() {
         if let product = Apphud.product(productIdentifier: "com.iloveapps.bettingadvisor.mysubscription") {
         // set up pricing for this product
@@ -136,10 +392,164 @@ class ViewController: UIViewController {
            var subscriptionPriceDescriptionBoldTextLabel = "Price: "
            var month = " / month"
             //локализация subscriptionPriceDescription перед ценой в местной валюте
-            if currentPhoneLangID == "ru" {
-                subscriptionPriceDescriptionBoldTextLabel = "Цена: "
-                month = " / мес."
-            }
+          
+                   if currentPhoneLangID == "ru" {
+            subscriptionPriceDescriptionBoldTextLabel = "Цена: "
+            month = " / месяц"
+                   }
+            //2) Арабский = ar
+                   else if currentPhoneLangID == "ar"{
+            subscriptionPriceDescriptionBoldTextLabel = "السعر "
+            month = " شهر"
+                   }
+                   //3) Венгерский = hu
+                   else if currentPhoneLangID == "hu"{
+            subscriptionPriceDescriptionBoldTextLabel = "Ár: "
+            month = " / hónap"
+                   }
+                   //4) Вьетнамский = vi
+                   else if currentPhoneLangID == "vi"{
+            subscriptionPriceDescriptionBoldTextLabel = "Giá bán: "
+            month = " / tháng"
+                   }
+                   //5) Греческий = el
+                   else if currentPhoneLangID == "el"{
+            subscriptionPriceDescriptionBoldTextLabel = "Τιμή: "
+            month = " / μήνας"
+                   }
+                   //6) Датский = da
+                   else if currentPhoneLangID == "da"{
+            subscriptionPriceDescriptionBoldTextLabel = "Pris: "
+            month = " / måned"
+                   }
+                   //7) Иврит = he
+                   else if currentPhoneLangID == "he"{
+            subscriptionPriceDescriptionBoldTextLabel = "מחיר "
+            month = " חוֹדֶשׁ"
+                   }
+                   //8) Индонезийский = id
+                   else if currentPhoneLangID == "id"{
+            subscriptionPriceDescriptionBoldTextLabel = "Harga: "
+            month = " / bulan"
+                   }
+                   //9) Испанский = es
+                   else if currentPhoneLangID == "es"{
+            subscriptionPriceDescriptionBoldTextLabel = "Precio: "
+            month = " / mes"
+                   }
+                   //10) Итальянский = it
+                   else if currentPhoneLangID == "it"{
+            subscriptionPriceDescriptionBoldTextLabel = "Prezzo: "
+            month = " / mese"
+                   }
+                   //11) Каталанский = ca
+                   else if currentPhoneLangID == "ca"{
+            subscriptionPriceDescriptionBoldTextLabel = "Preu: "
+            month = " / mes"
+                   }
+                   //12) Китайский = zh
+                   else if currentPhoneLangID == "zh"{
+            subscriptionPriceDescriptionBoldTextLabel = "價錢 "
+            month = " 月"
+                   }
+                   //13) Корейский = ko
+                   else if currentPhoneLangID == "ko"{
+            subscriptionPriceDescriptionBoldTextLabel = "가격 "
+            month = " 달"
+                   }
+                   //14) Малайский = ms
+                   else if currentPhoneLangID == "ms"{
+            subscriptionPriceDescriptionBoldTextLabel = "Harga: "
+            month = " / bulan"
+                   }
+                   //15) Немецкий = de
+                   else if currentPhoneLangID == "de"{
+            subscriptionPriceDescriptionBoldTextLabel = "Preis: "
+            month = " / monat"
+                   }
+                   //16) Нидерландский = nl
+                   else if currentPhoneLangID == "nl"{
+            subscriptionPriceDescriptionBoldTextLabel = "Prijs: "
+            month = " / maand"
+                   }
+                   //17) Норвежский = nb
+                   else if currentPhoneLangID == "nb"{
+            subscriptionPriceDescriptionBoldTextLabel = "Pris: "
+            month = " / måned"
+                   }
+                   //18) Польский = pl
+                   else if currentPhoneLangID == "pl"{
+            subscriptionPriceDescriptionBoldTextLabel = "Cena £: "
+            month = " / miesiąc"
+                   }
+                   //19) Португальский = pt
+                   else if currentPhoneLangID == "pt"{
+            subscriptionPriceDescriptionBoldTextLabel = "Preço: "
+            month = " / mês"
+                   }
+                   //20) Румынский = ro
+                   else if currentPhoneLangID == "ro"{
+            subscriptionPriceDescriptionBoldTextLabel = "Preț: "
+            month = " / lună"
+                   }
+                   //21) Русский = ru
+                   
+                   //22) Словацкий = sk
+                   else if currentPhoneLangID == "sk"{
+            subscriptionPriceDescriptionBoldTextLabel = "Cena: "
+            month = " / mesiac"
+                   }
+                   //23) Тайский = th
+                   else if currentPhoneLangID == "th"{
+            subscriptionPriceDescriptionBoldTextLabel = "ราคา "
+            month = " เดือน"
+                   }
+                   //24) Турецкий = tr
+                   else if currentPhoneLangID == "tr"{
+            subscriptionPriceDescriptionBoldTextLabel = "Fiyat: "
+            month = " / ay"
+                   }
+                   //25) Украинский = uk
+                   else if currentPhoneLangID == "uk"{
+            subscriptionPriceDescriptionBoldTextLabel = "Ціна: "
+            month = " / місяць"
+                   }
+                   //26) Финский = fi
+                   else if currentPhoneLangID == "fi"{
+            subscriptionPriceDescriptionBoldTextLabel = "Hinta: "
+            month = " / kuukausi"
+                   }
+                   //27) Французский = fr
+                   else if currentPhoneLangID == "fr"{
+            subscriptionPriceDescriptionBoldTextLabel = "Prix: "
+            month = " / mois"
+                   }
+                   //28) Хинди = hi
+                   else if currentPhoneLangID == "hi"{
+            subscriptionPriceDescriptionBoldTextLabel = "कीमत "
+            month = " महीना"
+                   }
+                   //29) Хорватский = hr
+                   else if currentPhoneLangID == "hr"{
+            subscriptionPriceDescriptionBoldTextLabel = "Cijena: "
+            month = " / mjesec"
+                   }
+                   //30) Чешский = cs
+                   else if currentPhoneLangID == "cs"{
+            subscriptionPriceDescriptionBoldTextLabel = "Cena: "
+            month = " / měsíc"
+                   }
+                   //31) Шведский = sv
+                   else if currentPhoneLangID == "sv"{
+            subscriptionPriceDescriptionBoldTextLabel = "Pris: "
+            month = " / månad"
+                   }
+                   //32) Японский = ja
+                   else if currentPhoneLangID == "ja"{
+            subscriptionPriceDescriptionBoldTextLabel = "価格 "
+            month = " 月"
+                   }
+            
             //записываем цену в местной валюте в priceString
             let numberFormatter = NumberFormatter()
             numberFormatter.locale = product.priceLocale
@@ -159,10 +569,134 @@ class ViewController: UIViewController {
     
             //делаем часть label жирным и сразу локализуем
             var productDescriptionBoldTextLabel  = "Description: "
-                //локализуем
-                if currentPhoneLangID == "ru" {
+                
+            //локализуем
+                   if currentPhoneLangID == "ru" {
                    productDescriptionBoldTextLabel = "Описание: "
-                }
+                   }
+                   //2) Арабский = ar
+                   else if currentPhoneLangID == "ar"{
+                   productDescriptionBoldTextLabel = "وصف "
+                   }
+                   //3) Венгерский = hu
+                   else if currentPhoneLangID == "hu"{
+                   productDescriptionBoldTextLabel = "Leírás: "
+                   }
+                   //4) Вьетнамский = vi
+                   else if currentPhoneLangID == "vi"{
+                   productDescriptionBoldTextLabel = "Sự miêu tả: "
+                   }
+                   //5) Греческий = el
+                   else if currentPhoneLangID == "el"{
+                   productDescriptionBoldTextLabel = "Περιγραφή: "
+                   }
+                   //6) Датский = da
+                   else if currentPhoneLangID == "da"{
+                   productDescriptionBoldTextLabel = "Beskrivelse: "
+                   }
+                   //7) Иврит = he
+                   else if currentPhoneLangID == "he"{
+                   productDescriptionBoldTextLabel = "תיאור "
+                   }
+                   //8) Индонезийский = id
+                   else if currentPhoneLangID == "id"{
+                   productDescriptionBoldTextLabel = "Deskripsi: "
+                   }
+                   //9) Испанский = es
+                   else if currentPhoneLangID == "es"{
+                   productDescriptionBoldTextLabel = "Descripción: "
+                   }
+                   //10) Итальянский = it
+                   else if currentPhoneLangID == "it"{
+                   productDescriptionBoldTextLabel = "Descrizione: "
+                   }
+                   //11) Каталанский = ca
+                   else if currentPhoneLangID == "ca"{
+                   productDescriptionBoldTextLabel = "Descripció: "
+                   }
+                   //12) Китайский = zh
+                   else if currentPhoneLangID == "zh"{
+                   productDescriptionBoldTextLabel = "描述 "
+                   }
+                   //13) Корейский = ko
+                   else if currentPhoneLangID == "ko"{
+                   productDescriptionBoldTextLabel = "기술 "
+                   }
+                   //14) Малайский = ms
+                   else if currentPhoneLangID == "ms"{
+                   productDescriptionBoldTextLabel = "Penerangan: "
+                   }
+                   //15) Немецкий = de
+                   else if currentPhoneLangID == "de"{
+                   productDescriptionBoldTextLabel = "Beschreibung: "
+                   }
+                   //16) Нидерландский = nl
+                   else if currentPhoneLangID == "nl"{
+                   productDescriptionBoldTextLabel = "Omschrijving: "
+                   }
+                   //17) Норвежский = nb
+                   else if currentPhoneLangID == "nb"{
+                   productDescriptionBoldTextLabel = "Beskrivelse: "
+                   }
+                   //18) Польский = pl
+                   else if currentPhoneLangID == "pl"{
+                   productDescriptionBoldTextLabel = "Opis: "
+                   }
+                   //19) Португальский = pt
+                   else if currentPhoneLangID == "pt"{
+                   productDescriptionBoldTextLabel = "Descrição: "
+                   }
+                   //20) Румынский = ro
+                   else if currentPhoneLangID == "ro"{
+                   productDescriptionBoldTextLabel = "Descriere: "
+                   }
+                   //21) Русский = ru
+                   
+                   //22) Словацкий = sk
+                   else if currentPhoneLangID == "sk"{
+                   productDescriptionBoldTextLabel = "Popis: "
+                   }
+                   //23) Тайский = th
+                   else if currentPhoneLangID == "th"{
+                   productDescriptionBoldTextLabel = "คำอธิบาย "
+                   }
+                   //24) Турецкий = tr
+                   else if currentPhoneLangID == "tr"{
+                   productDescriptionBoldTextLabel = "Açıklama: "
+                   }
+                   //25) Украинский = uk
+                   else if currentPhoneLangID == "uk"{
+                   productDescriptionBoldTextLabel = "Опис: "
+                   }
+                   //26) Финский = fi
+                   else if currentPhoneLangID == "fi"{
+                   productDescriptionBoldTextLabel = "Kuvaus: "
+                   }
+                   //27) Французский = fr
+                   else if currentPhoneLangID == "fr"{
+                   productDescriptionBoldTextLabel = "La description: "
+                   }
+                   //28) Хинди = hi
+                   else if currentPhoneLangID == "hi"{
+                   productDescriptionBoldTextLabel = "विवरण "
+                   }
+                   //29) Хорватский = hr
+                   else if currentPhoneLangID == "hr"{
+                   productDescriptionBoldTextLabel = "Opis: "
+                   }
+                   //30) Чешский = cs
+                   else if currentPhoneLangID == "cs"{
+                   productDescriptionBoldTextLabel = "Popis: "
+                   }
+                   //31) Шведский = sv
+                   else if currentPhoneLangID == "sv"{
+                   productDescriptionBoldTextLabel = "Beskrivning: "
+                   }
+                   //32) Японский = ja
+                   else if currentPhoneLangID == "ja"{
+                   productDescriptionBoldTextLabel = "説明 "
+                   }
+            
             let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
             let attributedString = NSMutableAttributedString(string: productDescriptionBoldTextLabel, attributes:attrs)
             
@@ -170,10 +704,132 @@ class ViewController: UIViewController {
             //делаем часть label нормальным и сразу локализуем
             var productDescriptionNormalTextLabel = "Betting Tips"
               
-            //локализуем
-                if currentPhoneLangID == "ru" {
-                   productDescriptionNormalTextLabel = "Спортивные Прогнозы"
-                }
+                       //локализуем
+                       if currentPhoneLangID == "ru" {
+                       productDescriptionNormalTextLabel = "Спортивные Прогнозы"
+                       }
+                       //2) Арабский = ar
+                       else if currentPhoneLangID == "ar"{
+                       productDescriptionNormalTextLabel = " نصائح الرهان"
+                       }
+                       //3) Венгерский = hu
+                       else if currentPhoneLangID == "hu"{
+                       productDescriptionNormalTextLabel = "Fogadási tippek"
+                       }
+                       //4) Вьетнамский = vi
+                       else if currentPhoneLangID == "vi"{
+                       productDescriptionNormalTextLabel = "Mẹo cá cược"
+                       }
+                       //5) Греческий = el
+                       else if currentPhoneLangID == "el"{
+                       productDescriptionNormalTextLabel = "Συμβουλές στοιχημάτων"
+                       }
+                       //6) Датский = da
+                       else if currentPhoneLangID == "da"{
+                       productDescriptionNormalTextLabel = "Sportsforudsigelser"
+                       }
+                       //7) Иврит = he
+                       else if currentPhoneLangID == "he"{
+                       productDescriptionNormalTextLabel = "תחזיות ספורט"
+                       }
+                       //8) Индонезийский = id
+                       else if currentPhoneLangID == "id"{
+                       productDescriptionNormalTextLabel = "Prediksi Olahraga"
+                       }
+                       //9) Испанский = es
+                       else if currentPhoneLangID == "es"{
+                       productDescriptionNormalTextLabel = "Consejos de apuestas"
+                       }
+                       //10) Итальянский = it
+                       else if currentPhoneLangID == "it"{
+                       productDescriptionNormalTextLabel = "Suggerimenti per le scommesse"
+                       }
+                       //11) Каталанский = ca
+                       else if currentPhoneLangID == "ca"{
+                       productDescriptionNormalTextLabel = "Consells d'apostes"
+                       }
+                       //12) Китайский = zh
+                       else if currentPhoneLangID == "zh"{
+                       productDescriptionNormalTextLabel = "投注技巧"
+                       }
+                       //13) Корейский = ko
+                       else if currentPhoneLangID == "ko"{
+                       productDescriptionNormalTextLabel = "스포츠 예측"
+                       }
+                       //14) Малайский = ms
+                       else if currentPhoneLangID == "ms"{
+                       productDescriptionNormalTextLabel = "Ramalan Sukan"
+                       }
+                       //15) Немецкий = de
+                       else if currentPhoneLangID == "de"{
+                       productDescriptionNormalTextLabel = "Wett-Tipps"
+                       }
+                       //16) Нидерландский = nl
+                       else if currentPhoneLangID == "nl"{
+                       productDescriptionNormalTextLabel = "Tips voor weddenschappen"
+                       }
+                       //17) Норвежский = nb
+                       else if currentPhoneLangID == "nb"{
+                       productDescriptionNormalTextLabel = "Sportsprognoser"
+                       }
+                       //18) Польский = pl
+                       else if currentPhoneLangID == "pl"{
+                       productDescriptionNormalTextLabel = "Typy bukmacherskie"
+                       }
+                       //19) Португальский = pt
+                       else if currentPhoneLangID == "pt"{
+                       productDescriptionNormalTextLabel = "Dicas de apostas"
+                       }
+                       //20) Румынский = ro
+                       else if currentPhoneLangID == "ro"{
+                       productDescriptionNormalTextLabel = "Ponturi de pariuri"
+                       }
+                       //21) Русский = ru
+                       
+                       //22) Словацкий = sk
+                       else if currentPhoneLangID == "sk"{
+                       productDescriptionNormalTextLabel = "Stávkové tipy"
+                       }
+                       //23) Тайский = th
+                       else if currentPhoneLangID == "th"{
+                       productDescriptionNormalTextLabel = "เคล็ดลับการเดิมพัน"
+                       }
+                       //24) Турецкий = tr
+                       else if currentPhoneLangID == "tr"{
+                       productDescriptionNormalTextLabel = "Bahis ipuçları"
+                       }
+                       //25) Украинский = uk
+                       else if currentPhoneLangID == "uk"{
+                       productDescriptionNormalTextLabel = "Спортивні прогнози"
+                       }
+                       //26) Финский = fi
+                       else if currentPhoneLangID == "fi"{
+                       productDescriptionNormalTextLabel = "Vedonlyöntivihjeitä"
+                       }
+                       //27) Французский = fr
+                       else if currentPhoneLangID == "fr"{
+                       productDescriptionNormalTextLabel = "Conseils de paris"
+                       }
+                       //28) Хинди = hi
+                       else if currentPhoneLangID == "hi"{
+                       productDescriptionNormalTextLabel = "सट्टेबाजी की युक्तियाँ"
+                       }
+                       //29) Хорватский = hr
+                       else if currentPhoneLangID == "hr"{
+                       productDescriptionNormalTextLabel = "Savjeti za klađenje"
+                       }
+                       //30) Чешский = cs
+                       else if currentPhoneLangID == "cs"{
+                       productDescriptionNormalTextLabel = "Sázkové tipy"
+                       }
+                       //31) Шведский = sv
+                       else if currentPhoneLangID == "sv"{
+                       productDescriptionNormalTextLabel = "Betting Tips"
+                       }
+                       //32) Японский = ja
+                       else if currentPhoneLangID == "ja"{
+                       productDescriptionNormalTextLabel = "賭けのヒント"
+                       }
             
             let normalString = NSMutableAttributedString(string: productDescriptionNormalTextLabel)
             //Соединяем 2 части текста:
@@ -187,9 +843,131 @@ class ViewController: UIViewController {
             //делаем часть label жирным и сразу локализуем
             var productTrialDurationBoldTextLabel  = "Free of charge: "
                 
-                if currentPhoneLangID == "ru" {
+                   if currentPhoneLangID == "ru" {
                    productTrialDurationBoldTextLabel = "Бесплатный период: "
-                }
+                   }
+                   //2) Арабский = ar
+                   else if currentPhoneLangID == "ar"{
+                   productTrialDurationBoldTextLabel = "شحن مجاني "
+                   }
+                   //3) Венгерский = hu
+                   else if currentPhoneLangID == "hu"{
+                   productTrialDurationBoldTextLabel = "Díjmentes: "
+                   }
+                   //4) Вьетнамский = vi
+                   else if currentPhoneLangID == "vi"{
+                   productTrialDurationBoldTextLabel = "Miễn phí: "
+                   }
+                   //5) Греческий = el
+                   else if currentPhoneLangID == "el"{
+                   productTrialDurationBoldTextLabel = "Δωρεάν: "
+                   }
+                   //6) Датский = da
+                   else if currentPhoneLangID == "da"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //7) Иврит = he
+                   else if currentPhoneLangID == "he"{
+                   productTrialDurationBoldTextLabel = "בחינם "
+                   }
+                   //8) Индонезийский = id
+                   else if currentPhoneLangID == "id"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //9) Испанский = es
+                   else if currentPhoneLangID == "es"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //10) Итальянский = it
+                   else if currentPhoneLangID == "it"{
+                   productTrialDurationBoldTextLabel = "Gratuito: "
+                   }
+                   //11) Каталанский = ca
+                   else if currentPhoneLangID == "ca"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //12) Китайский = zh
+                   else if currentPhoneLangID == "zh"{
+                   productTrialDurationBoldTextLabel = "免費的 "
+                   }
+                   //13) Корейский = ko
+                   else if currentPhoneLangID == "ko"{
+                   productTrialDurationBoldTextLabel = "무료로 "
+                   }
+                   //14) Малайский = ms
+                   else if currentPhoneLangID == "ms"{
+                   productTrialDurationBoldTextLabel = "Percuma: "
+                   }
+                   //15) Немецкий = de
+                   else if currentPhoneLangID == "de"{
+                   productTrialDurationBoldTextLabel = "Kostenlos: "
+                   }
+                   //16) Нидерландский = nl
+                   else if currentPhoneLangID == "nl"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //17) Норвежский = nb
+                   else if currentPhoneLangID == "nb"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //18) Польский = pl
+                   else if currentPhoneLangID == "pl"{
+                   productTrialDurationBoldTextLabel = "Darmo: "
+                   }
+                   //19) Португальский = pt
+                   else if currentPhoneLangID == "pt"{
+                   productTrialDurationBoldTextLabel = "Grátis: "
+                   }
+                   //20) Румынский = ro
+                   else if currentPhoneLangID == "ro"{
+                   productTrialDurationBoldTextLabel = "Gratuit: "
+                   }
+                   //21) Русский = ru
+                   
+                   //22) Словацкий = sk
+                   else if currentPhoneLangID == "sk"{
+                   productTrialDurationBoldTextLabel = "Zadarmo: "
+                   }
+                   //23) Тайский = th
+                   else if currentPhoneLangID == "th"{
+                   productTrialDurationBoldTextLabel = "ไม่คิดเงิน "
+                   }
+                   //24) Турецкий = tr
+                   else if currentPhoneLangID == "tr"{
+                   productTrialDurationBoldTextLabel = "Ücretsiz: "
+                   }
+                   //25) Украинский = uk
+                   else if currentPhoneLangID == "uk"{
+                   productTrialDurationBoldTextLabel = "Безкоштовно: "
+                   }
+                   //26) Финский = fi
+                   else if currentPhoneLangID == "fi"{
+                   productTrialDurationBoldTextLabel = "Ilmainen: "
+                   }
+                   //27) Французский = fr
+                   else if currentPhoneLangID == "fr"{
+                   productTrialDurationBoldTextLabel = "Gratuit: "
+                   }
+                   //28) Хинди = hi
+                   else if currentPhoneLangID == "hi"{
+                   productTrialDurationBoldTextLabel = "निःशुल्क "
+                   }
+                   //29) Хорватский = hr
+                   else if currentPhoneLangID == "hr"{
+                   productTrialDurationBoldTextLabel = "Besplatno: "
+                   }
+                   //30) Чешский = cs
+                   else if currentPhoneLangID == "cs"{
+                   productTrialDurationBoldTextLabel = "Zdarma: "
+                   }
+                   //31) Шведский = sv
+                   else if currentPhoneLangID == "sv"{
+                   productTrialDurationBoldTextLabel = "Gratis: "
+                   }
+                   //32) Японский = ja
+                   else if currentPhoneLangID == "ja"{
+                   productTrialDurationBoldTextLabel = "無料で "
+                   }
             
             let attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
             let attributedString1 = NSMutableAttributedString(string: productTrialDurationBoldTextLabel, attributes:attrs1)
@@ -197,9 +975,131 @@ class ViewController: UIViewController {
             //делаем часть label нормальным и сразу локализуем
             var productTrialDurationNormalTextLabel = "30 days"
                 
-                if currentPhoneLangID == "ru" {
+                   if currentPhoneLangID == "ru" {
                    productTrialDurationNormalTextLabel = "30 дней"
-                }
+                   }
+                   //2) Арабский = ar
+                   else if currentPhoneLangID == "ar"{
+                   productTrialDurationNormalTextLabel = "30 يوما"
+                   }
+                   //3) Венгерский = hu
+                   else if currentPhoneLangID == "hu"{
+                   productTrialDurationNormalTextLabel = "30 nap"
+                   }
+                   //4) Вьетнамский = vi
+                   else if currentPhoneLangID == "vi"{
+                   productTrialDurationNormalTextLabel = "30 ngày"
+                   }
+                   //5) Греческий = el
+                   else if currentPhoneLangID == "el"{
+                   productTrialDurationNormalTextLabel = "30 μέρες"
+                   }
+                   //6) Датский = da
+                   else if currentPhoneLangID == "da"{
+                   productTrialDurationNormalTextLabel = "30 dage"
+                   }
+                   //7) Иврит = he
+                   else if currentPhoneLangID == "he"{
+                   productTrialDurationNormalTextLabel = "30 ימים"
+                   }
+                   //8) Индонезийский = id
+                   else if currentPhoneLangID == "id"{
+                   productTrialDurationNormalTextLabel = "30 hari"
+                   }
+                   //9) Испанский = es
+                   else if currentPhoneLangID == "es"{
+                   productTrialDurationNormalTextLabel = "30 dias"
+                   }
+                   //10) Итальянский = it
+                   else if currentPhoneLangID == "it"{
+                   productTrialDurationNormalTextLabel = "30 giorni"
+                   }
+                   //11) Каталанский = ca
+                   else if currentPhoneLangID == "ca"{
+                   productTrialDurationNormalTextLabel = "30 dies"
+                   }
+                   //12) Китайский = zh
+                   else if currentPhoneLangID == "zh"{
+                   productTrialDurationNormalTextLabel = "30天"
+                   }
+                   //13) Корейский = ko
+                   else if currentPhoneLangID == "ko"{
+                   productTrialDurationNormalTextLabel = "30 일"
+                   }
+                   //14) Малайский = ms
+                   else if currentPhoneLangID == "ms"{
+                   productTrialDurationNormalTextLabel = "30 hari"
+                   }
+                   //15) Немецкий = de
+                   else if currentPhoneLangID == "de"{
+                   productTrialDurationNormalTextLabel = "30 Tage"
+                   }
+                   //16) Нидерландский = nl
+                   else if currentPhoneLangID == "nl"{
+                   productTrialDurationNormalTextLabel = "30 dagen"
+                   }
+                   //17) Норвежский = nb
+                   else if currentPhoneLangID == "nb"{
+                   productTrialDurationNormalTextLabel = "30 dager"
+                   }
+                   //18) Польский = pl
+                   else if currentPhoneLangID == "pl"{
+                   productTrialDurationNormalTextLabel = "30 dni"
+                   }
+                   //19) Португальский = pt
+                   else if currentPhoneLangID == "pt"{
+                   productTrialDurationNormalTextLabel = "30 dias"
+                   }
+                   //20) Румынский = ro
+                   else if currentPhoneLangID == "ro"{
+                   productTrialDurationNormalTextLabel = "30 de zile"
+                   }
+                   //21) Русский = ru
+                   
+                   //22) Словацкий = sk
+                   else if currentPhoneLangID == "sk"{
+                   productTrialDurationNormalTextLabel = "30 dní"
+                   }
+                   //23) Тайский = th
+                   else if currentPhoneLangID == "th"{
+                   productTrialDurationNormalTextLabel = "30 วัน"
+                   }
+                   //24) Турецкий = tr
+                   else if currentPhoneLangID == "tr"{
+                   productTrialDurationNormalTextLabel = "30 gün"
+                   }
+                   //25) Украинский = uk
+                   else if currentPhoneLangID == "uk"{
+                   productTrialDurationNormalTextLabel = "30 днів"
+                   }
+                   //26) Финский = fi
+                   else if currentPhoneLangID == "fi"{
+                   productTrialDurationNormalTextLabel = "30 päivää"
+                   }
+                   //27) Французский = fr
+                   else if currentPhoneLangID == "fr"{
+                   productTrialDurationNormalTextLabel = "30 jours"
+                   }
+                   //28) Хинди = hi
+                   else if currentPhoneLangID == "hi"{
+                   productTrialDurationNormalTextLabel = "तीस दिन"
+                   }
+                   //29) Хорватский = hr
+                   else if currentPhoneLangID == "hr"{
+                   productTrialDurationNormalTextLabel = "30 dana"
+                   }
+                   //30) Чешский = cs
+                   else if currentPhoneLangID == "cs"{
+                   productTrialDurationNormalTextLabel = "30 dní"
+                   }
+                   //31) Шведский = sv
+                   else if currentPhoneLangID == "sv"{
+                   productTrialDurationNormalTextLabel = "30 dagar"
+                   }
+                   //32) Японский = ja
+                   else if currentPhoneLangID == "ja"{
+                   productTrialDurationNormalTextLabel = "30日"
+                   }
             
             let normalString1 = NSMutableAttributedString(string: productTrialDurationNormalTextLabel)
             //Соединяем 2 части текста:
