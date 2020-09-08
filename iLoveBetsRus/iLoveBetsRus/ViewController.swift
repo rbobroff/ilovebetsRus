@@ -40,130 +40,310 @@ class ViewController: UIViewController {
             termsOfUseButtonOutlet.setTitle("Условия использования", for: .normal)
             privacyPolicyButtonOutlet.setTitle("Политика конфиденциальности", for: .normal)
             subscribeButtonOutlet.setTitle("Подписаться", for: .normal)
-            aboutSubscriptionTitleLabel.text = "Титул"
-            aboutSubscriptionTextLabel.text = "Описание правил"
+            aboutSubscriptionTitleLabel.text = "Пожалуйста, прочитайте ниже об автоматическом продлении подписки на этот продукт:"
+            aboutSubscriptionTextLabel.text = "Подписка продлевается автоматически. Вы можете отказаться в любой момент, но не позднее чем за 24 часа до окончания ее действия. Плата за продление взимается в течение 24 часов до окончания ее действия. Плата за продление взимается в течение 24 часов до окончания текущего расчетного периода. Стоимость подписки зависит от страны, в которой вы производите покупку, и происходит с вашей учетной записи iTunes. Бесплатный период или скидка при их наличии применимы только при первом оформлении подписки. Вы можете управлять подпиской после покупки, а также отключить ее автоматическое продление в настройках учетной записи AppStore. При оформлении подписки вы принимаете:"
         }
         //2) Арабский
         else if currentPhoneLangID == "ar"{
-        subscribeLabelPopUpView.text = "الاشتراك"
+            subscribeLabelPopUpView.text = "الاشتراك"
+            restorePurchasesButtonOutlet.setTitle("استعادة شراء", for: .normal)
+            termsOfUseButtonOutlet.setTitle("شروط الاستخدام", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("سياسة خاصة", for: .normal)
+            subscribeButtonOutlet.setTitle("الإشتراك", for: .normal)
+            aboutSubscriptionTitleLabel.text = "يرجى قراءة ما يلي حول اشتراك التجديد التلقائي لهذا المنتج:"
+            aboutSubscriptionTextLabel.text = "سيتم فرض الدفع على حساب iTunes عند تأكيد الشراء. يتم تجديد الاشتراك تلقائيًا ما لم يتم إيقاف التجديد التلقائي قبل 24 ساعة على الأقل من نهاية الفترة الحالية. سيتم فرض رسوم على التجديد في غضون 24 ساعة قبل نهاية الفترة الحالية ، وتحديد تكلفة التجديد. قد تتم إدارة الاشتراكات من قبل المستخدم ويمكن إيقاف التجديد التلقائي بالانتقال إلى إعدادات حساب المستخدم بعد الشراء. أي جزء غير مستخدم من فترة تجريبية مجانية ، إذا تم عرضه ، سيتم مصادرته عندما يشتري المستخدم اشتراكًا في هذا المنشور ، عند الاقتضاء."
         }
         //3) Венгерский = hu
         else if currentPhoneLangID == "hu"{
-        subscribeLabelPopUpView.text = "Feliratkozás"
+            subscribeLabelPopUpView.text = "Feliratkozás"
+            restorePurchasesButtonOutlet.setTitle("Vásárlás visszaállítása", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Használati feltételek", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Adatvédelmi irányelvek", for: .normal)
+            subscribeButtonOutlet.setTitle("Iratkozz fel", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Kérjük, olvassa el alább a termék automatikusan megújuló előfizetését:"
+            aboutSubscriptionTextLabel.text = "A fizetést az iTunes-számlára terhelik a vásárlás visszaigazolásakor. Az előfizetés automatikusan megújul, kivéve, ha az automatikus megújítást legalább 24 órával az aktuális időszak vége előtt kikapcsolják. A megújítás számláját a folyó időszak vége előtt 24 órán belül felszámoljuk, és meg kell adnia a megújítás költségét. Az előfizetéseket a felhasználó kezelheti, és az automatikus megújítást kikapcsolhatja a vásárlás után a felhasználó Fiókbeállításai között. Az ingyenes próbaidőszak fel nem használt része - amennyiben felajánlva - elveszik, amikor a felhasználó adott esetben előfizet az adott kiadványra."
         }
         //4) Вьетнамский = vi
         else if currentPhoneLangID == "vi"{
-        subscribeLabelPopUpView.text = "Đăng ký"
+            subscribeLabelPopUpView.text = "Đăng ký"
+            restorePurchasesButtonOutlet.setTitle("Khôi phục mua hàng", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Điều khoản sử dụng", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Chính sách bảo mật", for: .normal)
+            subscribeButtonOutlet.setTitle("Đăng ký", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Vui lòng đọc bên dưới về đăng ký tự động gia hạn của sản phẩm này:"
+            aboutSubscriptionTextLabel.text = "Thanh toán sẽ được tính vào Tài khoản iTunes khi xác nhận mua hàng. Đăng ký tự động gia hạn trừ khi tính năng tự động gia hạn được tắt ít nhất 24 giờ trước khi kết thúc giai đoạn hiện tại. Tài khoản sẽ bị tính phí gia hạn trong vòng 24 giờ trước khi kết thúc giai đoạn hiện tại và xác định chi phí gia hạn. Đăng ký có thể do người dùng quản lý và tính năng tự động gia hạn có thể bị tắt bằng cách đi tới Cài đặt tài khoản của người dùng sau khi mua. Bất kỳ phần chưa sử dụng nào của thời gian dùng thử miễn phí, nếu được cung cấp, sẽ bị mất khi người dùng mua đăng ký ấn phẩm đó, nếu có."
         }
         //5) Греческий = el
         else if currentPhoneLangID == "el"{
-        subscribeLabelPopUpView.text = "Συνδρομή"
+            subscribeLabelPopUpView.text = "Συνδρομή"
+            restorePurchasesButtonOutlet.setTitle("Επαναφορά αγοράς", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Οροι χρήσης", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Πολιτική απορρήτου", for: .normal)
+            subscribeButtonOutlet.setTitle("Εγγραφείτε", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Διαβάστε παρακάτω σχετικά με την αυτόματη ανανέωση της συνδρομής αυτού του προϊόντος:"
+            aboutSubscriptionTextLabel.text = "Η πληρωμή θα χρεωθεί στον λογαριασμό iTunes κατά την επιβεβαίωση της αγοράς. Η συνδρομή ανανεώνεται αυτόματα, εκτός εάν η αυτόματη ανανέωση είναι απενεργοποιημένη τουλάχιστον 24 ώρες πριν από το τέλος της τρέχουσας περιόδου. Ο λογαριασμός θα χρεωθεί για ανανέωση εντός 24 ωρών πριν από το τέλος της τρέχουσας περιόδου και θα προσδιορίσει το κόστος της ανανέωσης. Η διαχείριση των συνδρομών μπορεί να γίνει από τον χρήστη και η αυτόματη ανανέωση μπορεί να απενεργοποιηθεί μεταβαίνοντας στις Ρυθμίσεις λογαριασμού του χρήστη μετά την αγορά. Οποιοδήποτε αχρησιμοποίητο τμήμα μιας δωρεάν δοκιμαστικής περιόδου, εάν προσφέρεται, θα χαθεί όταν ο χρήστης αγοράσει μια συνδρομή σε αυτήν τη δημοσίευση, όπου ισχύει."
         }
         //6) Датский = da
         else if currentPhoneLangID == "da"{
-        subscribeLabelPopUpView.text = "Abonnement"
+            subscribeLabelPopUpView.text = "Abonnement"
+            restorePurchasesButtonOutlet.setTitle("Gendan køb", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Betingelser for brug", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Fortrolighedspolitik", for: .normal)
+            subscribeButtonOutlet.setTitle("Tilmeld", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Læs nedenfor om det automatiske fornyelsesabonnement på dette produkt:"
+            aboutSubscriptionTextLabel.text = "Betalingen opkræves på iTunes-kontoen ved bekræftelse af købet. Abonnement fornyes automatisk, medmindre automatisk fornyelse er slået fra mindst 24 timer inden udgangen af den nuværende periode. Konto vil blive opkrævet for fornyelse inden for 24 timer inden udgangen af den nuværende periode og identificere omkostningerne ved fornyelsen. Abonnementer administreres muligvis af brugeren, og automatisk fornyelse kan slås fra ved at gå til brugerens kontoindstillinger efter køb. Enhver ubrugt del af en gratis prøveperiode fortabes, hvis den tilbydes, når brugeren køber et abonnement på den publikation, hvor det er relevant."
         }
         //7) Иврит = he
         else if currentPhoneLangID == "he"{
-        subscribeLabelPopUpView.text = "מִנוּי"
+            subscribeLabelPopUpView.text = "מִנוּי"
+            restorePurchasesButtonOutlet.setTitle("שחזר רכישה", for: .normal)
+            termsOfUseButtonOutlet.setTitle("תנאי שימוש", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("מדיניות פרטיות", for: .normal)
+            subscribeButtonOutlet.setTitle("הירשם כמנוי", for: .normal)
+            aboutSubscriptionTitleLabel.text = "אנא קרא למטה על המינוי לחידוש אוטומטי של מוצר זה:"
+            aboutSubscriptionTextLabel.text = "התשלום יחויב בחשבון iTunes באישור הרכישה. המינוי מתחדש אוטומטית אלא אם כן הכיבוי האוטומטי מושבת לפחות 24 שעות לפני תום התקופה הנוכחית. חשבון יחויב בגין חידוש תוך 24 שעות לפני תום התקופה הנוכחית, ויזהה את עלות החידוש. המשתמש יכול לנהל מנויים וניתן יהיה לכבות את החידוש האוטומטי על ידי מעבר להגדרות החשבון של המשתמש לאחר הרכישה. כל חלק שלא נעשה בו שימוש בתקופת ניסיון בחינם, אם הוא מוצע, יופטר כאשר המשתמש רוכש מנוי לפרסום זה, במידת הצורך."
         }
         //8) Индонезийский = id
         else if currentPhoneLangID == "id"{
-        subscribeLabelPopUpView.text = "Berlangganan"
+            subscribeLabelPopUpView.text = "Berlangganan"
+            restorePurchasesButtonOutlet.setTitle("Pulihkan pembelian", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Syarat Penggunaan", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Rahasia pribadi", for: .normal)
+            subscribeButtonOutlet.setTitle("Langganan", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Harap baca di bawah tentang langganan perpanjangan otomatis produk ini:"
+            aboutSubscriptionTextLabel.text = "Pembayaran akan dibebankan ke Akun iTunes di konfirmasi pembelian. Langganan diperpanjang secara otomatis kecuali perpanjangan otomatis dimatikan setidaknya 24 jam sebelum akhir periode berjalan. Akun akan dikenakan biaya untuk pembaruan dalam 24 jam sebelum akhir periode berjalan, dan mengidentifikasi biaya pembaruan. Langganan dapat dikelola oleh pengguna dan perpanjangan otomatis dapat dimatikan dengan membuka Pengaturan Akun pengguna setelah pembelian. Setiap bagian yang tidak terpakai dari periode uji coba gratis, jika ditawarkan, akan hangus saat pengguna membeli langganan untuk publikasi tersebut, jika berlaku."
         }
         //9) Испанский = es
         else if currentPhoneLangID == "es"{
-        subscribeLabelPopUpView.text = "Suscripción"
+            subscribeLabelPopUpView.text = "Suscripción"
+            restorePurchasesButtonOutlet.setTitle("Restaurar compra", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Términos de Uso", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Política de privacidad", for: .normal)
+            subscribeButtonOutlet.setTitle("Suscribir", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Lea a continuación sobre la suscripción de renovación automática de este producto:"
+            aboutSubscriptionTextLabel.text = "El pago se cargará a la cuenta de iTunes en la confirmación de la compra. La suscripción se renueva automáticamente a menos que la renovación automática se desactive al menos 24 horas antes del final del período actual. Se cobrará a la cuenta la renovación dentro de las 24 horas anteriores al final del período actual, e identificará el costo de la renovación. Las suscripciones pueden ser administradas por el usuario y la renovación automática puede desactivarse yendo a la Configuración de la cuenta del usuario después de la compra. Cualquier porción no utilizada de un período de prueba gratuito, si se ofrece, se perderá cuando el usuario compre una suscripción a esa publicación, cuando corresponda."
         }
         //10) Итальянский = it
         else if currentPhoneLangID == "it"{
-        subscribeLabelPopUpView.text = "Sottoscrizione"
+            subscribeLabelPopUpView.text = "Sottoscrizione"
+            restorePurchasesButtonOutlet.setTitle("Ripristinare acquisto", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Condizioni d'uso", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Politica sulla riservatezza", for: .normal)
+            subscribeButtonOutlet.setTitle("Sottoscrivi", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Leggi di seguito sull'abbonamento con rinnovo automatico di questo prodotto:"
+            aboutSubscriptionTextLabel.text = "Il pagamento verrà addebitato sull'account iTunes alla conferma dell'acquisto. L'abbonamento si rinnova automaticamente a meno che il rinnovo automatico non venga disattivato almeno 24 ore prima della fine del periodo corrente. L'account verrà addebitato per il rinnovo entro 24 ore prima della fine del periodo corrente e verrà identificato il costo del rinnovo. Gli abbonamenti possono essere gestiti dall'utente e il rinnovo automatico può essere disattivato accedendo alle Impostazioni dell'account dell'utente dopo l'acquisto. Qualsiasi parte non utilizzata di un periodo di prova gratuito, se offerto, verrà annullata quando l'utente acquista un abbonamento a tale pubblicazione, ove applicabile."
         }
         //11) Каталанский = ca
         else if currentPhoneLangID == "ca"{
-        subscribeLabelPopUpView.text = "Subscripció"
+            subscribeLabelPopUpView.text = "Subscripció"
+            restorePurchasesButtonOutlet.setTitle("Restaurar la compra", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Condicions d'ús", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Política de privacitat", for: .normal)
+            subscribeButtonOutlet.setTitle("Subscriu-te", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Llegiu a continuació sobre la subscripció de renovació automàtica d’aquest producte:"
+            aboutSubscriptionTextLabel.text = "El pagament es carregarà al compte d’iTunes en confirmar la compra. La subscripció es renova automàticament tret que la renovació automàtica estigui desactivada almenys 24 hores abans que finalitzi el període actual. Es carregarà el compte per renovació dins de les 24 hores anteriors al final del període actual i identifiqueu el cost de la renovació. L'usuari pot gestionar les subscripcions i es pot desactivar la renovació automàtica anant a la configuració del compte de l'usuari després de la compra. Qualsevol part no utilitzada d'un període de prova gratuït, si s'ofereix, es perdrà quan l'usuari adquireixi una subscripció a aquesta publicació, si escau."
         }
         //12) Китайский = zh
         else if currentPhoneLangID == "zh"{
-        subscribeLabelPopUpView.text = "訂閱"
+            subscribeLabelPopUpView.text = "訂閱"
+            restorePurchasesButtonOutlet.setTitle("恢復購買", for: .normal)
+            termsOfUseButtonOutlet.setTitle("使用條款", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("隱私政策", for: .normal)
+            subscribeButtonOutlet.setTitle("訂閱", for: .normal)
+            aboutSubscriptionTitleLabel.text = "請閱讀以下有關此產品的自動續訂的信息："
+            aboutSubscriptionTextLabel.text = "購買確認後，付款將從iTunes帳戶中扣除。 訂閱會自動續訂，除非在當前期間結束前至少24小時關閉了自動續訂。 將會在當前期間結束前的24小時內向帳戶收取續訂費用，並確定續訂費用。 訂閱可以由用戶管理，並且可以通過購買後轉到用戶的“帳戶設置”來關閉自動續訂。 免費試用期的任何未使用部分（如果提供）將在用戶購買該出版物的訂閱（如果適用）時被沒收。"
         }
         //13) Корейский = ko
         else if currentPhoneLangID == "ko"{
-        subscribeLabelPopUpView.text = "신청"
+            subscribeLabelPopUpView.text = "신청"
+            restorePurchasesButtonOutlet.setTitle("구매 복원", for: .normal)
+            termsOfUseButtonOutlet.setTitle("이용 약관", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("개인 정보 정책", for: .normal)
+            subscribeButtonOutlet.setTitle("구독", for: .normal)
+            aboutSubscriptionTitleLabel.text = "이 제품의 자동 갱신 구독에 대해 아래를 읽으십시오."
+            aboutSubscriptionTextLabel.text = "결제는 구매 확인시 iTunes 계정으로 청구됩니다. 현재 기간이 끝나기 최소 24 시간 전에 자동 갱신을 끄지 않으면 구독이 자동으로 갱신됩니다. 현재 기간이 끝나기 전 24 시간 이내에 갱신 비용이 계정으로 청구되며 갱신 비용을 확인할 수 있습니다. 구독은 사용자가 관리 할 수 있으며 구매 후 사용자의 계정 설정으로 이동하여 자동 갱신을 끌 수 있습니다. 무료 평가판 기간 중 사용되지 않은 부분은 사용자가 해당 발행물에 대한 구독을 구매할 때 상실됩니다."
         }
         //14) Малайский = ms
         else if currentPhoneLangID == "ms"{
-        subscribeLabelPopUpView.text = "Langganan"
+            subscribeLabelPopUpView.text = "Langganan"
+            restorePurchasesButtonOutlet.setTitle("Pulihkan pembelian", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Syarat penggunaan", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Dasar Privasi", for: .normal)
+            subscribeButtonOutlet.setTitle("Langgan", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Baca di bawah mengenai langganan pembaharuan automatik produk ini:"
+            aboutSubscriptionTextLabel.text = "Pembayaran akan dikenakan ke Akaun iTunes semasa pengesahan pembelian. Langganan diperbaharui secara automatik kecuali pembaharuan automatik dimatikan sekurang-kurangnya 24 jam sebelum akhir tempoh semasa. Akaun akan dikenakan bayaran untuk pembaharuan dalam 24 jam sebelum akhir tempoh semasa, dan mengenal pasti kos pembaharuan. Langganan dapat dikendalikan oleh pengguna dan pembaharuan automatik dapat dimatikan dengan pergi ke Tetapan Akaun pengguna setelah pembelian. Sebarang bahagian masa percubaan percuma yang tidak digunakan, jika ditawarkan, akan hilang apabila pengguna membeli langganan penerbitan tersebut, jika berlaku."
         }
         //15) Немецкий = de
         else if currentPhoneLangID == "de"{
-        subscribeLabelPopUpView.text = "Abonnement"
+            subscribeLabelPopUpView.text = "Abonnement"
+            restorePurchasesButtonOutlet.setTitle("Kauf wiederherstellen", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Nutzungsbedingungen", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Datenschutz-Bestimmungen", for: .normal)
+            subscribeButtonOutlet.setTitle("Abonnieren", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Bitte lesen Sie unten über das Abonnement für die automatische Verlängerung dieses Produkts:"
+            aboutSubscriptionTextLabel.text = "Die Zahlung wird dem iTunes-Konto bei Bestätigung des Kaufs belastet. Das Abonnement verlängert sich automatisch, es sei denn, die automatische Verlängerung wird mindestens 24 Stunden vor dem Ende des aktuellen Zeitraums deaktiviert. Die Verlängerung des Kontos wird innerhalb von 24 Stunden vor dem Ende des aktuellen Zeitraums belastet und die Kosten für die Verlängerung werden angegeben. Abonnements können vom Benutzer verwaltet werden und die automatische Verlängerung kann deaktiviert werden, indem Sie nach dem Kauf zu den Kontoeinstellungen des Benutzers gehen. Jeder nicht genutzte Teil eines kostenlosen Testzeitraums verfällt, falls er angeboten wird, verfällt, wenn der Benutzer gegebenenfalls ein Abonnement für diese Veröffentlichung erwirbt."
         }
         //16) Нидерландский = nl
         else if currentPhoneLangID == "nl"{
-        subscribeLabelPopUpView.text = "Abonnement"
+            subscribeLabelPopUpView.text = "Abonnement"
+            restorePurchasesButtonOutlet.setTitle("Herstel aankoop", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Gebruiksvoorwaarden", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Privacybeleid", for: .normal)
+            subscribeButtonOutlet.setTitle("Abonneren", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Lees hieronder meer over het automatisch vernieuwende abonnement van dit product:"
+            aboutSubscriptionTextLabel.text = "De betaling wordt bij bevestiging van de aankoop in rekening gebracht op het iTunes-account. Het abonnement wordt automatisch verlengd, tenzij automatisch verlengen is uitgeschakeld ten minste 24 uur voor het einde van de huidige periode. Het account wordt binnen 24 uur voorafgaand aan het einde van de lopende periode in rekening gebracht voor verlenging en identificeert de kosten van de verlenging. Abonnementen kunnen door de gebruiker worden beheerd en automatische verlenging kan worden uitgeschakeld door na aankoop naar de accountinstellingen van de gebruiker te gaan. Elk ongebruikt deel van een gratis proefperiode, indien aangeboden, wordt verbeurd wanneer de gebruiker een abonnement op die publicatie koopt, indien van toepassing."
         }
         //17) Норвежский = nb
         else if currentPhoneLangID == "nb"{
-        subscribeLabelPopUpView.text = "Abonnement"
+            subscribeLabelPopUpView.text = "Abonnement"
+            restorePurchasesButtonOutlet.setTitle("Gjenopprett kjøp", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Vilkår for bruk", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Personvernregler", for: .normal)
+            subscribeButtonOutlet.setTitle("Abonnere", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Les nedenfor om automatisk fornyelse av abonnementet på dette produktet:"
+            aboutSubscriptionTextLabel.text = "Betalingen belastes iTunes-kontoen ved kjøpsbekreftelse. Abonnementet fornyes automatisk med mindre automatisk fornyelse er slått av minst 24 timer før utløpet av inneværende periode. Konto belastes for fornyelse innen 24 timer før utløpet av inneværende periode, og identifiserer kostnadene for fornyelsen. Abonnementer kan administreres av brukeren, og automatisk fornyelse kan slås av ved å gå til brukerens kontoinnstillinger etter kjøpet. Enhver ubrukt del av en gratis prøveperiode, hvis den tilbys, blir fortapt når brukeren kjøper et abonnement på den publikasjonen, der det er aktuelt."
         }
         //18) Польский = pl
         else if currentPhoneLangID == "pl"{
-        subscribeLabelPopUpView.text = "Subskrypcja"
+            subscribeLabelPopUpView.text = "Subskrypcja"
+            restorePurchasesButtonOutlet.setTitle("Przywróć zakup", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Warunki korzystania", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Polityka prywatności", for: .normal)
+            subscribeButtonOutlet.setTitle("Subskrybuj", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Przeczytaj poniżej na temat automatycznego odnawiania subskrypcji tego produktu:"
+            aboutSubscriptionTextLabel.text = "Płatność zostanie pobrana z konta iTunes po potwierdzeniu zakupu. Subskrypcja odnawia się automatycznie, chyba że automatyczne odnowienie zostanie wyłączone co najmniej 24 godziny przed końcem bieżącego okresu. Konto zostanie obciążone opłatą za przedłużenie w ciągu 24 godzin przed końcem bieżącego okresu i określi koszt odnowienia. Subskrypcje mogą być zarządzane przez użytkownika, a automatyczne odnawianie można wyłączyć, przechodząc do Ustawień konta użytkownika po zakupie. Każda niewykorzystana część bezpłatnego okresu próbnego, jeśli jest oferowana, przepadnie, gdy użytkownik kupi subskrypcję tej publikacji, w stosownych przypadkach."
         }
         //19) Португальский = pt
         else if currentPhoneLangID == "pt"{
-        subscribeLabelPopUpView.text = "Inscrição"
+            subscribeLabelPopUpView.text = "Inscrição"
+            restorePurchasesButtonOutlet.setTitle("Restaurar compra", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Termos de uso", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Política de Privacidade", for: .normal)
+            subscribeButtonOutlet.setTitle("Se inscrever", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Leia abaixo sobre a renovação automática da assinatura deste produto:"
+            aboutSubscriptionTextLabel.text = "O pagamento será cobrado na conta do iTunes na confirmação da compra. A assinatura é renovada automaticamente, a menos que a renovação automática seja desativada pelo menos 24 horas antes do final do período atual. A renovação da conta será cobrada 24 horas antes do final do período atual e identificará o custo da renovação. As assinaturas podem ser gerenciadas pelo usuário e a renovação automática pode ser desligada acessando as Configurações da conta do usuário após a compra. Qualquer porção não utilizada de um período de teste gratuito, se oferecido, será perdida quando o usuário adquirir uma assinatura dessa publicação, quando aplicável."
         }
         //20) Румынский = ro
         else if currentPhoneLangID == "ro"{
-        subscribeLabelPopUpView.text = "Abonament"
+            subscribeLabelPopUpView.text = "Abonament"
+            restorePurchasesButtonOutlet.setTitle("Restabili cumpărare", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Termeni de utilizare", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Politica de Confidențialitate", for: .normal)
+            subscribeButtonOutlet.setTitle("Abonati-va", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Vă rugăm să citiți mai jos despre abonamentul de reînnoire automată a acestui produs:"
+            aboutSubscriptionTextLabel.text = "Plata va fi încasată în contul iTunes la confirmarea achiziției. Abonamentul se reînnoiește automat, cu excepția cazului în care reînnoirea automată este dezactivată cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Contul va fi taxat pentru reînnoire în termen de 24 de ore înainte de sfârșitul perioadei curente și va identifica costul reînnoirii. Abonamentele pot fi gestionate de utilizator și reînnoirea automată poate fi dezactivată accesând Setările contului utilizatorului după cumpărare. Orice porțiune neutilizată dintr-o perioadă de încercare gratuită, dacă este oferită, va fi pierdută atunci când utilizatorul achiziționează un abonament la publicația respectivă, acolo unde este cazul."
         }
         //21) Русский = ru
         
         //22) Словацкий = sk
         else if currentPhoneLangID == "sk"{
-        subscribeLabelPopUpView.text = "Predplatné"
+            subscribeLabelPopUpView.text = "Predplatné"
+            restorePurchasesButtonOutlet.setTitle("Obnoviť nákup", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Podmienky používania", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Zásady ochrany osobných údajov", for: .normal)
+            subscribeButtonOutlet.setTitle("Predplatiť", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Prečítajte si nižšie informácie o automatickom obnovení predplatného tohto produktu:"
+            aboutSubscriptionTextLabel.text = "Platba bude zúčtovaná na účet iTunes pri potvrdení nákupu. Predplatné sa automaticky obnoví, pokiaľ automatické obnovenie nevypnete aspoň 24 hodín pred koncom aktuálneho obdobia. Za obnovenie účtu bude naúčtovaná suma do 24 hodín pred koncom aktuálneho obdobia a identifikácia nákladov na obnovenie. Predplatné môže spravovať používateľ a automatické obnovenie môžete vypnúť tak, že po zakúpení prejdete do nastavení účtu používateľa. Akákoľvek nevyužitá časť bezplatného skúšobného obdobia, ak bude ponúknutá, prepadne, keď si používateľ zakúpi predplatné tejto publikácie, ak je to vhodné."
         }
         //23) Тайский = th
         else if currentPhoneLangID == "th"{
-        subscribeLabelPopUpView.text = "การสมัครสมาชิก"
+            subscribeLabelPopUpView.text = "การสมัครสมาชิก"
+            restorePurchasesButtonOutlet.setTitle("กู้คืนการซื้อ", for: .normal)
+            termsOfUseButtonOutlet.setTitle("ข้อตกลงในการใช้งาน", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("นโยบายความเป็นส่วนตัว", for: .normal)
+            subscribeButtonOutlet.setTitle("ติดตาม", for: .normal)
+            aboutSubscriptionTitleLabel.text = "โปรดอ่านด้านล่างเกี่ยวกับการสมัครสมาชิกต่ออายุอัตโนมัติของผลิตภัณฑ์นี้:"
+            aboutSubscriptionTextLabel.text = "การชำระเงินจะถูกหักออกจากบัญชี iTunes ที่ยืนยันการสั่งซื้อ การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติเว้นแต่การต่ออายุอัตโนมัติจะถูกปิดอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดช่วงเวลาปัจจุบัน บัญชีจะถูกเรียกเก็บเงินสำหรับการต่ออายุภายใน 24 ชั่วโมงก่อนสิ้นสุดช่วงเวลาปัจจุบันและระบุค่าใช้จ่ายในการต่ออายุ การสมัครสมาชิกอาจได้รับการจัดการโดยผู้ใช้และการต่ออายุอัตโนมัติอาจถูกปิดโดยไปที่การตั้งค่าบัญชีของผู้ใช้หลังการซื้อ ส่วนที่ไม่ได้ใช้งานของช่วงทดลองใช้ฟรีหากมีให้จะถูกริบเมื่อผู้ใช้ซื้อการสมัครรับข้อมูลสิ่งพิมพ์นั้นหากมี"
         }
         //24) Турецкий = tr
         else if currentPhoneLangID == "tr"{
-        subscribeLabelPopUpView.text = "Abonelik"
+            subscribeLabelPopUpView.text = "Abonelik"
+            restorePurchasesButtonOutlet.setTitle("Satın almayı geri yükle", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Kullanım Şartları", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Gizlilik Politikası", for: .normal)
+            subscribeButtonOutlet.setTitle("Abone ol", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Lütfen bu ürünün otomatik yenilenen aboneliği hakkında bilgi edinin:"
+            aboutSubscriptionTextLabel.text = "Ödeme, satın alma onayı ile iTunes Hesabından tahsil edilecektir. Otomatik yenileme, cari dönemin bitiminden en az 24 saat önce kapatılmadığı sürece abonelik otomatik olarak yenilenir. Cari dönemin bitiminden 24 saat önce yenileme için hesap ücretlendirilecek ve yenileme maliyetini belirleyecektir. Abonelikler kullanıcı tarafından yönetilebilir ve satın alma işleminden sonra kullanıcının Hesap Ayarlarına gidilerek otomatik yenileme kapatılabilir. Ücretsiz deneme süresinin kullanılmayan herhangi bir kısmı, eğer teklif edilirse, kullanıcı bu yayına bir abonelik satın aldığında kaybedilecektir."
         }
         //25) Украинский = uk
         else if currentPhoneLangID == "uk"{
-        subscribeLabelPopUpView.text = "Передплата"
+            subscribeLabelPopUpView.text = "Передплата"
+            restorePurchasesButtonOutlet.setTitle("Відновити покупку", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Умови використання", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Політика конфіденційності", for: .normal)
+            subscribeButtonOutlet.setTitle("Підписатися", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Будь ласка, прочитайте нижче про автоматичне поновлення підписки на цей продукт:"
+            aboutSubscriptionTextLabel.text = "Оплата буде стягнута з рахунку iTunes після підтвердження покупки. Підписка автоматично поновлюється, якщо автоматичне поновлення не вимкнено принаймні за 24 години до кінця поточного періоду. З рахунку стягуватиметься плата за поновлення протягом 24 годин до кінця поточного періоду та визначатиметься вартість поновлення. Користувач може керувати підписками, а автоматичне поновлення може бути вимкнено, перейшовши в Налаштування облікового запису користувача після покупки. Будь-яка невикористана частина безкоштовного пробного періоду, якщо вона буде запропонована, буде втрачена, коли користувач придбає підписку на цю публікацію, де це можливо."
         }
         //26) Финский = fi
         else if currentPhoneLangID == "fi"{
-        subscribeLabelPopUpView.text = "Tilaus"
+            subscribeLabelPopUpView.text = "Tilaus"
+            restorePurchasesButtonOutlet.setTitle("Palauta osto", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Käyttöehdot", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Tietosuojakäytäntö", for: .normal)
+            subscribeButtonOutlet.setTitle("Tilaa", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Lue alla tämän tuotteen automaattinen uusiminen:"
+            aboutSubscriptionTextLabel.text = "Maksu veloitetaan iTunes-tililtä oston vahvistuksen yhteydessä. Tilaus uusitaan automaattisesti, ellei automaattista uusimista ole kytketty pois päältä vähintään 24 tuntia ennen nykyisen jakson päättymistä. Tililtä veloitetaan uusiminen 24 tunnin sisällä ennen kuluvan kauden päättymistä, ja siinä ilmoitetaan uusimisen hinta. Käyttäjä voi hallinnoida tilauksia ja automaattinen uusiminen voidaan poistaa käytöstä siirtymällä käyttäjän tiliasetuksiin ostamisen jälkeen. Maksuttoman kokeilujakson käyttämätön osa menetetään, jos sitä tarjotaan, kun käyttäjä ostaa tilauksen kyseiseen julkaisuun."
         }
         //27) Французский = fr
         else if currentPhoneLangID == "fr"{
-        subscribeLabelPopUpView.text = "Abonnement"
+            subscribeLabelPopUpView.text = "Abonnement"
+            restorePurchasesButtonOutlet.setTitle("Restaurer l'achat", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Conditions d'utilisation", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Politique de confidentialité", for: .normal)
+            subscribeButtonOutlet.setTitle("Souscrire", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Veuillez lire ci-dessous à propos de l'abonnement à renouvellement automatique de ce produit:"
+            aboutSubscriptionTextLabel.text = "Le paiement sera débité du compte iTunes lors de la confirmation de l'achat. L'abonnement se renouvelle automatiquement sauf si le renouvellement automatique est désactivé au moins 24 heures avant la fin de la période en cours. Le compte sera facturé pour le renouvellement dans les 24 heures avant la fin de la période en cours, et identifiera le coût du renouvellement. Les abonnements peuvent être gérés par l'utilisateur et le renouvellement automatique peut être désactivé en accédant aux paramètres du compte de l'utilisateur après l'achat. Toute partie inutilisée d'une période d'essai gratuite, si elle est offerte, sera perdue lorsque l'utilisateur achète un abonnement à cette publication, le cas échéant."
         }
         //28) Хинди = hi
         else if currentPhoneLangID == "hi"{
-        subscribeLabelPopUpView.text = "अंशदान"
+            subscribeLabelPopUpView.text = "अंशदान"
+            restorePurchasesButtonOutlet.setTitle("पुनःस्थापन क्रय", for: .normal)
+            termsOfUseButtonOutlet.setTitle("उपयोग की शर्तें", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("गोपनीयता नीति", for: .normal)
+            subscribeButtonOutlet.setTitle("सदस्यता लें", for: .normal)
+            aboutSubscriptionTitleLabel.text = "कृपया इस उत्पाद के ऑटो-नवीनीकरण सदस्यता के बारे में नीचे पढ़ें:"
+            aboutSubscriptionTextLabel.text = "खरीद की पुष्टि पर iTunes खाते से भुगतान लिया जाएगा। सदस्यता स्वतः स्वतः नवीनीकृत हो जाती है जब तक कि वर्तमान अवधि के अंत से कम से कम 24-घंटे पहले ऑटो-नवीनीकरण बंद न हो जाए। चालू अवधि की समाप्ति से 24 घंटे पहले नवीनीकरण के लिए खाते का शुल्क लिया जाएगा और नवीनीकरण की लागत की पहचान की जाएगी। सदस्यता को उपयोगकर्ता द्वारा प्रबंधित किया जा सकता है और खरीद के बाद उपयोगकर्ता के खाता सेटिंग्स में जाकर ऑटो-नवीनीकरण बंद किया जा सकता है। नि: शुल्क परीक्षण अवधि के किसी भी अप्रयुक्त हिस्से को, यदि पेशकश की जाती है, तो उपयोगकर्ता द्वारा उस प्रकाशन की सदस्यता खरीदने पर रोक लगा दी जाएगी, जहां लागू हो।"
         }
         //29) Хорватский = hr
         else if currentPhoneLangID == "hr"{
-        subscribeLabelPopUpView.text = "Pretplata"
+            subscribeLabelPopUpView.text = "Pretplata"
+            restorePurchasesButtonOutlet.setTitle("Vrati kupnju", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Uvjeti korištenja", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Pravila o privatnosti", for: .normal)
+            subscribeButtonOutlet.setTitle("Pretplatiti", for: .normal)
+            aboutSubscriptionTitleLabel.text = "U nastavku pročitajte o automatski obnavljanju pretplate za ovaj proizvod:"
+            aboutSubscriptionTextLabel.text = "Uplata će biti naplaćena na iTunes račun nakon potvrde kupnje. Pretplata se automatski obnavlja, osim ako automatsko obnavljanje nije isključeno najmanje 24 sata prije kraja tekućeg razdoblja. Račun će se naplatiti za obnovu u roku od 24 sata prije kraja tekućeg razdoblja i identificirati troškove obnove. Korisnikom može upravljati pretplatama, a automatska obnova može se isključiti odlaskom u Postavke korisničkog računa nakon kupnje. Svaki neiskorišteni dio besplatnog probnog razdoblja, ako se ponudi, izgubit će se kada korisnik kupi pretplatu na tu publikaciju, tamo gdje je to primjenjivo."
         }
         //30) Чешский = cs
         else if currentPhoneLangID == "cs"{
-        subscribeLabelPopUpView.text = "Předplatné"
+            subscribeLabelPopUpView.text = "Předplatné"
+            restorePurchasesButtonOutlet.setTitle("Obnovit nákup", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Podmínky použití", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Zásady ochrany osobních údajů", for: .normal)
+            subscribeButtonOutlet.setTitle("Předplatit", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Přečtěte si níže o automatickém obnovení předplatného tohoto produktu:"
+            aboutSubscriptionTextLabel.text = "Platba bude účtována na účet iTunes při potvrzení nákupu. Předplatné se automaticky obnovuje, pokud není automatické obnovení vypnuto alespoň 24 hodin před koncem aktuálního období. Účet bude účtován za obnovení do 24 hodin před koncem aktuálního období a bude identifikovat náklady na obnovení. Předplatné může spravovat uživatel a automatické obnovení lze vypnout přechodem do nastavení účtu uživatele po zakoupení. Jakákoli nevyužitá část bezplatného zkušebního období, pokud bude nabídnuta, propadne, pokud si uživatel zakoupí předplatné této publikace, je-li to relevantní."
         }
         //31) Шведский = sv
         else if currentPhoneLangID == "sv"{
-        subscribeLabelPopUpView.text = "Prenumeration"
+            subscribeLabelPopUpView.text = "Prenumeration"
+            restorePurchasesButtonOutlet.setTitle("Återställa köp", for: .normal)
+            termsOfUseButtonOutlet.setTitle("Villkor", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("Integritetspolicy", for: .normal)
+            subscribeButtonOutlet.setTitle("Prenumerera", for: .normal)
+            aboutSubscriptionTitleLabel.text = "Läs nedan om den automatiska förnyelsen av den här produkten:"
+            aboutSubscriptionTextLabel.text = "Betalning debiteras iTunes-kontot vid bekräftelse på köpet. Prenumerationen förnyas automatiskt såvida inte automatisk förnyelse är avstängd minst 24 timmar före slutet av den aktuella perioden. Kontot debiteras för förnyelse inom 24 timmar före slutet av den aktuella perioden och identifierar kostnaden för förnyelsen. Prenumerationer kan hanteras av användaren och automatisk förnyelse kan stängas av genom att gå till användarens kontoinställningar efter köpet. Eventuell oanvänd del av en gratis provperiod, om den erbjuds, förverkas när användaren köper en prenumeration på den publikationen, där så är tillämpligt."
         }
         //32) Японский = ja
         else if currentPhoneLangID == "ja"{
-        subscribeLabelPopUpView.text = "申し込み"
+            subscribeLabelPopUpView.text = "申し込み"
+            restorePurchasesButtonOutlet.setTitle("購入商品を復元する", for: .normal)
+            termsOfUseButtonOutlet.setTitle("利用規約", for: .normal)
+            privacyPolicyButtonOutlet.setTitle("個人情報保護方針", for: .normal)
+            subscribeButtonOutlet.setTitle("申し込む", for: .normal)
+            aboutSubscriptionTitleLabel.text = "この製品の自動更新サブスクリプションについては、以下をお読みください："
+            aboutSubscriptionTextLabel.text = "お支払いは購入確認時にiTunesアカウントに請求されます。 現在の期間が終了する少なくとも24時間前に自動更新をオフにしない限り、サブスクリプションは自動的に更新されます。 アカウントには、現在の期間が終了する前の24時間以内に更新料が請求され、更新のコストが特定されます。 サブスクリプションはユーザーが管理でき、購入後にユーザーのアカウント設定に移動して自動更新をオフにすることができます。 無料試用期間の未使用部分が提供されている場合、ユーザーが該当する場合、そのパブリケーションのサブスクリプションを購入すると失効します。"
         }
         
         
@@ -556,7 +736,7 @@ class ViewController: UIViewController {
             numberFormatter.numberStyle = .currency
             let priceString = numberFormatter.string(from: product.price)! + month
             //делаем часть текста жирным
-            let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
             let attributedString2 = NSMutableAttributedString(string: subscriptionPriceDescriptionBoldTextLabel, attributes:attrs2)
             //делаем часть label нормальным
             let priceStringNormalTextLabel = priceString
@@ -697,7 +877,7 @@ class ViewController: UIViewController {
                    productDescriptionBoldTextLabel = "説明 "
                    }
             
-            let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
             let attributedString = NSMutableAttributedString(string: productDescriptionBoldTextLabel, attributes:attrs)
             
             //v.3.3
@@ -969,7 +1149,7 @@ class ViewController: UIViewController {
                    productTrialDurationBoldTextLabel = "無料で "
                    }
             
-            let attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
             let attributedString1 = NSMutableAttributedString(string: productTrialDurationBoldTextLabel, attributes:attrs1)
             //v.3.3
             //делаем часть label нормальным и сразу локализуем

@@ -258,18 +258,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="334" height="604"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subscribeLabelPopUpView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-NL-7f0">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-NL-7f0">
                             <rect key="frame" x="15" y="20" width="304" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="nhH-c5-IN2"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription Price: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vci-to-dX8">
-                            <rect key="frame" x="15" y="75" width="304" height="21.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <rect key="frame" x="15" y="75" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -288,33 +288,26 @@
                             </connections>
                         </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxj-bO-6OP">
-                            <rect key="frame" x="15" y="184.5" width="304" height="30"/>
+                            <rect key="frame" x="15" y="171" width="304" height="30"/>
                             <state key="normal" title="Восстановить покупки"/>
                             <connections>
                                 <action selector="restorePurchasesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8x-QQ-mca"/>
                             </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byh-7S-UoE">
-                            <rect key="frame" x="15" y="111.5" width="304" height="21.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <rect key="frame" x="15" y="107" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free of charge:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-cm-sUN">
-                            <rect key="frame" x="15" y="148" width="304" height="21.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <rect key="frame" x="15" y="139" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
-                            <rect key="frame" x="15" y="489" width="91" height="30"/>
-                            <state key="normal" title="Terms of Use"/>
-                            <connections>
-                                <segue destination="zUQ-xx-Ee9" kind="presentation" id="tIy-dE-gLi"/>
-                            </connections>
-                        </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read below about the auto-renewing subscription nature of this product:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-Gp-ojG">
-                            <rect key="frame" x="15" y="229.5" width="304" height="54"/>
+                            <rect key="frame" x="15" y="216" width="304" height="54"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -331,7 +324,7 @@
                             </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-iR-XDK">
-                            <rect key="frame" x="15" y="288.5" width="304" height="200.5"/>
+                            <rect key="frame" x="15" y="275" width="304" height="200.5"/>
                             <string key="text">Payment will be charged to iTunes Account at confirmation of purchase 
 Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period 
 Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal 
@@ -344,27 +337,34 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="w69-In-cCQ">
                             <rect key="frame" x="157" y="569" width="20" height="20"/>
                         </activityIndicatorView>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
-                            <rect key="frame" x="224" y="489" width="95" height="30"/>
-                            <state key="normal" title="Privacy Policy"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
+                            <rect key="frame" x="15" y="475.5" width="91" height="30"/>
+                            <state key="normal" title="Terms of Use"/>
                             <connections>
-                                <segue destination="Tux-tD-ntR" kind="presentation" id="xdp-H0-TKo"/>
+                                <segue destination="zUQ-xx-Ee9" kind="presentation" id="tIy-dE-gLi"/>
                             </connections>
                         </button>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QPN-sN-Gd3">
                             <rect key="frame" x="157" y="292" width="20" height="20"/>
                         </activityIndicatorView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
+                            <rect key="frame" x="15" y="506.5" width="95" height="30"/>
+                            <state key="normal" title="Privacy Policy"/>
+                            <connections>
+                                <segue destination="Tux-tD-ntR" kind="presentation" id="xdp-H0-TKo"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="byh-7S-UoE" firstAttribute="top" secondItem="vci-to-dX8" secondAttribute="bottom" constant="15" id="0Zg-Dw-2uj"/>
                         <constraint firstItem="BnQ-pP-luN" firstAttribute="top" secondItem="SEO-4a-SWf" secondAttribute="top" constant="20" id="2Cn-kc-kTB"/>
-                        <constraint firstItem="NeR-hg-4yU" firstAttribute="top" secondItem="uiG-iR-XDK" secondAttribute="bottom" id="2fC-OX-B9a"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="uiG-iR-XDK" secondAttribute="trailing" constant="15" id="4UV-Sz-egF"/>
-                        <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="NeR-hg-4yU" secondAttribute="trailing" constant="15" id="8jo-0V-kLy"/>
                         <constraint firstItem="QPN-sN-Gd3" firstAttribute="centerX" secondItem="TsE-6t-Suf" secondAttribute="centerX" id="92w-JO-eZd"/>
                         <constraint firstItem="Mth-Gp-ojG" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="Aju-QD-iZF"/>
                         <constraint firstItem="U0u-N9-2VF" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="KxR-a7-5AG"/>
+                        <constraint firstItem="NeR-hg-4yU" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="LhA-Vk-P3y"/>
+                        <constraint firstItem="NeR-hg-4yU" firstAttribute="top" secondItem="U0u-N9-2VF" secondAttribute="bottom" constant="1" id="LhL-cN-meF"/>
                         <constraint firstItem="byh-7S-UoE" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="O7k-w2-UoA"/>
                         <constraint firstItem="U0u-N9-2VF" firstAttribute="top" secondItem="uiG-iR-XDK" secondAttribute="bottom" id="RHd-d5-SuU"/>
                         <constraint firstItem="QPN-sN-Gd3" firstAttribute="centerY" secondItem="TsE-6t-Suf" secondAttribute="centerY" id="RL7-Co-71X"/>
@@ -377,6 +377,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="Dsb-dm-pJ3" secondAttribute="trailing" id="XhT-uN-m65"/>
                         <constraint firstItem="IcH-NL-7f0" firstAttribute="top" secondItem="SEO-4a-SWf" secondAttribute="top" constant="20" id="XxG-c1-knK"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="BnQ-pP-luN" secondAttribute="trailing" constant="20" id="YVx-lc-orx"/>
+                        <constraint firstItem="NeR-hg-4yU" firstAttribute="height" secondItem="U0u-N9-2VF" secondAttribute="height" id="YYw-tL-8Ng"/>
                         <constraint firstItem="uiG-iR-XDK" firstAttribute="leading" secondItem="SEO-4a-SWf" secondAttribute="leading" constant="15" id="beB-9x-G1g"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="trailing" secondItem="Mth-Gp-ojG" secondAttribute="trailing" constant="15" id="eaw-oi-9ED"/>
                         <constraint firstItem="SEO-4a-SWf" firstAttribute="bottom" secondItem="w69-In-cCQ" secondAttribute="bottom" constant="15" id="ffw-2k-SrE"/>
