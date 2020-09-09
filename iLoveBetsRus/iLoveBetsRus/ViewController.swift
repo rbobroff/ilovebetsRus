@@ -1701,6 +1701,10 @@ class ViewController: UIViewController {
 
                     let button6 = UIImage(named: "ru-6")
                     aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+                    let button7 = UIImage(named: "ru-0")
+                    buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
+            
         }
         
         //v.3.2
@@ -1728,6 +1732,8 @@ class ViewController: UIViewController {
             let button6 = UIImage(named: "ar-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
             
+            let button7 = UIImage(named: "ar-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
             
         }
         //3) Венгерский = hu
@@ -1753,6 +1759,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "hu-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "hu-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //4) Вьетнамский = vi
         else if currentPhoneLangID == "vi"{
@@ -1778,6 +1787,9 @@ class ViewController: UIViewController {
             let button6 = UIImage(named: "vi-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
             
+            let button7 = UIImage(named: "hu-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
+            
         }
         //5) Греческий = el
         else if currentPhoneLangID == "el"{
@@ -1802,6 +1814,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "el-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "el-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //6) Датский = da
         else if currentPhoneLangID == "da"{
@@ -1826,6 +1841,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "da-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "da-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //7) Иврит = he
         else if currentPhoneLangID == "he"{
@@ -1850,6 +1868,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "he-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "he-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //8) Индонезийский = id
         else if currentPhoneLangID == "id"{
@@ -1874,6 +1895,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "id-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "id-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //9) Испанский = es
         else if currentPhoneLangID == "es"{
@@ -1898,6 +1922,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "es-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "es-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //10) Итальянский = it
         else if currentPhoneLangID == "it"{
@@ -1922,6 +1949,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "it-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "it-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //11) Каталанский = ca
         else if currentPhoneLangID == "ca"{
@@ -1946,6 +1976,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "ca-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "ca-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //12) Китайский = zh
         else if currentPhoneLangID == "zh"{
@@ -1970,6 +2003,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "zh-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "zh-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //13) Корейский = ko
         else if currentPhoneLangID == "ko"{
@@ -1994,6 +2030,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "ko-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "ko-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //14) Малайский = ms
         else if currentPhoneLangID == "ms"{
@@ -2018,6 +2057,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "ms-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "ms-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //15) Немецкий = de
         else if currentPhoneLangID == "de"{
@@ -2042,6 +2084,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "de-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "de-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //16) Нидерландский = nl
         else if currentPhoneLangID == "nl"{
@@ -2066,6 +2111,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "nl-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "nl-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //17) Норвежский = nb
         else if currentPhoneLangID == "nb"{
@@ -2090,6 +2138,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "nb-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "nb-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //18) Польский = pl
         else if currentPhoneLangID == "pl"{
@@ -2114,6 +2165,9 @@ class ViewController: UIViewController {
 
              let button6 = UIImage(named: "pl-6")
              aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "pl-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //19) Португальский = pt
         else if currentPhoneLangID == "pt"{
@@ -2138,6 +2192,9 @@ class ViewController: UIViewController {
 
              let button6 = UIImage(named: "pt-6")
              aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "pt-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //20) Румынский = ro
         else if currentPhoneLangID == "ro"{
@@ -2162,6 +2219,9 @@ class ViewController: UIViewController {
 
              let button6 = UIImage(named: "ro-6")
              aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+             let button7 = UIImage(named: "ro-0")
+             buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //21) Русский = ru
         
@@ -2188,6 +2248,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "sk-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "sk-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //23) Тайский = th
         else if currentPhoneLangID == "th"{
@@ -2212,6 +2275,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "th-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "th-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //24) Турецкий = tr
         else if currentPhoneLangID == "tr"{
@@ -2236,6 +2302,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "tr-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "tr-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
         }
         //25) Украинский = uk
         else if currentPhoneLangID == "uk"{
@@ -2261,6 +2330,9 @@ class ViewController: UIViewController {
             let button6 = UIImage(named: "uk-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
             
+            let button7 = UIImage(named: "uk-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
+            
                }
         //26) Финский = fi
         else if currentPhoneLangID == "fi"{
@@ -2285,6 +2357,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "fi-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "fi-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                }
         //27) Французский = fr
         else if currentPhoneLangID == "fr"{
@@ -2309,6 +2384,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "fr-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "fr-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                }
         //28) Хинди = hi
         else if currentPhoneLangID == "hi"{
@@ -2333,6 +2411,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "hi-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "hi-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                }
         //29) Хорватский = hr
         else if currentPhoneLangID == "hr"{
@@ -2357,6 +2438,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "hr-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "hr-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                }
         //30) Чешский = cs
         else if currentPhoneLangID == "cs"{
@@ -2381,6 +2465,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "cs-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "cs-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                }
         //31) Шведский = sv
         else if currentPhoneLangID == "sv"{
@@ -2405,6 +2492,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "sv-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "sv-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                }
         //32) Японский = ja
         else if currentPhoneLangID == "ja"{
@@ -2429,6 +2519,9 @@ class ViewController: UIViewController {
 
             let button6 = UIImage(named: "ja-6")
             aboutUsButton.setImage(button6, for: UIControl.State.normal)
+            
+            let button7 = UIImage(named: "ja-0")
+            buyButtonOutlet.setImage(button7, for: UIControl.State.normal)
                       }
         
         

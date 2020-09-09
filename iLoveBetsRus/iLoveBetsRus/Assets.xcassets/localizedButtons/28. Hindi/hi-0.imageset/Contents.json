@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "hi-0.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
+      "filename" : "hi-1.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
@@ -13,6 +15,7 @@
       "scale" : "3x"
     },
     {
+      "filename" : "hi-2.png",
       "idiom" : "ipad",
       "scale" : "1x"
     },
