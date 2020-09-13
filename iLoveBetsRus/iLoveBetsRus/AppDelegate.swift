@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import ApphudSDK //v.3.3
-import iAd       //v.3.3
+import ApphudSDK //v.3.3 встроенные покупки
+import iAd       //v.3.3 встроенные покупки
 import Firebase //при настройке push-уведомлений
 import Messages //при настройке push-уведомлений
 @UIApplicationMain
@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.barTintColor = UIColorFromHex(rgbValue: 0x161c1f)
         // цвет заголовка NavigationBar
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        //принудительная смета цвета StatusBar, но метод Deprecated. В настройках приложения выставлено по умолчанию StatusBar = Ligh. В Info.plist добавлена запись "View controller-based status bar appearance" = NO
+        //принудительная смена цвета StatusBar, но метод Deprecated. В настройках приложения выставлено по умолчанию StatusBar = Ligh. В Info.plist добавлена запись "View controller-based status bar appearance" = NO
       //  UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
       //  UIApplication.shared.statusBarStyle = .lightContent
         

@@ -17,6 +17,42 @@ class ViewController: UIViewController {
     
 
     
+//Переходим в TermsOfUse
+//проверять версию устройства
+    @IBAction func goTermsOfUseVC(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let termsOfUseViewController = storyBoard.instantiateViewController(withIdentifier: "vcTermsOfUse") as! TermsOfUseViewController
+        
+        //проверка версии ios. убирать окно с подпиской при переходе, если ниже iOS 13
+        if #available(iOS 13, *)  {
+            self.present(termsOfUseViewController, animated: true, completion: nil)
+        }   else   {
+            self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+            self.animateOut(desiredView: self.blurView)
+            self.present(termsOfUseViewController, animated: true, completion: nil)
+        }
+    }
+    
+        
+//Переходим в PrivacyPolicy
+    @IBAction func goPrivacyPolicy(_ sender: Any) {
+        let storyBoard2: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let PrivacyPolicyViewController = storyBoard2.instantiateViewController(withIdentifier: "vcPrivacyPolicy") as! PrivacyPolicyViewController
+            
+            //проверка версии ios. убирать окно с подпиской при переходе, если ниже iOS 13
+        if #available(iOS 13, *)  {
+                self.present(PrivacyPolicyViewController, animated: true, completion: nil)
+        }   else   {
+            self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+                self.animateOut(desiredView: self.blurView)
+                self.present(PrivacyPolicyViewController, animated: true, completion: nil)
+            }
+        }
+    
+    
+    
+    
+    
 //https://www.youtube.com/watch?v=gLTDY8Qj6EM&feature=youtu.be
 //v.3.3 - actions и outlets для всплывающего окна подписки
     //при нажатии кнопки "Купить" на главном экране ViewController срабатывает blur-эффект и после этого появляется Pop-Up View

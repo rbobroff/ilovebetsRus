@@ -11,9 +11,11 @@
 		ED096A00239C32FC00F88568 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0969FF239C32FC00F88568 /* ChatViewController.swift */; };
 		ED096A04239C3DEC00F88568 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED096A03239C3DEC00F88568 /* Constants.swift */; };
 		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
+		ED317784250AC2CB00425C7E /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */; };
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
 		ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */; };
+		ED8258D6250D43CD00986FAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8258D5250D43CD00986FAB /* WebKit.framework */; };
 		ED9BA40924B7B44300078577 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9BA40824B7B44300078577 /* StoreKit.framework */; };
 		EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525822368B3D0002428AB /* AppDelegate.swift */; };
 		EDB525872368B3D0002428AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB525862368B3D0002428AB /* ViewController.swift */; };
@@ -24,6 +26,7 @@
 		EDBE2061237337D500E206C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE2060237337D500E206C9 /* Model.swift */; };
 		EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */; };
 		EDC97D632455F0EE0035E95F /* newTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC97D622455F0EE0035E95F /* newTableViewCell.swift */; };
+		EDCFF141250E90EA002EF435 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFF140250E90EA002EF435 /* PrivacyPolicyViewController.swift */; };
 		EDD2039D24F6F5A9000192DA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2039C24F6F5A9000192DA /* CustomButton.swift */; };
 		EDFF6BF223748C61005816C7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF6BF123748C61005816C7 /* TableViewController.swift */; };
 		F3E66F53F7DC5AA22D1871C4 /* Pods_iLoveBetsRus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */; };
@@ -39,9 +42,11 @@
 		ED096A03239C3DEC00F88568 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED10D595238D97DF00B9EC30 /* Ставки ХП Спортивные Прогнозы.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ставки ХП Спортивные Прогнозы.entitlements"; sourceTree = "<group>"; };
 		ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUsViewController.swift; sourceTree = "<group>"; };
+		ED8258D5250D43CD00986FAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		ED9BA40824B7B44300078577 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EDB5257F2368B3D0002428AB /* iLoveBets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLoveBets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB525822368B3D0002428AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		EDBE2060237337D500E206C9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EDBF7E3E2375D9A4002A5853 /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
 		EDC97D622455F0EE0035E95F /* newTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = newTableViewCell.swift; path = /Users/rbobroff/Documents/GitProjects/ilovebetsRus/iLoveBetsRus/iLoveBetsRus/BettingTips/newTableViewCell.swift; sourceTree = "<absolute>"; };
+		EDCFF140250E90EA002EF435 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		EDD2039C24F6F5A9000192DA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		EDFF6BF123748C61005816C7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8258D6250D43CD00986FAB /* WebKit.framework in Frameworks */,
 				F3E66F53F7DC5AA22D1871C4 /* Pods_iLoveBetsRus.framework in Frameworks */,
 				ED9BA40924B7B44300078577 /* StoreKit.framework in Frameworks */,
 			);
@@ -83,6 +90,7 @@
 		76CF7BAE3DA13D359A170DF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED8258D5250D43CD00986FAB /* WebKit.framework */,
 				ED9BA40824B7B44300078577 /* StoreKit.framework */,
 				2211CC971EF6D59E3EFFE4B0 /* Pods_iLoveBetsRus.framework */,
 			);
@@ -155,6 +163,8 @@
 				EDB525822368B3D0002428AB /* AppDelegate.swift */,
 				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
 				EDB525862368B3D0002428AB /* ViewController.swift */,
+				ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */,
+				EDCFF140250E90EA002EF435 /* PrivacyPolicyViewController.swift */,
 				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
 				ED7B7080236CA44200784F55 /* BettingTips */,
@@ -284,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED317784250AC2CB00425C7E /* TermsOfUseViewController.swift in Sources */,
 				ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */,
 				EDBE2061237337D500E206C9 /* Model.swift in Sources */,
 				ED096A00239C32FC00F88568 /* ChatViewController.swift in Sources */,
@@ -294,6 +305,7 @@
 				EDB525832368B3D0002428AB /* AppDelegate.swift in Sources */,
 				ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */,
 				ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */,
+				EDCFF141250E90EA002EF435 /* PrivacyPolicyViewController.swift in Sources */,
 				EDC97D632455F0EE0035E95F /* newTableViewCell.swift in Sources */,
 				EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */,
 				ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */,
