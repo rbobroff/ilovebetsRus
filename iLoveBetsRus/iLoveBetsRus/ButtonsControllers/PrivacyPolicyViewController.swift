@@ -1,187 +1,180 @@
 //
-//  TermsOfUseViewController.swift
+//  PrivacyPolicyViewController.swift
 //  iLoveBetsRus
 //
-//  Created by Roman Bobrov on 10.09.2020.
+//  Created by Roman Bobrov on 13.09.2020.
 //  Copyright © 2020 Roman Bobrov. All rights reserved.
 //
-
-
-//v3.3
 
 import UIKit
 import WebKit
 
-class TermsOfUseViewController: UIViewController {
+class PrivacyPolicyViewController: UIViewController {
 
-    
-    
+
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    
     @IBOutlet weak var slideButtonOutlet: UIImageView!
-    
     
     //https://www.youtube.com/watch?v=2ArlCvtL33I&feature=youtu.be
     //добавляем библиотеку в Build Phases - Webkit.Framework
     @IBOutlet weak var webView: WKWebView!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //убирать кнопку slideButton, если ниже iOS13
-        if #available(iOS 13, *)  {
-            slideButtonOutlet.isHidden = false
-               }   else   {
-            slideButtonOutlet.isHidden = true
-               }
-        
-        
-        
-        
-       // var url = URL(string: "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse")
-        
-        var termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/en/"
 
-        // if currentLangID == "ru-RU"
+
+    //убирать кнопку slideButton, если ниже iOS13
+    if #available(iOS 13, *)  {
+    slideButtonOutlet.isHidden = false
+    }   else   {
+    slideButtonOutlet.isHidden = true
+    }
+                
+        
+                  var privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/en/"
+
                   if currentPhoneLangID == "ru"     {
-                        termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ru/"
+                        privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ru/"
                   }
                 
                   else if currentPhoneLangID == "ar"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ar/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ar/"
                   }
                   //3) Венгерский = hu
                   else if currentPhoneLangID == "hu"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/hu/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/hu/"
                   }
                   //4) Вьетнамский = vi
                   else if currentPhoneLangID == "vi"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/vi/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/vi/"
                   }
                   //5) Греческий = el
                   else if currentPhoneLangID == "el"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/el/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/el/"
                   }
                   //6) Датский = da
                   else if currentPhoneLangID == "da"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/da/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/da/"
                   }
                   //7) Иврит = he
                   else if currentPhoneLangID == "he"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/he/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/he/"
                   }
                   //8) Индонезийский = id
                   else if currentPhoneLangID == "id"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/id/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/id/"
                   }
                   //9) Испанский = es
                   else if currentPhoneLangID == "es"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/es/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/es/"
                   }
                   //10) Итальянский = it
                   else if currentPhoneLangID == "it"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/it/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/it/"
                   }
                   //11) Каталанский = ca
                   else if currentPhoneLangID == "ca"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ca/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ca/"
                   }
                   //12) Китайский = zh
                   else if currentPhoneLangID == "zh"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/zh/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/zh/"
                   }
                   //13) Корейский = ko
                   else if currentPhoneLangID == "ko"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ko/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ko/"
                   }
                   //14) Малайский = ms
                   else if currentPhoneLangID == "ms"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ms/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ms/"
                   }
                   //15) Немецкий = de
                   else if currentPhoneLangID == "de"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/de/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/de/"
                   }
                   //16) Нидерландский = nl
                   else if currentPhoneLangID == "nl"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/nl/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/nl/"
                   }
                   //17) Норвежский = nb
                   else if currentPhoneLangID == "nb"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/nb/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/nb/"
                   }
                   //18) Польский = pl
                   else if currentPhoneLangID == "pl"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/pl/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/pl/"
                   }
                   //19) Португальский = pt
                   else if currentPhoneLangID == "pt"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/pt/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/pt/"
                   }
                   //20) Румынский = ro
                   else if currentPhoneLangID == "ro"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ro/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ro/"
                   }
                   //21) Русский = ru
                   
                   //22) Словацкий = sk
                   else if currentPhoneLangID == "sk"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/sk/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/sk/"
                   }
                   //23) Тайский = th
                   else if currentPhoneLangID == "th"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/th/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/th/"
                   }
                   //24) Турецкий = tr
                   else if currentPhoneLangID == "tr"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/tr/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/tr/"
                   }
                   //25) Украинский = uk
                   else if currentPhoneLangID == "uk"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/uk/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/uk/"
                   }
                   //26) Финский = fi
                   else if currentPhoneLangID == "fi"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/fi/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/fi/"
                   }
                   //27) Французский = fr
                   else if currentPhoneLangID == "fr"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/fr/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/fr/"
                   }
                   //28) Хинди = hi
                   else if currentPhoneLangID == "hi"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/hi/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/hi/"
                   }
                   //29) Хорватский = hr
                   else if currentPhoneLangID == "hr"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/hr/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/hr/"
                   }
                   //30) Чешский = cs
                   else if currentPhoneLangID == "cs"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/cs/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/cs/"
                   }
                   //31) Шведский = sv
                   else if currentPhoneLangID == "sv"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/sv/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/sv/"
                   }
                   //32) Японский = ja
                   else if currentPhoneLangID == "ja"{
-                      termsOfUse = "https://ilovebets.ru/mobileApp/iOS/Localization/TermsOfUse/ja/"
+                      privacyPolicy = "https://ilovebets.ru/mobileApp/iOS/Localization/PrivacyPolicy/ja/"
                   }
         
-
-        let url = URL(string: termsOfUse)
-        let request = URLRequest(url: url!)
         
-        webView.load(request)
+        
+                let url = URL(string: privacyPolicy)
+                let request = URLRequest(url: url!)
+                
+                webView.load(request)
 
-        // Do any additional setup after loading the view.
-    }
-    
+                // Do any additional setup after loading the view.
+            }
+            
 
 
-}
+        }

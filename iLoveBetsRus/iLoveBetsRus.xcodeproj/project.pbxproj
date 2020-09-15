@@ -117,10 +117,12 @@
 		ED5E9A39238850C900C32F30 /* ButtonsControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EDD2039C24F6F5A9000192DA /* CustomButton.swift */,
+				ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */,
+				EDCFF140250E90EA002EF435 /* PrivacyPolicyViewController.swift */,
 				ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */,
 				ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */,
 				ED54299E238303BB00F501F1 /* AboutUsViewController.swift */,
+				EDD2039C24F6F5A9000192DA /* CustomButton.swift */,
 			);
 			path = ButtonsControllers;
 			sourceTree = "<group>";
@@ -163,8 +165,6 @@
 				EDB525822368B3D0002428AB /* AppDelegate.swift */,
 				ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */,
 				EDB525862368B3D0002428AB /* ViewController.swift */,
-				ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */,
-				EDCFF140250E90EA002EF435 /* PrivacyPolicyViewController.swift */,
 				EDB525882368B3D0002428AB /* Main.storyboard */,
 				EDB5258D2368B3D3002428AB /* LaunchScreen.storyboard */,
 				ED7B7080236CA44200784F55 /* BettingTips */,
