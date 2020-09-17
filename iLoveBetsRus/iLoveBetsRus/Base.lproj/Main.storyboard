@@ -148,6 +148,14 @@
                                     <action selector="buyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yih-Mm-czm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-JE-pvg">
+                                <rect key="frame" x="32" y="105" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="nSU-Z6-VAJ" kind="show" id="9jU-8c-r3j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -397,7 +405,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     <viewLayoutGuide key="safeArea" id="SEO-4a-SWf"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="873" y="-225"/>
+            <point key="canvasLocation" x="872.79999999999995" y="-225.33733133433284"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="RZU-No-Rto">
@@ -429,7 +437,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-uT-HgC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="669.5"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-Jz-aG4">
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-Jz-aG4">
                                                 <rect key="frame" x="177.5" y="215" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="H56-hf-07s"/>
@@ -648,6 +656,51 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW6-JC-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-114" y="-1029"/>
+        </scene>
+        <!--Test Web View Controller-->
+        <scene sceneID="X81-9h-M1A">
+            <objects>
+                <viewController id="nSU-Z6-VAJ" customClass="testWebViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9i4-rk-5MM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STC-70-qR7">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-rq-Qxu">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="4uO-IH-pdp"/>
+                                    <constraint firstAttribute="height" constant="20" id="ksg-LI-KoZ"/>
+                                </constraints>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VGK-rq-Qxu" firstAttribute="centerY" secondItem="9i4-rk-5MM" secondAttribute="centerY" id="1SU-EW-YzI"/>
+                            <constraint firstItem="STC-70-qR7" firstAttribute="leading" secondItem="Rlq-1t-W40" secondAttribute="leading" id="GGo-cG-pVV"/>
+                            <constraint firstItem="STC-70-qR7" firstAttribute="trailing" secondItem="Rlq-1t-W40" secondAttribute="trailing" id="XnZ-d6-kW2"/>
+                            <constraint firstItem="STC-70-qR7" firstAttribute="top" secondItem="Rlq-1t-W40" secondAttribute="top" id="ce8-A8-FUm"/>
+                            <constraint firstItem="STC-70-qR7" firstAttribute="bottom" secondItem="Rlq-1t-W40" secondAttribute="bottom" id="jV4-VJ-JDr"/>
+                            <constraint firstItem="VGK-rq-Qxu" firstAttribute="centerX" secondItem="9i4-rk-5MM" secondAttribute="centerX" id="oCy-WM-KYL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rlq-1t-W40"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C5T-Fc-kfZ"/>
+                    <connections>
+                        <outlet property="ActInd" destination="VGK-rq-Qxu" id="IXi-a1-KuP"/>
+                        <outlet property="webView" destination="STC-70-qR7" id="Vth-aH-x4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBn-fT-MTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581.60000000000002" y="-954.87256371814101"/>
         </scene>
         <!--Terms of Use-->
         <scene sceneID="5sa-hF-77G">

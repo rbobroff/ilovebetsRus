@@ -13,6 +13,7 @@
 		ED1FF203236A0BB00023F948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */; };
 		ED317784250AC2CB00425C7E /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */; };
 		ED54299F238303BB00F501F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54299E238303BB00F501F1 /* AboutUsViewController.swift */; };
+		ED5D750125129E9700D71E60 /* testWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D750025129E9700D71E60 /* testWebViewController.swift */; };
 		ED5E9A38238850A800C32F30 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */; };
 		ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */; };
 		ED8258D6250D43CD00986FAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8258D5250D43CD00986FAB /* WebKit.framework */; };
@@ -44,6 +45,7 @@
 		ED1FF202236A0BAF0023F948 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ED317783250AC2CB00425C7E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		ED54299E238303BB00F501F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		ED5D750025129E9700D71E60 /* testWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testWebViewController.swift; sourceTree = "<group>"; };
 		ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUsViewController.swift; sourceTree = "<group>"; };
 		ED8258D5250D43CD00986FAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,7 @@
 				ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */,
 				ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */,
 				ED54299E238303BB00F501F1 /* AboutUsViewController.swift */,
+				ED5D750025129E9700D71E60 /* testWebViewController.swift */,
 				EDD2039C24F6F5A9000192DA /* CustomButton.swift */,
 			);
 			path = ButtonsControllers;
@@ -309,6 +312,7 @@
 				EDC97D632455F0EE0035E95F /* newTableViewCell.swift in Sources */,
 				EDBF7E3F2375D9A4002A5853 /* OneNewsViewController.swift in Sources */,
 				ED5E9A3C2388534F00C32F30 /* HelpUsViewController.swift in Sources */,
+				ED5D750125129E9700D71E60 /* testWebViewController.swift in Sources */,
 				ED096A04239C3DEC00F88568 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
