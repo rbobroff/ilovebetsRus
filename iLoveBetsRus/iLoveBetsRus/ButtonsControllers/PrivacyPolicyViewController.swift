@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class PrivacyPolicyViewController: UIViewController {
+class PrivacyPolicyViewController: UIViewController, WKNavigationDelegate {
 
 
     @IBAction func goBack(_ sender: Any) {
@@ -21,6 +21,7 @@ class PrivacyPolicyViewController: UIViewController {
     //https://www.youtube.com/watch?v=2ArlCvtL33I&feature=youtu.be
     //добавляем библиотеку в Build Phases - Webkit.Framework
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var ActInd: UIActivityIndicatorView!
     
     
     
@@ -172,9 +173,34 @@ class PrivacyPolicyViewController: UIViewController {
                 
                 webView.load(request)
 
-                // Do any additional setup after loading the view.
-            }
+                //ActivityIndicator during loading page
+                webView.addSubview(ActInd)
+                ActInd.startAnimating()
+                webView.navigationDelegate = self
+                ActInd.hidesWhenStopped = true
+           
+    } //конец функции viewDidLoad
             
 
+    //ActivityIndicator during loading page
+     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+         
+         ActInd.stopAnimating()
+         
+     }
+     
+     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+         
+         ActInd.stopAnimating()
+         
+     }
+     
+     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+         
+         ActInd.startAnimating()
+         
+     }
 
-        }
+
+
+} //конец класса

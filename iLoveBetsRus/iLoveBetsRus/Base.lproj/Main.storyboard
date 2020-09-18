@@ -787,14 +787,20 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <constraint firstAttribute="width" constant="27" id="uuc-pK-Kpy"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-SK-OOT">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vbz-n8-FEN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XPp-SK-OOT" firstAttribute="centerX" secondItem="vbj-gM-1df" secondAttribute="centerX" id="4Bl-ym-RUH"/>
                             <constraint firstItem="Vbz-n8-FEN" firstAttribute="trailing" secondItem="bVN-5O-6nN" secondAttribute="trailing" constant="10" id="Cdq-ov-nus"/>
                             <constraint firstItem="xkl-0a-6gR" firstAttribute="top" secondItem="Vbz-n8-FEN" secondAttribute="top" constant="7" id="FpF-M2-fJ0"/>
                             <constraint firstItem="bVN-5O-6nN" firstAttribute="top" secondItem="Vbz-n8-FEN" secondAttribute="top" constant="10" id="Lph-z1-hp4"/>
                             <constraint firstItem="PTX-j5-nlh" firstAttribute="trailing" secondItem="Vbz-n8-FEN" secondAttribute="trailing" id="eMR-ek-VLV"/>
+                            <constraint firstItem="XPp-SK-OOT" firstAttribute="centerY" secondItem="vbj-gM-1df" secondAttribute="centerY" id="eap-qy-5tR"/>
                             <constraint firstItem="PTX-j5-nlh" firstAttribute="leading" secondItem="Vbz-n8-FEN" secondAttribute="leading" id="l62-E5-htf"/>
                             <constraint firstItem="PTX-j5-nlh" firstAttribute="top" secondItem="bVN-5O-6nN" secondAttribute="bottom" constant="10" id="owv-5Z-Wci"/>
                             <constraint firstItem="xkl-0a-6gR" firstAttribute="centerX" secondItem="Vbz-n8-FEN" secondAttribute="centerX" id="r5y-wa-EW8"/>
@@ -803,6 +809,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="ActInd" destination="XPp-SK-OOT" id="140-wo-97a"/>
                         <outlet property="slideButtonOutlet" destination="xkl-0a-6gR" id="Nyh-MZ-tIE"/>
                         <outlet property="webView" destination="PTX-j5-nlh" id="5On-ba-gy3"/>
                     </connections>
@@ -885,22 +892,29 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <constraint firstAttribute="width" constant="27" id="kQj-yd-6H3"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-Uy-Rhx">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wQb-Z2-9fg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hfy-rI-dHM" firstAttribute="top" secondItem="wQb-Z2-9fg" secondAttribute="top" constant="7" id="0eD-MH-Cvi"/>
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="bottom" secondItem="wQb-Z2-9fg" secondAttribute="bottom" id="2rh-8L-kkj"/>
+                            <constraint firstItem="F4G-Uy-Rhx" firstAttribute="centerY" secondItem="hRM-vk-T57" secondAttribute="centerY" id="8lA-ni-CT0"/>
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="trailing" secondItem="wQb-Z2-9fg" secondAttribute="trailing" id="OgW-T4-bMZ"/>
                             <constraint firstItem="wQb-Z2-9fg" firstAttribute="trailing" secondItem="MxV-V2-dDJ" secondAttribute="trailing" constant="10" id="PTe-CL-E7Z"/>
                             <constraint firstItem="MxV-V2-dDJ" firstAttribute="top" secondItem="wQb-Z2-9fg" secondAttribute="top" constant="10" id="iBU-ch-D0J"/>
                             <constraint firstItem="Hfy-rI-dHM" firstAttribute="centerX" secondItem="wQb-Z2-9fg" secondAttribute="centerX" id="qhf-fG-I0g"/>
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="leading" secondItem="wQb-Z2-9fg" secondAttribute="leading" id="qnA-HK-sua"/>
+                            <constraint firstItem="F4G-Uy-Rhx" firstAttribute="centerX" secondItem="hRM-vk-T57" secondAttribute="centerX" id="vvv-Zd-cfy"/>
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="top" secondItem="MxV-V2-dDJ" secondAttribute="bottom" constant="10" id="zYl-m1-f8q"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="ActInd" destination="F4G-Uy-Rhx" id="kM7-h6-hom"/>
                         <outlet property="slideButtonOutlet" destination="Hfy-rI-dHM" id="doE-A0-J3a"/>
                         <outlet property="webView" destination="ckw-Bz-HHs" id="A1g-68-nVx"/>
                     </connections>

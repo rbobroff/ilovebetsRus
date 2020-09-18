@@ -43,7 +43,9 @@ class testWebViewController: UIViewController, WKNavigationDelegate {
               })
         
         
-        
+        //для Статистики, что всегда обновлялась страница
+        //=======================================
+        /*
         var aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/en/"
         if currentPhoneLangID == "ru"     {
         aboutUsLink = "https://ilovebets.ru/mobileApp/iOS/Localization/AboutUs/ru/"
@@ -59,7 +61,8 @@ class testWebViewController: UIViewController, WKNavigationDelegate {
         ActInd.startAnimating()
         webView.navigationDelegate = self
         ActInd.hidesWhenStopped = true
-        
+        */
+        //=========================================
         
            } // конец функции ViewWillAppear
     
