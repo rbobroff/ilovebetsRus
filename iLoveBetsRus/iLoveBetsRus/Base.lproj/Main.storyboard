@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDV-ab-oJY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDV-ab-oJY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,14 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-fe-qhC">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gR7-0s-Ia3">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" systemColor="labelColor"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Jjb-VB-jld"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ocd-fe-qhC" firstAttribute="top" secondItem="Jjb-VB-jld" secondAttribute="top" id="5AD-8M-Xxa"/>
+                            <constraint firstItem="Ocd-fe-qhC" firstAttribute="bottom" secondItem="Jjb-VB-jld" secondAttribute="bottom" id="5Ow-P1-5ne"/>
+                            <constraint firstItem="Ocd-fe-qhC" firstAttribute="trailing" secondItem="Jjb-VB-jld" secondAttribute="trailing" id="7LT-kR-f6L"/>
+                            <constraint firstItem="gR7-0s-Ia3" firstAttribute="centerY" secondItem="jEe-gE-22T" secondAttribute="centerY" id="J4E-xm-RGG"/>
+                            <constraint firstItem="Ocd-fe-qhC" firstAttribute="leading" secondItem="Jjb-VB-jld" secondAttribute="leading" id="YEP-hv-2rc"/>
+                            <constraint firstItem="gR7-0s-Ia3" firstAttribute="centerX" secondItem="jEe-gE-22T" secondAttribute="centerX" id="cQ9-pB-2iS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kCj-K3-CTA"/>
+                    <connections>
+                        <outlet property="ActInd" destination="gR7-0s-Ia3" id="LGx-o4-Ekm"/>
+                        <outlet property="webView" destination="Ocd-fe-qhC" id="Pyb-7E-KRd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIt-Ic-bnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="541"/>
+            <point key="canvasLocation" x="72.799999999999997" y="540.17991004497753"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="0ZG-S7-Rca">
@@ -31,8 +57,8 @@
                     <view key="view" contentMode="scaleToFill" id="wHf-7H-uIA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sej-Ef-nF0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hsn-94-PA2"/>
                 </viewController>
@@ -69,7 +95,7 @@
                                     <constraint firstAttribute="height" constant="129" id="Gg0-oE-kTB"/>
                                 </constraints>
                                 <state key="normal" image="4. E-Mail_eng">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qt1-WH-iXJ"/>
@@ -81,7 +107,7 @@
                                     <constraint firstAttribute="height" constant="129" id="PGJ-68-PfL"/>
                                 </constraints>
                                 <state key="normal" image="5. Help_eng">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
@@ -105,7 +131,7 @@
                                     <constraint firstAttribute="height" constant="129" id="Lgh-r8-HOQ"/>
                                 </constraints>
                                 <state key="normal" image="2. Statistics_eng">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="iGG-G0-tQr" kind="show" id="LoY-Gg-Kvm"/>
@@ -123,7 +149,7 @@
                                     <constraint firstAttribute="height" constant="129" id="fXc-ai-iMY"/>
                                 </constraints>
                                 <state key="normal" image="6. AboutUS_eng">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="XgA-X0-SKs" kind="show" id="2Hp-3P-ko1"/>
@@ -148,7 +174,7 @@
                                     <action selector="buyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yih-Mm-czm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-JE-pvg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-JE-pvg">
                                 <rect key="frame" x="32" y="105" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -157,7 +183,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XMk-Vi-Eeg" secondAttribute="trailing" constant="16" id="6mU-pj-i12"/>
                             <constraint firstItem="N4C-3Q-fJ3" firstAttribute="top" secondItem="ZCO-g1-1p3" secondAttribute="bottom" constant="3" id="7Ts-hg-AwG"/>
@@ -200,7 +227,6 @@
                             <constraint firstItem="ZCO-g1-1p3" firstAttribute="height" secondItem="N4C-3Q-fJ3" secondAttribute="height" id="u1D-2U-CWJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PMF-W3-YlE" secondAttribute="trailing" constant="71" id="uzs-WI-t7N"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="JOH-zc-VPh"/>
                     <connections>
@@ -281,9 +307,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsb-dm-pJ3">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsb-dm-pJ3">
                             <rect key="frame" x="0.0" y="554" width="334" height="50"/>
-                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="cAN-y1-kJu"/>
                             </constraints>
@@ -295,7 +321,7 @@
                                 <action selector="subscribeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5X-Oe-oZ5"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxj-bO-6OP">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxj-bO-6OP">
                             <rect key="frame" x="15" y="171" width="304" height="30"/>
                             <state key="normal" title="Восстановить покупки"/>
                             <connections>
@@ -344,18 +370,19 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                         </label>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="w69-In-cCQ">
                             <rect key="frame" x="157" y="569" width="20" height="20"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-N9-2VF">
                             <rect key="frame" x="15" y="475.5" width="91" height="30"/>
                             <state key="normal" title="Terms of Use"/>
                             <connections>
                                 <action selector="goTermsOfUseVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izk-02-mKh"/>
                             </connections>
                         </button>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QPN-sN-Gd3">
-                            <rect key="frame" x="157" y="292" width="20" height="20"/>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="QPN-sN-Gd3">
+                            <rect key="frame" x="148.5" y="283.5" width="37" height="37"/>
                         </activityIndicatorView>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-hg-4yU">
                             <rect key="frame" x="15" y="506.5" width="95" height="30"/>
                             <state key="normal" title="Privacy Policy"/>
                             <connections>
@@ -363,7 +390,8 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="SEO-4a-SWf"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="byh-7S-UoE" firstAttribute="top" secondItem="vci-to-dX8" secondAttribute="bottom" constant="15" id="0Zg-Dw-2uj"/>
                         <constraint firstItem="BnQ-pP-luN" firstAttribute="top" secondItem="SEO-4a-SWf" secondAttribute="top" constant="20" id="2Cn-kc-kTB"/>
@@ -402,7 +430,6 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                         <constraint firstItem="Sxj-bO-6OP" firstAttribute="top" secondItem="XRy-cm-sUN" secondAttribute="bottom" constant="15" id="zKL-kV-PWN"/>
                         <constraint firstAttribute="trailing" secondItem="vci-to-dX8" secondAttribute="trailing" constant="15" id="zm0-Jv-dYa"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="SEO-4a-SWf"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="-225.33733133433284"/>
@@ -414,14 +441,39 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     <view key="view" contentMode="scaleToFill" id="HE8-S9-S1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHk-Ca-twN">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-46-gNS">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hxE-kz-BHD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PHk-Ca-twN" firstAttribute="bottom" secondItem="hxE-kz-BHD" secondAttribute="bottom" id="6rg-mw-dbQ"/>
+                            <constraint firstItem="TDg-46-gNS" firstAttribute="centerY" secondItem="HE8-S9-S1K" secondAttribute="centerY" id="Ndp-qY-NGr"/>
+                            <constraint firstItem="TDg-46-gNS" firstAttribute="centerX" secondItem="HE8-S9-S1K" secondAttribute="centerX" id="PnN-0y-Dt6"/>
+                            <constraint firstItem="PHk-Ca-twN" firstAttribute="leading" secondItem="hxE-kz-BHD" secondAttribute="leading" id="SUm-5L-EJE"/>
+                            <constraint firstItem="PHk-Ca-twN" firstAttribute="top" secondItem="hxE-kz-BHD" secondAttribute="top" id="TMQ-a4-tKC"/>
+                            <constraint firstItem="PHk-Ca-twN" firstAttribute="trailing" secondItem="hxE-kz-BHD" secondAttribute="trailing" id="eI7-CT-LBT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GKy-li-xgW"/>
+                    <connections>
+                        <outlet property="ActInd" destination="TDg-46-gNS" id="WKX-FZ-P83"/>
+                        <outlet property="webView" destination="PHk-Ca-twN" id="8fI-cb-HxL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYt-xj-AnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670" y="542"/>
+            <point key="canvasLocation" x="1669.5999999999999" y="541.97901049475263"/>
         </scene>
         <!--Прогнозы-->
         <scene sceneID="iD3-1A-J6b">
@@ -437,7 +489,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-uT-HgC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="669.5"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-Jz-aG4">
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-Jz-aG4">
                                                 <rect key="frame" x="177.5" y="215" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="H56-hf-07s"/>
@@ -487,7 +539,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="cOv-qv-PiQ" firstAttribute="top" secondItem="Nbp-0X-zNj" secondAttribute="bottom" constant="8" id="01f-bg-M7d"/>
                                             <constraint firstAttribute="trailing" secondItem="eGi-cd-2kl" secondAttribute="trailing" constant="8" id="0hh-eg-0hq"/>
@@ -526,14 +578,14 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Lqr-hP-SbW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Lqr-hP-SbW" firstAttribute="trailing" secondItem="S7w-LY-Cgj" secondAttribute="trailing" id="2BO-lH-Fxk"/>
                             <constraint firstItem="S7w-LY-Cgj" firstAttribute="top" secondItem="Lqr-hP-SbW" secondAttribute="top" id="3Ca-Ad-EAA"/>
                             <constraint firstItem="S7w-LY-Cgj" firstAttribute="leading" secondItem="Lqr-hP-SbW" secondAttribute="leading" id="9mr-Hx-ufZ"/>
                             <constraint firstItem="Lqr-hP-SbW" firstAttribute="bottom" secondItem="S7w-LY-Cgj" secondAttribute="bottom" id="XrT-pi-eJb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Lqr-hP-SbW"/>
                     </view>
                     <navigationItem key="navigationItem" id="vSM-4i-n2X"/>
                     <connections>
@@ -559,7 +611,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygR-7M-hPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="GSq-0c-lJn">
                             <rect key="frame" x="0.0" y="151" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -678,10 +730,11 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <constraint firstAttribute="width" constant="20" id="4uO-IH-pdp"/>
                                     <constraint firstAttribute="height" constant="20" id="ksg-LI-KoZ"/>
                                 </constraints>
-                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="color" systemColor="darkTextColor"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Rlq-1t-W40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VGK-rq-Qxu" firstAttribute="centerY" secondItem="9i4-rk-5MM" secondAttribute="centerY" id="1SU-EW-YzI"/>
                             <constraint firstItem="STC-70-qR7" firstAttribute="leading" secondItem="Rlq-1t-W40" secondAttribute="leading" id="GGo-cG-pVV"/>
@@ -690,7 +743,6 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             <constraint firstItem="STC-70-qR7" firstAttribute="bottom" secondItem="Rlq-1t-W40" secondAttribute="bottom" id="jV4-VJ-JDr"/>
                             <constraint firstItem="VGK-rq-Qxu" firstAttribute="centerX" secondItem="9i4-rk-5MM" secondAttribute="centerX" id="oCy-WM-KYL"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Rlq-1t-W40"/>
                     </view>
                     <navigationItem key="navigationItem" id="C5T-Fc-kfZ"/>
                     <connections>
@@ -736,7 +788,8 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Vbz-n8-FEN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vbz-n8-FEN" firstAttribute="trailing" secondItem="bVN-5O-6nN" secondAttribute="trailing" constant="10" id="Cdq-ov-nus"/>
                             <constraint firstItem="xkl-0a-6gR" firstAttribute="top" secondItem="Vbz-n8-FEN" secondAttribute="top" constant="7" id="FpF-M2-fJ0"/>
@@ -747,7 +800,6 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             <constraint firstItem="xkl-0a-6gR" firstAttribute="centerX" secondItem="Vbz-n8-FEN" secondAttribute="centerX" id="r5y-wa-EW8"/>
                             <constraint firstItem="PTX-j5-nlh" firstAttribute="bottom" secondItem="Vbz-n8-FEN" secondAttribute="bottom" id="s1O-68-43M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vbz-n8-FEN"/>
                     </view>
                     <toolbarItems/>
                     <connections>
@@ -766,14 +818,39 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     <view key="view" contentMode="scaleToFill" id="dCM-sD-fdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-7N-hlO">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-pv-PiJ">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="a9u-1R-dYo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ahm-pv-PiJ" firstAttribute="centerX" secondItem="dCM-sD-fdy" secondAttribute="centerX" id="5Od-vY-Qr6"/>
+                            <constraint firstItem="4ZQ-7N-hlO" firstAttribute="top" secondItem="a9u-1R-dYo" secondAttribute="top" id="8HK-Lm-c4t"/>
+                            <constraint firstItem="4ZQ-7N-hlO" firstAttribute="leading" secondItem="a9u-1R-dYo" secondAttribute="leading" id="F6a-AN-FiN"/>
+                            <constraint firstItem="4ZQ-7N-hlO" firstAttribute="bottom" secondItem="a9u-1R-dYo" secondAttribute="bottom" id="eo5-3a-gaf"/>
+                            <constraint firstItem="Ahm-pv-PiJ" firstAttribute="centerY" secondItem="dCM-sD-fdy" secondAttribute="centerY" id="sT6-0Y-Gon"/>
+                            <constraint firstItem="4ZQ-7N-hlO" firstAttribute="trailing" secondItem="a9u-1R-dYo" secondAttribute="trailing" id="ynP-ld-7NR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OCY-cY-9H1"/>
+                    <connections>
+                        <outlet property="ActInd" destination="Ahm-pv-PiJ" id="CIS-yV-dBr"/>
+                        <outlet property="webView" destination="4ZQ-7N-hlO" id="QWj-sT-aFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rp-2t-wNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="-997"/>
+            <point key="canvasLocation" x="1645.5999999999999" y="-997.15142428785612"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="S0x-un-WHg">
@@ -809,7 +886,8 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wQb-Z2-9fg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hfy-rI-dHM" firstAttribute="top" secondItem="wQb-Z2-9fg" secondAttribute="top" constant="7" id="0eD-MH-Cvi"/>
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="bottom" secondItem="wQb-Z2-9fg" secondAttribute="bottom" id="2rh-8L-kkj"/>
@@ -820,7 +898,6 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="leading" secondItem="wQb-Z2-9fg" secondAttribute="leading" id="qnA-HK-sua"/>
                             <constraint firstItem="ckw-Bz-HHs" firstAttribute="top" secondItem="MxV-V2-dDJ" secondAttribute="bottom" constant="10" id="zYl-m1-f8q"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wQb-Z2-9fg"/>
                     </view>
                     <toolbarItems/>
                     <connections>
@@ -844,5 +921,29 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
         <image name="MainScreenBackground" width="320" height="568"/>
         <image name="closeButton" width="491" height="491"/>
         <image name="slideButton" width="27" height="6.5"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

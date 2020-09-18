@@ -109,11 +109,13 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		ED1FF1DE236A02F00023F948 /* SupportingFiles */ = {
+		ED1FF1DE236A02F00023F948 /* unUsedViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED5D750025129E9700D71E60 /* testWebViewController.swift */,
+				EDD2039C24F6F5A9000192DA /* CustomButton.swift */,
 			);
-			path = SupportingFiles;
+			path = unUsedViewControllers;
 			sourceTree = "<group>";
 		};
 		ED5E9A39238850C900C32F30 /* ButtonsControllers */ = {
@@ -124,8 +126,6 @@
 				ED5E9A37238850A800C32F30 /* StatisticsViewController.swift */,
 				ED5E9A3B2388534F00C32F30 /* HelpUsViewController.swift */,
 				ED54299E238303BB00F501F1 /* AboutUsViewController.swift */,
-				ED5D750025129E9700D71E60 /* testWebViewController.swift */,
-				EDD2039C24F6F5A9000192DA /* CustomButton.swift */,
 			);
 			path = ButtonsControllers;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 				ED7B7080236CA44200784F55 /* BettingTips */,
 				ED0969FE239C32B600F88568 /* Chat */,
 				ED5E9A39238850C900C32F30 /* ButtonsControllers */,
-				ED1FF1DE236A02F00023F948 /* SupportingFiles */,
+				ED1FF1DE236A02F00023F948 /* unUsedViewControllers */,
 				EDB5258B2368B3D3002428AB /* Assets.xcassets */,
 				ED06AD7624142F2300BCB1E0 /* GoogleService-Info.plist */,
 				EDB525902368B3D3002428AB /* Info.plist */,
