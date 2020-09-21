@@ -16,12 +16,12 @@ class HelpUsViewController: UIViewController, WKNavigationDelegate {
 
 
     @IBOutlet weak var webView: WKWebView!
+
     @IBOutlet weak var ActInd: UIActivityIndicatorView!
     
     
     
-    
-    //добавление заголовка
+       //добавление заголовка
        override func viewWillAppear(_ animated: Bool) {
               
            

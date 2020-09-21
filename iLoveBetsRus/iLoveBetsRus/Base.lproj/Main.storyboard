@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Help Us View Controller-->
+        <!--Test Web View Controller-->
         <scene sceneID="xgf-2R-56U">
             <objects>
-                <viewController id="GoH-Ca-hs9" customClass="HelpUsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GoH-Ca-hs9" customClass="testWebViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEe-gE-22T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-fe-qhC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -42,13 +42,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="kCj-K3-CTA"/>
                     <connections>
-                        <outlet property="ActInd" destination="gR7-0s-Ia3" id="LGx-o4-Ekm"/>
                         <outlet property="webView" destination="Ocd-fe-qhC" id="Pyb-7E-KRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIt-Ic-bnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.799999999999997" y="540.17991004497753"/>
+            <point key="canvasLocation" x="-911" y="610"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="0ZG-S7-Rca">
@@ -110,7 +109,7 @@
                                     <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GoH-Ca-hs9" kind="show" id="cEz-rh-10s"/>
+                                    <segue destination="nSU-Z6-VAJ" kind="show" id="qG0-hL-LYn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Personal Sports Betting Advisor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-3d-KjB">
@@ -172,14 +171,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yih-Mm-czm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-JE-pvg">
-                                <rect key="frame" x="32" y="105" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="nSU-Z6-VAJ" kind="show" id="9jU-8c-r3j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -449,7 +440,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-46-gNS">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-46-gNS">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
@@ -467,7 +458,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     </view>
                     <navigationItem key="navigationItem" id="GKy-li-xgW"/>
                     <connections>
-                        <outlet property="ActInd" destination="TDg-46-gNS" id="WKX-FZ-P83"/>
+                        <outlet property="ActInd" destination="TDg-46-gNS" id="kZm-0K-vvk"/>
                         <outlet property="webView" destination="PHk-Ca-twN" id="8fI-cb-HxL"/>
                     </connections>
                 </viewController>
@@ -709,10 +700,10 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
             </objects>
             <point key="canvasLocation" x="-114" y="-1029"/>
         </scene>
-        <!--Test Web View Controller-->
+        <!--Help Us View Controller-->
         <scene sceneID="X81-9h-M1A">
             <objects>
-                <viewController id="nSU-Z6-VAJ" customClass="testWebViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nSU-Z6-VAJ" customClass="HelpUsViewController" customModule="iLoveBets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9i4-rk-5MM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -724,7 +715,7 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-rq-Qxu">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-rq-Qxu">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="4uO-IH-pdp"/>
@@ -746,13 +737,13 @@ Any unused portion of a free trial period, if offered, will be forfeited when th
                     </view>
                     <navigationItem key="navigationItem" id="C5T-Fc-kfZ"/>
                     <connections>
-                        <outlet property="ActInd" destination="VGK-rq-Qxu" id="IXi-a1-KuP"/>
+                        <outlet property="ActInd" destination="VGK-rq-Qxu" id="qBY-CC-cDh"/>
                         <outlet property="webView" destination="STC-70-qR7" id="Vth-aH-x4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBn-fT-MTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581.60000000000002" y="-954.87256371814101"/>
+            <point key="canvasLocation" x="796" y="535"/>
         </scene>
         <!--Terms of Use-->
         <scene sceneID="5sa-hF-77G">

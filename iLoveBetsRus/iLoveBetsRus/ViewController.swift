@@ -592,9 +592,25 @@ class ViewController: UIViewController {
     
     //v.3.3 кнопка закрыть на всплывающем окне
     @IBAction func closeButton(_ sender: Any) {
+        /* 20 сентября 2020 - проверка активной покупки при нажатии "Закрыть"
         self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
         self.animateOut(desiredView: self.blurView)
+         */
+        if Apphud.hasActiveSubscription() {
+        print("!Есть активная подписка!")
+        self.activityIndicatorButtonSubscribe.stopAnimating()
+        self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
+        self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+        self.animateOut(desiredView: self.blurView)
+        self.buyButtonOutlet.isHidden = true
+        self.bettingTipsButton.isHidden = false
+        } else {
+        print("!Подписка неактивна!")
+            self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+            self.animateOut(desiredView: self.blurView)
+        }
     }
+    
     
     
     
@@ -1337,7 +1353,7 @@ class ViewController: UIViewController {
     @IBAction func subscribeButton(_ sender: Any) {
         // when purchase button tapped
         
-        //спиннер появляется, текст пропадает
+        //спиннер появляется на кнопке Subscribe, текст пропадает
         activityIndicatorButtonSubscribe.startAnimating()
         //subscribeButtonOutlet.setTitle("Text", for: .normal)
         subscribeButtonOutlet.setTitleColor(UIColor.clear, for: .normal)
@@ -1346,25 +1362,334 @@ class ViewController: UIViewController {
                Apphud.purchase(product) { result in
                    if Apphud.hasActiveSubscription() {
                        print("подписка оформлена")
+
+                    self.activityIndicatorButtonSubscribe.stopAnimating() //останавливаем спиннер
+                    self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal) //возвращаем текст на кнопку Subscribe
+                    self.buyButtonOutlet.isHidden = true //скрываем кнопку с замком на главном экране
+                    self.bettingTipsButton.isHidden = false //показываем кпопку с PremiumContent
                     self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
                     self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
-                    self.buyButtonOutlet.isHidden = true
-                    self.bettingTipsButton.isHidden = false
-                    self.activityIndicatorButtonSubscribe.stopAnimating()
-                    self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
+                    
+                    
+                    /*
+                        //20 сентября 2020 iOS 14 - двойная попытка скрыть окно подписки, если активная подписка
+                        if self.activityIndicatorButtonSubscribe.isHidden == true {
+                                self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+                                self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
+                        } else {
+                                self.activityIndicatorButtonSubscribe.stopAnimating()
+                                self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
+                                self.buyButtonOutlet.isHidden = true
+                                self.bettingTipsButton.isHidden = false
+                                self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
+                                self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
+                        }
+                        if Apphud.hasActiveSubscription() {
+                            self.animateOut(desiredView: self.popupView)
+                            self.animateOut(desiredView: self.blurView)
+                            self.buyButtonOutlet.isHidden = true
+                            self.bettingTipsButton.isHidden = false
+                        }  //20 сентября 2020 iOS 14
+                    */
                     
                    } else {
-                       print("покупка отменена")
+                       print("Покупка отменена")
                     
                     //спиннер пропадает, текст на кнопке "Subscribe" появляется
                     self.activityIndicatorButtonSubscribe.stopAnimating()
                     self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
+                    
+                    
+                    //сообщение "Покупка отменена"
+                    var controller = UIAlertController(title: "Purchase canceled", message: nil, preferredStyle: .alert)
+                    var ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                controller.addAction(ok)
+                    
+                            //локализация
+                           if currentPhoneLangID == "ru" {
+                        controller = UIAlertController(title: "Покупка отменена", message: nil, preferredStyle: .alert)
+                        ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        controller.addAction(ok)
+                           }
+                           //2) Арабский = ar
+                           else if currentPhoneLangID == "ar"{
+                        controller = UIAlertController(title: "تم إلغاء الشراء", message: nil, preferredStyle: .alert)
+                           }
+                           //3) Венгерский = hu
+                           else if currentPhoneLangID == "hu"{
+                        controller = UIAlertController(title: "A vásárlás törölve", message: nil, preferredStyle: .alert)
+                           }
+                           //4) Вьетнамский = vi
+                           else if currentPhoneLangID == "vi"{
+                        controller = UIAlertController(title: "Mua hàng đã bị hủy", message: nil, preferredStyle: .alert)
+                           }
+                           //5) Греческий = el
+                           else if currentPhoneLangID == "el"{
+                        controller = UIAlertController(title: "Η αγορά ακυρώθηκε", message: nil, preferredStyle: .alert)
+                           }
+                           //6) Датский = da
+                           else if currentPhoneLangID == "da"{
+                        controller = UIAlertController(title: "Køb annulleret", message: nil, preferredStyle: .alert)
+                           }
+                           //7) Иврит = he
+                           else if currentPhoneLangID == "he"{
+                        controller = UIAlertController(title: "הרכישה בוטלה", message: nil, preferredStyle: .alert)
+                               }
+                           //8) Индонезийский = id
+                           else if currentPhoneLangID == "id"{
+                        controller = UIAlertController(title: "Pembelian dibatalkan", message: nil, preferredStyle: .alert)
+                               }
+                           //9) Испанский = es
+                           else if currentPhoneLangID == "es"{
+                        controller = UIAlertController(title: "Compra cancelada", message: nil, preferredStyle: .alert)
+                               }
+                           //10) Итальянский = it
+                           else if currentPhoneLangID == "it"{
+                        controller = UIAlertController(title: "Acquisto annullato", message: nil, preferredStyle: .alert)
+                               }
+                           //11) Каталанский = ca
+                           else if currentPhoneLangID == "ca"{
+                        controller = UIAlertController(title: "S'ha cancel·lat la compra", message: nil, preferredStyle: .alert)
+                               }
+                           //12) Китайский = zh
+                           else if currentPhoneLangID == "zh"{
+                        controller = UIAlertController(title: "購買已取消", message: nil, preferredStyle: .alert)
+                               }
+                           //13) Корейский = ko
+                           else if currentPhoneLangID == "ko"{
+                        controller = UIAlertController(title: "구매 취소", message: nil, preferredStyle: .alert)
+                               }
+                           //14) Малайский = ms
+                           else if currentPhoneLangID == "ms"{
+                        controller = UIAlertController(title: "Pembelian dibatalkan", message: nil, preferredStyle: .alert)
+                               }
+                           //15) Немецкий = de
+                           else if currentPhoneLangID == "de"{
+                        controller = UIAlertController(title: "Kauf storniert", message: nil, preferredStyle: .alert)
+                               }
+                           //16) Нидерландский = nl
+                           else if currentPhoneLangID == "nl"{
+                        controller = UIAlertController(title: "Aankoop geannuleerd", message: nil, preferredStyle: .alert)
+                               }
+                           //17) Норвежский = nb
+                           else if currentPhoneLangID == "nb"{
+                        controller = UIAlertController(title: "Kjøpet ble kansellert", message: nil, preferredStyle: .alert)
+                               }
+                           //18) Польский = pl
+                           else if currentPhoneLangID == "pl"{
+                        controller = UIAlertController(title: "Zakup anulowany", message: nil, preferredStyle: .alert)
+                               }
+                           //19) Португальский = pt
+                           else if currentPhoneLangID == "pt"{
+                        controller = UIAlertController(title: "Compra cancelada", message: nil, preferredStyle: .alert)
+                               }
+                           //20) Румынский = ro
+                           else if currentPhoneLangID == "ro"{
+                        controller = UIAlertController(title: "Achiziție anulată", message: nil, preferredStyle: .alert)
+                               }
+                           //21) Русский = ru
+                           
+                           //22) Словацкий = sk
+                           else if currentPhoneLangID == "sk"{
+                        controller = UIAlertController(title: "Nákup bol zrušený", message: nil, preferredStyle: .alert)
+                               }
+                           //23) Тайский = th
+                           else if currentPhoneLangID == "th"{
+                        controller = UIAlertController(title: "ยกเลิกการซื้อแล้ว", message: nil, preferredStyle: .alert)
+                               }
+                           //24) Турецкий = tr
+                           else if currentPhoneLangID == "tr"{
+                        controller = UIAlertController(title: "Satın alma iptal edildi", message: nil, preferredStyle: .alert)
+                               }
+                           //25) Украинский = uk
+                           else if currentPhoneLangID == "uk"{
+                        controller = UIAlertController(title: "Покупку скасовано", message: nil, preferredStyle: .alert)
+                               }
+                           //26) Финский = fi
+                           else if currentPhoneLangID == "fi"{
+                        controller = UIAlertController(title: "Osto peruutettu", message: nil, preferredStyle: .alert)
+                               }
+                           //27) Французский = fr
+                           else if currentPhoneLangID == "fr"{
+                        controller = UIAlertController(title: "Achat annulé", message: nil, preferredStyle: .alert)
+                               }
+                           //28) Хинди = hi
+                           else if currentPhoneLangID == "hi"{
+                        controller = UIAlertController(title: "खरीद रद्द", message: nil, preferredStyle: .alert)
+                               }
+                           //29) Хорватский = hr
+                           else if currentPhoneLangID == "hr"{
+                        controller = UIAlertController(title: "Kupnja otkazana", message: nil, preferredStyle: .alert)
+                               }
+                           //30) Чешский = cs
+                           else if currentPhoneLangID == "cs"{
+                        controller = UIAlertController(title: "Nákup zrušen", message: nil, preferredStyle: .alert)
+                               }
+                           //31) Шведский = sv
+                           else if currentPhoneLangID == "sv"{
+                        controller = UIAlertController(title: "Inköpet avbröts", message: nil, preferredStyle: .alert)
+                               }
+                           //32) Японский = ja
+                           else if currentPhoneLangID == "ja"{
+                        controller = UIAlertController(title: "購入をキャンセルしました", message: nil, preferredStyle: .alert)
+                               }
+                    
+                    
+                self.present(controller, animated: true, completion: nil)
+                    
+                    
                    }
                }
+            
            } else {
-              print("продукты еще не загрузились из App Store, покупка невозможна")
+              print("Продукты еще не загрузились из App Store, покупка невозможна")
+                //спиннер пропадает, текст на кнопке "Subscribe" появляется
+            self.activityIndicatorButtonSubscribe.stopAnimating()
+            self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
+            
+            
+            //сообщение "Продукты еще не загрузились"
+            var controller = UIAlertController(title: "Try again later", message: "Products have not yet been downloaded from the App Store and cannot be purchased", preferredStyle: .alert)
+            var ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(ok)
+            
+                    //локализация
+                   if currentPhoneLangID == "ru" {
+                controller = UIAlertController(title: "Попробуйте позже", message: "Продукты еще не загрузились из App Store, покупка невозможна", preferredStyle: .alert)
+                ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                controller.addAction(ok)
+                   }
+                   //2) Арабский = ar
+                   else if currentPhoneLangID == "ar"{
+                controller = UIAlertController(title: "حاول مرة أخرى في وقت لاحق", message: "لم يتم تنزيل المنتجات من App Store بعد ولا يمكن شراؤها", preferredStyle: .alert)
+                       }
+                   //3) Венгерский = hu
+                   else if currentPhoneLangID == "hu"{
+                controller = UIAlertController(title: "Próbáld újra később", message: "A termékeket még nem töltötték le az App Store-ból, és nem vásárolhatók meg", preferredStyle: .alert)
+                   }
+                   //4) Вьетнамский = vi
+                   else if currentPhoneLangID == "vi"{
+                controller = UIAlertController(title: "Thử lại sau", message: "Sản phẩm chưa được tải xuống từ App Store và không thể mua được", preferredStyle: .alert)
+                   }
+                   //5) Греческий = el
+                   else if currentPhoneLangID == "el"{
+                controller = UIAlertController(title: "Προσπαθήστε ξανά αργότερα", message: "Τα προϊόντα δεν έχουν ακόμη ληφθεί από το App Store και δεν μπορούν να αγοραστούν", preferredStyle: .alert)
+                   }
+                   //6) Датский = da
+                   else if currentPhoneLangID == "da"{
+                controller = UIAlertController(title: "Prøv igen senere", message: "Produkter er endnu ikke downloadet fra App Store og kan ikke købes", preferredStyle: .alert)
+                   }
+                   //7) Иврит = he
+                   else if currentPhoneLangID == "he"{
+                controller = UIAlertController(title: "נסה שוב מאוחר יותר", message: "מוצרים טרם הורדו מחנות האפליקציות ולא ניתן לרכוש אותם", preferredStyle: .alert)
+                       }
+                   //8) Индонезийский = id
+                   else if currentPhoneLangID == "id"{
+                controller = UIAlertController(title: "Coba lagi nanti", message: "Produk belum diunduh dari App Store dan tidak dapat dibeli", preferredStyle: .alert)
+                       }
+                   //9) Испанский = es
+                   else if currentPhoneLangID == "es"{
+                controller = UIAlertController(title: "Vuelve a intentarlo más tarde", message: "Los productos aún no se han descargado de la App Store y no se pueden comprar", preferredStyle: .alert)
+                       }
+                   //10) Итальянский = it
+                   else if currentPhoneLangID == "it"{
+                controller = UIAlertController(title: "Riprovare più tardi", message: "I prodotti non sono ancora stati scaricati dall'App Store e non possono essere acquistati", preferredStyle: .alert)
+                       }
+                   //11) Каталанский = ca
+                   else if currentPhoneLangID == "ca"{
+                controller = UIAlertController(title: "Torna-ho a provar més tard", message: "Els productes encara no s'han descarregat de l'App Store i no es poden comprar", preferredStyle: .alert)
+                       }
+                   //12) Китайский = zh
+                   else if currentPhoneLangID == "zh"{
+                controller = UIAlertController(title: "稍後再試", message: "產品尚未從App Store下載，無法購買", preferredStyle: .alert)
+                       }
+                   //13) Корейский = ko
+                   else if currentPhoneLangID == "ko"{
+                controller = UIAlertController(title: "나중에 다시 시도", message: "제품이 아직 App Store에서 다운로드되지 않았으며 구매할 수 없습니다.", preferredStyle: .alert)
+                       }
+                   //14) Малайский = ms
+                   else if currentPhoneLangID == "ms"{
+                controller = UIAlertController(title: "Cuba lagi nanti", message: "Produk belum dimuat turun dari App Store dan tidak dapat dibeli", preferredStyle: .alert)
+                       }
+                   //15) Немецкий = de
+                   else if currentPhoneLangID == "de"{
+                controller = UIAlertController(title: "Versuchen Sie es später noch einmal", message: "Produkte wurden noch nicht aus dem App Store heruntergeladen und können nicht gekauft werden", preferredStyle: .alert)
+                       }
+                   //16) Нидерландский = nl
+                   else if currentPhoneLangID == "nl"{
+                controller = UIAlertController(title: "Probeer het later opnieuw", message: "Producten zijn nog niet gedownload uit de App Store en kunnen niet worden gekocht", preferredStyle: .alert)
+                       }
+                   //17) Норвежский = nb
+                   else if currentPhoneLangID == "nb"{
+                controller = UIAlertController(title: "Prøv igjen senere", message: "Produktene er ennå ikke lastet ned fra App Store og kan ikke kjøpes", preferredStyle: .alert)
+                       }
+                   //18) Польский = pl
+                   else if currentPhoneLangID == "pl"{
+                controller = UIAlertController(title: "Spróbuj ponownie później", message: "Produkty nie zostały jeszcze pobrane z App Store i nie można ich kupić", preferredStyle: .alert)
+                       }
+                   //19) Португальский = pt
+                   else if currentPhoneLangID == "pt"{
+                controller = UIAlertController(title: "Tente mais tarde", message: "Os produtos ainda não foram baixados da App Store e não podem ser comprados", preferredStyle: .alert)
+                       }
+                   //20) Румынский = ro
+                   else if currentPhoneLangID == "ro"{
+                controller = UIAlertController(title: "Încercați mai târziu", message: "Produsele nu au fost încă descărcate din App Store și nu pot fi achiziționate", preferredStyle: .alert)
+                       }
+                   //21) Русский = ru
+                   
+                   //22) Словацкий = sk
+                   else if currentPhoneLangID == "sk"{
+                controller = UIAlertController(title: "Skúste to znova neskôr", message: "Produkty ešte neboli stiahnuté z App Store a nie je možné ich kúpiť", preferredStyle: .alert)
+                       }
+                   //23) Тайский = th
+                   else if currentPhoneLangID == "th"{
+                controller = UIAlertController(title: "โปรดลองอีกครั้งในภายหลัง", message: "ผลิตภัณฑ์ยังไม่ได้ดาวน์โหลดจาก App Store และไม่สามารถซื้อได้", preferredStyle: .alert)
+                       }
+                   //24) Турецкий = tr
+                   else if currentPhoneLangID == "tr"{
+                controller = UIAlertController(title: "Daha sonra tekrar deneyin", message: "Ürünler henüz App Store'dan indirilmemiştir ve satın alınamaz", preferredStyle: .alert)
+                       }
+                   //25) Украинский = uk
+                   else if currentPhoneLangID == "uk"{
+                controller = UIAlertController(title: "Спробуйте ще раз пізніше", message: "Продукти ще не завантажені з App Store і їх не можна придбати", preferredStyle: .alert)
+                       }
+                   //26) Финский = fi
+                   else if currentPhoneLangID == "fi"{
+                controller = UIAlertController(title: "Yritä myöhemmin uudelleen", message: "Tuotteita ei ole vielä ladattu App Storesta, eikä niitä voi ostaa", preferredStyle: .alert)
+                       }
+                   //27) Французский = fr
+                   else if currentPhoneLangID == "fr"{
+                controller = UIAlertController(title: "Réessayez plus tard", message: "Les produits n'ont pas encore été téléchargés depuis l'App Store et ne peuvent pas être achetés", preferredStyle: .alert)
+                       }
+                   //28) Хинди = hi
+                   else if currentPhoneLangID == "hi"{
+                controller = UIAlertController(title: "बाद में पुन: प्रयास करें", message: "उत्पादों को अभी तक ऐप स्टोर से डाउनलोड नहीं किया गया है और खरीदा नहीं जा सकता है", preferredStyle: .alert)
+                       }
+                   //29) Хорватский = hr
+                   else if currentPhoneLangID == "hr"{
+                controller = UIAlertController(title: "Pokušajte ponovno kasnije", message: "Proizvodi još nisu preuzeti iz App Storea i ne mogu se kupiti", preferredStyle: .alert)
+                       }
+                   //30) Чешский = cs
+                   else if currentPhoneLangID == "cs"{
+                controller = UIAlertController(title: "Zkuste to později znovu", message: "Produkty ještě nebyly staženy z App Store a nelze je zakoupit", preferredStyle: .alert)
+                       }
+                   //31) Шведский = sv
+                   else if currentPhoneLangID == "sv"{
+                controller = UIAlertController(title: "Försök igen senare", message: "Produkter har ännu inte laddats ner från App Store och kan inte köpas", preferredStyle: .alert)
+                       }
+                   //32) Японский = ja
+                   else if currentPhoneLangID == "ja"{
+                controller = UIAlertController(title: "あとでもう一度試してみてください", message: "製品はまだApp Storeからダウンロードされておらず、購入できません", preferredStyle: .alert)
+                       }
+            
+            
+        self.present(controller, animated: true, completion: nil)
+            
+            
+            
+            
           }
-    }
+    } //func subscribeButton - конец функции
     
     
     

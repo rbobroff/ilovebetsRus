@@ -27,7 +27,6 @@ class AboutUsViewController: UIViewController, WKNavigationDelegate {
         
         if currentPhoneLangID == "ru"       {
           self.navigationItem.title = "#О Нас"
-           //добавление строки навигации при загрузке ViewControllera
         }
         
         else if currentPhoneLangID == "ar"{
