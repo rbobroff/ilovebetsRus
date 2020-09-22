@@ -2986,7 +2986,7 @@ class ViewController: UIViewController {
 
         }
         
-        //Для iPhone 6, 6S, 7, 8, SE_2nd (с высотой экрана 667.0, width = 375) - настроены Constraints
+        //Для iPhone 6, 6S, 7, 8, SE_2nd_gen (с высотой экрана 667.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 667 {
             
             //top Constraint для верхнего label
@@ -3037,7 +3037,8 @@ class ViewController: UIViewController {
             
         }
         
-        //iPadPro 9.7, iPad Air2, iPad Air, iPad 5th gen
+        //iPadPro (9.7 - inch), iPad Air2, iPad Air, iPad 5th gen
+        // (7.9 - inch) - iPad mini 2,3,4,5 gen
         if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
             bettingTipsButtonHeight.constant = 235
             statisticsButtonHeight.constant = 235
@@ -3090,7 +3091,7 @@ class ViewController: UIViewController {
         }
         
         
-        //iPad Pro (11-inch) 2nd gen
+        //iPad Pro (11-inch) 2nd gen, 1 gen
         //Высота экрана =  1194.0
         //Ширина экрана =  834.0
         if UIScreen.main.bounds.height == 1194 && UIScreen.main.bounds.width == 834 {
@@ -3135,7 +3136,7 @@ class ViewController: UIViewController {
             }
         }
         
-        //iPad 7th gen
+        //iPad (10.2 inch) - 7th gen, 8th gen (2020 year)
         if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
             bettingTipsButtonHeight.constant = 235
             statisticsButtonHeight.constant = 235
@@ -3151,6 +3152,30 @@ class ViewController: UIViewController {
             sportBetsLabel.font = UIFont.systemFont(ofSize: 30)
             iLoveBetsTopConstraints.constant  = 25
             }
+        
+        
+        
+        
+        
+        //iPad Air (10.9 inch) - 4th gen - 2020 year
+        if UIScreen.main.bounds.height == 1180 && UIScreen.main.bounds.width == 820 {
+            bettingTipsButtonHeight.constant = 540
+            statisticsButtonHeight.constant = 250
+            chatButtonHeight.constant = 250
+            emailButtonHeight.constant = 250
+            helpButtonHeight.constant = 250
+            aboutUsButtonHeight.constant = 250
+            bettingTipsButtonTopConstraint.constant = 150
+            buyButtonTopConstraint.constant = 150
+            statisticsButtonTopConstraint.constant = 150
+            yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 35)
+            iLoveBetsLabel.font = UIFont.systemFont(ofSize: 85)
+            sportBetsLabel.font = UIFont.systemFont(ofSize: 32)
+            iLoveBetsTopConstraints.constant  = 17.49
+            if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
+                yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 30)
+            }
+        }
         
         
     } //конец функции viewDidLoad
