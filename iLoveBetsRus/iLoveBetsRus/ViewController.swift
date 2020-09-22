@@ -456,124 +456,185 @@ class ViewController: UIViewController {
                            //2) Арабский = ar
                            else if currentPhoneLangID == "ar"{
                         controller = UIAlertController(title: "ليس لديك اشتراكات نشطة", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //3) Венгерский = hu
                            else if currentPhoneLangID == "hu"{
                         controller = UIAlertController(title: "Nincs aktív előfizetésed", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //4) Вьетнамский = vi
                            else if currentPhoneLangID == "vi"{
                         controller = UIAlertController(title: "Bạn không có đăng ký nào đang hoạt động", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //5) Греческий = el
                            else if currentPhoneLangID == "el"{
                         controller = UIAlertController(title: "Δεν έχετε ενεργές συνδρομές", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //6) Датский = da
                            else if currentPhoneLangID == "da"{
                         controller = UIAlertController(title: "Du har ingen aktive abonnementer", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //7) Иврит = he
                            else if currentPhoneLangID == "he"{
                         controller = UIAlertController(title: "אין לך מינויים פעילים", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //8) Индонезийский = id
                            else if currentPhoneLangID == "id"{
                         controller = UIAlertController(title: "Anda tidak memiliki langganan aktif", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //9) Испанский = es
                            else if currentPhoneLangID == "es"{
                         controller = UIAlertController(title: "No tienes suscripciones activas", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //10) Итальянский = it
                            else if currentPhoneLangID == "it"{
                         controller = UIAlertController(title: "Non hai abbonamenti attivi", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //11) Каталанский = ca
                            else if currentPhoneLangID == "ca"{
                         controller = UIAlertController(title: "No teniu cap subscripció activa", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //12) Китайский = zh
                            else if currentPhoneLangID == "zh"{
                         controller = UIAlertController(title: "您沒有有效的訂閱", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //13) Корейский = ko
                            else if currentPhoneLangID == "ko"{
                         controller = UIAlertController(title: "활성 구독이 없습니다.", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //14) Малайский = ms
                            else if currentPhoneLangID == "ms"{
                         controller = UIAlertController(title: "Anda tidak mempunyai langganan aktif", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //15) Немецкий = de
                            else if currentPhoneLangID == "de"{
                         controller = UIAlertController(title: "Sie haben keine aktiven Abonnements", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //16) Нидерландский = nl
                            else if currentPhoneLangID == "nl"{
                         controller = UIAlertController(title: "Je hebt geen actieve abonnementen", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //17) Норвежский = nb
                            else if currentPhoneLangID == "nb"{
                         controller = UIAlertController(title: "Du har ingen aktive abonnementer", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //18) Польский = pl
                            else if currentPhoneLangID == "pl"{
                         controller = UIAlertController(title: "Nie masz żadnych aktywnych subskrypcji", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //19) Португальский = pt
                            else if currentPhoneLangID == "pt"{
                         controller = UIAlertController(title: "Você não tem assinaturas ativas", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //20) Румынский = ro
                            else if currentPhoneLangID == "ro"{
                         controller = UIAlertController(title: "Nu aveți abonamente active", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
+                           
                            //21) Русский = ru
                            
                            //22) Словацкий = sk
                            else if currentPhoneLangID == "sk"{
                         controller = UIAlertController(title: "Nemáte žiadne aktívne predplatné", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //23) Тайский = th
                            else if currentPhoneLangID == "th"{
                         controller = UIAlertController(title: "คุณไม่มีการสมัครสมาชิกที่ใช้งานอยู่", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //24) Турецкий = tr
                            else if currentPhoneLangID == "tr"{
                         controller = UIAlertController(title: "Aktif aboneliğiniz yok", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //25) Украинский = uk
                            else if currentPhoneLangID == "uk"{
                         controller = UIAlertController(title: "У вас немає активних підписок", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //26) Финский = fi
                            else if currentPhoneLangID == "fi"{
                         controller = UIAlertController(title: "Sinulla ei ole aktiivisia tilauksia", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //27) Французский = fr
                            else if currentPhoneLangID == "fr"{
                         controller = UIAlertController(title: "Vous n'avez aucun abonnement actif", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //28) Хинди = hi
                            else if currentPhoneLangID == "hi"{
                         controller = UIAlertController(title: "आपके पास कोई सक्रिय सदस्यता नहीं है", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //29) Хорватский = hr
                            else if currentPhoneLangID == "hr"{
                         controller = UIAlertController(title: "Nemate aktivnih pretplata", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //30) Чешский = cs
                            else if currentPhoneLangID == "cs"{
                         controller = UIAlertController(title: "Nemáte žádné aktivní předplatné", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //31) Шведский = sv
                            else if currentPhoneLangID == "sv"{
                         controller = UIAlertController(title: "Du har inga aktiva prenumerationer", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //32) Японский = ja
                            else if currentPhoneLangID == "ja"{
                         controller = UIAlertController(title: "アクティブなサブスクリプションはありません", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                     
                     
@@ -1414,124 +1475,184 @@ class ViewController: UIViewController {
                            //2) Арабский = ar
                            else if currentPhoneLangID == "ar"{
                         controller = UIAlertController(title: "تم إلغاء الشراء", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //3) Венгерский = hu
                            else if currentPhoneLangID == "hu"{
                         controller = UIAlertController(title: "A vásárlás törölve", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //4) Вьетнамский = vi
                            else if currentPhoneLangID == "vi"{
                         controller = UIAlertController(title: "Mua hàng đã bị hủy", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //5) Греческий = el
                            else if currentPhoneLangID == "el"{
                         controller = UIAlertController(title: "Η αγορά ακυρώθηκε", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //6) Датский = da
                            else if currentPhoneLangID == "da"{
                         controller = UIAlertController(title: "Køb annulleret", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                            }
                            //7) Иврит = he
                            else if currentPhoneLangID == "he"{
                         controller = UIAlertController(title: "הרכישה בוטלה", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //8) Индонезийский = id
                            else if currentPhoneLangID == "id"{
                         controller = UIAlertController(title: "Pembelian dibatalkan", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //9) Испанский = es
                            else if currentPhoneLangID == "es"{
                         controller = UIAlertController(title: "Compra cancelada", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //10) Итальянский = it
                            else if currentPhoneLangID == "it"{
                         controller = UIAlertController(title: "Acquisto annullato", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //11) Каталанский = ca
                            else if currentPhoneLangID == "ca"{
                         controller = UIAlertController(title: "S'ha cancel·lat la compra", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //12) Китайский = zh
                            else if currentPhoneLangID == "zh"{
                         controller = UIAlertController(title: "購買已取消", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //13) Корейский = ko
                            else if currentPhoneLangID == "ko"{
                         controller = UIAlertController(title: "구매 취소", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //14) Малайский = ms
                            else if currentPhoneLangID == "ms"{
                         controller = UIAlertController(title: "Pembelian dibatalkan", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //15) Немецкий = de
                            else if currentPhoneLangID == "de"{
                         controller = UIAlertController(title: "Kauf storniert", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //16) Нидерландский = nl
                            else if currentPhoneLangID == "nl"{
                         controller = UIAlertController(title: "Aankoop geannuleerd", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //17) Норвежский = nb
                            else if currentPhoneLangID == "nb"{
                         controller = UIAlertController(title: "Kjøpet ble kansellert", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //18) Польский = pl
                            else if currentPhoneLangID == "pl"{
                         controller = UIAlertController(title: "Zakup anulowany", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //19) Португальский = pt
                            else if currentPhoneLangID == "pt"{
                         controller = UIAlertController(title: "Compra cancelada", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //20) Румынский = ro
                            else if currentPhoneLangID == "ro"{
                         controller = UIAlertController(title: "Achiziție anulată", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //21) Русский = ru
                            
                            //22) Словацкий = sk
                            else if currentPhoneLangID == "sk"{
                         controller = UIAlertController(title: "Nákup bol zrušený", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //23) Тайский = th
                            else if currentPhoneLangID == "th"{
                         controller = UIAlertController(title: "ยกเลิกการซื้อแล้ว", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //24) Турецкий = tr
                            else if currentPhoneLangID == "tr"{
                         controller = UIAlertController(title: "Satın alma iptal edildi", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //25) Украинский = uk
                            else if currentPhoneLangID == "uk"{
                         controller = UIAlertController(title: "Покупку скасовано", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //26) Финский = fi
                            else if currentPhoneLangID == "fi"{
                         controller = UIAlertController(title: "Osto peruutettu", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //27) Французский = fr
                            else if currentPhoneLangID == "fr"{
                         controller = UIAlertController(title: "Achat annulé", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //28) Хинди = hi
                            else if currentPhoneLangID == "hi"{
                         controller = UIAlertController(title: "खरीद रद्द", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //29) Хорватский = hr
                            else if currentPhoneLangID == "hr"{
                         controller = UIAlertController(title: "Kupnja otkazana", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //30) Чешский = cs
                            else if currentPhoneLangID == "cs"{
                         controller = UIAlertController(title: "Nákup zrušen", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //31) Шведский = sv
                            else if currentPhoneLangID == "sv"{
                         controller = UIAlertController(title: "Inköpet avbröts", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                            //32) Японский = ja
                            else if currentPhoneLangID == "ja"{
                         controller = UIAlertController(title: "購入をキャンセルしました", message: nil, preferredStyle: .alert)
+                            ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            controller.addAction(ok)
                                }
                     
                     
@@ -1562,124 +1683,184 @@ class ViewController: UIViewController {
                    //2) Арабский = ar
                    else if currentPhoneLangID == "ar"{
                 controller = UIAlertController(title: "حاول مرة أخرى في وقت لاحق", message: "لم يتم تنزيل المنتجات من App Store بعد ولا يمكن شراؤها", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //3) Венгерский = hu
                    else if currentPhoneLangID == "hu"{
                 controller = UIAlertController(title: "Próbáld újra később", message: "A termékeket még nem töltötték le az App Store-ból, és nem vásárolhatók meg", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                    }
                    //4) Вьетнамский = vi
                    else if currentPhoneLangID == "vi"{
                 controller = UIAlertController(title: "Thử lại sau", message: "Sản phẩm chưa được tải xuống từ App Store và không thể mua được", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                    }
                    //5) Греческий = el
                    else if currentPhoneLangID == "el"{
                 controller = UIAlertController(title: "Προσπαθήστε ξανά αργότερα", message: "Τα προϊόντα δεν έχουν ακόμη ληφθεί από το App Store και δεν μπορούν να αγοραστούν", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                    }
                    //6) Датский = da
                    else if currentPhoneLangID == "da"{
                 controller = UIAlertController(title: "Prøv igen senere", message: "Produkter er endnu ikke downloadet fra App Store og kan ikke købes", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                    }
                    //7) Иврит = he
                    else if currentPhoneLangID == "he"{
                 controller = UIAlertController(title: "נסה שוב מאוחר יותר", message: "מוצרים טרם הורדו מחנות האפליקציות ולא ניתן לרכוש אותם", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //8) Индонезийский = id
                    else if currentPhoneLangID == "id"{
                 controller = UIAlertController(title: "Coba lagi nanti", message: "Produk belum diunduh dari App Store dan tidak dapat dibeli", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //9) Испанский = es
                    else if currentPhoneLangID == "es"{
                 controller = UIAlertController(title: "Vuelve a intentarlo más tarde", message: "Los productos aún no se han descargado de la App Store y no se pueden comprar", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //10) Итальянский = it
                    else if currentPhoneLangID == "it"{
                 controller = UIAlertController(title: "Riprovare più tardi", message: "I prodotti non sono ancora stati scaricati dall'App Store e non possono essere acquistati", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //11) Каталанский = ca
                    else if currentPhoneLangID == "ca"{
                 controller = UIAlertController(title: "Torna-ho a provar més tard", message: "Els productes encara no s'han descarregat de l'App Store i no es poden comprar", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //12) Китайский = zh
                    else if currentPhoneLangID == "zh"{
                 controller = UIAlertController(title: "稍後再試", message: "產品尚未從App Store下載，無法購買", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //13) Корейский = ko
                    else if currentPhoneLangID == "ko"{
                 controller = UIAlertController(title: "나중에 다시 시도", message: "제품이 아직 App Store에서 다운로드되지 않았으며 구매할 수 없습니다.", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //14) Малайский = ms
                    else if currentPhoneLangID == "ms"{
                 controller = UIAlertController(title: "Cuba lagi nanti", message: "Produk belum dimuat turun dari App Store dan tidak dapat dibeli", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //15) Немецкий = de
                    else if currentPhoneLangID == "de"{
                 controller = UIAlertController(title: "Versuchen Sie es später noch einmal", message: "Produkte wurden noch nicht aus dem App Store heruntergeladen und können nicht gekauft werden", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //16) Нидерландский = nl
                    else if currentPhoneLangID == "nl"{
                 controller = UIAlertController(title: "Probeer het later opnieuw", message: "Producten zijn nog niet gedownload uit de App Store en kunnen niet worden gekocht", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //17) Норвежский = nb
                    else if currentPhoneLangID == "nb"{
                 controller = UIAlertController(title: "Prøv igjen senere", message: "Produktene er ennå ikke lastet ned fra App Store og kan ikke kjøpes", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //18) Польский = pl
                    else if currentPhoneLangID == "pl"{
                 controller = UIAlertController(title: "Spróbuj ponownie później", message: "Produkty nie zostały jeszcze pobrane z App Store i nie można ich kupić", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //19) Португальский = pt
                    else if currentPhoneLangID == "pt"{
                 controller = UIAlertController(title: "Tente mais tarde", message: "Os produtos ainda não foram baixados da App Store e não podem ser comprados", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //20) Румынский = ro
                    else if currentPhoneLangID == "ro"{
                 controller = UIAlertController(title: "Încercați mai târziu", message: "Produsele nu au fost încă descărcate din App Store și nu pot fi achiziționate", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //21) Русский = ru
                    
                    //22) Словацкий = sk
                    else if currentPhoneLangID == "sk"{
                 controller = UIAlertController(title: "Skúste to znova neskôr", message: "Produkty ešte neboli stiahnuté z App Store a nie je možné ich kúpiť", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //23) Тайский = th
                    else if currentPhoneLangID == "th"{
                 controller = UIAlertController(title: "โปรดลองอีกครั้งในภายหลัง", message: "ผลิตภัณฑ์ยังไม่ได้ดาวน์โหลดจาก App Store และไม่สามารถซื้อได้", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //24) Турецкий = tr
                    else if currentPhoneLangID == "tr"{
                 controller = UIAlertController(title: "Daha sonra tekrar deneyin", message: "Ürünler henüz App Store'dan indirilmemiştir ve satın alınamaz", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //25) Украинский = uk
                    else if currentPhoneLangID == "uk"{
                 controller = UIAlertController(title: "Спробуйте ще раз пізніше", message: "Продукти ще не завантажені з App Store і їх не можна придбати", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //26) Финский = fi
                    else if currentPhoneLangID == "fi"{
                 controller = UIAlertController(title: "Yritä myöhemmin uudelleen", message: "Tuotteita ei ole vielä ladattu App Storesta, eikä niitä voi ostaa", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //27) Французский = fr
                    else if currentPhoneLangID == "fr"{
                 controller = UIAlertController(title: "Réessayez plus tard", message: "Les produits n'ont pas encore été téléchargés depuis l'App Store et ne peuvent pas être achetés", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //28) Хинди = hi
                    else if currentPhoneLangID == "hi"{
                 controller = UIAlertController(title: "बाद में पुन: प्रयास करें", message: "उत्पादों को अभी तक ऐप स्टोर से डाउनलोड नहीं किया गया है और खरीदा नहीं जा सकता है", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //29) Хорватский = hr
                    else if currentPhoneLangID == "hr"{
                 controller = UIAlertController(title: "Pokušajte ponovno kasnije", message: "Proizvodi još nisu preuzeti iz App Storea i ne mogu se kupiti", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //30) Чешский = cs
                    else if currentPhoneLangID == "cs"{
                 controller = UIAlertController(title: "Zkuste to později znovu", message: "Produkty ještě nebyly staženy z App Store a nelze je zakoupit", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //31) Шведский = sv
                    else if currentPhoneLangID == "sv"{
                 controller = UIAlertController(title: "Försök igen senare", message: "Produkter har ännu inte laddats ner från App Store och kan inte köpas", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
                    //32) Японский = ja
                    else if currentPhoneLangID == "ja"{
                 controller = UIAlertController(title: "あとでもう一度試してみてください", message: "製品はまだApp Storeからダウンロードされておらず、購入できません", preferredStyle: .alert)
+                    ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(ok)
                        }
             
             
