@@ -3167,7 +3167,7 @@ class ViewController: UIViewController {
 
         }
         
-        //v.3.3 - окно подписки по умолчанию - ОК
+        //+v.3.3 - окно подписки по умолчанию - ОК
         //Для iPhone 6, 6S, 7, 8, SE_2nd_gen (с высотой экрана 667.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 667 {
             
@@ -3185,7 +3185,7 @@ class ViewController: UIViewController {
        
         }
 
-        
+        //+v.3.3 - окно подписки по умолчанию - ОК
         //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, width - 414) - настроены Constraints
         if UIScreen.main.bounds.height == 736 {
 
