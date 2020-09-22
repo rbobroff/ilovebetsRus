@@ -3169,7 +3169,7 @@ class ViewController: UIViewController {
         
         //+v.3.3 - окно подписки по умолчанию - ОК
         //Для iPhone 6, 6S, 7, 8, SE_2nd_gen (с высотой экрана 667.0, width = 375) - настроены Constraints
-        if UIScreen.main.bounds.height == 667 {
+        if UIScreen.main.bounds.height == 667 && UIScreen.main.bounds.width == 375 {
             
             //top Constraint для верхнего label
             upConstraintYourPersonalSportsBettingAdvisor.constant = 17
@@ -3187,12 +3187,12 @@ class ViewController: UIViewController {
 
         //+v.3.3 - окно подписки по умолчанию - ОК
         //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, width - 414) - настроены Constraints
-        if UIScreen.main.bounds.height == 736 {
+        if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
 
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
-            bettingTipsButtonTopConstraint.constant = 111
-            buyButtonTopConstraint.constant = 111
-            statisticsButtonTopConstraint.constant = 111
+            bettingTipsButtonTopConstraint.constant = 125
+            buyButtonTopConstraint.constant = 125
+            statisticsButtonTopConstraint.constant = 125
             //left right Constraint для нижнего label "Спортивные прогнозы" "Sport Betting Tips"
             sportBetsLabelLeftConstraint.constant = 120
             sportBetsLabelRightConstraint.constant = 120
