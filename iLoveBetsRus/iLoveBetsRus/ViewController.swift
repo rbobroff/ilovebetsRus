@@ -3141,6 +3141,7 @@ class ViewController: UIViewController {
             sportBetsLabel.isHidden = false
         }
         
+        //v.3.3 - окно подписки ОК
         //Для iPhone 5S, SE (с высотой экрана 568.0, width = 320) - настроены Constraints
         if UIScreen.main.bounds.height == 568 {
              //top Constraint для верхнего label
@@ -3152,19 +3153,21 @@ class ViewController: UIViewController {
             buyButtonTopConstraint.constant = 80
             statisticsButtonTopConstraint.constant = 80
             
-            //v.3.3 - для окна подписки
+            
             subscriptionPriceLabelUpConstraint.constant = 5
             productDescriptionLabelUpConstraint.constant = 5
             productTrialDurationLabelUpConstraint.constant = 5
             restorePurchasesButtonUpConstraint.constant = 5
             aboutSubscriptionTitleUpConstraint.constant = 5
             subscribeLabelPopUpViewUpConstraint.constant = 5
-            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 16.0)
-            productDescriptionLabel.font = UIFont.systemFont(ofSize: 16.0)
-            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 16.0)
+            //для окна подписки
+            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 12.0)
+            productDescriptionLabel.font = UIFont.systemFont(ofSize: 12.0)
+            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 12.0)
             //делаем текст жирным в label
-            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 18.0)
-
+            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 13.0)
+            aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 11.0)
+            aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 11.0)
         }
         
         //+v.3.3 - окно подписки по умолчанию - ОК
@@ -3185,7 +3188,7 @@ class ViewController: UIViewController {
        
         }
 
-        //+v.3.3 - окно подписки по умолчанию - ОК
+        //+v.3.3 - окно подписки - ОК
         //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, width - 414) - настроены Constraints
         if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
 
@@ -3198,24 +3201,51 @@ class ViewController: UIViewController {
             sportBetsLabelRightConstraint.constant = 120
             leftConstraintYourPersonalSportsBettingAdvisor.constant = 36
             rightConstraintYourPersonalSportsBettingAdvisor.constant = 36
+            //для окна подписки
+            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 15.0)
+            productDescriptionLabel.font = UIFont.systemFont(ofSize: 15.0)
+            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 15.0)
+            //делаем текст жирным в label
+            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 17.0)
+            aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 14.0)
+            aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 14.0)
+            
         }
         
-        
+        //+v.3.3 - окно подписки - ОК
         //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
-        if UIScreen.main.bounds.height == 812 {
+        if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 bettingTipsButtonTopConstraint.constant = 111
                 buyButtonTopConstraint.constant = 111
                 statisticsButtonTopConstraint.constant = 111
+                //для окна подписки
+                subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 16.0)
+                productDescriptionLabel.font = UIFont.systemFont(ofSize: 16.0)
+                productTrialDurationLabel.font = UIFont.systemFont(ofSize: 16.0)
+                //делаем текст жирным в label
+                subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 18.0)
+                aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+                aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 15.0)
             }
         
         
+        //+v.3.3 - окно подписки - ОК
         //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0, width = 414) - настроены Constraints
-        if UIScreen.main.bounds.height == 896 {
+        if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
             bettingTipsButtonTopConstraint.constant = 161
             buyButtonTopConstraint.constant = 161
             statisticsButtonTopConstraint.constant = 161
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
+            //для окна подписки
+            subscribeLabelPopUpViewUpConstraint.constant = 40
+            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 18.0)
+            productDescriptionLabel.font = UIFont.systemFont(ofSize: 18.0)
+            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 18.0)
+            //делаем текст жирным в label
+            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 20.0)
+            aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+            aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 16.0)
             
         }
         
@@ -3262,6 +3292,20 @@ class ViewController: UIViewController {
             sportBetsLabel.font = UIFont.systemFont(ofSize: 40.2)
             iLoveBetsTopConstraints.constant  = 50
             sportBetsLabelBottomConstraint.constant = 40
+            //для окна подписки
+                //размер текста кнопок
+            restorePurchasesButtonOutlet.titleLabel?.font = .systemFont(ofSize: 22)
+            termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 22)
+            privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 22)
+            subscribeButtonOutlet.titleLabel?.font = .systemFont(ofSize: 22)
+            subscribeLabelPopUpViewUpConstraint.constant = 240
+            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 27.0)
+            productDescriptionLabel.font = UIFont.systemFont(ofSize: 27.0)
+            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 27.0)
+            //делаем текст жирным в label
+            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 30.0)
+            aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
+            aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 24.0)
 
             if currentPhoneLangID == "ru" || currentPhoneLangID == "uk" {
                 yourPersonalSportsBettingAdvisorLabel.font = UIFont.systemFont(ofSize: 40.2) //26.68
