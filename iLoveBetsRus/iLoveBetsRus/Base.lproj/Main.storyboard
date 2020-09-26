@@ -288,7 +288,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="nhH-c5-IN2"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -304,7 +304,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="cAN-y1-kJu"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                             <state key="normal" title="Subscribe">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
