@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             self.present(termsOfUseViewController, animated: true, completion: nil)
         }   else   {
             self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
-            self.animateOut(desiredView: self.blurView)
+            self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
             self.present(termsOfUseViewController, animated: true, completion: nil)
         }
     }
@@ -662,13 +662,13 @@ class ViewController: UIViewController {
         self.activityIndicatorButtonSubscribe.stopAnimating()
         self.subscribeButtonOutlet.setTitleColor(UIColor.white, for: .normal)
         self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
-        self.animateOut(desiredView: self.blurView)
+        self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
         self.buyButtonOutlet.isHidden = true
         self.bettingTipsButton.isHidden = false
         } else {
         print("!Подписка неактивна!")
             self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
-            self.animateOut(desiredView: self.blurView)
+            self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
         }
     }
     
@@ -3300,9 +3300,14 @@ class ViewController: UIViewController {
         //Высота экрана =  1112.0
         //Ширина экрана =  834.0
         
-    //iPad 7th gen
+        
+    //iPad (10.2 inch) - 7th gen, 8th gen (2020 year)
         //Высота экрана =  1080.0
         //Ширина экрана =  810.0
+        
+    //iPad Air (10.9 inch) - 4th gen - 2020 year
+        //Высота экрана =  1180
+        //Ширина экрана =  820
         
         
         //проверяем размер экрана!!!!
@@ -3422,6 +3427,8 @@ class ViewController: UIViewController {
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
             //для окна подписки
+            subscribeLabelPopUpViewUpConstraint.constant = 50
+            subscriptionPriceLabelUpConstraint.constant = 50
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 17.0)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 17.0)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 17.0)
