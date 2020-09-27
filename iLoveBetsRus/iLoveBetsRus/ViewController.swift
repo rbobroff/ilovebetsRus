@@ -3324,7 +3324,7 @@ class ViewController: UIViewController {
         }
         
         //++v.3.3 - окно подписки ОК
-        //Для iPhone 5S, SE (с высотой экрана 568.0, width = 320) - настроены Constraints
+        //Для iPhone 5S, SE (4-inch, с высотой экрана 568.0, width = 320) - настроены Constraints
         if UIScreen.main.bounds.height == 568  && UIScreen.main.bounds.width == 320 {
              //top Constraint для верхнего label
             //17
@@ -3352,7 +3352,7 @@ class ViewController: UIViewController {
         }
         
         //++v.3.3 - окно подписки по умолчанию - ОК
-        //Для iPhone 6, 6S, 7, 8, SE_2nd_gen (с высотой экрана 667.0, width = 375) - настроены Constraints
+        //Для iPhone 6, 6S, 7, 8, SE_2nd_gen (4.7-inch, с высотой экрана 667.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 667 && UIScreen.main.bounds.width == 375 {
             
             //top Constraint для верхнего label
@@ -3370,7 +3370,7 @@ class ViewController: UIViewController {
         }
 
         //++v.3.3 - окно подписки - ОК
-        //Для iPhone 6+, 6S+ 7+, 8+ (с высотой экрана 736.0, width - 414) - настроены Constraints
+        //Для iPhone 6+, 6S+ 7+, 8+ (5.5-inch, с высотой экрана 736.0, width - 414) - настроены Constraints
         if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
 
             //top Constraint для верхних двух кнопок "Прогнозы" и "Статистика". Тк все кнопки привязаны к верхним кнопкам, они автоматически подтягиваются
@@ -3398,7 +3398,7 @@ class ViewController: UIViewController {
         }
         
         //++v.3.3 - окно подписки - ОК
-        //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
+        //Для iPhone X, 11pro (5.8-inch, с высотой экрана 812.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 bettingTipsButtonTopConstraint.constant = 111
                 buyButtonTopConstraint.constant = 111
@@ -3419,7 +3419,7 @@ class ViewController: UIViewController {
         
         
         //++v.3.3 - окно подписки - ОК
-        //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0, width = 414) - настроены Constraints
+        //Для iPhone 11, 11 Pro Max (6.1-inch, с высотой экрана 896.0, width = 414) - настроены Constraints
         if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
             bettingTipsButtonTopConstraint.constant = 161
             buyButtonTopConstraint.constant = 161
@@ -3462,6 +3462,7 @@ class ViewController: UIViewController {
             iLoveBetsTopConstraints.constant  = 15
             //для окна подписки
             subscribeLabelPopUpViewUpConstraint.constant = 100
+            subscriptionPriceLabelUpConstraint.constant = 80
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 21.5)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 21.5)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 21.5)
@@ -3505,7 +3506,8 @@ class ViewController: UIViewController {
             iLoveBetsTopConstraints.constant  = 50
             sportBetsLabelBottomConstraint.constant = 40
             //для окна подписки
-            subscribeLabelPopUpViewUpConstraint.constant = 100
+            subscribeLabelPopUpViewUpConstraint.constant = 200
+            subscriptionPriceLabelUpConstraint.constant = 100
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 21.5)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 21.5)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 21.5)
@@ -3548,6 +3550,7 @@ class ViewController: UIViewController {
             iLoveBetsTopConstraints.constant  = 17.49
             //для окна подписки
             subscribeLabelPopUpViewUpConstraint.constant = 100
+            subscriptionPriceLabelUpConstraint.constant = 100
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 21.5)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 21.5)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 21.5)
@@ -3585,6 +3588,7 @@ class ViewController: UIViewController {
             sportBetsLabel.font = UIFont.systemFont(ofSize: 32)
             //для окна подписки
             subscribeLabelPopUpViewUpConstraint.constant = 100
+            subscriptionPriceLabelUpConstraint.constant = 100
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 21.5)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 21.5)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 21.5)
@@ -3621,6 +3625,7 @@ class ViewController: UIViewController {
             iLoveBetsTopConstraints.constant  = 25
             //для окна подписки
             subscribeLabelPopUpViewUpConstraint.constant = 100
+            subscriptionPriceLabelUpConstraint.constant = 100
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 21.5)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 21.5)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 21.5)
@@ -3655,6 +3660,7 @@ class ViewController: UIViewController {
             iLoveBetsTopConstraints.constant  = 17.49
             //для окна подписки
             subscribeLabelPopUpViewUpConstraint.constant = 100
+            subscriptionPriceLabelUpConstraint.constant = 100
             subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 21.5)
             productDescriptionLabel.font = UIFont.systemFont(ofSize: 21.5)
             productTrialDurationLabel.font = UIFont.systemFont(ofSize: 21.5)
