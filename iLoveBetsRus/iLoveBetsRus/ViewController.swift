@@ -59,7 +59,60 @@ class ViewController: UIViewController {
     @IBAction func buyButton(_ sender: Any) {
         animateIn(desiredView: blurView)
         animateIn(desiredView: popupView)
-         
+        
+        /*
+        //все надписи скрыть, пока не загрузятся товары
+        activityIndicatorPopupView.startAnimating()
+        subscribeLabelPopUpView.isHidden = true
+        subscriptionPriceLabelOutlet.isHidden = true
+        productDescriptionLabel.isHidden = true
+        productTrialDurationLabel.isHidden = true
+        restorePurchasesButtonOutlet.isHidden = true
+        aboutSubscriptionTitleLabel.isHidden = true
+        aboutSubscriptionTextLabel.isHidden = true
+        termsOfUseButtonOutlet.isHidden = true
+        privacyPolicyButtonOutlet.isHidden = true
+        subscribeButtonOutlet.isHidden = true
+        
+        
+        //!!!!!!!!!!!!!!!! - удалить, если не сработает
+        if Apphud.products() != nil {
+            reloadUI()
+            activityIndicatorPopupView.stopAnimating()
+            subscribeLabelPopUpView.isHidden = false
+            subscriptionPriceLabelOutlet.isHidden = false
+            productDescriptionLabel.isHidden = false
+            productTrialDurationLabel.isHidden = false
+            restorePurchasesButtonOutlet.isHidden = false
+            aboutSubscriptionTitleLabel.isHidden = false
+            aboutSubscriptionTextLabel.isHidden = false
+            termsOfUseButtonOutlet.isHidden = false
+            privacyPolicyButtonOutlet.isHidden = false
+            subscribeButtonOutlet.isHidden = false
+            
+            
+           
+        } else {
+            
+            Apphud.refreshStoreKitProducts { products in
+            self.reloadUI()
+            self.activityIndicatorPopupView.stopAnimating()
+            self.subscribeLabelPopUpView.isHidden = false
+            self.subscriptionPriceLabelOutlet.isHidden = false
+            self.productDescriptionLabel.isHidden = false
+            self.productTrialDurationLabel.isHidden = false
+            self.restorePurchasesButtonOutlet.isHidden = false
+            self.aboutSubscriptionTitleLabel.isHidden = false
+            self.aboutSubscriptionTextLabel.isHidden = false
+            self.termsOfUseButtonOutlet.isHidden = false
+            self.privacyPolicyButtonOutlet.isHidden = false
+            self.subscribeButtonOutlet.isHidden = false
+                
+
+            }
+        } //удалить, если не сработает !!!!!!!!!!!!!!!!!
+        */
+        
         //v.3.3 - язык по умолчанию
         subscribeLabelPopUpView.text = "Subscription"
         aboutSubscriptionTitleLabel.text = "Please read below about the auto-renewing subscription nature of this product:"
@@ -381,46 +434,6 @@ class ViewController: UIViewController {
             aboutSubscriptionTitleLabel.text = "この製品の自動更新サブスクリプションについては、以下をお読みください："
             aboutSubscriptionTextLabel.text = "お支払いは購入確認時にiTunesアカウントに請求されます。 現在の期間が終了する少なくとも24時間前に自動更新をオフにしない限り、サブスクリプションは自動的に更新されます。 アカウントには、現在の期間が終了する前の24時間以内に更新料が請求され、更新のコストが特定されます。 サブスクリプションはユーザーが管理でき、購入後にユーザーのアカウント設定に移動して自動更新をオフにすることができます。 無料試用期間の未使用部分が提供されている場合、ユーザーが該当する場合、そのパブリケーションのサブスクリプションを購入すると失効します。"
         }
-        
-        
-        //!!!!!!!!!!!!!!!! - удалить, если не сработает
-        if Apphud.products() != nil {
-            reloadUI()
-            activityIndicatorPopupView.stopAnimating()
-            subscribeLabelPopUpView.isHidden = false
-            subscriptionPriceLabelOutlet.isHidden = false
-            productDescriptionLabel.isHidden = false
-            productTrialDurationLabel.isHidden = false
-            restorePurchasesButtonOutlet.isHidden = false
-            aboutSubscriptionTitleLabel.isHidden = false
-            aboutSubscriptionTextLabel.isHidden = false
-            termsOfUseButtonOutlet.isHidden = false
-            privacyPolicyButtonOutlet.isHidden = false
-            subscribeButtonOutlet.isHidden = false
-            
-            
-           
-        } else {
-            
-            Apphud.refreshStoreKitProducts { products in
-            self.reloadUI()
-            self.activityIndicatorPopupView.stopAnimating()
-            self.subscribeLabelPopUpView.isHidden = false
-            self.subscriptionPriceLabelOutlet.isHidden = false
-            self.productDescriptionLabel.isHidden = false
-            self.productTrialDurationLabel.isHidden = false
-            self.restorePurchasesButtonOutlet.isHidden = false
-            self.aboutSubscriptionTitleLabel.isHidden = false
-            self.aboutSubscriptionTextLabel.isHidden = false
-            self.termsOfUseButtonOutlet.isHidden = false
-            self.privacyPolicyButtonOutlet.isHidden = false
-            self.subscribeButtonOutlet.isHidden = false
-                
-
-            }
-        } //удалить, если не сработает !!!!!!!!!!!!!!!!!
-        
-        
         
         
     }
@@ -3280,6 +3293,9 @@ class ViewController: UIViewController {
     
     //высота экрана iphone X = 812.0
     //высота экрана iphone 11 Pro = 812.0
+    //высота экрана iPhone 12 mini = 812.0
+    //Ширина = 375
+        
         
     //высота экрана iphone 11 = 896.0
     //высота экрана iphone 11 Pro Max = 896.0
@@ -3308,6 +3324,15 @@ class ViewController: UIViewController {
     //iPad Air (10.9 inch) - 4th gen - 2020 year
         //Высота экрана =  1180
         //Ширина экрана =  820
+        
+        //iPhone 12 Pro Max =================
+        //Высота = 926.0
+        //Ширина = 428.0
+        
+        //iPhone 12 Pro, 12 =================
+        //Высота = 844.0
+        //Ширина = 390.0
+        
         
         
         //проверяем размер экрана!!!!
@@ -3398,7 +3423,7 @@ class ViewController: UIViewController {
         }
         
         //++v.3.3 - окно подписки - ОК
-        //Для iPhone X, 11pro (5.8-inch, с высотой экрана 812.0, width = 375) - настроены Constraints
+        //Для iPhone X, 11pro, 12mini (5.8-inch, с высотой экрана 812.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 bettingTipsButtonTopConstraint.constant = 111
                 buyButtonTopConstraint.constant = 111
