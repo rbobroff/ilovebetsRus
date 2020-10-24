@@ -876,7 +876,7 @@ class ViewController: UIViewController {
             if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
                 attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
             }
-            //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
+            //Для iPhone X, 11 Pro, iPhone 12 mini (с высотой экрана 812.0, width = 375) - настроены Constraints
             if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             }
@@ -884,6 +884,16 @@ class ViewController: UIViewController {
             if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
                 attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             }
+            //Для iPhone 12, 12 Pro (с высотой экрана 844.0, width = 390.0) - настроены Constraints
+            if UIScreen.main.bounds.height == 844 && UIScreen.main.bounds.width == 390 {
+                attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            }
+            
+            //Для iPhone 12 Pro Max (с высотой экрана 926.0, width = 428)
+            if UIScreen.main.bounds.height == 926 && UIScreen.main.bounds.width == 428 {
+                attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            }
+            
             //iPadPro (9.7 - inch), iPad Air2, iPad Air, iPad 5th gen
             // (7.9 - inch) - iPad mini 2,3,4,5 gen
             if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
@@ -1075,12 +1085,20 @@ class ViewController: UIViewController {
             if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
                 attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
             }
-            //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
+            //Для iPhone X, 11 Pro, iPhone 12 mini (с высотой экрана 812.0, width = 375) - настроены Constraints
             if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             }
             //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0, width = 414)
             if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
+                attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            }
+            //Для iPhone 12, 12 Pro (с высотой экрана 844.0, width = 390.0) - настроены Constraints
+            if UIScreen.main.bounds.height == 844 && UIScreen.main.bounds.width == 390 {
+                attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            }
+            //Для iPhone 12 Pro Max (с высотой экрана 926.0, width = 428.0)
+            if UIScreen.main.bounds.height == 926 && UIScreen.main.bounds.width == 428 {
                 attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             }
             //iPadPro (9.7 - inch), iPad Air2, iPad Air, iPad 5th gen
@@ -1407,14 +1425,23 @@ class ViewController: UIViewController {
             if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
                 attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
             }
-            //Для iPhone X, 11pro (с высотой экрана 812.0, width = 375) - настроены Constraints
+            //Для iPhone X, 11 Pro, iPhone 12 mini (с высотой экрана 812.0, width = 375) - настроены Constraints
             if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             }
-            //Для iPhone 11, 11 Pro Max (с высотой экрана 896.0, width = 414)
+            //Для iPhone 11, 11 Pro Max,  (с высотой экрана 896.0, width = 414)
             if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
                 attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             }
+            //Для iPhone 12, 12 Pro (с высотой экрана 844.0, width = 390) - настроены Constraints
+            if UIScreen.main.bounds.height == 844 && UIScreen.main.bounds.width == 390 {
+                attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            }
+            //Для iPhone 12 Pro Max (с высотой экрана 926.0, width = 428.0)
+            if UIScreen.main.bounds.height == 926 && UIScreen.main.bounds.width == 428 {
+                attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            }
+            
             //iPadPro (9.7 - inch), iPad Air2, iPad Air, iPad 5th gen
             // (7.9 - inch) - iPad mini 2,3,4,5 gen
             if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
@@ -2123,9 +2150,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightConstraintYourPersonalSportsBettingAdvisor: NSLayoutConstraint!
     
     
+    //v.3.4 аутлет верхнего Constraint для label = iLoveBets
+    @IBOutlet weak var upConstraintiLoveBetsLabel: NSLayoutConstraint!
+    
+    
     //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
     @IBOutlet weak var bettingTipsButtonTopConstraint: NSLayoutConstraint!
-    //аутлет верхнего Constraint ^ для кнопки bettingTipsButton:
+    //аутлет верхнего Constraint ^ для кнопки statisticButton:
     @IBOutlet weak var statisticsButtonTopConstraint: NSLayoutConstraint!
     
     
@@ -3423,7 +3454,7 @@ class ViewController: UIViewController {
         }
         
         //++v.3.3 - окно подписки - ОК
-        //Для iPhone X, 11pro, 12mini (5.8-inch, с высотой экрана 812.0, width = 375) - настроены Constraints
+        //Для iPhone X, 11 Pro, 12 mini (5.8-inch, с высотой экрана 812.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 bettingTipsButtonTopConstraint.constant = 111
                 buyButtonTopConstraint.constant = 111
@@ -3448,6 +3479,57 @@ class ViewController: UIViewController {
         if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
             bettingTipsButtonTopConstraint.constant = 161
             buyButtonTopConstraint.constant = 161
+            upConstraintiLoveBetsLabel.constant = 30
+            statisticsButtonTopConstraint.constant = 161
+            sportBetsLabelLeftConstraint.constant = 100
+            sportBetsLabelRightConstraint.constant = 100
+            //для окна подписки
+            subscribeLabelPopUpViewUpConstraint.constant = 50
+            subscriptionPriceLabelUpConstraint.constant = 50
+            subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 17.0)
+            productDescriptionLabel.font = UIFont.systemFont(ofSize: 17.0)
+            productTrialDurationLabel.font = UIFont.systemFont(ofSize: 17.0)
+            //делаем текст жирным в label
+            subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 23.0)
+            aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+            aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 14.0)
+            restorePurchasesButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
+            termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
+            privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
+            subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 23)
+        }
+        
+        
+        
+        //v.3.4
+        //Для iPhone 12, 12 Pro (6.1-inch, с высотой экрана 844.0, width = 390) - настроены Constraints
+        if UIScreen.main.bounds.height == 844 && UIScreen.main.bounds.width == 390 {
+                bettingTipsButtonTopConstraint.constant = 111
+                buyButtonTopConstraint.constant = 111
+                statisticsButtonTopConstraint.constant = 111
+                //для окна подписки
+                subscriptionPriceLabelOutlet.font = UIFont.systemFont(ofSize: 17.0)
+                productDescriptionLabel.font = UIFont.systemFont(ofSize: 17.0)
+                productTrialDurationLabel.font = UIFont.systemFont(ofSize: 17.0)
+                //делаем текст жирным в label
+                subscribeLabelPopUpView.font = UIFont.boldSystemFont(ofSize: 23.0)
+                aboutSubscriptionTitleLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+                aboutSubscriptionTextLabel.font = UIFont.systemFont(ofSize: 14.0)
+                restorePurchasesButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
+                termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
+                privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
+                subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 23)
+            }
+        
+        
+        //v.3.4
+        //Для iPhone 12 Pro Max (6.7-inch, с высотой экрана 926.0, width = 428) - настроены Constraints
+        if UIScreen.main.bounds.height == 926 && UIScreen.main.bounds.width == 428 {
+            bettingTipsButtonTopConstraint.constant = 161
+            buyButtonTopConstraint.constant = 161
+            upConstraintiLoveBetsLabel.constant = 30
+            leftConstraintYourPersonalSportsBettingAdvisor.constant = 19
+            rightConstraintYourPersonalSportsBettingAdvisor.constant = 19
             statisticsButtonTopConstraint.constant = 161
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
