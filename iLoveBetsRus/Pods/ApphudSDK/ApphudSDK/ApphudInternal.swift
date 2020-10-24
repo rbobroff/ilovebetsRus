@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import AdSupport
 import StoreKit
 
 internal typealias HasPurchasesChanges = (hasSubscriptionChanges: Bool, hasNonRenewingChanges: Bool)
@@ -22,8 +21,8 @@ final class ApphudInternal: NSObject {
 
     // MARK: - Private properties
     private var userRegisteredCallbacks = [ApphudVoidCallback]()
-    private var allowInitialize = true
     private var addedObservers = false
+    private var allowIdentifyUser = true
 
     // MARK: - Receipt and products properties
     internal var productsFetchRetriesCount: Int = 0
@@ -41,13 +40,43 @@ final class ApphudInternal: NSObject {
     internal var currentUser: ApphudUser?
     internal var currentDeviceID: String = ""
     internal var currentUserID: String = ""
+    internal var setNeedsToUpdateUser: Bool = false {
+        didSet {
+            if setNeedsToUpdateUser {
+                self.perform(#selector(updateCurrentUser), with: nil, afterDelay: 2.0)
+            } else {
+                NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(updateCurrentUser), object: nil)
+            }
+        }
+    }
+    internal var setNeedsToUpdateUserProperties: Bool = false {
+        didSet {
+            if setNeedsToUpdateUserProperties {
+                self.perform(#selector(updateUserProperties), with: nil, afterDelay: 1.0)
+            } else {
+                NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(updateUserProperties), object: nil)
+            }
+        }
+    }
+    internal var pendingUserProperties = [ApphudUserProperty]()
     internal var lastCheckDate = Date()
     internal var userRegisterRetriesCount: Int = 0
     internal let maxNumberOfUserRegisterRetries: Int = 10
     internal var isRegisteringUser = false {
-        didSet(newValue) {
-            if newValue == true {
+        didSet {
+            if isRegisteringUser {
                 NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(continueToRegisteringUser), object: nil)
+            }
+        }
+    }
+
+    // MARK: - Advertising Identifier
+
+    internal var advertisingIdentifier: String? {
+        didSet {
+            if advertisingIdentifier != nil {
+                apphudLog("Received IDFA (\(advertisingIdentifier ?? ""), will submit soon.")
+                setNeedsToUpdateUser = true
             }
         }
     }
@@ -67,6 +96,7 @@ final class ApphudInternal: NSObject {
     internal let didSubmitProductPricesKey = "didSubmitProductPricesKey"
     internal var isSendingAppsFlyer = false
     internal var isSendingAdjust = false
+
     internal var didSubmitAppsFlyerAttribution: Bool {
         get {
             UserDefaults.standard.bool(forKey: didSubmitAppsFlyerAttributionKey)
@@ -102,17 +132,27 @@ final class ApphudInternal: NSObject {
 
     // MARK: - Initialization
 
-    internal func initialize(apiKey: String, inputUserID: String?, inputDeviceID: String? = nil) {
+    internal func initialize(apiKey: String, inputUserID: String?, inputDeviceID: String? = nil, observerMode: Bool) {
 
-        guard allowInitialize == true else {
-            apphudLog("Abort initializing, because Apphud SDK already initialized.", forceDisplay: true)
+        if httpClient == nil {
+            ApphudStoreKitWrapper.shared.setupObserver()
+            httpClient = ApphudHttpClient.shared
+            httpClient.apiKey = apiKey
+            apphudLog("Started Apphud SDK (\(apphud_sdk_version))", forceDisplay: true)
+        }
+
+        guard allowIdentifyUser == true else {
+            apphudLog("Abort initializing, because Apphud SDK already initialized. You can only call `Apphud.start()` once per app lifecycle. Or if `Apphud.logout()` was called previously.", forceDisplay: true)
             return
         }
-        allowInitialize = false
+        allowIdentifyUser = false
 
-        apphudLog("Started Apphud SDK (\(apphud_sdk_version))", forceDisplay: true)
+        identify(inputUserID: inputUserID, inputDeviceID: inputDeviceID, observerMode: observerMode)
+    }
 
-        ApphudStoreKitWrapper.shared.setupObserver()
+    internal func identify(inputUserID: String?, inputDeviceID: String? = nil, observerMode: Bool) {
+
+        ApphudUtils.shared.storeKitObserverMode = observerMode
 
         var deviceID = ApphudKeychain.loadDeviceID()
 
@@ -120,15 +160,14 @@ final class ApphudInternal: NSObject {
             deviceID = inputDeviceID
         }
 
+        let generatedUUID: String = ApphudKeychain.generateUUID()
+
         if deviceID == nil {
-            deviceID = ApphudKeychain.generateUUID()
+            deviceID = generatedUUID
             ApphudKeychain.saveDeviceID(deviceID: deviceID!)
         }
 
         self.currentDeviceID = deviceID!
-
-        self.httpClient = ApphudHttpClient.shared
-        self.httpClient.apiKey = apiKey
 
         self.currentUser = ApphudUser.fromCache()
         let userIDFromKeychain = ApphudKeychain.loadUserID()
@@ -140,7 +179,7 @@ final class ApphudInternal: NSObject {
         } else if userIDFromKeychain != nil {
             self.currentUserID = userIDFromKeychain!
         } else {
-            self.currentUserID = ApphudKeychain.generateUUID()
+            self.currentUserID = generatedUUID
         }
 
         if self.currentUserID != userIDFromKeychain {
@@ -149,12 +188,16 @@ final class ApphudInternal: NSObject {
 
         self.productsGroupsMap = apphudFromUserDefaultsCache(key: "productsGroupsMap")
 
-        continueToRegisteringUser()
+        DispatchQueue.main.async {
+            self.continueToRegisteringUser()
+        }
     }
 
-    internal func resetUser() {
+    internal func logout() {
         ApphudUser.clearCache()
         ApphudKeychain.resetValues()
+        allowIdentifyUser = true
+        apphudLog("User logged out. Apphud SDK is uninitialized.", logLevel: .all)
     }
 
     @objc internal func continueToRegisteringUser() {
@@ -170,6 +213,7 @@ final class ApphudInternal: NSObject {
                 apphudLog("User successfully registered with id: \(self.currentUserID)", forceDisplay: true)
                 self.performAllUserRegisteredBlocks()
                 self.checkForUnreadNotifications()
+                self.perform(#selector(self.forceSendAttributionDataIfNeeded), with: nil, afterDelay: 10.0)
             } else {
                 self.scheduleUserRegistering()
             }
@@ -211,7 +255,7 @@ final class ApphudInternal: NSObject {
                 self.continueToRegisteringUser()
             } else if Date().timeIntervalSince(self.lastCheckDate) > minCheckInterval {
                 self.checkForUnreadNotifications()
-                self.refreshCurrentUser()
+                self.updateCurrentUser()
             }
         }
     }

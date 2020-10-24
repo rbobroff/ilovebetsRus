@@ -12,16 +12,6 @@ import AdSupport
 
 typealias ApphudVoidCallback = (() -> Void)
 
-internal func apphudLog(_ text: String, forceDisplay: Bool = false) {
-    if ApphudUtils.shared.isLoggingEnabled || forceDisplay {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .none
-        formatter.timeStyle = .medium
-        let time = formatter.string(from: Date())
-        print("[\(time)] [Apphud] \(text)")
-    }
-}
-
 internal func apphudVisibleViewController() -> UIViewController? {
     var currentVC = UIApplication.shared.keyWindow?.rootViewController
     while let presentedVC = currentVC?.presentedViewController {
@@ -97,6 +87,7 @@ internal func apphudCurrentDeviceParameters() -> [String: String] {
         params["idfv"] = idfv
     }
 
+    // let idfa = ApphudInternal.shared.advertisingIdentifier
     if !ApphudUtils.shared.optOutOfIDFACollection, let idfa = apphudIdentifierForAdvertising() {
         params["idfa"] = idfa
     }
@@ -105,13 +96,12 @@ internal func apphudCurrentDeviceParameters() -> [String: String] {
 }
 
 internal func apphudIdentifierForAdvertising() -> String? {
-    // Check whether advertising tracking is enabled
-    guard ASIdentifierManager.shared().isAdvertisingTrackingEnabled else {
+    let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+    if idfa == "00000000-0000-0000-0000-000000000000" {
         return nil
+    } else {
+        return idfa
     }
-
-    // Get and return IDFA
-    return ASIdentifierManager.shared().advertisingIdentifier.uuidString
 }
 
 extension UIDevice {
@@ -129,6 +119,16 @@ extension UIDevice {
 
 internal func apphudIsAppsFlyerSDKIntegrated() -> Bool {
 
+    if true {
+        let klass: AnyClass? = NSClassFromString("AppsFlyerLib")
+        let managerClass = klass as AnyObject as? NSObjectProtocol
+
+        let sel = NSSelectorFromString("shared")
+        if managerClass?.responds(to: sel) ?? false {
+            return true
+        }
+    }
+
     let klass: AnyClass? = NSClassFromString("AppsFlyerTracker")
     let managerClass = klass as AnyObject as? NSObjectProtocol
 
@@ -141,6 +141,25 @@ internal func apphudIsAppsFlyerSDKIntegrated() -> Bool {
 }
 
 internal func apphudGetAppsFlyerID() -> String? {
+
+    if true {
+        let klass: AnyClass? = NSClassFromString("AppsFlyerLib")
+        let managerClass = klass as AnyObject as? NSObjectProtocol
+
+        let sel = NSSelectorFromString("shared")
+        if managerClass?.responds(to: sel) ?? false {
+            let value = managerClass?.perform(sel)
+            if let tracker = value?.takeUnretainedValue() as? NSObject {
+                let selID = NSSelectorFromString("getAppsFlyerUID")
+                if tracker.responds(to: selID) {
+                    let value = tracker.perform(selID)
+                    if let string = value?.takeUnretainedValue() as? String, string.count > 0 {
+                        return string
+                    }
+                }
+            }
+        }
+    }
 
     let klass: AnyClass? = NSClassFromString("AppsFlyerTracker")
     let managerClass = klass as AnyObject as? NSObjectProtocol
@@ -192,11 +211,33 @@ internal func apphudGetAdjustID() -> String? {
 }
 
 internal func apphudNeedsToCollectFBAnonID() -> Bool {
-    return (ApphudUtils.shared.optOutOfIDFACollection || apphudIdentifierForAdvertising() == nil)
+    true
 }
 
 internal func apphudIsFBSDKIntegrated() -> Bool {
     return NSClassFromString("FBSDKAppEvents") != nil || NSClassFromString("FBSDKBasicUtility") != nil
+}
+
+internal func apphudGetFBExtInfo() -> String? {
+
+    let klass: AnyClass? = NSClassFromString("FBSDKAppEventsDeviceInfo")
+    let managerClass = klass as AnyObject as? NSObjectProtocol
+
+    let sel = NSSelectorFromString("sharedDeviceInfo")
+    if managerClass?.responds(to: sel) ?? false {
+        let value = managerClass?.perform(sel)
+        if let shared = value?.takeUnretainedValue() as? NSObject {
+            let selInfo = NSSelectorFromString("encodedDeviceInfo")
+            if shared.responds(to: selInfo) {
+                let value = shared.perform(selInfo)
+                if let encodedString = value?.takeUnretainedValue() as? String, encodedString.count > 0 {
+                    return encodedString
+                }
+            }
+        }
+    }
+
+    return nil
 }
 
 internal func apphudGetFBAnonID() -> String? {

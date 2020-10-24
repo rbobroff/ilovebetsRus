@@ -1,5 +1,5 @@
 PODS:
-  - ApphudSDK (0.16)
+  - ApphudSDK (0.18.5)
   - Firebase/Analytics (6.13.0):
     - Firebase/Core
   - Firebase/Auth (6.13.0):
@@ -146,7 +146,7 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
-  ApphudSDK: 8a4c78d6812d04ea62199026b9302fb299870bb6
+  ApphudSDK: 448bb69007715ffc9fbde3be4a9e2a0ccf1971ee
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
   FirebaseAnalytics: 45f36d9c429fc91d206283900ab75390cd05ee8a
   FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
