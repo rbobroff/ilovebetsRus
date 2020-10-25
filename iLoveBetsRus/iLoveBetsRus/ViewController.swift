@@ -3407,9 +3407,10 @@ class ViewController: UIViewController {
             subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 16)
         }
         
-        //++v.3.3 - окно подписки по умолчанию - ОК
+        //++v.3.4
         //Для iPhone 6, 6S, 7, 8, SE_2nd_gen (4.7-inch, с высотой экрана 667.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 667 && UIScreen.main.bounds.width == 375 {
+            
             
             //top Constraint для верхнего label
             upConstraintYourPersonalSportsBettingAdvisor.constant = 17
@@ -3422,10 +3423,75 @@ class ViewController: UIViewController {
             //левый и правый constraint нижнего Label = Спортивные прогнозы
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
+            
+            if currentPhoneLangID == "ja"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "zh"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "de"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 22
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 22
+            }
+            if currentPhoneLangID == "ko"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "tr"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "ar"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "sv"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 30
+            }
+            if currentPhoneLangID == "nb"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "he"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "sk"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
+            if currentPhoneLangID == "hi"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                bettingTipsButtonTopConstraint.constant = 100
+                buyButtonTopConstraint.constant = 100
+                statisticsButtonTopConstraint.constant = 100
+            }
        
-        }
+        } //конец условия Для iPhone 6, 6S, 7, 8, SE_2nd_gen
 
-        //++v.3.3 - окно подписки - ОК
+        
+        
+        //++v.3.4
         //Для iPhone 6+, 6S+ 7+, 8+ (5.5-inch, с высотой экрана 736.0, width - 414) - настроены Constraints
         if UIScreen.main.bounds.height == 736 && UIScreen.main.bounds.width == 414 {
 
@@ -3450,10 +3516,19 @@ class ViewController: UIViewController {
             termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 16)
             privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 16)
             subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 21)
+            if currentPhoneLangID == "de"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 46
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 46
+            }
             
-        }
+            
+            
+        } //конец условия для iPhone 6+, 6S+ 7+, 8+
         
-        //++v.3.3 - окно подписки - ОК
+        
+        
+        
+        //++v.3.4
         //Для iPhone X, 11 Pro, 12 mini (5.8-inch, с высотой экрана 812.0, width = 375) - настроены Constraints
         if UIScreen.main.bounds.height == 812 && UIScreen.main.bounds.width == 375 {
                 bettingTipsButtonTopConstraint.constant = 111
@@ -3471,16 +3546,54 @@ class ViewController: UIViewController {
                 termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
                 privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
                 subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 23)
+            
+            if currentPhoneLangID == "zh"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 68
             }
+            if currentPhoneLangID == "ja"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 68
+            }
+            if currentPhoneLangID == "de"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 20
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 20
+            }
+            if currentPhoneLangID == "ko"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 68
+            }
+            if currentPhoneLangID == "tr"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 45
+            }
+            if currentPhoneLangID == "ar"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "sv"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 30
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 30
+            }
+            if currentPhoneLangID == "nb"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "he"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "sk"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "hi"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            
+            }//конец условия для iPhone X, 11 Pro, 12 mini
         
         
-        //++v.3.3 - окно подписки - ОК
+        //++v.3.4
         //Для iPhone 11, 11 Pro Max (6.1-inch, с высотой экрана 896.0, width = 414) - настроены Constraints
         if UIScreen.main.bounds.height == 896 && UIScreen.main.bounds.width == 414 {
             bettingTipsButtonTopConstraint.constant = 161
             buyButtonTopConstraint.constant = 161
-            upConstraintiLoveBetsLabel.constant = 30
             statisticsButtonTopConstraint.constant = 161
+            upConstraintiLoveBetsLabel.constant = 30
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
             //для окна подписки
@@ -3497,7 +3610,52 @@ class ViewController: UIViewController {
             termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
             privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
             subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 23)
-        }
+        
+            if currentPhoneLangID == "hi"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "cs"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 35
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 35
+            }
+            if currentPhoneLangID == "fi"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 35
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 35
+            }
+            if currentPhoneLangID == "pl"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 35
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 35
+            }
+            if currentPhoneLangID == "nb"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "sv"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "th"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "ar"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "tr"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "ko"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "de"{
+                leftConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                rightConstraintYourPersonalSportsBettingAdvisor.constant = 45
+            }
+            if currentPhoneLangID == "ja"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+            if currentPhoneLangID == "zh"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+            }
+        
+        }// конец условия для iPhone 11, 11 Pro Max
         
         
         
@@ -3519,18 +3677,77 @@ class ViewController: UIViewController {
                 termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
                 privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
                 subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 23)
-            }
+           
+                if currentPhoneLangID == "zh"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 70
+                }
+                if currentPhoneLangID == "ja"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 70
+                }
+                if currentPhoneLangID == "de"{
+                    leftConstraintYourPersonalSportsBettingAdvisor.constant = 35
+                    rightConstraintYourPersonalSportsBettingAdvisor.constant = 35
+                }
+                if currentPhoneLangID == "ko"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 70
+                }
+                if currentPhoneLangID == "tr"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 70
+                }
+                if currentPhoneLangID == "ar"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 70
+                }
+                if currentPhoneLangID == "sv"{
+                    leftConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                    rightConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                }
+                if currentPhoneLangID == "nb"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+                    upConstraintiLoveBetsLabel.constant = 20
+                    bettingTipsButtonTopConstraint.constant = 131
+                    buyButtonTopConstraint.constant = 131
+                    statisticsButtonTopConstraint.constant = 131
+                }
+                if currentPhoneLangID == "pl"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+                    leftConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                    rightConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                    bettingTipsButtonTopConstraint.constant = 131
+                    buyButtonTopConstraint.constant = 131
+                    statisticsButtonTopConstraint.constant = 131
+                }
+                if currentPhoneLangID == "he"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+                    bettingTipsButtonTopConstraint.constant = 131
+                    buyButtonTopConstraint.constant = 131
+                    statisticsButtonTopConstraint.constant = 131
+                }
+                if currentPhoneLangID == "sk"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+                    upConstraintiLoveBetsLabel.constant = 20
+                    leftConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                    rightConstraintYourPersonalSportsBettingAdvisor.constant = 45
+                    bettingTipsButtonTopConstraint.constant = 131
+                    buyButtonTopConstraint.constant = 131
+                    statisticsButtonTopConstraint.constant = 131
+                }
+                if currentPhoneLangID == "hi"{
+                    upConstraintYourPersonalSportsBettingAdvisor.constant = 60
+                }
+            
+            }// конец условия для iPhone 12, 12 Pro
         
         
         //v.3.4
         //Для iPhone 12 Pro Max (6.7-inch, с высотой экрана 926.0, width = 428) - настроены Constraints
         if UIScreen.main.bounds.height == 926 && UIScreen.main.bounds.width == 428 {
+            upConstraintYourPersonalSportsBettingAdvisor.constant = 70
             bettingTipsButtonTopConstraint.constant = 161
             buyButtonTopConstraint.constant = 161
+            statisticsButtonTopConstraint.constant = 161
             upConstraintiLoveBetsLabel.constant = 30
             leftConstraintYourPersonalSportsBettingAdvisor.constant = 19
             rightConstraintYourPersonalSportsBettingAdvisor.constant = 19
-            statisticsButtonTopConstraint.constant = 161
             sportBetsLabelLeftConstraint.constant = 100
             sportBetsLabelRightConstraint.constant = 100
             //для окна подписки
@@ -3547,7 +3764,8 @@ class ViewController: UIViewController {
             termsOfUseButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
             privacyPolicyButtonOutlet.titleLabel?.font = .systemFont(ofSize: 18)
             subscribeButtonOutlet.titleLabel?.font = .boldSystemFont(ofSize: 23)
-        }
+       
+        } // конец условия для iPhone 12 Pro Max
         
         
         //++v.3.3 - окно подписки - ОК
