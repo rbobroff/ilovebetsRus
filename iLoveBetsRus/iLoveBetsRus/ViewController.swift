@@ -3768,7 +3768,7 @@ class ViewController: UIViewController {
         } // конец условия для iPhone 12 Pro Max
         
         
-        //++v.3.3 - окно подписки - ОК
+        //++v.3.4
         //iPadPro (9.7 - inch), iPad Air2, iPad Air, iPad 5th gen
         // (7.9 - inch) - iPad mini 2,3,4,5 gen
         if UIScreen.main.bounds.height == 1024 && UIScreen.main.bounds.width == 768 {
@@ -3808,10 +3808,18 @@ class ViewController: UIViewController {
             buyButtonTopConstraint.constant = 120
             statisticsButtonTopConstraint.constant = 120
             }
-        }
+            
+            if currentPhoneLangID == "el"{
+                upConstraintYourPersonalSportsBettingAdvisor.constant = 20
+            }
+        } //конец условия для
+        //iPadPro (9.7 - inch), iPad Air2, iPad Air, iPad 5th gen
+        // (7.9 - inch) - iPad mini 2,3,4,5 gen
         
         
-        //++v.3.3 - окно подписки - ОК
+        
+        
+        //++v.3.4
         //ipad Pro (12.9-inch) 2nd, 4th gen
         //Высота экрана =  1366.0
         //Ширина экрана =  1024.0
@@ -3855,7 +3863,7 @@ class ViewController: UIViewController {
         }
         
         
-        //++v.3.3 - окно подписки - ОК
+        //++v.3.4
         //iPad Pro (11-inch) 2nd gen, 1 gen
         //Высота экрана =  1194.0
         //Ширина экрана =  834.0
@@ -3894,7 +3902,7 @@ class ViewController: UIViewController {
         }
         
         
-        //++v.3.3 - окно подписки - ОК
+        //++v.3.4
         //iPadPro (10.5-inch), iPad Air (3rd gen)
             //Высота экрана =  1112.0
             //Ширина экрана =  834.0
@@ -3932,7 +3940,7 @@ class ViewController: UIViewController {
             }
         }
         
-        //++v.3.3 - окно подписки - ОК
+        //++v.3.4
         //iPad (10.2 inch) - 7th gen, 8th gen (2020 year)
         if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
             bettingTipsButtonHeight.constant = 235
@@ -3967,7 +3975,7 @@ class ViewController: UIViewController {
         
         
         
-        //++v.3.3 - окно подписки - ОК
+        //++v.3.4
         //iPad Air (10.9 inch) - 4th gen - 2020 year
         if UIScreen.main.bounds.height == 1180 && UIScreen.main.bounds.width == 820 {
             bettingTipsButtonHeight.constant = 540
