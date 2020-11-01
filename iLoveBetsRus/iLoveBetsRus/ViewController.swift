@@ -919,7 +919,7 @@ class ViewController: UIViewController {
             if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
                 attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 21.5)]
             }
-            //iPad Air (10.9 inch) - 4th gen - 2020 year
+            //iPad Air (10.9 inch) - 4th gen (2020 year)
             if UIScreen.main.bounds.height == 1180 && UIScreen.main.bounds.width == 820 {
                 attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 21.5)]
             }
@@ -1467,7 +1467,7 @@ class ViewController: UIViewController {
             if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
                 attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 21.5)]
             }
-            //iPad Air (10.9 inch) - 4th gen - 2020 year
+            //iPad Air (10.9 inch) - 4th gen (2020 year)
             if UIScreen.main.bounds.height == 1180 && UIScreen.main.bounds.width == 820 {
                 attrs1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 21.5)]
             }
@@ -2220,8 +2220,9 @@ class ViewController: UIViewController {
         print("!Есть активная подписка!")
     } else {
         print("!Подписка закончилась!")
-        buyButtonOutlet.isHidden = false
-        bettingTipsButton.isHidden = true
+        //for test imageSize in Tip (888)
+            buyButtonOutlet.isHidden = false
+            bettingTipsButton.isHidden = true
         activityIndicatorPopupView.startAnimating()
         subscribeLabelPopUpView.isHidden = true
         subscriptionPriceLabelOutlet.isHidden = true
@@ -2347,8 +2348,12 @@ class ViewController: UIViewController {
             print("!Есть активная подписка!")
         } else {
             print("!Подписка закончилась!")
-            buyButtonOutlet.isHidden = false
-            bettingTipsButton.isHidden = true
+                buyButtonOutlet.isHidden = false
+                bettingTipsButton.isHidden = true
+            /*//for test imageSize in Tip (888)
+                buyButtonOutlet.isHidden = true
+                bettingTipsButton.isHidden = false
+            */
         }
         
     
@@ -3356,11 +3361,11 @@ class ViewController: UIViewController {
         //Высота экрана =  1180
         //Ширина экрана =  820
         
-        //iPhone 12 Pro Max =================
+    //iPhone 12 Pro Max =================
         //Высота = 926.0
         //Ширина = 428.0
         
-        //iPhone 12 Pro, 12 =================
+    //iPhone 12 Pro, 12 =================
         //Высота = 844.0
         //Ширина = 390.0
         
@@ -3379,7 +3384,7 @@ class ViewController: UIViewController {
             sportBetsLabel.isHidden = false
         }
         
-        //++v.3.3 - окно подписки ОК
+        //++v.3.4
         //Для iPhone 5S, SE (4-inch, с высотой экрана 568.0, width = 320) - настроены Constraints
         if UIScreen.main.bounds.height == 568  && UIScreen.main.bounds.width == 320 {
              //top Constraint для верхнего label

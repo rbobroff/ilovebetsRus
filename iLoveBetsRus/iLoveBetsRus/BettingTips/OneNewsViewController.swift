@@ -22,7 +22,11 @@ class OneNewsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         
+        //v.3.4 - растягивание картинки для всех устройств по умолчанию, кроме указанных ниже
+        imageHeightConstraint.constant = UIScreen.main.bounds.width * 1.2
         
+        
+        //По умолчанию Constraints для картинки настроено для ширины = 375
         //Масштабирование КАРТИНКИ для разной ширины экрана
         //iPhone 5S, SE
        if UIScreen.main.bounds.width == 320 {
@@ -52,11 +56,30 @@ class OneNewsViewController: UIViewController {
             imageHeightConstraint.constant = 1074.60
             imageViewTopConstraint.constant = 0
          }
-        //iPad 7th gen
+        //iPad (10.2 inch) - 7th gen, 8th gen (2020 year)
         else if UIScreen.main.bounds.height == 1080 && UIScreen.main.bounds.width == 810 {
             imageHeightConstraint.constant = 972
             imageViewTopConstraint.constant = 0
          }
+        //v3.4
+        //iPad Air (10.9 inch) - 4th gen (2020 year)
+        if  UIScreen.main.bounds.width == 820 {
+            imageHeightConstraint.constant = 984
+            imageViewTopConstraint.constant = 0
+            
+
+            
+        }
+        //v.3.4
+        //Для iPhone 12 Pro Max (6.7-inch, с высотой экрана 926.0, width = 428) - настроены Constraints
+        if  UIScreen.main.bounds.width == 428 {
+            imageHeightConstraint.constant = 514
+        }
+        //Для iPhone 12, 12 Pro (6.1-inch, с высотой экрана 844.0, width = 390) - настроены Constraints
+        if  UIScreen.main.bounds.width == 390 {
+            imageHeightConstraint.constant = 468
+        }
+        
         
         
         
