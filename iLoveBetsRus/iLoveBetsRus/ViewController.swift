@@ -113,6 +113,48 @@ class ViewController: UIViewController {
         } //удалить, если не сработает !!!!!!!!!!!!!!!!!
         */
         
+        //v.3.5 - исправление ошибки повторного запуска окна подписки, после исследования разделов приложения. Иначе просто крутится спиннер и продукты повторно не отображаются
+            //загружаем продукты
+        if Apphud.products() != nil {
+            reloadUI()
+            activityIndicatorPopupView.stopAnimating()
+            subscribeLabelPopUpView.isHidden = false
+            subscriptionPriceLabelOutlet.isHidden = false
+            productDescriptionLabel.isHidden = false
+            productTrialDurationLabel.isHidden = false
+            restorePurchasesButtonOutlet.isHidden = false
+            aboutSubscriptionTitleLabel.isHidden = false
+            aboutSubscriptionTextLabel.isHidden = false
+            termsOfUseButtonOutlet.isHidden = false
+            privacyPolicyButtonOutlet.isHidden = false
+            subscribeButtonOutlet.isHidden = false
+                //buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
+            //buyButtonOutlet.backgroundColor = UIColor.green
+           
+        } else {
+            
+            Apphud.refreshStoreKitProducts { products in
+            self.reloadUI()
+            self.activityIndicatorPopupView.stopAnimating()
+            self.subscribeLabelPopUpView.isHidden = false
+            self.subscriptionPriceLabelOutlet.isHidden = false
+            self.productDescriptionLabel.isHidden = false
+            self.productTrialDurationLabel.isHidden = false
+            self.restorePurchasesButtonOutlet.isHidden = false
+            self.aboutSubscriptionTitleLabel.isHidden = false
+            self.aboutSubscriptionTextLabel.isHidden = false
+            self.termsOfUseButtonOutlet.isHidden = false
+            self.privacyPolicyButtonOutlet.isHidden = false
+            self.subscribeButtonOutlet.isHidden = false
+                
+                //self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
+                //self.buyButtonOutlet.backgroundColor = UIColor.green
+            }
+        } //v.3.5
+        
+        
+        
+        
         //v.3.3 - язык по умолчанию
         subscribeLabelPopUpView.text = "Subscription"
         aboutSubscriptionTitleLabel.text = "Please read below about the auto-renewing subscription nature of this product:"
@@ -682,6 +724,19 @@ class ViewController: UIViewController {
         print("!Подписка неактивна!")
             self.animateOut(desiredView: self.popupView) //убираем Pop-Up View с анимацией
             self.animateOut(desiredView: self.blurView)  //убираем Pop-Up View с анимацией
+            //v3.5
+            activityIndicatorPopupView.startAnimating()
+            subscribeLabelPopUpView.isHidden = true
+            subscriptionPriceLabelOutlet.isHidden = true
+            productDescriptionLabel.isHidden = true
+            productTrialDurationLabel.isHidden = true
+            restorePurchasesButtonOutlet.isHidden = true
+            aboutSubscriptionTitleLabel.isHidden = true
+            aboutSubscriptionTextLabel.isHidden = true
+            termsOfUseButtonOutlet.isHidden = true
+            privacyPolicyButtonOutlet.isHidden = true
+            subscribeButtonOutlet.isHidden = true
+            //v3.5
         }
     }
     
@@ -2234,7 +2289,7 @@ class ViewController: UIViewController {
                 termsOfUseButtonOutlet.isHidden = true
                 privacyPolicyButtonOutlet.isHidden = true
                 subscribeButtonOutlet.isHidden = true
-        //v.3.5 - исправление ошибки повторного запуска окна подписки, после исследования разделов приложения. Иначе просто крутится спиннер и продукты повторно не отображаются
+    /*  //v.3.5 - исправление ошибки повторного запуска окна подписки, после исследования разделов приложения. Иначе просто крутится спиннер и продукты повторно не отображаются
         //загружаем продукты
         if Apphud.products() != nil {
             reloadUI()
@@ -2271,7 +2326,8 @@ class ViewController: UIViewController {
                 //self.buyButtonOutlet.isEnabled = true //из-за задержки загрузки продуктов делаем кнопку активной только после загрузки продуктов и меняем цвет
                 //self.buyButtonOutlet.backgroundColor = UIColor.green
             }
-        } //конец кода версии 3.5
+        } //конец кода версии 3.5 */
+        
         
         //v.3.4 - закомментировал и перенес выше для исправления ошибки повторного открытия окна подписки
         /*activityIndicatorPopupView.startAnimating()
